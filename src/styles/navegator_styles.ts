@@ -12,15 +12,15 @@ export const NavStyle = styled.nav`
 `;
 
 export const ListDesorder = styled.ul`
+  gap: 1.5rem;
+`;
 
-
-  @media (min-width:720px){
-    display: ${props => props.className === "ham" ? "none" : "flex"}
+export const ListPoint = styled.li`
+  @media(min-width:720px){
+    display:none
   }
 
 `;
-
-export const ListPoint = styled.li``;
 
 export const ListLink = styled.a`
   font: normal normal 400 1rem/1.9rem var(--black);
@@ -31,6 +31,8 @@ export const ListImageBox = styled.li`
   justify-content: center;
   align-items: center;
 `;
+
+
 export const ListLogo = styled.img`
   width: 100%;
   height: auto;

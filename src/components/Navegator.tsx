@@ -46,8 +46,8 @@ function Navegator(){
 	    </ListPoint>
 	  
 	  </ListDesorder>
-	  <ListDesorder className="ham">
-	    
+	  <ListDesorder>
+
 	  </ListDesorder>
 	</NavStyle>
       </HeaderStyle>
