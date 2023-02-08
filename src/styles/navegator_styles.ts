@@ -2,14 +2,25 @@ import styled from "styled-components";
 
 export const HeaderStyle = styled.header`
   width: 100%;
+  position: fixed;
+  top:0;
+  left:0;
+  right: 0;
+  box-shadow: 0px 4px 4px #0002;
 `;
 export const NavStyle = styled.nav`
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   display: flex;
-  padding: 2rem;
+  padding: 1rem 1.5rem;
   justify-content: space-between;
+  
+  @media (min-width: 720px){
+    padding: 1.5rem 2rem;
+  	
+  }
+
 `;
 
 export const ListDesorder = styled.ul`
@@ -28,7 +39,11 @@ export const ListPoint = styled.li`
 `;
 
 export const ListLink = styled.a`
-  font: normal normal 400 1rem/1.9rem var(--black);
+  font: normal normal 400 1rem/1.9rem var(--font-lato);
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;	
 
 export const ListImageBox = styled.li`

@@ -37,11 +37,13 @@ export const BoxGridTwo = styled.div`
 `;
 
 export const HeadlinePrincipal = styled.h1`
-  font: normal normal 600 1.5rem/2rem var(--font-lato);
+  font: normal normal 600 1.8rem/2.5rem var(--font-lato);
   color: var(--black);
+  text-align: center;
   @media (min-width:720px){
+    text-align: left;
     max-width: 25rem;
-    font: normal normal 600 2rem/3rem var(--font-lato);
+    font: normal normal 600 2.3rem/3.4rem var(--font-lato);
   }
 `
 export const BoxButtons = styled.div`
@@ -83,14 +85,22 @@ export const BoxImages = styled.div`
   width:100%;
   height: 100%;
   position: relative;
+  padding: 0  0 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  gap: 2rem;
 `
 
 export const IconImage = styled.img`
   position: relative;
-  width: 6.25.rem;  
+  width: 75%;
+  height: 75%;
+  max-width: 6.25rem;
+  object-fit: contain;
   @media (min-width: 720px){
-    width:auto;
-  	
+    bottom: ${props => props.className === "icon_" ? "-100px":""}
   }
 
 `
