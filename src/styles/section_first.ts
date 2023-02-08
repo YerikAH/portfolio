@@ -14,43 +14,83 @@ export const BoxGrid = styled.div`
   margin: 0 auto;
   place-items:center;
   padding: 0 2rem;
+  @media (min-width:720px){
+    grid-template-columns: repeat(2, 50%);
+    grid-template-areas: "box_two box_one"
+  }
 `;
 export const BoxGridOne = styled.div`
   display:grid;
+  height: 100%;
+  width:100%;
+  @media (min-width:720px){
+    grid-area: box_one
+  }
 `;
 export const BoxGridTwo = styled.div`
   display:grid;
+  height: 100%;
+  width:100%;
+  @media (min-width:720px){
+    grid-area: box_two
+  }
 `;
 
 export const HeadlinePrincipal = styled.h1`
   font: normal normal 600 1.5rem/2rem var(--font-lato);
   color: var(--black);
   @media (min-width:720px){
+    max-width: 25rem;
     font: normal normal 600 2rem/3rem var(--font-lato);
   }
 `
 export const BoxButtons = styled.div`
   width: 100%;
   display:grid;
+  gap: 1rem;
+  margin-top: 2rem;
   @media (min-width: 720px){
-    grid-template-columns: 50% 50%;
+    justify-content: start;
+    grid-template-columns: auto auto;
   }
       
 `
 export const TextButtonStroke = styled.button`
   color:var(--blue);
-  font: normal normal 700 1rem/0.9rem var(--font-lato);
+  font: normal normal 700 0.8rem/0.7rem var(--font-lato);
   background-color: transparent;
   border: 1px solid var(--blue);
+  padding: 0.8rem;
+  border-radius: 0.8rem;
+  @media (min-width:720px){
+    font: normal normal 600 1rem/0.9rem var(--font-lato);
+    padding: 0.8rem 2rem;
+  }
 `;
 export const TextButtonFill = styled.button`
   color: var(--white);
   background-color: var(--blue);
-  font: normal normal 700 1rem/0.9rem var(--font-lato);
+  font: normal normal 700 0.8rem/0.7rem var(--font-lato);
+  padding: 0.8rem;
+  border-radius: 0.8rem;
+  @media (min-width:720px){
+    padding: 0.8rem 2rem;
+    font: normal normal 600 1rem/0.9rem var(--font-lato);
+  }
 `;
 
 export const BoxImages = styled.div`
   width:100%;
   height: 100%;
   position: relative;
+`
+
+export const IconImage = styled.img`
+  position: relative;
+  width: 6.25.rem;  
+  @media (min-width: 720px){
+    width:auto;
+  	
+  }
+
 `

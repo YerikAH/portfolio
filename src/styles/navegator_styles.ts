@@ -65,4 +65,9 @@ export const ListTheme = styled.button`
 `
 
 export const HamImage = styled.img``
-export const ThemeImage = styled.img``
+export const ThemeImage = styled.img`
+  width: 1rem;
+  @media (min-width:720px){
+    width:auto;
+  }
+`
