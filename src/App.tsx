@@ -1,10 +1,12 @@
 // components
+import Main from "./components/Main";
 import Navegator from "./components/Navegator";
 
 function App(){
 	return(
 	  <>
-	    <Navegator></Navegator>
+	    <Navegator/>
+	    <Main/>
 	  </>
 	)
 }
