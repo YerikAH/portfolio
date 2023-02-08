@@ -44,6 +44,22 @@ export const ListLink = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  &::after{
+    content: "";
+    width: 100%;
+    height: 1.5px;
+    transform: ${(props) =>
+        props.className === "true" ? "scale(1)" : "scaleX(0)"};
+    background-color: var(--black);
+    opacity: ${(props) => props.className === "false" && "0.5"};
+    bottom: -0.2rem;
+    transition: 0.3s;
+    position: absolute;
+  }
+  &:hover::after {
+      transform: ${props => props.className !== "logo" && "scale(1)"};
+    }
 `;	
 
 export const ListImageBox = styled.li`

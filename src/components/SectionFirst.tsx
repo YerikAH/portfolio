@@ -13,9 +13,9 @@ function SectionFirst(){
 	      
 	      <BoxGridOne>
 		<BoxImages>
-		  <IconImage src={reactIcon}/>
+		  <IconImage src={reactIcon} className="icon_side"/>
 		  <IconImage src={flutterIcon}/>
-		  <IconImage src={typescriptIcon}/>
+		  <IconImage src={typescriptIcon} className="icon_side"/>
 		</BoxImages>
 	      </BoxGridOne>
 

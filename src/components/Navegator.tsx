@@ -13,37 +13,37 @@ function Navegator(){
 	  <ListDesorder>
 	    
 	    <ListImageBox>
-	      <ListLink>
+	      <ListLink className="logo">
 		<ListLogo src={logo}/>
 	      </ListLink>
 	    </ListImageBox>
 	  
 	    <ListPoint>
-	      <ListLink>
+	      <ListLink className="true">
 		Home
 	      </ListLink>
 	    </ListPoint>
 	    
 	    <ListPoint>
-	      <ListLink>
+	      <ListLink className="false">
 		Sobre mí	
 	      </ListLink>
 	    </ListPoint>
 	    
 	    <ListPoint>
-	      <ListLink>
+	      <ListLink className="false">
 	      Portafolio	
 	      </ListLink>
 	    </ListPoint>
 	    
 	    <ListPoint>
-	      <ListLink>
+	      <ListLink className="false">
 		Contactame	
 	      </ListLink>
 	    </ListPoint>
 	  
 	    <ListPoint>
-	      <ListLink>
+	      <ListLink className="false">
 		Blog	
 	      </ListLink>
 	    </ListPoint>

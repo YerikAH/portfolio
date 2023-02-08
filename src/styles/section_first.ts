@@ -91,7 +91,13 @@ export const BoxImages = styled.div`
   justify-content: center;
   overflow: hidden;
   gap: 2rem;
-`
+  
+
+@media (min-width: 720px){
+	padding: 0
+}
+
+`	
 
 export const IconImage = styled.img`
   position: relative;
@@ -100,7 +106,7 @@ export const IconImage = styled.img`
   max-width: 6.25rem;
   object-fit: contain;
   @media (min-width: 720px){
-    bottom: ${props => props.className === "icon_" ? "-100px":""}
+    bottom: ${props => props.className === "icon_side" ? "50px":"-50px"}
   }
 
 `
