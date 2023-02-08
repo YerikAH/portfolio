@@ -1,9 +1,10 @@
 // styles
-import {HeaderStyle, ListDesorder, ListImageBox, ListLink, ListLogo, ListPoint, NavStyle} from "../styles/navegator_styles";
+import {HamImage, HeaderStyle, ListDesorder, ListHam, ListImageBox, ListLink, ListLogo, ListPoint, ListTheme, NavStyle, ThemeImage} from "../styles/navegator_styles";
 
 // images
 import logo from "../assets/logo.svg"
-
+import ham from "../assets/ham.svg"
+import sun from "../assets/sun.svg"
 function Navegator(){
   return (
     <>
@@ -12,7 +13,9 @@ function Navegator(){
 	  <ListDesorder>
 	    
 	    <ListImageBox>
-	      <ListLogo src={logo}/>
+	      <ListLink>
+		<ListLogo src={logo}/>
+	      </ListLink>
 	    </ListImageBox>
 	  
 	    <ListPoint>
@@ -47,7 +50,12 @@ function Navegator(){
 	  
 	  </ListDesorder>
 	  <ListDesorder>
-
+	    <ListTheme>
+	      <ThemeImage src={sun}/>
+	    </ListTheme>
+	    <ListHam aria-label="open menu">
+	      <HamImage src={ham} />
+	    </ListHam>
 	  </ListDesorder>
 	</NavStyle>
       </HeaderStyle>
