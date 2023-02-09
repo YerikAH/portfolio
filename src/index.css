@@ -2,32 +2,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 :root {
-	--font-lato: 'Lato', sans-serif;
-	--black: #212121;
-	--white: #ffffff;
-	--blue: #5B8BD2;
+  --font-lato: "Lato", sans-serif;
+  --black: #212121;
+  --white: #ffffff;
+  --blue: #5b8bd2;
+  --white-pale: #fafafa;
 }
 
 *,
 *::after,
 *::before {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: var(--font-lato);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-lato);
 }
 
 a,
 li {
-	text-decoration: none;
-	list-style: none;
+  text-decoration: none;
+  list-style: none;
 }
 
 a,
 button,
 input[type="submit"],
 input[type="button"] {
-	cursor: pointer;
-	outline: none;
-	border: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
 }
