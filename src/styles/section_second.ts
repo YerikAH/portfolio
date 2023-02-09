@@ -65,3 +65,19 @@ export const CircleAvatar = styled.img`
   width: 100%;
   height: 100%;
 `;
+export const ListSkills = styled.div`
+  display: flex;
+  gap: 8px;
+  justify-content: start;
+  width: 100%;
+  max-width: 720px;
+  margin-top: 3.5rem;
+  flex-wrap: wrap;
+`;
+
+export const LabelSkills = styled.p`
+  background-color: var(--blue);
+  color: var(--white);
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.4rem;
+`;

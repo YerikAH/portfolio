@@ -9,6 +9,8 @@ import {
   SubtitleOne,
   TextBodyOne,
   CircleAvatar,
+  LabelSkills,
+  ListSkills,
 } from "../styles/section_second";
 // images
 import aboutIcon from "../assets/icon/icon-about.svg";
@@ -35,6 +37,29 @@ function SectionSecond() {
           <CircleAvatar src={photo} />
         </BoxGridTwo>
       </BoxGrid>
+      <ListSkills>
+        <LabelSkills>JavaScript</LabelSkills>
+        <LabelSkills>Python</LabelSkills>
+        <LabelSkills>C</LabelSkills>
+        <LabelSkills>PHP</LabelSkills>
+        <LabelSkills>Java</LabelSkills>
+        <LabelSkills>Dart</LabelSkills>
+        <LabelSkills>SQL</LabelSkills>
+        <LabelSkills>JavaScript</LabelSkills>
+        <LabelSkills>Python</LabelSkills>
+        <LabelSkills>C</LabelSkills>
+        <LabelSkills>PHP</LabelSkills>
+        <LabelSkills>Java</LabelSkills>
+        <LabelSkills>Dart</LabelSkills>
+        <LabelSkills>SQL</LabelSkills>
+        <LabelSkills>JavaScript</LabelSkills>
+        <LabelSkills>Python</LabelSkills>
+        <LabelSkills>C</LabelSkills>
+        <LabelSkills>PHP</LabelSkills>
+        <LabelSkills>Java</LabelSkills>
+        <LabelSkills>Dart</LabelSkills>
+        <LabelSkills>SQL</LabelSkills>
+      </ListSkills>
     </SectionScondStyles>
   );
 }
