@@ -1,0 +1,35 @@
+{
+  "text_principal": {
+    "es": "",
+    "en": ""
+  },
+  "photo_url": "",
+  "description": {
+    "es": "",
+    "en": ""
+  },
+  "skills": [
+    "JavaScript",
+    "TypeScript",
+    "HTML",
+    "Python",
+    "Dart",
+    "C",
+    "Bash",
+    "Java",
+    "SQL",
+    "CSS",
+    "SASS",
+    "Pug",
+    "styled-components",
+    "TailwildCSS",
+    "Bootstrap",
+    "less",
+    "React",
+    "Vue.js",
+    "Vite",
+    "Flutter",
+    "Git",
+    "GitHub"
+  ]
+}

@@ -38,6 +38,7 @@ export const BoxGridTwo = styled.div`
   display: grid;
   height: 100%;
   width: 100%;
+  place-items: center;
   @media (min-width: 720px) {
     grid-area: box_two;
   }
@@ -51,12 +52,17 @@ export const IconImage = styled.img``;
 export const SubtitleOne = styled.h2`
   font: normal normal 700 1.5rem/1.5rem var(--font-lato);
   color: var(--black);
+  margin-top: 1.25rem;
 `;
 
 export const TextBodyOne = styled.p`
   font: normal normal 400 1rem/1.5rem var(--font-lato);
   color: var(--black);
   opacity: 0.6;
+  text-align: center;
+  @media (min-width: 720px) {
+    text-align: left;
+  }
 `;
 export const CircleAvatar = styled.img`
   border-radius: 15rem;
@@ -64,15 +70,23 @@ export const CircleAvatar = styled.img`
   max-height: 7.8125rem;
   width: 100%;
   height: 100%;
+  display: none;
+  @media (min-width: 720px) {
+    display: block;
+  }
 `;
 export const ListSkills = styled.div`
   display: flex;
   gap: 8px;
-  justify-content: start;
+  justify-content: center;
   width: 100%;
   max-width: 720px;
   margin-top: 3.5rem;
   flex-wrap: wrap;
+  padding: 0 2rem;
+  @media (min-width: 720px) {
+    justify-content: start;
+  }
 `;
 
 export const LabelSkills = styled.p`
