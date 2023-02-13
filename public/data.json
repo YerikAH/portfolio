@@ -3,36 +3,36 @@
     "es": {
       "static": {
         "nav": {
-          "home": "",
-          "about": "",
-          "portfolio": "",
-          "language": "",
-          "contact": "",
-          "blog": ""
+          "home": "Inicio",
+          "about": "Acerca de ",
+          "portfolio": "Proyectos",
+          "language": "Idioma",
+          "contact": "Contáctame",
+          "blog": "Blog"
         },
         "section_first": {
-          "headline": "",
-          "button_one": "",
-          "button_two": ""
+          "headline": "Hola, soy desarrollador Front end con React y Flutter",
+          "button_one": "Certificados",
+          "button_two": "Currículo"
         },
         "section_second": {
-          "headline": ""
+          "headline": "Sobre mí"
         },
         "section_third": {
-          "headline": "",
-          "button": ""
+          "headline": "Mis proyectos",
+          "button": "Cargar más…"
         },
         "section_four": {
-          "headline": "",
-          "text": "",
-          "label_one": "",
-          "label_two": "",
-          "label_three": "",
-          "button": ""
+          "headline": "Contáctame",
+          "text": "No dude en comunicarse conmigo si desea más información sobre mi experiencia o si tiene alguna pregunta relacionada con el desarrollo web. Estoy abierto a nuevas oportunidades y estoy seguro de que puedo aportar valor a su empresa con mis habilidades y conocimientos.",
+          "label_one": "Ingresa tu nombre:",
+          "label_two": "Ingresa tu correo electrónico:",
+          "label_three": "Ingresa tu mensaje:",
+          "button": "Enviar mensaje"
         },
         "footer": {
-          "text": "",
-          "text_link": ""
+          "text": "Diseñado y construido por ",
+          "text_link": "Harvey Yerik"
         }
       },
       "dynamic": {
@@ -52,40 +52,39 @@
     "en": {
       "static": {
         "nav": {
-          "home": "",
-          "about": "",
-          "portfolio": "",
-          "language": "",
-          "contact": "",
-          "blog": ""
+          "home": "Home",
+          "about": "About",
+          "portfolio": "Projects",
+          "language": "Language",
+          "contact": "Contact me",
+          "blog": "Blog"
         },
         "section_first": {
-          "headline": "",
-          "button_one": "",
-          "button_two": ""
+          "headline": "Hi, I'm a Front End Developer with React and Flutter",
+          "button_one": "Certificates",
+          "button_two": "Resume"
         },
         "section_second": {
-          "headline": ""
+          "headline": "About"
         },
         "section_third": {
-          "headline": "",
-          "button": ""
+          "headline": "Projects",
+          "button": "Load more..."
         },
         "section_four": {
-          "headline": "",
-          "text": "",
-          "label_one": "",
-          "label_two": "",
-          "label_three": "",
-          "button": ""
+          "headline": "Contact me",
+          "text": "Feel free to contact me if you would like more information about my experience or if you have any questions related to web development. I am open to new opportunities and I am sure that I can add value to your company with my skills and knowledge.",
+          "label_one": "Enter your name:",
+          "label_two": "Enter your email:",
+          "label_three": "Enter your message:",
+          "button": "Send the message"
         },
         "footer": {
-          "text": "",
-          "text_link": ""
+          "text": "Designed and built by ",
+          "text_link": "Harvey Yerik"
         }
       },
       "dynamic": {
-        "description": "",
         "portfolio": [
           {
             "id": "",

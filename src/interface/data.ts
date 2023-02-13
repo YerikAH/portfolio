@@ -16,7 +16,6 @@ export interface En {
 }
 
 export interface Dynamic {
-  description: string;
   portfolio: Portfolio[];
 }
 

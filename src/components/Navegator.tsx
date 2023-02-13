@@ -19,12 +19,9 @@ import ham from "../assets/icon/ham.svg";
 import sun from "../assets/icon/sun.svg";
 import FetchContext from "../context/dataContext";
 import { useContext, useState } from "react";
-import { Welcome } from "../interface/data";
-import { DATA_INITIAL_STATE } from "../constant/dataInitialState";
 function Navegator() {
   const dataContext = useContext(FetchContext);
-  const [data, setData] = useState<Welcome>(DATA_INITIAL_STATE);
-
+  console.log(dataContext);
   return (
     <FetchContext.Provider value={dataContext}>
       <HeaderStyle>
