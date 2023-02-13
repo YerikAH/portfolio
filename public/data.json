@@ -39,12 +39,60 @@
         "description": "Soy un desarrollador Front-end altamente capacitado con experiencia en React y conocimientos en desarrollo móvil con Flutter. Me apasiona crear aplicaciones interactivas y atractivas que brindan una experiencia de usuario única y satisfactoria. Las tecnologías que uso como desarrollador son:",
         "portfolio": [
           {
-            "id": "",
-            "name": "",
-            "description": "",
-            "image_path": "",
-            "link_code": "",
-            "link_preview": ""
+            "id": "1",
+            "name": "Aplicación de productividad",
+            "description": "Esta aplicación de productividad cuenta con una funcionalidad de pomodoro para ayudar a aumentar la eficiencia y productividad. Además, permite la adición de tareas para llevar un registro organizado de las tareas pendientes. La aplicación también cuenta con opciones de configuración para personalizarla según las preferencias del usuario. Este proyecto fue un reto significativo en mi camino de aprendizaje de JavaScript Vanilla y estoy muy orgulloso del resultado logrado.",
+            "image_path": "./images/projects/task_app.png",
+            "link_code": "https://github.com/YerikAH/my-task-app",
+            "link_preview": "https://yerikah.github.io/my-task-app/public/#"
+          },
+          {
+            "id": "2",
+            "name": "Front end mentor challenges",
+            "description": "En este sitio web podrás ver algunas de las soluciones de los desafíos de Frontend Mentor que yo desarrolle, Frontend Mentor es una plataforma en línea que ofrece desafíos prácticos y prácticos de desarrollo web para ayudar a los desarrolladores front-end a mejorar sus habilidades y crear proyectos realistas.",
+            "image_path": "./images/projects/frontend_mentor.png",
+            "link_code": "https://github.com/YerikAH/frond-end-challenge",
+            "link_preview": "https://yerikah.github.io/frond-end-challenge/"
+          },
+          {
+            "id": "3",
+            "name": "Mi antiguo portafolio",
+            "description": "Mi antiguo portafolio, desarrollado con React, Utilicé diversos hooks, como useEffect y useState, y también tuve la oportunidad de utilizar useContext, lo que me ayudó a comprender de manera más clara el concepto de estados en React. Además, gracias a esta experiencia, fui capaz de aplicar animaciones con React de manera efectiva.",
+            "image_path": "./images/projects/portfolio.png",
+            "link_code": "https://github.com/YerikAH/briefcase",
+            "link_preview": "https://yerikah.github.io/briefcase/"
+          },
+          {
+            "id": "4",
+            "name": "Prevent Nature",
+            "description": "Tienda virtual Prevent Nature, trata acerca ventas de productos naturales, además contiene un blog. Utilice un enfoque de consumo de datos dinámicos mediante el uso de peticiones AJAX para obtener y visualizar los productos y artículos del blog a partir de un archivo JSON. El proyecto en cuestión me permitió adquirir una gran cantidad de conocimientos y habilidades.",
+            "image_path": "./images/projects/prevent_nature.png",
+            "link_code": "https://github.com/YerikAH/prevent-nature",
+            "link_preview": "https://yerikah.github.io/prevent-nature/public/index.html"
+          },
+          {
+            "id": "5",
+            "name": "Aplicación de mecanografía",
+            "description": "Esta es una aplicación avanzada de mecanografía que te permite mejorar tus habilidades de escritura. Con ella, puedes personalizar el tiempo de la prueba y el número de palabras de prueba para adaptarse a tus necesidades. Al final de cada prueba, se te proporcionarán tus resultados detallados, incluyendo las palabras escritas correctamente y incorrectamente, así como también tu velocidad de escritura en palabras por minuto.",
+            "image_path": "./images/projects/typebreak.png",
+            "link_code": "https://github.com/YerikAH/type-break-app",
+            "link_preview": "https://yerikah.github.io/type-break-app/"
+          },
+          {
+            "id": "6",
+            "name": "Especificador de horarios",
+            "description": "Esta aplicación es una solución integral para mejorar la productividad. Te permite programar tareas y especificar horarios para su ejecución, con un temporizador que se activa automáticamente cuando llega el momento programado. Además, la aplicación mantiene un registro detallado de tus sesiones de trabajo, permitiéndote ver tu progreso a través de gráficos y estadísticas visuales. Con esta herramienta, podrás optimizar tu tiempo y aumentar tu rendimiento en el trabajo.",
+            "image_path": "./images/projects/register_work.png",
+            "link_code": "https://github.com/YerikAH/register-work",
+            "link_preview": "https://yerikah.github.io/register-work/public/"
+          },
+          {
+            "id": "7",
+            "name": "Especificador de horarios",
+            "description": "Esta aplicación es una solución integral para mejorar la productividad. Te permite programar tareas y especificar horarios para su ejecución, con un temporizador que se activa automáticamente cuando llega el momento programado. Además, la aplicación mantiene un registro detallado de tus sesiones de trabajo, permitiéndote ver tu progreso a través de gráficos y estadísticas visuales. Con esta herramienta, podrás optimizar tu tiempo y aumentar tu rendimiento en el trabajo.",
+            "image_path": "./images/projects/register_work.png",
+            "link_code": "https://github.com/YerikAH/register-work",
+            "link_preview": "https://yerikah.github.io/register-work/public/"
           }
         ]
       }
@@ -88,7 +136,7 @@
         "description": "I'm a highly-skilled front-end developer with a background in React and a background in mobile development with Flutter. I am passionate about creating engaging and interactive apps that provide a unique and satisfying user experience. The technologies I use as a developer are:",
         "portfolio": [
           {
-            "id": "",
+            "id": "1",
             "name": "",
             "description": "",
             "image_path": "",
