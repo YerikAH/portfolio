@@ -11,3 +11,4 @@ export interface ContextInterface {
   skills: string[];
   handle_language: () => void;
 }
+export interface DataProps {}

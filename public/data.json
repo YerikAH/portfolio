@@ -36,7 +36,7 @@
         }
       },
       "dynamic": {
-        "description": "",
+        "description": "Soy un desarrollador Front-end altamente capacitado con experiencia en React y conocimientos en desarrollo móvil con Flutter. Me apasiona crear aplicaciones interactivas y atractivas que brindan una experiencia de usuario única y satisfactoria. Las tecnologías que uso como desarrollador son:",
         "portfolio": [
           {
             "id": "",
@@ -85,7 +85,7 @@
         }
       },
       "dynamic": {
-        "description": "",
+        "description": "I'm a highly-skilled front-end developer with a background in React and a background in mobile development with Flutter. I am passionate about creating engaging and interactive apps that provide a unique and satisfying user experience. The technologies I use as a developer are:",
         "portfolio": [
           {
             "id": "",
@@ -100,7 +100,7 @@
     }
   },
 
-  "photo_url": "",
+  "photo_url": "./images/photo-harvey.png",
   "skills": [
     "JavaScript",
     "TypeScript",
