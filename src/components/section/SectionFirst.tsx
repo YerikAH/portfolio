@@ -4,11 +4,11 @@ import {
   BoxGridOne,
   BoxGridTwo,
   SectionFirstStyles,
-} from "../styles/section_first";
+} from "../../styles/section_first";
 
 //components
-import IconsPrincipal from "./section/first/IconsPrincipal";
-import InfoPrincipal from "./section/first/InfoPrincipal";
+import IconsPrincipal from "./first/IconsPrincipal";
+import InfoPrincipal from "./first/InfoPrincipal";
 
 function SectionFirst() {
   return (

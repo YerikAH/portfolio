@@ -1,3 +1,6 @@
+// hook
+import { useContext } from "react";
+
 // styles
 import {
   BoxGrid,
@@ -6,11 +9,12 @@ import {
   CircleAvatar,
   TextBodyOne,
 } from "../../../styles/section_second";
+
+// context
 import FetchContext from "../../../context/dataContext";
-import { useContext } from "react";
+
 export default function InfoComponent() {
   const dataContext = useContext(FetchContext);
-
   return (
     <BoxGrid>
       <BoxGridOne>

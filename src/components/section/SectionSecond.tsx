@@ -3,24 +3,19 @@ import { useContext } from "react";
 
 // styles
 import {
-  BoxGrid,
-  BoxGridOne,
   SectionScondStyles,
-  BoxGridTwo,
   TitleBox,
   IconImage,
   SubtitleOne,
-  TextBodyOne,
-  CircleAvatar,
-} from "../styles/section_second";
+} from "../../styles/section_second";
 // images
-import aboutIcon from "../assets/icon/icon-about.svg";
-import photo from "../assets/static/photo-harvey.png";
-
+import aboutIcon from "../../assets/icon/icon-about.svg";
 // components
-import ListLabel from "./section/second/ListLabel";
-import FetchContext from "../context/dataContext";
-import InfoComponent from "./section/second/InfoComponent";
+import ListLabel from "./second/ListLabel";
+import InfoComponent from "./second/InfoComponent";
+
+// hook
+import FetchContext from "../../context/dataContext";
 
 function SectionSecond() {
   const dataContext = useContext(FetchContext);

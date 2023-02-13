@@ -1,6 +1,6 @@
 import { MainStyles } from "../styles/main_styles";
-import SectionFirst from "./SectionFirst";
-import SectionSecond from "./SectionSecond";
+import SectionFirst from "./section/SectionFirst";
+import SectionSecond from "./section/SectionSecond";
 
 function Main() {
   return (
