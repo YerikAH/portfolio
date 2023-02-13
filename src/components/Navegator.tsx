@@ -22,6 +22,10 @@ import { useContext, useState } from "react";
 function Navegator() {
   const dataContext = useContext(FetchContext);
   console.log(dataContext);
+
+  function handleClik() {
+    dataContext.handle_language();
+  }
   return (
     <FetchContext.Provider value={dataContext}>
       <HeaderStyle>
@@ -34,23 +38,39 @@ function Navegator() {
             </ListImageBox>
 
             <ListPoint>
-              <ListLink className="true">Home</ListLink>
+              <ListLink className="true">
+                {dataContext.language_static.nav.home}
+              </ListLink>
             </ListPoint>
 
             <ListPoint>
-              <ListLink className="false">Sobre mí</ListLink>
+              <ListLink className="false">
+                {dataContext.language_static.nav.about}
+              </ListLink>
             </ListPoint>
 
             <ListPoint>
-              <ListLink className="false">Portafolio</ListLink>
+              <ListLink className="false">
+                {dataContext.language_static.nav.portfolio}
+              </ListLink>
             </ListPoint>
 
             <ListPoint>
-              <ListLink className="false">Contactame</ListLink>
+              <ListLink className="false">
+                {dataContext.language_static.nav.contact}
+              </ListLink>
             </ListPoint>
 
             <ListPoint>
-              <ListLink className="false">Blog</ListLink>
+              <ListLink className="false" onClick={handleClik}>
+                {dataContext.language_static.nav.language}
+              </ListLink>
+            </ListPoint>
+
+            <ListPoint>
+              <ListLink className="false">
+                {dataContext.language_static.nav.blog}
+              </ListLink>
             </ListPoint>
           </ListDesorder>
           <ListDesorder>
