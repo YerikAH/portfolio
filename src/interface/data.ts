@@ -6,7 +6,7 @@ export interface Welcome {
 }
 
 export interface Language {
-  es: En;
+  [key: string]: En;
   en: En;
 }
 
