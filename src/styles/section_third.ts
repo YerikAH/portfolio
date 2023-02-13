@@ -1,5 +1,15 @@
 import styled from "styled-components";
 
+export const SectionThirdStyles = styled.section`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 5rem;
+  padding: 5rem 0;
+`;
+
 export const TitleBox = styled.div`
   display: grid;
   place-items: center;

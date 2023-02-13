@@ -2,7 +2,12 @@
 import { useContext } from "react";
 
 //styles
-import { IconImage, SubtitleOne, TitleBox } from "../../styles/section_third";
+import {
+  IconImage,
+  SectionThirdStyles,
+  SubtitleOne,
+  TitleBox,
+} from "../../styles/section_third";
 
 // images
 import portfolioIcon from "../../assets/icon/icon-job.svg";
@@ -14,12 +19,14 @@ export default function SectionThird() {
   const dataContext = useContext(FetchContext);
   return (
     <FetchContext.Provider value={dataContext}>
-      <TitleBox>
-        <IconImage src={portfolioIcon} />
-        <SubtitleOne>
-          {dataContext.language_static.section_third.headline}
-        </SubtitleOne>
-      </TitleBox>
+      <SectionThirdStyles>
+        <TitleBox>
+          <IconImage src={portfolioIcon} />
+          <SubtitleOne>
+            {dataContext.language_static.section_third.headline}
+          </SubtitleOne>
+        </TitleBox>
+      </SectionThirdStyles>
     </FetchContext.Provider>
   );
 }
