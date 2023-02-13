@@ -6,6 +6,7 @@ import { useFetch } from "../hook/useFetch";
 /* interface and init state */
 import { ContextInterface, ContextProps } from "../interface/props";
 import { CONTEXT_INITIAL_STATE } from "../constant/contextInitialState";
+import { Language } from "../enum/LanguageEnum";
 
 const DataContext = createContext<ContextInterface>(CONTEXT_INITIAL_STATE);
 
@@ -15,15 +16,11 @@ const DataProvider = ({ children }: ContextProps) => {
   const [dataValueAll, setDataValueAll] = useState<ContextInterface>(
     CONTEXT_INITIAL_STATE
   );
-  const [language, setLanguage] = useState<string>("es");
+  const [language, setLanguage] = useState<Language>(Language.es);
 
   function handleLanguage() {
     if (dataJson !== null) {
-      if (language === "es") {
-        setLanguage("en");
-      } else {
-        setLanguage("es");
-      }
+      setLanguage(language === Language.es ? Language.en : Language.es);
     }
   }
 
@@ -39,35 +36,21 @@ const DataProvider = ({ children }: ContextProps) => {
       };
       setDataValueAll(dataValue);
     }
-    console.log("Me");
   }, [load]);
 
   useEffect(() => {
     if (dataJson !== null) {
-      const lang = language === "es" ? "es" : "en";
-      if (language === "es") {
-        const dataValue: ContextInterface = {
-          language_static: dataJson.language["en"].static,
-          language_dynamic: dataJson.language["en"].dynamic,
-          photo: dataJson.photo_url,
-          social_media: dataJson.social_media,
-          skills: dataJson.skills,
-          handle_language: handleLanguage,
-        };
-        setDataValueAll(dataValue);
-      } else {
-        const dataValue: ContextInterface = {
-          language_static: dataJson.language["es"].static,
-          language_dynamic: dataJson.language["es"].dynamic,
-          photo: dataJson.photo_url,
-          social_media: dataJson.social_media,
-          skills: dataJson.skills,
-          handle_language: handleLanguage,
-        };
-        setDataValueAll(dataValue);
-      }
+      const dataValue: ContextInterface = {
+        language_static: dataJson.language[language].static,
+        language_dynamic: dataJson.language[language].dynamic,
+        photo: dataJson.photo_url,
+        social_media: dataJson.social_media,
+        skills: dataJson.skills,
+        handle_language: handleLanguage,
+      };
+      setDataValueAll(dataValue);
     }
-  }, [language]);
+  }, [language, dataJson]);
 
   return (
     <DataContext.Provider value={dataValueAll}>{children}</DataContext.Provider>
