@@ -38,6 +38,7 @@ export const DATA_INITIAL_STATE: Welcome = {
         },
       },
       dynamic: {
+        description: "",
         portfolio: [
           {
             id: "",
@@ -86,6 +87,7 @@ export const DATA_INITIAL_STATE: Welcome = {
         },
       },
       dynamic: {
+        description: "",
         portfolio: [
           {
             id: "",

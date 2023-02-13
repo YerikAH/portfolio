@@ -18,11 +18,9 @@ import logo from "../assets/icon/logo.svg";
 import ham from "../assets/icon/ham.svg";
 import sun from "../assets/icon/sun.svg";
 import FetchContext from "../context/dataContext";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 function Navegator() {
   const dataContext = useContext(FetchContext);
-  console.log(dataContext);
-
   function handleClik() {
     dataContext.handle_language();
   }

@@ -80,11 +80,12 @@
           "button": "Send the message"
         },
         "footer": {
-          "text": "Designed and built by ",
+          "text": "",
           "text_link": "Harvey Yerik"
         }
       },
       "dynamic": {
+        "description": "",
         "portfolio": [
           {
             "id": "",
