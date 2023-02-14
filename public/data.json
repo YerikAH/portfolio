@@ -104,9 +104,9 @@
           },
           {
             "id": "9",
-            "name": "Aplicación de tareas con una base de datos",
-            "description": "Esta aplicación de gestión de tareas brinda la posibilidad de agregar, eliminar y actualizar tareas en una base de datos segura y accesible. Para disfrutar de todas sus funciones, es necesario iniciar sesión y registrarse en la plataforma, lo que permitirá mantener un registro detallado y organizado de las tareas realizadas. Con esta herramienta, optimice su productividad y aumente la eficiencia en la gestión de sus tareas cotidianas.",
-            "image_path": "./images/projects/flask.png",
+            "name": "Aplicación de votación",
+            "description": "Esta aplicación ha sido diseñada para votar en encuestas. Por medio de una interfaz intuitiva y fácil de usar, los usuarios pueden participar en encuestas relevantes. Al utilizar la plataforma Django como base, esta aplicación garantiza una gestión segura y eficiente de los datos de los usuarios, permitiendo un proceso de votación preciso y confiable.",
+            "image_path": "./images/projects/django.png",
             "link_code": "https://github.com/YerikAH/todoyou-fullstack",
             "link_preview": "https://github.com/YerikAH/todoyou-fullstack#readme"
           }
