@@ -153,11 +153,19 @@
         "portfolio": [
           {
             "id": "1",
-            "name": "",
-            "description": "",
-            "image_path": "",
-            "link_code": "",
-            "link_preview": ""
+            "name": "My task app",
+            "description": "This productivity app features pomodoro functionality to help increase efficiency and productivity. In addition, it allows the addition of tasks to keep an organized record of pending tasks. The application also has configuration options to customize it according to the user's preferences. This project was a significant challenge in my path of learning Vanilla JavaScript and I am very proud of the result achieved.",
+            "image_path": "./images/projects/task_app.png",
+            "link_code": "https://github.com/YerikAH/my-task-app",
+            "link_preview": "https://yerikah.github.io/my-task-app/public/#"
+          },
+          {
+            "id": "2",
+            "name": "Front end mentor challenges",
+            "description": "On this website you will be able to see some of the Frontend Mentor Challenge Solutions that I develop, Frontend Mentor is an online platform that offers hands-on and hands-on web development challenges to help front-end developers improve their skills and create realistic projects.",
+            "image_path": "./images/projects/frontend_mentor.png",
+            "link_code": "https://github.com/YerikAH/frond-end-challenge",
+            "link_preview": "https://yerikah.github.io/frond-end-challenge/"
           }
         ]
       }
