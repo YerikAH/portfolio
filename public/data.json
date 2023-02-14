@@ -88,11 +88,27 @@
           },
           {
             "id": "7",
-            "name": "Especificador de horarios",
-            "description": "Esta aplicación es una solución integral para mejorar la productividad. Te permite programar tareas y especificar horarios para su ejecución, con un temporizador que se activa automáticamente cuando llega el momento programado. Además, la aplicación mantiene un registro detallado de tus sesiones de trabajo, permitiéndote ver tu progreso a través de gráficos y estadísticas visuales. Con esta herramienta, podrás optimizar tu tiempo y aumentar tu rendimiento en el trabajo.",
-            "image_path": "./images/projects/register_work.png",
-            "link_code": "https://github.com/YerikAH/register-work",
-            "link_preview": "https://yerikah.github.io/register-work/public/"
+            "name": "Pokedex",
+            "description": "Esta aplicación ofrece una experiencia única en la búsqueda y visualización de Pokémon. Con ella, puedes acceder a información detallada sobre las estadísticas y descripciones de cada Pokémon de manera fácil y rápida. Desarrollada con React, esta aplicación te permite explorar y conocer mejor el mundo de los Pokémon. Además, a pesar de ser uno de mis primeros proyectos con React, fue un paso importante en mi camino para mejorar mis habilidades en el desarrollo web y estoy emocionado por continuar mejorando mi código en el futuro.",
+            "image_path": "./images/projects/pokemon.png",
+            "link_code": "https://github.com/YerikAH/pokemon-app",
+            "link_preview": "https://yerikah.github.io/pokemon-app/"
+          },
+          {
+            "id": "8",
+            "name": "Aplicación de tareas con una base de datos",
+            "description": "Esta aplicación de gestión de tareas brinda la posibilidad de agregar, eliminar y actualizar tareas en una base de datos segura y accesible. Para disfrutar de todas sus funciones, es necesario iniciar sesión y registrarse en la plataforma, lo que permitirá mantener un registro detallado y organizado de las tareas realizadas. Con esta herramienta, optimice su productividad y aumente la eficiencia en la gestión de sus tareas cotidianas.",
+            "image_path": "./images/projects/flask.png",
+            "link_code": "https://github.com/YerikAH/todoyou-fullstack",
+            "link_preview": "https://github.com/YerikAH/todoyou-fullstack#readme"
+          },
+          {
+            "id": "9",
+            "name": "Aplicación de tareas con una base de datos",
+            "description": "Esta aplicación de gestión de tareas brinda la posibilidad de agregar, eliminar y actualizar tareas en una base de datos segura y accesible. Para disfrutar de todas sus funciones, es necesario iniciar sesión y registrarse en la plataforma, lo que permitirá mantener un registro detallado y organizado de las tareas realizadas. Con esta herramienta, optimice su productividad y aumente la eficiencia en la gestión de sus tareas cotidianas.",
+            "image_path": "./images/projects/flask.png",
+            "link_code": "https://github.com/YerikAH/todoyou-fullstack",
+            "link_preview": "https://github.com/YerikAH/todoyou-fullstack#readme"
           }
         ]
       }
