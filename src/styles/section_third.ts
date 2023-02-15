@@ -44,6 +44,9 @@ export const DecorationBox = styled.div`
   backdrop-filter: blur(12.5px);
   border-radius: 15px;
   position: relative;
+  max-width: 425px;
+  width: 100%;
+  height: 275px;
 `;
 
 export const AssetImage = styled.img`
@@ -53,6 +56,9 @@ export const AssetImage = styled.img`
   width: 100%;
   height: 100%;
   border-radius: 15px;
+  bottom: -15px;
+  right: -15px;
+  filter: drop-shadow(0px 4px 10px rgba(33, 33, 33, 0.08));
 `;
 
 export const BoxInfo = styled.div`
