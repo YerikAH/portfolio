@@ -144,7 +144,7 @@
           "button": "Send the message"
         },
         "footer": {
-          "text": "",
+          "text": "Designed and built by",
           "text_link": "Harvey Yerik"
         }
       },
