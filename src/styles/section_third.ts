@@ -20,3 +20,7 @@ export const SubtitleOne = styled.h2`
   color: var(--black);
   margin-top: 1.25rem;
 `;
+
+export const BoxGrid = styled.div``;
+
+export const ProjectStyle = styled.div``;

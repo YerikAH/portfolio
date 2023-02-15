@@ -3,6 +3,7 @@ import { useContext } from "react";
 
 //styles
 import {
+  BoxGrid,
   IconImage,
   SectionThirdStyles,
   SubtitleOne,
@@ -14,6 +15,7 @@ import portfolioIcon from "../../assets/icon/icon-job.svg";
 
 // context
 import FetchContext from "../../context/dataContext";
+import ProjectsComponent from "./third/ProjectsComponent";
 
 export default function SectionThird() {
   const dataContext = useContext(FetchContext);
@@ -26,6 +28,11 @@ export default function SectionThird() {
             {dataContext.language_static.section_third.headline}
           </SubtitleOne>
         </TitleBox>
+        <BoxGrid>
+          {dataContext.language_dynamic.portfolio.map((item, i) => (
+            <ProjectsComponent />
+          ))}
+        </BoxGrid>
       </SectionThirdStyles>
     </FetchContext.Provider>
   );
