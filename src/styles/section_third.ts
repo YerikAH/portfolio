@@ -86,11 +86,11 @@ export const BoxButtons = styled.div`
   width: 100%;
 `;
 
-export const TextButton = styled.button`
+export const TextButton = styled.a`
   border-radius: 5px;
   color: var(--black);
   font: normal normal 400 10px/10px var(--font-lato);
-  border: none;
-  background: transparent;
+  padding: 0.5rem;
+  display: block;
 `;
 export const ImageIcon = styled.img``;

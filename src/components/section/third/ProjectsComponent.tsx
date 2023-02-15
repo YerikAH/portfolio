@@ -26,15 +26,15 @@ export default function ProjectsComponent({ data }: PortfolioProps) {
         <TextProject>{data.description}</TextProject>
       </BoxInfo>
       <BoxButtons>
-        <TextButton>
+        <TextButton href={data.link_preview}>
           <ImageIcon src={iconLink} />
           Ver aplicación
         </TextButton>
-        <TextButton>
+        <TextButton href={data.link_code}>
           <ImageIcon src={iconGitHub} />
           Ver codigo
         </TextButton>
-        <TextButton>
+        <TextButton href="">
           <ImageIcon src={iconInfo} />
           Información
         </TextButton>
