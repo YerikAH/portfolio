@@ -166,6 +166,62 @@
             "image_path": "./images/projects/frontend_mentor.png",
             "link_code": "https://github.com/YerikAH/frond-end-challenge",
             "link_preview": "https://yerikah.github.io/frond-end-challenge/"
+          },
+          {
+            "id": "3",
+            "name": "My old portfolio",
+            "description": "My old portfolio, developed with React, I used various hooks, such as useEffect and useState, and I also had the opportunity to use useContext, which helped me understand the concept of states in React more clearly. Also, thanks to this experience, I was able to apply animations with React effectively.",
+            "image_path": "./images/projects/portfolio.png",
+            "link_code": "https://github.com/YerikAH/briefcase",
+            "link_preview": "https://yerikah.github.io/briefcase/"
+          },
+          {
+            "id": "4",
+            "name": "Prevent Nature",
+            "description": "Prevent Nature virtual store, deals with sales of natural products, also contains a blog. Use a dynamic data consumption approach by using AJAX requests to get and display products and blog articles from a JSON file. The project in question allowed me to acquire a great deal of knowledge and skills.",
+            "image_path": "./images/projects/prevent_nature.png",
+            "link_code": "https://github.com/YerikAH/prevent-nature",
+            "link_preview": "https://yerikah.github.io/prevent-nature/public/index.html"
+          },
+          {
+            "id": "5",
+            "name": "Typebreak",
+            "description": "This is an advanced typing app that allows you to improve your typing skills. With it, you can customize the test time and the number of test words to suit your needs. At the end of each test, you will be provided with your detailed results, including correctly and incorrectly spelled words, as well as your typing speed in words per minute.",
+            "image_path": "./images/projects/typebreak.png",
+            "link_code": "https://github.com/YerikAH/type-break-app",
+            "link_preview": "https://yerikah.github.io/type-break-app/"
+          },
+          {
+            "id": "6",
+            "name": "Register work",
+            "description": "This application is a comprehensive solution to improve productivity. It allows you to schedule tasks and specify times for their execution, with a timer that automatically activates when the scheduled time arrives. In addition, the application keeps a detailed record of your work sessions, allowing you to see your progress through graphs and visual statistics. With this tool, you will be able to optimize your time and increase your performance at work.",
+            "image_path": "./images/projects/register_work.png",
+            "link_code": "https://github.com/YerikAH/register-work",
+            "link_preview": "https://yerikah.github.io/register-work/public/"
+          },
+          {
+            "id": "7",
+            "name": "Pokedex",
+            "description": "This application offers a unique experience in finding and viewing Pokémon. With it, you can access detailed information about the statistics and descriptions of each Pokémon easily and quickly. Developed with React, this application allows you to explore and learn more about the world of Pokémon. Also, despite being one of my first projects with React, it was an important step on my way to improve my web development skills and I'm excited to continue improving my code in the future.",
+            "image_path": "./images/projects/pokemon.png",
+            "link_code": "https://github.com/YerikAH/pokemon-app",
+            "link_preview": "https://yerikah.github.io/pokemon-app/"
+          },
+          {
+            "id": "8",
+            "name": "Application of tasks with a database",
+            "description": "This task management application provides the ability to add, delete and update tasks in a secure and accessible database. To enjoy all its functions, it is necessary to log in and register on the platform, which will allow you to keep a detailed and organized record of the tasks performed. With this tool, optimize your productivity and increase efficiency in managing your daily tasks.",
+            "image_path": "./images/projects/flask.png",
+            "link_code": "https://github.com/YerikAH/todoyou-fullstack",
+            "link_preview": "https://github.com/YerikAH/todoyou-fullstack#readme"
+          },
+          {
+            "id": "9",
+            "name": "Voting App",
+            "description": "This application has been designed to vote in polls. Through an intuitive and easy-to-use interface, users can participate in relevant surveys. By using the Django platform as a foundation, this application ensures secure and efficient management of user data, enabling an accurate and reliable voting process.",
+            "image_path": "./images/projects/django.png",
+            "link_code": "https://github.com/YerikAH/todoyou-fullstack",
+            "link_preview": "https://github.com/YerikAH/todoyou-fullstack#readme"
           }
         ]
       }
@@ -199,7 +255,7 @@
   ],
   "social_media": {
     "linkedin": {
-      "user": "",
+      "user": "yerik05vh@gmail.com",
       "link": ""
     },
     "github": {
