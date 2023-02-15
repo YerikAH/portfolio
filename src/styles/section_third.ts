@@ -62,7 +62,7 @@ export const AssetImage = styled.img`
 `;
 
 export const BoxInfo = styled.div`
-  margin-top: 18px;
+  margin-top: 24px;
 `;
 
 export const TitleProject = styled.h4`
@@ -93,3 +93,4 @@ export const TextButton = styled.button`
   border: none;
   background: transparent;
 `;
+export const ImageIcon = styled.img``;
