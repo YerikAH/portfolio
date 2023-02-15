@@ -29,8 +29,8 @@ export default function SectionThird() {
           </SubtitleOne>
         </TitleBox>
         <BoxGrid>
-          {dataContext.language_dynamic.portfolio.map((item, i) => (
-            <ProjectsComponent />
+          {dataContext.language_dynamic.portfolio.map((item) => (
+            <ProjectsComponent data={item} />
           ))}
         </BoxGrid>
       </SectionThirdStyles>

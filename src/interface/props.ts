@@ -1,4 +1,4 @@
-import { Dynamic, SocialMedia, Static } from "./data";
+import { Dynamic, Portfolio, SocialMedia, Static } from "./data";
 
 export interface ContextProps {
   children: JSX.Element;
@@ -11,4 +11,6 @@ export interface ContextInterface {
   skills: string[];
   handle_language: () => void;
 }
-export interface DataProps {}
+export interface PortfolioProps {
+  data: Portfolio;
+}
