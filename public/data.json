@@ -253,26 +253,30 @@
     "Git",
     "GitHub"
   ],
-  "social_media": {
-    "linkedin": {
+  "social_media": [
+    {
+      "name":"linkedin",
       "icon":"./images/icon/linkedin-link.svg",
       "user": "Harvey Yerik Vasquez Huaranga",
       "link": "https://www.linkedin.com/in/harvey-yerik-vasquez-huaranga-802218228/"
     },
-    "github": {
+     {
+      "name": "github",
       "icon":"./images/icon/github-link.svg",
       "user": "YerikAH",
       "link": "https://github.com/YerikAH"
     },
-    "twitter": {
+    {
+      "name": "twitter",
       "icon":"./images/icon/twitter-link.svg",
       "user": "@yerikhar",
       "link": "https://twitter.com/yerikhar"
     },
-    "email": {
+    {
+      "name": "email",
       "icon":"./images/icon/email-link.svg",
       "user": "yerik05vh@gmail.com",
       "link": "yerik05vh@gmail.com"
     }
-  }
+  ]
 }

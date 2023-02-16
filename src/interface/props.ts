@@ -7,7 +7,7 @@ export interface ContextInterface {
   language_static: Static;
   language_dynamic: Dynamic;
   photo: string;
-  social_media: SocialMedia;
+  social_media: SocialMedia[];
   skills: string[];
   handle_language: () => void;
 }

@@ -127,26 +127,30 @@ export const DATA_INITIAL_STATE: Welcome = {
     "Git",
     "GitHub",
   ],
-  social_media: {
-    linkedin: {
+  social_media: [
+    {
+      name:"",
       icon:"",
       user: "",
       link: "",
     },
-    github: {
+    {
+      name:"",
       icon:"",
       user: "",
       link: "",
     },
-    twitter: {
+    {
+      name:"",
       icon:"",
       user: "",
       link: "",
     },
-    email: {
+    {
+      name:"",
       icon:"",
       user: "",
       link: "",
     },
-  },
+  ],
 };

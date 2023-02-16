@@ -34,7 +34,7 @@ export default function SectionFourth() {
 
           </BoxGridOne>
           <BoxGridTwo>
-            
+            {dataContext.social_media.map(item)}
 
           </BoxGridTwo>
         </BoxGrid>

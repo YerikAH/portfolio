@@ -2,7 +2,7 @@ export interface Welcome {
   language: Language;
   photo_url: string;
   skills: string[];
-  social_media: SocialMedia;
+  social_media: SocialMedia[];
 }
 
 export interface Language {
@@ -76,14 +76,10 @@ export interface SectionThird {
   button: string;
 }
 
-export interface SocialMedia {
-  linkedin: Email;
-  github: Email;
-  twitter: Email;
-  email: Email;
-}
 
-export interface Email {
+
+export interface SocialMedia {
+  name: string;
   icon: string;
   user: string;
   link: string;
