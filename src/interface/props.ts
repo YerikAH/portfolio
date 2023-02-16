@@ -14,3 +14,6 @@ export interface ContextInterface {
 export interface PortfolioProps {
   data: Portfolio;
 }
+export interface SocialMediaProps {
+  data: SocialMedia;
+}

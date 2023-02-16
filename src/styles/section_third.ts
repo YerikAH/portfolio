@@ -40,7 +40,6 @@ export const ProjectStyle = styled.div`
   position: relative;
   height: 100%;
 
-
   &:hover {
     .hoverBox {
       width: 110%;
@@ -71,9 +70,7 @@ export const ProjectStyle = styled.div`
       }
     }
   }
-  
 `;
-
 
 export const HoverBox = styled.div`
   position: absolute;
@@ -108,6 +105,7 @@ export const LinkImage = styled.a`
     margin-top: 2.5rem;
   }
 `;
+
 export const AssetImage = styled.img`
   border-radius: 15px;
   width: 100%;
@@ -174,18 +172,18 @@ export const ImageIcon = styled.img``;
 
 export const TextButtonStroke = styled.button`
   margin-top: 4rem;
-  color:var(--blue);
+  color: var(--blue);
   font: normal normal 700 0.8rem/0.7rem var(--font-lato);
   background-color: transparent;
   border: 1px solid var(--blue);
   padding: 0.8rem;
   border-radius: 0.8rem;
-  transition: .3s;
-  @media (min-width:720px){
+  transition: 0.3s;
+  @media (min-width: 720px) {
     font: normal normal 600 1rem/0.9rem var(--font-lato);
     padding: 0.8rem 2rem;
   }
-  &:hover{
+  &:hover {
     background-color: var(--blue);
     color: var(--white);
   }

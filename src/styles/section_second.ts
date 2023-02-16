@@ -36,11 +36,13 @@ export const BoxGridOne = styled.div`
 `;
 export const BoxGridTwo = styled.div`
   display: grid;
-  height: 100%;
-  width: 100%;
+  height: 0%;
+  width: 0%;
   place-items: center;
   @media (min-width: 720px) {
     grid-area: box_two;
+    height: 100%;
+    width: 100%;
   }
 `;
 
@@ -69,11 +71,12 @@ export const CircleAvatar = styled.img`
   max-width: 7.8125rem;
   max-height: 7.8125rem;
   width: 100%;
-  height: 100%;
+  height: 0%;
   opacity: 0;
   visibility: hidden;
   @media (min-width: 720px) {
     opacity: 1;
+    height: 100%;
     visibility: visible;
   }
 `;
