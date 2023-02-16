@@ -46,6 +46,8 @@ export const BoxGridTwo = styled.div`
   height: 100%;
   width: 100%;
   place-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
   @media (min-width: 720px) {
     grid-area: box_two;
   }
@@ -57,7 +59,7 @@ export const TitleBox = styled.div`
 `;
 export const IconImage = styled.img``;
 export const SubtitleOne = styled.h2`
-  font: normal normal 700 1.5rem/1.5rem var(--font-lato);
+  font: normal normal 600 1.5rem/1.5rem var(--font-lato);
   color: var(--white);
   margin-top: 1.25rem;
 `;
@@ -100,4 +102,35 @@ export const TextAreaStyles = styled.textarea`
   width: 100%;
   outline: none;
 `;
-export const ButtonSubmit = styled.button``;
+export const ButtonSubmit = styled.button`
+  display: flex;
+  background-color: var(--white);
+  padding: 0.5rem;
+  color: var(--white);
+  outline: none;
+  font: normal normal 500 1rem/1.2rem var(--font-lato);
+`;
+
+export const ButtonIcon = styled.img``;
+
+export const ListTileStyles = styled.div`
+  display: grid;
+  place-items: center;
+  width: 100%;
+`;
+export const ListTileBox = styled.div`
+  display: grid;
+  place-items: center;
+`;
+export const ListTileImage = styled.img``;
+export const ListTileTitle = styled.h4`
+  font: normal normal 600 1rem/1.2rem var(--font-lato);
+  color: var(--white);
+  text-transform: capitalize;
+`;
+export const ListTileLink = styled.a`
+  margin-top: 0.3rem;
+  font: normal normal 400 0.8rem/1.2rem var(--font-lato);
+  color: var(--white);
+  opacity: 0.7;
+`;
