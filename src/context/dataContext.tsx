@@ -17,12 +17,13 @@ const DataProvider = ({ children }: ContextProps) => {
     CONTEXT_INITIAL_STATE
   );
   const [language, setLanguage] = useState<Language>(Language.es);
-
   function handleLanguage() {
     if (dataJson !== null) {
       setLanguage(language === Language.es ? Language.en : Language.es);
     }
   }
+  
+
 
   useEffect(() => {
     if (dataJson !== null) {

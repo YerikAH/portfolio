@@ -29,7 +29,6 @@ export const BoxGrid = styled.div`
   gap: 3rem;
   @media (min-width: 720px) {
     grid-template-columns: repeat(2, 45%);
-    gap: 5%;
     width: 100%;
     margin: 5rem auto 0 auto;
   }
@@ -39,7 +38,7 @@ export const ProjectStyle = styled.div`
   display: grid;
   place-items: center;
   position: relative;
-
+  height: 100%;
 
 
   &:hover {
@@ -75,7 +74,6 @@ export const ProjectStyle = styled.div`
   
 `;
 
-// no variables css and no rem
 
 export const HoverBox = styled.div`
   position: absolute;
@@ -169,7 +167,26 @@ export const TextButton = styled.a`
   gap: 0.5rem;
   transition: 0.3s;
   &:hover {
-    background-color: #0001;
+    background-color: var(--black-10);
   }
 `;
 export const ImageIcon = styled.img``;
+
+export const TextButtonStroke = styled.button`
+  margin-top: 4rem;
+  color:var(--blue);
+  font: normal normal 700 0.8rem/0.7rem var(--font-lato);
+  background-color: transparent;
+  border: 1px solid var(--blue);
+  padding: 0.8rem;
+  border-radius: 0.8rem;
+  transition: .3s;
+  @media (min-width:720px){
+    font: normal normal 600 1rem/0.9rem var(--font-lato);
+    padding: 0.8rem 2rem;
+  }
+  &:hover{
+    background-color: var(--blue);
+    color: var(--white);
+  }
+`;

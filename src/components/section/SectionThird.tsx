@@ -1,5 +1,5 @@
 // hook
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 
 //styles
 import {
@@ -7,6 +7,7 @@ import {
   IconImage,
   SectionThirdStyles,
   SubtitleOne,
+  TextButtonStroke,
   TitleBox,
 } from "../../styles/section_third";
 
@@ -19,6 +20,22 @@ import ProjectsComponent from "./third/ProjectsComponent";
 
 export default function SectionThird() {
   const dataContext = useContext(FetchContext);
+  const [offset, setOffset] = useState(6);
+  const [thereProjects, setThereProjects] = useState(true);
+
+
+  useEffect(() => {
+    const numberProjects = dataContext.language_dynamic.portfolio.length
+    console.log(offset, numberProjects)
+    console.log(offset >= numberProjects)
+    if (offset >= numberProjects) {
+      setOffset(offset);
+      setThereProjects(false)
+    } else {
+      setThereProjects(true)
+    }
+  }, [offset, dataContext.language_dynamic.portfolio.length])
+  
   return (
     <FetchContext.Provider value={dataContext}>
       <SectionThirdStyles>
@@ -29,10 +46,17 @@ export default function SectionThird() {
           </SubtitleOne>
         </TitleBox>
         <BoxGrid>
-          {dataContext.language_dynamic.portfolio.map((item) => (
-            <ProjectsComponent data={item} key={item.id}/>
-          ))}
+          {dataContext.language_dynamic.portfolio
+            .slice(0, offset)
+            .map((item) => (
+              <ProjectsComponent data={item} key={item.id} />
+            ))}
         </BoxGrid>
+        {thereProjects && (
+          <TextButtonStroke onClick={()=> setOffset(offset + 6)}>
+            {dataContext.language_static.section_third.button}
+          </TextButtonStroke>
+        )}
       </SectionThirdStyles>
     </FetchContext.Provider>
   );
