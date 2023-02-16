@@ -4,6 +4,7 @@ import {
   BoxButtons,
   BoxInfo,
   DecorationBox,
+  HoverBox,
   ImageIcon,
   ProjectStyle,
   TextButton,
@@ -18,12 +19,13 @@ import iconInfo from "../../../assets/icon/icon-info.svg";
 export default function ProjectsComponent({ data }: PortfolioProps) {
   return (
     <ProjectStyle>
+      <HoverBox></HoverBox>
       <DecorationBox>
         <AssetImage src={data.image_path} />
       </DecorationBox>
       <BoxInfo>
         <TitleProject>{data.name}</TitleProject>
-        <TextProject>{data.description}</TextProject>
+        <TextProject>{data.description.substring(0, 300)}...</TextProject>
       </BoxInfo>
       <BoxButtons>
         <TextButton href={data.link_preview}>
