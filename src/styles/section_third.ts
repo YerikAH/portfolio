@@ -80,20 +80,18 @@ export const ProjectStyle = styled.div`
 export const HoverBox = styled.div`
   position: absolute;
   background: rgba(243, 243, 243, 0.1);
-  border: 0.5px solid #dddddd;
+  border: 0.5px solid var(--gray);
   backdrop-filter: blur(12.5px);
   border-radius: 15px;
   transition: 0.3s;
-  /* width: 425px; */
-  /* height: 275px; */
   width: 0;
   height: 0;
   top: 0;
   @media (min-width: 1000px) {
     top: 1.5rem;
     width: 100%;
-    max-width: 400px;
-    height: 250px;
+    max-width: 25rem;
+    height: 15.625rem;
   }
 `;
 
@@ -118,8 +116,8 @@ export const AssetImage = styled.img`
   height: 100%;
   filter: drop-shadow(0px 4px 10px rgba(33, 33, 33, 0.08));
   @media (min-width: 1000px) {
-    max-width: 400px;
-    max-height: 250px;
+    max-width: 25rem;
+    max-height: 15.625rem;
   }
 `;
 
