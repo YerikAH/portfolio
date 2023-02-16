@@ -84,6 +84,7 @@ export interface SocialMedia {
 }
 
 export interface Email {
+  icon: string;
   user: string;
   link: string;
 }

@@ -129,18 +129,22 @@ export const DATA_INITIAL_STATE: Welcome = {
   ],
   social_media: {
     linkedin: {
+      icon:"",
       user: "",
       link: "",
     },
     github: {
+      icon:"",
       user: "",
       link: "",
     },
     twitter: {
+      icon:"",
       user: "",
       link: "",
     },
     email: {
+      icon:"",
       user: "",
       link: "",
     },

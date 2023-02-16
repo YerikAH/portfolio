@@ -29,8 +29,14 @@ export default function SectionFourth() {
           </TextBodyOne>
         </TitleBox>
         <BoxGrid>
-          <BoxGridOne></BoxGridOne>
-          <BoxGridTwo></BoxGridTwo>
+          <BoxGridOne>
+            
+
+          </BoxGridOne>
+          <BoxGridTwo>
+            
+
+          </BoxGridTwo>
         </BoxGrid>
       </SectionFourthStyles>
     </FetchContext.Provider>

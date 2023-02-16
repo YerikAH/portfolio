@@ -51,18 +51,22 @@ export const CONTEXT_INITIAL_STATE: ContextInterface = {
   photo: "",
   social_media: {
     linkedin: {
+      icon:"",
       user: "",
       link: "",
     },
     github: {
+      icon:"",
       user: "",
       link: "",
     },
     twitter: {
+      icon:"",
       user: "",
       link: "",
     },
     email: {
+      icon:"",
       user: "",
       link: "",
     },

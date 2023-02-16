@@ -63,3 +63,29 @@ export const TextBodyOne = styled.p`
     text-align: left;
   }
 `;
+
+export const FormStyles = styled.form`
+    display: grid;
+`
+export const LabelStyles = styled.label`
+    font: normal normal 600 0.9rem/1.2rem var(--font-lato);
+    color: var(--white);
+`
+export const InputStyles = styled.input`
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    font: normal normal 400 0.9rem/1.2rem var(--font-lato);
+    color: var(--white-40);
+    border-radius: 10px;
+    border: 1px solid var(--white)
+`
+export const TextAreaStyles = styled.textarea`
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    font: normal normal 400 0.9rem/1.2rem var(--font-lato);
+    color: var(--white-40);
+    border-radius: 10px;
+    resize: none;
+    height: 15rem;
+`
+export const ButtonSubmit = styled.input``
