@@ -7,8 +7,8 @@ export default function ListLabel() {
   return (
     <FetchContext.Provider value={dataContext}>
       <ListSkills>
-        {dataContext.skills.map((item) => (
-          <LabelSkills>{item}</LabelSkills>
+        {dataContext.skills.map((item,i) => (
+          <LabelSkills key={i}>{item}</LabelSkills>
         ))}
       </ListSkills>
     </FetchContext.Provider>
