@@ -27,11 +27,11 @@ export const BoxGrid = styled.div`
   display: grid;
   margin: 0 auto;
   place-items: center;
-  padding: 0 2rem;
   margin-top: 3.625rem;
   @media (min-width: 720px) {
     grid-template-columns: repeat(2, 45%);
     gap: 5%;
+    padding: 0 2rem;
   }
 `;
 
@@ -52,6 +52,7 @@ export const HoverBox = styled.div`
   width: 425px;
   height: 275px;
   top: 0;
+  display: none;
 `;
 export const DecorationBox = styled.div`
   position: relative;
@@ -61,6 +62,7 @@ export const DecorationBox = styled.div`
   display: flex;
   justify-content: end;
   align-items: end;
+  padding: 0 1rem;
 `;
 
 export const AssetImage = styled.img`

@@ -21,7 +21,7 @@ export default function InfoComponent() {
         <TextBodyOne>{dataContext.language_dynamic.description}</TextBodyOne>
       </BoxGridOne>
       <BoxGridTwo>
-        <CircleAvatar src={dataContext.photo} />
+        <CircleAvatar src={dataContext.photo} alt="harvey photo" />
       </BoxGridTwo>
     </BoxGrid>
   );

@@ -70,7 +70,7 @@ export const CircleAvatar = styled.img`
   max-height: 7.8125rem;
   width: 100%;
   height: 100%;
-  display: none;
+  display: none !important;
   @media (min-width: 720px) {
     display: block;
   }
