@@ -7,7 +7,6 @@ export const SectionThirdStyles = styled.section`
   justify-content: center;
   flex-direction: column;
   margin-top: 5rem;
-  padding: 5rem 0;
 `;
 
 export const TitleBox = styled.div`
@@ -26,18 +25,54 @@ export const BoxGrid = styled.div`
   display: grid;
   padding: 0 2rem;
   place-items: center;
-  margin-top: 3.625rem;
+  margin-top: 5rem;
+  gap: 3rem;
   @media (min-width: 720px) {
     grid-template-columns: repeat(2, 45%);
     gap: 5%;
     width: 100%;
-    margin: 0 auto;
+    margin: 5rem auto 0 auto;
   }
 `;
 
 export const ProjectStyle = styled.div`
   display: grid;
   place-items: center;
+  position: relative;
+
+
+
+  &:hover {
+    .hoverBox {
+      width: 110%;
+      height: 100%;
+    }
+    @media (min-width: 500px) {
+      .hoverBox {
+        width: 105%;
+        height: 100%;
+      }
+    }
+    @media (min-width: 720px) {
+      .hoverBox {
+        width: 110%;
+        height: 100%;
+        max-width: none;
+      }
+      .linkImage {
+        justify-content: center;
+        align-items: center;
+        bottom: 0;
+        right: 0;
+      }
+    }
+    @media (min-width: 1000px) {
+      .hoverBox {
+        top: 0;
+      }
+    }
+  }
+  
 `;
 
 // no variables css and no rem
@@ -48,32 +83,53 @@ export const HoverBox = styled.div`
   border: 0.5px solid #dddddd;
   backdrop-filter: blur(12.5px);
   border-radius: 15px;
-  width: 425px;
-  height: 275px;
+  transition: 0.3s;
+  /* width: 425px; */
+  /* height: 275px; */
+  width: 0;
+  height: 0;
   top: 0;
-  display: none;
+  @media (min-width: 1000px) {
+    top: 1.5rem;
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+  }
 `;
-export const DecorationBox = styled.div`
-  // max-width: 425px;
+
+export const LinkImage = styled.a`
   width: 100%;
   height: auto;
   display: flex;
-  justify-content: end;
-  align-items: end;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 1.5rem;
+  transition: 0.3s;
+  @media (min-width: 1000px) {
+    bottom: -15px;
+    right: -15px;
+    margin-top: 2.5rem;
+  }
 `;
-
 export const AssetImage = styled.img`
-  //max-width: 400px;
-  // max-height: 250px;
   border-radius: 15px;
-  // bottom: -15px;
-  // right: -15px;
   width: 100%;
   height: 100%;
   filter: drop-shadow(0px 4px 10px rgba(33, 33, 33, 0.08));
+  @media (min-width: 1000px) {
+    max-width: 400px;
+    max-height: 250px;
+  }
 `;
 
-export const BoxInfo = styled.div``;
+export const BoxInfo = styled.div`
+  margin-top: 1.5rem;
+  position: relative;
+  @media (min-width: 1000px) {
+    margin-top: 2.5rem;
+  }
+`;
 
 export const TitleProject = styled.h4`
   font: normal normal 500 1rem/1.5rem var(--font-lato);
@@ -94,17 +150,28 @@ export const BoxButtons = styled.div`
   display: flex;
   justify-content: space-around;
   width: 100%;
+  gap: 1rem;
   flex-wrap: wrap;
+  margin-top: 1.5rem;
+  position: relative;
+  margin-bottom: 1.5rem;
+  @media (min-width: 1000px) {
+    margin-bottom: 2.5rem;
+  }
 `;
 
 export const TextButton = styled.a`
-  border-radius: 5px;
+  border-radius: 10px;
   color: var(--black);
   font: normal normal 500 14px/10px var(--font-lato);
-  padding: 0.5rem;
+  padding: 0.3rem 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+  transition: 0.3s;
+  &:hover {
+    background-color: #0001;
+  }
 `;
 export const ImageIcon = styled.img``;

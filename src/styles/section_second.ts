@@ -70,9 +70,11 @@ export const CircleAvatar = styled.img`
   max-height: 7.8125rem;
   width: 100%;
   height: 100%;
-  display: none !important;
+  opacity: 0;
+  visibility: hidden;
   @media (min-width: 720px) {
-    display: block;
+    opacity: 1;
+    visibility: visible;
   }
 `;
 export const ListSkills = styled.div`
