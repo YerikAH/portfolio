@@ -23,22 +23,21 @@ export const SubtitleOne = styled.h2`
 
 export const BoxGrid = styled.div`
   max-width: 1200px;
-  width: 100%;
   display: grid;
-  margin: 0 auto;
+  padding: 0 2rem;
   place-items: center;
   margin-top: 3.625rem;
   @media (min-width: 720px) {
     grid-template-columns: repeat(2, 45%);
     gap: 5%;
-    padding: 0 2rem;
+    width: 100%;
+    margin: 0 auto;
   }
 `;
 
 export const ProjectStyle = styled.div`
   display: grid;
   place-items: center;
-  position: relative;
 `;
 
 // no variables css and no rem
@@ -55,14 +54,12 @@ export const HoverBox = styled.div`
   display: none;
 `;
 export const DecorationBox = styled.div`
-  position: relative;
   // max-width: 425px;
   width: 100%;
   height: auto;
   display: flex;
   justify-content: end;
   align-items: end;
-  padding: 0 1rem;
 `;
 
 export const AssetImage = styled.img`
@@ -76,10 +73,7 @@ export const AssetImage = styled.img`
   filter: drop-shadow(0px 4px 10px rgba(33, 33, 33, 0.08));
 `;
 
-export const BoxInfo = styled.div`
-  margin: 2rem 1rem 0 1rem;
-  position: relative;
-`;
+export const BoxInfo = styled.div``;
 
 export const TitleProject = styled.h4`
   font: normal normal 500 1rem/1.5rem var(--font-lato);
@@ -100,8 +94,7 @@ export const BoxButtons = styled.div`
   display: flex;
   justify-content: space-around;
   width: 100%;
-  margin: 1rem 1rem 0 1rem;
-  position: relative;
+  flex-wrap: wrap;
 `;
 
 export const TextButton = styled.a`
