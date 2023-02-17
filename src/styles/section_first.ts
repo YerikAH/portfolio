@@ -110,3 +110,6 @@ export const IconImage = styled.img`
   }
 
 `
+export const SectionFirstStylesTheme = styled(SectionFirstStyles)`
+  
+`

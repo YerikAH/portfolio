@@ -1,4 +1,6 @@
 // styles
+import { useContext } from "react";
+import ThemeContext from "../../context/themeContext";
 import {
   BoxGrid,
   BoxGridOne,
@@ -11,17 +13,20 @@ import IconsPrincipal from "./first/IconsPrincipal";
 import InfoPrincipal from "./first/InfoPrincipal";
 
 function SectionFirst() {
+  const themeContext = useContext(ThemeContext);
   return (
-    <SectionFirstStyles>
-      <BoxGrid>
-        <BoxGridOne>
-          <IconsPrincipal />
-        </BoxGridOne>
-        <BoxGridTwo>
-          <InfoPrincipal />
-        </BoxGridTwo>
-      </BoxGrid>
-    </SectionFirstStyles>
+    <ThemeContext.Provider value={themeContext}>
+      <SectionFirstStyles>
+        <BoxGrid>
+          <BoxGridOne>
+            <IconsPrincipal />
+          </BoxGridOne>
+          <BoxGridTwo>
+            <InfoPrincipal />
+          </BoxGridTwo>
+        </BoxGrid>
+      </SectionFirstStyles>
+    </ThemeContext.Provider>
   );
 }
 

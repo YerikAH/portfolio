@@ -17,6 +17,9 @@
   --black-10: #2121211a;
   --white-40: #ffffffcc;
   --blue-strong: #2472ce;
+  
+  /* dark theme*/
+  --black-blue: #303033;
 }
 
 *,
