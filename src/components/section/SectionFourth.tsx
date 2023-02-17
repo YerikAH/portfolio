@@ -5,23 +5,18 @@ import {
   BoxGridFather,
   BoxGridOne,
   BoxGridTwo,
-  ButtonIcon,
-  ButtonSubmit,
-  FormStyles,
   IconImage,
-  InputStyles,
-  LabelStyles,
   SectionFourthStyles,
   SubtitleOne,
-  TextAreaStyles,
   TextBodyOne,
   TitleBox,
 } from "../../styles/section_fourth";
 // images
 import Contact from "../../assets/icon/icon-phone.svg";
-import Send from "../../assets/icon/icon-send.svg"
+
 import FetchContext from "../../context/dataContext";
 import ListTile from "./fourth/ListTile";
+import FormComponent from "./fourth/FormComponent";
 
 export default function SectionFourth() {
   const dataContext = useContext(FetchContext);
@@ -40,24 +35,7 @@ export default function SectionFourth() {
           </TitleBox>
           <BoxGrid>
             <BoxGridOne>
-              <FormStyles>
-                <LabelStyles htmlFor="name">
-                  {dataContext.language_static.section_four.label_one}
-                </LabelStyles>
-                <InputStyles id="name" name="name" />
-                <LabelStyles htmlFor="email">
-                  {dataContext.language_static.section_four.label_two}
-                </LabelStyles>
-                <InputStyles id="email" name="email" />
-                <LabelStyles>
-                  {dataContext.language_static.section_four.label_three}
-                </LabelStyles>
-                <TextAreaStyles />
-                <ButtonSubmit type="submit">
-                  <ButtonIcon src={Send}/>
-                  {dataContext.language_static.section_four.button}
-                </ButtonSubmit>
-              </FormStyles>
+              <FormComponent/>
             </BoxGridOne>
             <BoxGridTwo>
               {dataContext.social_media.map((item, i) => (
