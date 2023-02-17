@@ -1,3 +1,4 @@
+import { Language } from "../enum/LanguageEnum";
 import { ContextInterface } from "../interface/props";
 
 export const CONTEXT_INITIAL_STATE: ContextInterface = {
@@ -106,4 +107,5 @@ export const CONTEXT_INITIAL_STATE: ContextInterface = {
     "GitHub",
   ],
   handle_language: () => {},
+  language_current: Language.es
 };

@@ -33,6 +33,7 @@ const DataProvider = ({ children }: ContextProps) => {
         photo: dataJson.photo_url,
         social_media: dataJson.social_media,
         skills: dataJson.skills,
+        language_current: language,
         handle_language: handleLanguage,
       };
       setDataValueAll(dataValue);
@@ -45,6 +46,7 @@ const DataProvider = ({ children }: ContextProps) => {
         language_static: dataJson.language[language].static,
         language_dynamic: dataJson.language[language].dynamic,
         photo: dataJson.photo_url,
+        language_current: language,
         social_media: dataJson.social_media,
         skills: dataJson.skills,
         handle_language: handleLanguage,

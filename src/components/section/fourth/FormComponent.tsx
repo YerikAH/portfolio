@@ -5,6 +5,7 @@ import { useContext, useState } from "react";
 import {
   ButtonIcon,
   ButtonSubmit,
+  ErrorStyles,
   FormStyles,
   InputStyles,
   LabelStyles,
@@ -16,19 +17,38 @@ import FetchContext from "../../../context/dataContext";
 
 // images
 import Send from "../../../assets/icon/icon-send.svg";
-import { FORM_INITIAL_STATE, FORM_VERIFY } from "../../../constant/appInitialState";
+import {
+  FORM_INITIAL_STATE,
+  FORM_VERIFY,
+} from "../../../constant/appInitialState";
 
-import { OptionsForm } from "../../../enum/LanguageEnum";
+import { Language, OptionsForm } from "../../../enum/LanguageEnum";
 import {
   verifyEmail,
   verifyMessage,
   verifyName,
 } from "../../../helpers/verifyForm";
+import {
+  ERROR_EMAIL_EN,
+  ERROR_EMAIL_ES,
+  ERROR_MESSAGE_EN,
+  ERROR_MESSAGE_ES,
+  ERROR_NAME_EN,
+  ERROR_NAME_ES,
+} from "../../../constant/TextInit";
 export default function FormComponent() {
   const dataContext = useContext(FetchContext);
   const [form, setForm] = useState(FORM_INITIAL_STATE);
-  const [errorMessage, setErrorMessage] = useState("")
+  const [errorMessage, setErrorMessage] = useState("");
   const [errorForm, setErrorForm] = useState(FORM_VERIFY);
+
+  function languageErrorSwitch(messageEn: string, messageEs: string) {
+    if (dataContext.language_current === Language.es) {
+      setErrorMessage(messageEs);
+    } else {
+      setErrorMessage(messageEn);
+    }
+  }
 
   function verifyText(name: string, value: string) {
     if (name === OptionsForm.name) {
@@ -36,16 +56,19 @@ export default function FormComponent() {
         ...errorForm,
         name: verifyName(value),
       });
+      languageErrorSwitch(ERROR_NAME_EN, ERROR_NAME_ES);
     } else if (name === OptionsForm.email) {
       setErrorForm({
         ...errorForm,
         email: verifyEmail(value),
       });
+      languageErrorSwitch(ERROR_EMAIL_EN, ERROR_EMAIL_ES);
     } else if (name === OptionsForm.message) {
       setErrorForm({
         ...errorForm,
         message: verifyMessage(value),
       });
+      languageErrorSwitch(ERROR_MESSAGE_EN, ERROR_MESSAGE_ES);
     }
   }
 
@@ -59,6 +82,7 @@ export default function FormComponent() {
       [e.target.name]: e.target.value,
     });
     verifyText(e.target.name, e.target.value);
+    console.log()
   }
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -94,6 +118,10 @@ export default function FormComponent() {
           name={OptionsForm.message}
           onChange={(e) => handleForm(e)}
         />
+        {!errorForm.name ||
+          !errorForm.email ||
+          (!errorForm.message && <ErrorStyles>{errorMessage}</ErrorStyles>)}
+
         <ButtonSubmit type="submit" aria-label="send message">
           <ButtonIcon src={Send} />
           {dataContext.language_static.section_four.button}

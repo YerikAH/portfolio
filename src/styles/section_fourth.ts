@@ -173,3 +173,11 @@ export const ListTileLink = styled.a`
   width: 100%;
   transition: 0.3s;
 `;
+export const ErrorStyles = styled.p`
+  margin-top: 1rem;
+text-align: left;
+font: normal normal 500 0.9rem/1.2rem var(--font-lato);
+letter-spacing: 0.05rem;
+color: var(--black-pale);
+
+`

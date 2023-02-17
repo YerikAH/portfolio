@@ -1,5 +1,5 @@
-import { Dynamic, Portfolio, SocialMedia, Static } from "./data";
-
+import { Dynamic,  Portfolio, SocialMedia, Static } from "./data";
+import { Language } from "../enum/LanguageEnum";
 export interface ContextProps {
   children: JSX.Element;
 }
@@ -9,6 +9,7 @@ export interface ContextInterface {
   photo: string;
   social_media: SocialMedia[];
   skills: string[];
+  language_current: Language;
   handle_language: () => void;
 }
 export interface PortfolioProps {
