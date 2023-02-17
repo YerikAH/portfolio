@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Theme } from "../enum/LanguageEnum";
 
-export const HeaderStyle = styled.header`
+const HeaderStyle = styled.header`
   width: 100%;
   position: fixed;
   top: 0;
@@ -9,8 +9,7 @@ export const HeaderStyle = styled.header`
   right: 0;
   box-shadow: 0px 0px 1.5px 1px #0002;
   z-index: 100;
-
-  transition: .3s;
+  transition: 0.3s;
 `;
 export const NavStyle = styled.nav`
   max-width: 1200px;
@@ -104,15 +103,18 @@ export const ThemeImage = styled.img`
 // DARK MODE
 
 export const HeaderStyleTheme = styled(HeaderStyle)`
-  background-color: ${props => props.className === Theme.dark ? "var(--black-blue)": "var(--white)"};
+  background-color: ${(props) =>
+    props.className === Theme.dark ? "var(--black-blue)" : "var(--white)"};
   & ${ListLink} {
-    color: ${props => props.className === Theme.dark ? "var(--white)": "var(--black)"};
-    &::after{
-      background-color:  ${props => props.className === Theme.dark ? "var(--white)": "var(--black)"};
+    color: ${(props) =>
+      props.className === Theme.dark ? "var(--white)" : "var(--black)"};
+    &::after {
+      background-color: ${(props) =>
+        props.className === Theme.dark ? "var(--white)" : "var(--black)"};
     }
   }
-  & ${ListTheme}{
-    background-color:  ${props => props.className === Theme.dark ? "var(--black-pale)": "var(--white)"};
+  & ${ListTheme} {
+    background-color: ${(props) =>
+      props.className === Theme.dark ? "var(--black-pale)" : "var(--white)"};
   }
-
 `;

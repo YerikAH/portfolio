@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Theme } from "../enum/LanguageEnum";
 
-export const SectionFirstStyles = styled.section`
+const SectionFirstStyles = styled.section`
   width: 100%;
   display: flex;
   align-items: center;
@@ -41,6 +41,7 @@ export const HeadlinePrincipal = styled.h1`
   font: normal normal 600 1.8rem/2.5rem var(--font-lato);
   color: var(--black);
   text-align: center;
+  transition: .3s;
   @media (min-width:720px){
     text-align: left;
     max-width: 25rem;
@@ -65,6 +66,7 @@ export const TextButtonStroke = styled.button`
   border: 1px solid var(--blue);
   padding: 0.8rem;
   border-radius: 0.8rem;
+  transition: .3s;
   @media (min-width:720px){
     font: normal normal 600 1rem/0.9rem var(--font-lato);
     padding: 0.8rem 2rem;
@@ -76,6 +78,7 @@ export const TextButtonFill = styled.button`
   font: normal normal 700 0.8rem/0.7rem var(--font-lato);
   padding: 0.8rem;
   border-radius: 0.8rem;
+  transition: .3s;
   @media (min-width:720px){
     padding: 0.8rem 2rem;
     font: normal normal 600 1rem/0.9rem var(--font-lato);
@@ -112,6 +115,7 @@ export const IconImage = styled.img`
 
 `
 export const SectionFirstStylesTheme = styled(SectionFirstStyles)`
+
   & ${TextButtonFill}{
     color: ${props => props.className === Theme.dark ? "var(--black-pale)": "var(--white)"};
   }

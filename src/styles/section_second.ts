@@ -1,12 +1,13 @@
 import styled from "styled-components";
+import { Theme } from "../enum/LanguageEnum";
 
-export const SectionScondStyles = styled.section`
+const SectionScondStyles = styled.section`
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: var(--white-pale);
+  transition: .3s;
   margin-top: 5rem;
   padding: 5rem 0;
 `;
@@ -50,11 +51,11 @@ export const TitleBox = styled.div`
   display: grid;
   place-items: center;
 `;
-export const IconImage = styled.img``;
 export const SubtitleOne = styled.h2`
   font: normal normal 700 1.5rem/1.5rem var(--font-lato);
   color: var(--black);
   margin-top: 1.25rem;
+  transition: .3s;
 `;
 
 export const TextBodyOne = styled.p`
@@ -62,6 +63,7 @@ export const TextBodyOne = styled.p`
   color: var(--black);
   opacity: 0.6;
   text-align: center;
+  transition: .3s;
   @media (min-width: 720px) {
     text-align: left;
   }
@@ -99,4 +101,15 @@ export const LabelSkills = styled.p`
   color: var(--white);
   padding: 0.2rem 0.5rem;
   border-radius: 0.4rem;
+  transition: .3s;
 `;
+export const SectionScondStylesTheme = styled(SectionScondStyles)`
+  
+  background-color: ${props => props.className === Theme.dark ? "var(--black-blue-pale)": "var(--white-pale)"};
+  & ${SubtitleOne}{
+    color: ${props => props.className === Theme.dark ? "var(--white)": "var(--black)"}
+  }
+  & ${TextBodyOne}{
+    color: ${props => props.className === Theme.dark ? "var(--white)": "var(--black)"}
+  }
+`
