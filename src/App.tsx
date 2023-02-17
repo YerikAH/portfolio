@@ -1,5 +1,6 @@
 // components
 import Footer from "./components/Footer";
+import Global from "./components/Global";
 import Main from "./components/Main";
 import Navegator from "./components/Navegator";
 
@@ -15,6 +16,7 @@ function App() {
           <Navegator />
           <Main />
           <Footer />
+          <Global />
         </>
       </ThemeProvider>
     </DataProvider>

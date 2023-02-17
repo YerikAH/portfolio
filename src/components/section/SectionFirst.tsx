@@ -5,7 +5,7 @@ import {
   BoxGrid,
   BoxGridOne,
   BoxGridTwo,
-  SectionFirstStyles,
+  SectionFirstStylesTheme,
 } from "../../styles/section_first";
 
 //components
@@ -16,7 +16,7 @@ function SectionFirst() {
   const themeContext = useContext(ThemeContext);
   return (
     <ThemeContext.Provider value={themeContext}>
-      <SectionFirstStyles>
+      <SectionFirstStylesTheme className={themeContext.theme}>
         <BoxGrid>
           <BoxGridOne>
             <IconsPrincipal />
@@ -25,7 +25,7 @@ function SectionFirst() {
             <InfoPrincipal />
           </BoxGridTwo>
         </BoxGrid>
-      </SectionFirstStyles>
+      </SectionFirstStylesTheme>
     </ThemeContext.Provider>
   );
 }

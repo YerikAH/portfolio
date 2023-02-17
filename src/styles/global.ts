@@ -8,6 +8,8 @@ export const sectionGlobal = css`
 // Crear estilos globales para el body
 export const GlobalStyles = createGlobalStyle`
   body {
-    
+    transition: 0.3s;
+    background-color: ${(props) =>
+      props.theme === Theme.dark ? "var(--black-blue)" : "var(--white)"};
   }
 `;

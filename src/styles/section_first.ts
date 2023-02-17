@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Theme } from "../enum/LanguageEnum";
 
 export const SectionFirstStyles = styled.section`
   width: 100%;
@@ -111,5 +112,10 @@ export const IconImage = styled.img`
 
 `
 export const SectionFirstStylesTheme = styled(SectionFirstStyles)`
-  
+  & ${TextButtonFill}{
+    color: ${props => props.className === Theme.dark ? "var(--black-pale)": "var(--white)"};
+  }
+  & ${HeadlinePrincipal} {
+    color: ${props => props.className === Theme.dark ? "var(--white)": "var(--black)"};
+  }
 `
