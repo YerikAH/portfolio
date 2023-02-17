@@ -1,5 +1,4 @@
 import { useContext } from "react";
-
 import ThemeContext from "../../context/themeContext";
 import { SvgProjects } from "../../styles/images/icons";
 

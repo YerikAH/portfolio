@@ -1,6 +1,7 @@
 import ThemeContext from "../../context/themeContext";
-import { useContext } from "react";
 import { SvgIconsProjects } from "../../styles/images/icons";
+import { useContext } from "react";
+
 export default function LinkComponent() {
   const themeContext = useContext(ThemeContext);
   return (

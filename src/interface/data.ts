@@ -79,8 +79,6 @@ export interface SectionThird {
   button: string;
 }
 
-
-
 export interface SocialMedia {
   name: string;
   icon: string;

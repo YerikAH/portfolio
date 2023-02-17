@@ -1,8 +1,12 @@
+// hook
 import { createContext, useEffect, useState } from "react";
+
+// interface and init state
 import { THEME_CONTEXT_INITIAL_STATE } from "../constant/contextInitialState";
-import { Theme } from "../enum/LanguageEnum";
-/* interface and init state */
 import { ContextProps, ContextThemeInterface } from "../interface/props";
+
+// enum
+import { Theme } from "../enum/LanguageEnum";
 
 const ThemeContext = createContext<ContextThemeInterface>(
   THEME_CONTEXT_INITIAL_STATE

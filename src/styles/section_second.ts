@@ -1,4 +1,6 @@
 import styled from "styled-components";
+
+// enum
 import { Theme } from "../enum/LanguageEnum";
 
 const SectionScondStyles = styled.section`

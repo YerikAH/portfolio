@@ -1,11 +1,13 @@
 import styled, { createGlobalStyle, css } from "styled-components";
+
+// enum
 import { Theme } from "../enum/LanguageEnum";
 
 export const sectionGlobal = css`
   width: 100%;
 `;
 
-// Crear estilos globales para el body
+// global HTML
 export const GlobalStyles = createGlobalStyle`
   body {
     transition: 0.3s;

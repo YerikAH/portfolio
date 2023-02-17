@@ -1,3 +1,5 @@
+import { useContext } from "react";
+
 // styles
 import {
   HamImage,
@@ -15,21 +17,26 @@ import {
 // images
 import ham from "../assets/icon/ham.svg";
 import sun from "../assets/icon/sun.svg";
-import moon from "../assets/icon/moon.svg"
+import moon from "../assets/icon/moon.svg";
 
+// context
 import FetchContext from "../context/dataContext";
-import { useContext } from "react";
-import ThemeContext  from "../context/themeContext";
+import ThemeContext from "../context/themeContext";
+
+// component
 import LogoComponent from "./images/LogoComponent";
+
+// enum
 import { Theme } from "../enum/LanguageEnum";
+
 function Navegator() {
   const dataContext = useContext(FetchContext);
   const themeContext = useContext(ThemeContext);
   function handleClik() {
     dataContext.handle_language();
   }
-  function handleTheme(){
-    themeContext.handle_theme()
+  function handleTheme() {
+    themeContext.handle_theme();
   }
   return (
     <ThemeContext.Provider value={themeContext}>
@@ -39,7 +46,7 @@ function Navegator() {
             <ListDesorder>
               <ListImageBox>
                 <ListLink className="logo">
-                  <LogoComponent/>
+                  <LogoComponent />
                 </ListLink>
               </ListImageBox>
 
@@ -81,9 +88,11 @@ function Navegator() {
             </ListDesorder>
             <ListDesorder>
               <ListTheme onClick={handleTheme}>
-                {themeContext.theme === Theme.light
-                ? <ThemeImage src={sun} /> : <ThemeImage src={moon} />}
-                
+                {themeContext.theme === Theme.light ? (
+                  <ThemeImage src={sun} />
+                ) : (
+                  <ThemeImage src={moon} />
+                )}
               </ListTheme>
               <ListHam aria-label="open menu">
                 <HamImage src={ham} />

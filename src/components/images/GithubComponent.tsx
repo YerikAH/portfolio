@@ -1,6 +1,7 @@
-import ThemeContext from "../../context/themeContext";
 import { useContext } from "react";
+import ThemeContext from "../../context/themeContext";
 import { SvgIconsProjects } from "../../styles/images/icons";
+
 export default function GithubComponent() {
   const themeContext = useContext(ThemeContext);
   return (
