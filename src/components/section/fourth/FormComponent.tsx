@@ -1,5 +1,5 @@
 // react
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 // styles
 import {
@@ -22,12 +22,17 @@ import {
   FORM_VERIFY,
 } from "../../../constant/appInitialState";
 
+// enum
 import { Language, OptionsForm } from "../../../enum/LanguageEnum";
+
+// helpers
 import {
   verifyEmail,
   verifyMessage,
   verifyName,
 } from "../../../helpers/verifyForm";
+
+// const
 import {
   ERROR_EMAIL_EN,
   ERROR_EMAIL_ES,
@@ -36,11 +41,14 @@ import {
   ERROR_NAME_EN,
   ERROR_NAME_ES,
 } from "../../../constant/TextInit";
+
+
 export default function FormComponent() {
   const dataContext = useContext(FetchContext);
   const [form, setForm] = useState(FORM_INITIAL_STATE);
   const [errorMessage, setErrorMessage] = useState("");
   const [errorForm, setErrorForm] = useState(FORM_VERIFY);
+  
 
   function languageErrorSwitch(messageEn: string, messageEs: string) {
     if (dataContext.language_current === Language.es) {
@@ -82,15 +90,17 @@ export default function FormComponent() {
       [e.target.name]: e.target.value,
     });
     verifyText(e.target.name, e.target.value);
-    console.log()
+    console.log(errorForm.email, errorForm.name, errorForm.message);
+    console.log(!errorForm.name || !errorForm.email || !errorForm.message);
   }
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    if (errorForm.email && errorForm.name && errorForm.message) {
-      console.log(form);
-    }
+    // e.preventDefault();
+    // if (errorForm.email && errorForm.name && errorForm.message) {
+    //   console.log(form);
+    // }
   }
+
   return (
     <FetchContext.Provider value={dataContext}>
       <FormStyles onSubmit={(e) => handleSubmit(e)}>
@@ -118,11 +128,12 @@ export default function FormComponent() {
           name={OptionsForm.message}
           onChange={(e) => handleForm(e)}
         />
-        {!errorForm.name ||
-          !errorForm.email ||
-          (!errorForm.message && <ErrorStyles>{errorMessage}</ErrorStyles>)}
-
-        <ButtonSubmit type="submit" aria-label="send message">
+        {!errorForm.name || !errorForm.email || !errorForm.message ? (
+          <ErrorStyles>{errorMessage}</ErrorStyles>
+        ) : (
+          <></>
+        )}
+        <ButtonSubmit type="submit" aria-label="send message" disabled={!errorForm.name || !errorForm.email || !errorForm.message}>
           <ButtonIcon src={Send} />
           {dataContext.language_static.section_four.button}
         </ButtonSubmit>

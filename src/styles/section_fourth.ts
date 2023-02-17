@@ -27,7 +27,7 @@ export const BoxGrid = styled.div`
   place-items: center;
 
   @media (min-width: 720px) {
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, 50%);
     grid-template-areas: "box_two box_one";
     gap: 3.5rem;
   }
@@ -39,6 +39,7 @@ export const BoxGridOne = styled.div`
   width: 100%;
   @media (min-width: 720px) {
     grid-area: box_one;
+    place-items: center;
   }
 `;
 export const BoxGridTwo = styled.div`
@@ -79,6 +80,8 @@ export const TextBodyOne = styled.p`
 
 export const FormStyles = styled.form`
   display: grid;
+  max-width: 21.3125rem;
+  width: 100%;
 `;
 export const LabelStyles = styled.label`
   font: normal normal 600 0.9rem/1.2rem var(--font-lato);
@@ -148,8 +151,8 @@ export const ListTileBox = styled.div`
   }
 `;
 export const ListTileLinkIcon = styled.a`
-display: block;
-`
+  display: block;
+`;
 export const ListTileImage = styled.img``;
 export const ListTileTitle = styled.h4`
   margin-top: 1rem;
@@ -175,9 +178,8 @@ export const ListTileLink = styled.a`
 `;
 export const ErrorStyles = styled.p`
   margin-top: 1rem;
-text-align: left;
-font: normal normal 500 0.9rem/1.2rem var(--font-lato);
-letter-spacing: 0.05rem;
-color: var(--black-pale);
-
-`
+  text-align: left;
+  font: normal normal 500 0.8rem/1rem var(--font-lato);
+  letter-spacing: 0.05rem;
+  color: var(--black-pale);
+`;
