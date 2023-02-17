@@ -7,3 +7,7 @@ export enum OptionsForm{
   email = "email",
   message = "message"
 }
+export enum Theme {
+  dark = "darkTheme",
+  light = "lightTheme"
+}

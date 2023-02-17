@@ -12,6 +12,11 @@ export interface ContextInterface {
   language_current: Language;
   handle_language: () => void;
 }
+export interface ContextThemeInterface{
+  theme: string;
+  handle_theme: () => void
+}
+
 export interface PortfolioProps {
   data: Portfolio;
 }

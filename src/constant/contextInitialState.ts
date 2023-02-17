@@ -1,5 +1,5 @@
-import { Language } from "../enum/LanguageEnum";
-import { ContextInterface } from "../interface/props";
+import { Language, Theme } from "../enum/LanguageEnum";
+import { ContextInterface, ContextThemeInterface } from "../interface/props";
 
 export const CONTEXT_INITIAL_STATE: ContextInterface = {
   language_static: {
@@ -109,3 +109,7 @@ export const CONTEXT_INITIAL_STATE: ContextInterface = {
   handle_language: () => {},
   language_current: Language.es
 };
+export const THEME_CONTEXT_INITIAL_STATE: ContextThemeInterface = {
+  theme: Theme.light,
+  handle_theme: ()=>{}
+}

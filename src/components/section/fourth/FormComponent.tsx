@@ -90,20 +90,12 @@ export default function FormComponent() {
       [e.target.name]: e.target.value,
     });
     verifyText(e.target.name, e.target.value);
-    console.log(errorForm.email, errorForm.name, errorForm.message);
-    console.log(!errorForm.name || !errorForm.email || !errorForm.message);
   }
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    // e.preventDefault();
-    // if (errorForm.email && errorForm.name && errorForm.message) {
-    //   console.log(form);
-    // }
-  }
 
   return (
     <FetchContext.Provider value={dataContext}>
-      <FormStyles onSubmit={(e) => handleSubmit(e)}>
+      <FormStyles>
         <LabelStyles htmlFor={OptionsForm.name}>
           {dataContext.language_static.section_four.label_one}
         </LabelStyles>
