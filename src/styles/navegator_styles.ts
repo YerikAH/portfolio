@@ -8,7 +8,8 @@ export const HeaderStyle = styled.header`
   right: 0;
   box-shadow: 0px 0px 1.5px 1px #0002;
   z-index: 100;
-  background-color: var(--white);
+  background-color: ${props => props.className === "darkTheme" ? "var(--black)": "var(--white)"};
+  transition: .3s;
 `;
 export const NavStyle = styled.nav`
   max-width: 1200px;
@@ -97,4 +98,16 @@ export const ThemeImage = styled.img`
   @media (min-width: 720px) {
     width: auto;
   }
+`;
+
+// DARK MODE
+
+export const HeaderStyleTheme = styled(HeaderStyle)`
+  & ${ListLink} {
+    color: ${props => props.className === "darkTheme" ? "var(--white)": "var(--dark)"};
+    &::after{
+      background-color:  ${props => props.className === "darkTheme" ? "var(--white)": "var(--dark)"};
+    }
+  }
+
 `;
