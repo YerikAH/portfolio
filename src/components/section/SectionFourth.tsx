@@ -5,6 +5,7 @@ import {
   BoxGridFather,
   BoxGridOne,
   BoxGridTwo,
+  ButtonIcon,
   ButtonSubmit,
   FormStyles,
   IconImage,
@@ -18,6 +19,7 @@ import {
 } from "../../styles/section_fourth";
 // images
 import Contact from "../../assets/icon/icon-phone.svg";
+import Send from "../../assets/icon/icon-send.svg"
 import FetchContext from "../../context/dataContext";
 import ListTile from "./fourth/ListTile";
 
@@ -52,6 +54,7 @@ export default function SectionFourth() {
                 </LabelStyles>
                 <TextAreaStyles />
                 <ButtonSubmit type="submit">
+                  <ButtonIcon src={Send}/>
                   {dataContext.language_static.section_four.button}
                 </ButtonSubmit>
               </FormStyles>

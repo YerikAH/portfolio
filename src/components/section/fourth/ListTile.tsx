@@ -13,7 +13,7 @@ export default function ListTile({ data }: SocialMediaProps) {
       <ListTileImage src={data.icon} />
       <ListTileBox>
         <ListTileTitle>{data.name}</ListTileTitle>
-        <ListTileLink href={data.link}>{data.user}</ListTileLink>
+        <ListTileLink href={data.link} className="nameCompleted">{data.user}</ListTileLink>
       </ListTileBox>
     </ListTileStyles>
   );

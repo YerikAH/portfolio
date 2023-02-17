@@ -16,7 +16,7 @@ export const BoxGridFather = styled.div`
   margin: 0 auto;
   place-items: center;
   padding: 3.625rem 2rem;
-  background: linear-gradient(90deg, #5b8bd2 0.15%, #2472ce 90%);
+  background: linear-gradient(90deg, var(--blue) 0.15%, var(--blue-strong) 90%);
   border-radius: 30px;
 `;
 export const BoxGrid = styled.div`
@@ -42,14 +42,18 @@ export const BoxGridOne = styled.div`
   }
 `;
 export const BoxGridTwo = styled.div`
-  display: grid;
+  display: flex;
   height: 100%;
   width: 100%;
-  place-items: center;
   gap: 2rem;
-  margin-top: 2rem;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 4rem;
   @media (min-width: 720px) {
     grid-area: box_two;
+    flex-direction: column;
+    padding-top: 0;
   }
 `;
 
@@ -79,6 +83,7 @@ export const FormStyles = styled.form`
 export const LabelStyles = styled.label`
   font: normal normal 600 0.9rem/1.2rem var(--font-lato);
   color: var(--white);
+  margin: 1rem 0 0.5rem 0;
 `;
 export const InputStyles = styled.input`
   padding: 0.5rem 1rem;
@@ -98,39 +103,70 @@ export const TextAreaStyles = styled.textarea`
   border-radius: 10px;
   resize: none;
   border: 1px solid var(--white);
-  height: 15rem;
+  height: 150px;
   width: 100%;
   outline: none;
 `;
 export const ButtonSubmit = styled.button`
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
   background-color: var(--white);
   padding: 0.5rem;
-  color: var(--white);
   outline: none;
-  font: normal normal 500 1rem/1.2rem var(--font-lato);
+  font: normal normal 500 0.9rem/1.2rem var(--font-lato);
+  border-radius: 10px;
+  margin-top: 1rem;
+  color: var(--blue-strong);
 `;
 
 export const ButtonIcon = styled.img``;
 
 export const ListTileStyles = styled.div`
-  display: grid;
+  display: flex;
   place-items: center;
   width: 100%;
+  flex-direction: column;
+  max-width: 7rem;
+  @media (min-width: 720px) {
+    flex-direction: row;
+    max-width: none;
+    gap: 1rem;
+  }
+  &:hover{
+    .nameCompleted{
+      width: auto;
+    }
+  }
 `;
 export const ListTileBox = styled.div`
   display: grid;
   place-items: center;
+  @media (min-width: 720px) {
+    place-items: start;
+  }
 `;
 export const ListTileImage = styled.img``;
 export const ListTileTitle = styled.h4`
+  margin-top: 1rem;
   font: normal normal 600 1rem/1.2rem var(--font-lato);
   color: var(--white);
   text-transform: capitalize;
+  text-align: center;
+  @media (min-width: 720px) {
+    margin-top: 0;
+  }
 `;
 export const ListTileLink = styled.a`
   margin-top: 0.3rem;
   font: normal normal 400 0.8rem/1.2rem var(--font-lato);
   color: var(--white);
-  opacity: 0.7;
+  opacity: 0.8;
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: pre;
+  width: 100%;
+  transition: 0.3s;
 `;
