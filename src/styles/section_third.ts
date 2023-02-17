@@ -207,5 +207,28 @@ export const SectionThirdStylesTheme = styled(SectionThirdStyles)`
   & ${TextButton} {
     color: ${(props) =>
       props.className === Theme.dark ? "var(--white)" : "var(--black)"};
+    &:hover {
+      background-color: ${(props) =>
+        props.className === Theme.dark ? "var(--white-10)" : "var(--black-10)"};
+    }
+  }
+  & ${HoverBox} {
+    background: ${(props) =>
+      props.className === Theme.dark
+        ? "rgba(5, 5, 5, 0.1)"
+        : "rgba(243, 243, 243, 0.1)"};
+    border: ${(props) =>
+      props.className === Theme.dark
+        ? "0.5px solid var(--black-blue-pale)"
+        : "0.5px solid var(--gray)"};
+  }
+  & ${TextButtonStroke} {
+    &:hover {
+      background-color: var(--blue);
+      color: ${(props) =>
+        props.className === Theme.dark
+          ? "var(--black-blue-pale)"
+          : "var(--white)"};
+    }
   }
 `;

@@ -12,11 +12,11 @@ import {
   TitleProject,
 } from "../../../styles/section_third";
 /* images */
-import iconLink from "../../../assets/icon/icon-link.svg";
-import iconGitHub from "../../../assets/icon/icon-github.svg";
-import iconInfo from "../../../assets/icon/icon-info.svg";
 import { useContext } from "react";
 import FetchContext from "../../../context/dataContext";
+import LinkComponent from "../../images/LinkComponent";
+import GithubComponent from "../../images/GithubComponent";
+import InfoComponent from "../../images/InfoComponent";
 export default function ProjectsComponent({ data }: PortfolioProps) {
   const dataContext = useContext(FetchContext);
   return (
@@ -36,15 +36,15 @@ export default function ProjectsComponent({ data }: PortfolioProps) {
         </BoxInfo>
         <BoxButtons>
           <TextButton href={data.link_preview} target="_blank">
-            <ImageIcon src={iconLink} />
+            <LinkComponent />
             {dataContext.language_static.section_third.preview}
           </TextButton>
           <TextButton href={data.link_code} target="_blank">
-            <ImageIcon src={iconGitHub} />
+            <GithubComponent />
             {dataContext.language_static.section_third.code}
           </TextButton>
           <TextButton href="">
-            <ImageIcon src={iconInfo} />
+            <InfoComponent />
             {dataContext.language_static.section_third.info}
           </TextButton>
         </BoxButtons>

@@ -15,12 +15,13 @@
   --white-pale: #fafafa;
   --gray: #dddddd;
   --black-10: #2121211a;
+  --white-10: #ffffff1a;
   --white-40: #ffffffcc;
   --blue-strong: #2472ce;
-  
+
   /* dark theme*/
   --black-blue: #303033;
-  --black-blue-pale: #43434B;
+  --black-blue-pale: #43434b;
 }
 
 *,
