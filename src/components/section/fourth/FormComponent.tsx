@@ -34,7 +34,7 @@ export default function FormComponent() {
           {dataContext.language_static.section_four.label_three}
         </LabelStyles>
         <TextAreaStyles />
-        <ButtonSubmit type="submit">
+        <ButtonSubmit type="submit" aria-label="send message">
           <ButtonIcon src={Send} />
           {dataContext.language_static.section_four.button}
         </ButtonSubmit>

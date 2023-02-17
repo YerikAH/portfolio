@@ -134,8 +134,8 @@ export const ListTileStyles = styled.div`
     max-width: none;
     gap: 1rem;
   }
-  &:hover{
-    .nameCompleted{
+  &:hover {
+    .nameCompleted {
       width: auto;
     }
   }
@@ -147,6 +147,9 @@ export const ListTileBox = styled.div`
     place-items: start;
   }
 `;
+export const ListTileLinkIcon = styled.a`
+display: block;
+`
 export const ListTileImage = styled.img``;
 export const ListTileTitle = styled.h4`
   margin-top: 1rem;
