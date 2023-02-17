@@ -73,6 +73,9 @@ export interface SectionSecond {
 
 export interface SectionThird {
   headline: string;
+  preview: string;
+  code: string;
+  info: string;
   button: string;
 }
 

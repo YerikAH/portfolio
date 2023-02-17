@@ -20,6 +20,9 @@ export const CONTEXT_INITIAL_STATE: ContextInterface = {
     },
     section_third: {
       headline: "",
+      code: "",
+      info: "",
+      preview: "",
       button: "",
     },
     section_four: {

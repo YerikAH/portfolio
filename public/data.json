@@ -20,6 +20,9 @@
         },
         "section_third": {
           "headline": "Mis proyectos",
+          "preview": "Ver aplicación",
+          "code": "Ver código",
+          "info": "Información",
           "button": "Cargar más…"
         },
         "section_four": {
@@ -133,6 +136,9 @@
         },
         "section_third": {
           "headline": "Projects",
+          "preview": "See app",
+          "code": "See code",
+          "info": "Info",
           "button": "Load more..."
         },
         "section_four": {

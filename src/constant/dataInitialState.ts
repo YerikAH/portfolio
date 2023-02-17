@@ -22,6 +22,9 @@ export const DATA_INITIAL_STATE: Welcome = {
         },
         section_third: {
           headline: "",
+          preview: "",
+          code: "",
+          info: "",
           button: "",
         },
         section_four: {
@@ -71,6 +74,9 @@ export const DATA_INITIAL_STATE: Welcome = {
         },
         section_third: {
           headline: "",
+          preview: "",
+          code: "",
+          info: "",
           button: "",
         },
         section_four: {
