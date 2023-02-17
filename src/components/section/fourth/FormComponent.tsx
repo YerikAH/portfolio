@@ -16,16 +16,39 @@ import FetchContext from "../../../context/dataContext";
 
 // images
 import Send from "../../../assets/icon/icon-send.svg";
-import { FORM_INITIAL_STATE } from "../../../constant/appInitialState";
+import { FORM_INITIAL_STATE, FORM_VERIFY } from "../../../constant/appInitialState";
 
+import { OptionsForm } from "../../../enum/LanguageEnum";
+import {
+  verifyEmail,
+  verifyMessage,
+  verifyName,
+} from "../../../helpers/verifyForm";
 export default function FormComponent() {
   const dataContext = useContext(FetchContext);
   const [form, setForm] = useState(FORM_INITIAL_STATE);
+  const [errorMessage, setErrorMessage] = useState("")
+  const [errorForm, setErrorForm] = useState(FORM_VERIFY);
 
-  function VerifyText(name: string, value: string){
-    
-
+  function verifyText(name: string, value: string) {
+    if (name === OptionsForm.name) {
+      setErrorForm({
+        ...errorForm,
+        name: verifyName(value),
+      });
+    } else if (name === OptionsForm.email) {
+      setErrorForm({
+        ...errorForm,
+        email: verifyEmail(value),
+      });
+    } else if (name === OptionsForm.message) {
+      setErrorForm({
+        ...errorForm,
+        message: verifyMessage(value),
+      });
+    }
   }
+
   function handleForm(
     e:
       | React.ChangeEvent<HTMLInputElement>
@@ -35,28 +58,40 @@ export default function FormComponent() {
       ...form,
       [e.target.name]: e.target.value,
     });
+    verifyText(e.target.name, e.target.value);
   }
+
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    console.log(form);
+    if (errorForm.email && errorForm.name && errorForm.message) {
+      console.log(form);
+    }
   }
   return (
     <FetchContext.Provider value={dataContext}>
       <FormStyles onSubmit={(e) => handleSubmit(e)}>
-        <LabelStyles htmlFor="name">
+        <LabelStyles htmlFor={OptionsForm.name}>
           {dataContext.language_static.section_four.label_one}
         </LabelStyles>
-        <InputStyles id="name" name="name" onChange={(e) => handleForm(e)} />
-        <LabelStyles htmlFor="email">
+        <InputStyles
+          id={OptionsForm.name}
+          name={OptionsForm.name}
+          onChange={(e) => handleForm(e)}
+        />
+        <LabelStyles htmlFor={OptionsForm.email}>
           {dataContext.language_static.section_four.label_two}
         </LabelStyles>
-        <InputStyles id="email" name="email" onChange={(e) => handleForm(e)} />
-        <LabelStyles htmlFor="message">
+        <InputStyles
+          id={OptionsForm.email}
+          name={OptionsForm.email}
+          onChange={(e) => handleForm(e)}
+        />
+        <LabelStyles htmlFor={OptionsForm.message}>
           {dataContext.language_static.section_four.label_three}
         </LabelStyles>
         <TextAreaStyles
-          id="message"
-          name="message"
+          id={OptionsForm.message}
+          name={OptionsForm.message}
           onChange={(e) => handleForm(e)}
         />
         <ButtonSubmit type="submit" aria-label="send message">

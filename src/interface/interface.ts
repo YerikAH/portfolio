@@ -3,3 +3,8 @@ export interface InterfaceForm{
     email: string,
     message: string,
 }
+export interface InterfaceFormVerify{
+    name: boolean,
+    email: boolean,
+    message: boolean,
+}
