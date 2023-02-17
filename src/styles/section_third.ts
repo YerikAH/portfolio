@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { Theme } from "../enum/LanguageEnum";
 
-export const SectionThirdStyles = styled.section`
+const SectionThirdStyles = styled.section`
   width: 100%;
   display: flex;
   align-items: center;
@@ -13,11 +14,11 @@ export const TitleBox = styled.div`
   display: grid;
   place-items: center;
 `;
-export const IconImage = styled.img``;
 export const SubtitleOne = styled.h2`
   font: normal normal 700 1.5rem/1.5rem var(--font-lato);
   color: var(--black);
   margin-top: 1.25rem;
+  transition: 0.3s;
 `;
 
 export const BoxGrid = styled.div`
@@ -130,6 +131,7 @@ export const TitleProject = styled.h4`
   text-align: justify;
   letter-spacing: 0.02em;
   color: var(--black);
+  transition: 0.3s;
 `;
 
 export const TextProject = styled.p`
@@ -138,6 +140,7 @@ export const TextProject = styled.p`
   letter-spacing: 0.02em;
   color: var(--black);
   opacity: 0.6;
+  transition: 0.3s;
 `;
 
 export const BoxButtons = styled.div`
@@ -186,5 +189,23 @@ export const TextButtonStroke = styled.button`
   &:hover {
     background-color: var(--blue);
     color: var(--white);
+  }
+`;
+export const SectionThirdStylesTheme = styled(SectionThirdStyles)`
+  & ${TitleProject} {
+    color: ${(props) =>
+      props.className === Theme.dark ? "var(--white)" : "var(--black)"};
+  }
+  & ${SubtitleOne} {
+    color: ${(props) =>
+      props.className === Theme.dark ? "var(--white)" : "var(--black)"};
+  }
+  & ${TextProject} {
+    color: ${(props) =>
+      props.className === Theme.dark ? "var(--white)" : "var(--black)"};
+  }
+  & ${TextButton} {
+    color: ${(props) =>
+      props.className === Theme.dark ? "var(--white)" : "var(--black)"};
   }
 `;
