@@ -10,21 +10,37 @@ import flagEs from "../../assets/static/es.png";
 import flagEn from "../../assets/static/en.png";
 
 // interface and enum
-import { Language } from "../../enum/LanguageEnum";
-import { InterfaceLangButton } from "../../interface/buttons";
+import { Language, Theme } from "../../enum/LanguageEnum";
+import { InterfaceButton } from "../../interface/buttons";
+
+// helpers
+import { getTooltipText } from "../../helpers/getTooltipText";
+import { useEffect, useState } from "react";
 
 export default function LanguageButton({
-  handleLanguageProps,
+  handleFunction,
   languageCurrent,
-}: InterfaceLangButton) {
+  themeCurrent,
+}: InterfaceButton) {
+  const [textToolTip, setTextToolTip] = useState("Cambiar de tema");
+
+  useEffect(() => {
+    const textTooltip: string = getTooltipText(
+      languageCurrent,
+      "Cambiar de idioma",
+      "Change the language"
+    );
+    setTextToolTip(textTooltip);
+  }, [languageCurrent]);
+
   return (
     <>
       <ListTheme
-        onClick={() => handleLanguageProps()}
-        data-tooltip-id="my-tooltip"
-        data-tooltip-content="Hello world!"
+        onClick={() => handleFunction()}
+        data-tooltip-id="language-tooltip"
+        data-tooltip-content={textToolTip}
         data-tooltip-place="top"
-        data-tooltip-variant="dark"
+        data-tooltip-variant={themeCurrent === Theme.dark ? "light" : "dark"}
       >
         {languageCurrent === Language.es ? (
           <ImageButton src={flagEn} />
@@ -32,7 +48,7 @@ export default function LanguageButton({
           <ImageButton src={flagEs} />
         )}
       </ListTheme>
-      <Tooltip id="my-tooltip" />
+      <Tooltip id="language-tooltip" />
     </>
   );
 }

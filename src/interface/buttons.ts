@@ -1,11 +1,7 @@
 import { Language, Theme } from "../enum/LanguageEnum";
 
-export interface InterfaceLangButton {
-  handleLanguageProps(): void;
-  languageCurrent: Language;
-}
-export interface InterfaceTheButton {
+export interface InterfaceButton {
   languageCurrent: Language;
   themeCurrent: Theme;
-  handleThemeProps(): void;
+  handleFunction(): void;
 }

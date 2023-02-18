@@ -101,11 +101,12 @@ function Navegator({ activeSection }: InterfaceNavScroll) {
             <ListDesorder>
               <LanguageButton
                 languageCurrent={dataContext.language_current}
-                handleLanguageProps={handleLanguage}
+                themeCurrent={themeContext.theme}
+                handleFunction={handleLanguage}
               />
 
               <ThemeButton
-                handleThemeProps={handleTheme}
+                handleFunction={handleTheme}
                 languageCurrent={dataContext.language_current}
                 themeCurrent={themeContext.theme}
               />
