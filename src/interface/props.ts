@@ -23,3 +23,10 @@ export interface PortfolioProps {
 export interface SocialMediaProps {
   data: SocialMedia;
 }
+export interface MenuMobileProps {
+  menu: boolean;
+  handleMenu: () => void;
+}
+export interface InterfaceStylesMenu {
+  right: string;
+}

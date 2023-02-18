@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 
 // styles
 import {
@@ -36,11 +36,16 @@ import MenuMobile from "./mobile/MenuMobile";
 function Navegator() {
   const dataContext = useContext(FetchContext);
   const themeContext = useContext(ThemeContext);
-  function handleClik() {
+  const [menu, setMenu] = useState(false);
+
+  function handleLanguage() {
     dataContext.handle_language();
   }
   function handleTheme() {
     themeContext.handle_theme();
+  }
+  function handleMenu() {
+    setMenu(menu ? false : true);
   }
   return (
     <ThemeContext.Provider value={themeContext}>
@@ -85,7 +90,7 @@ function Navegator() {
               </ListPoint>
             </ListDesorder>
             <ListDesorder>
-              <ListTheme onClick={handleClik}>
+              <ListTheme onClick={handleLanguage}>
                 {dataContext.language_current === Language.es ? (
                   <ImageButton src={flagEn} />
                 ) : (
@@ -99,13 +104,13 @@ function Navegator() {
                   <ImageButton src={moon} />
                 )}
               </ListTheme>
-              <ListHam aria-label="open menu">
+              <ListHam aria-label="open menu" onClick={handleMenu}>
                 <HamComponents />
               </ListHam>
             </ListDesorder>
           </NavStyle>
         </HeaderStyleTheme>
-        <MenuMobile />
+        <MenuMobile menu={menu} handleMenu={handleMenu} />
       </FetchContext.Provider>
     </ThemeContext.Provider>
   );
