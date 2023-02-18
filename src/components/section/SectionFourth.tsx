@@ -17,13 +17,14 @@ import Contact from "../../assets/icon/icon-phone.svg";
 import FetchContext from "../../context/dataContext";
 import ListTile from "./fourth/ListTile";
 import FormComponent from "./fourth/FormComponent";
+import { InterfaceSectionScroll } from "../../interface/scrollspy";
 
-export default function SectionFourth() {
+export default function SectionFourth({ sectionRef }: InterfaceSectionScroll) {
   const dataContext = useContext(FetchContext);
 
   return (
     <FetchContext.Provider value={dataContext}>
-      <SectionFourthStyles>
+      <SectionFourthStyles ref={sectionRef} id="contact">
         <BoxGridFather>
           <TitleBox>
             <IconImage src={Contact} />
@@ -36,7 +37,7 @@ export default function SectionFourth() {
           </TitleBox>
           <BoxGrid>
             <BoxGridOne>
-              <FormComponent/>
+              <FormComponent />
             </BoxGridOne>
             <BoxGridTwo>
               {dataContext.social_media.map((item, i) => (

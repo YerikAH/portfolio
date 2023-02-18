@@ -1,6 +1,7 @@
 // styles
 import { useContext } from "react";
 import ThemeContext from "../../context/themeContext";
+import { InterfaceSectionScroll } from "../../interface/scrollspy";
 import {
   BoxGrid,
   BoxGridOne,
@@ -12,11 +13,15 @@ import {
 import IconsPrincipal from "./first/IconsPrincipal";
 import InfoPrincipal from "./first/InfoPrincipal";
 
-function SectionFirst() {
+function SectionFirst({ sectionRef }: InterfaceSectionScroll) {
   const themeContext = useContext(ThemeContext);
   return (
     <ThemeContext.Provider value={themeContext}>
-      <SectionFirstStylesTheme className={themeContext.theme}>
+      <SectionFirstStylesTheme
+        className={themeContext.theme}
+        ref={sectionRef}
+        id="home"
+      >
         <BoxGrid>
           <BoxGridOne>
             <IconsPrincipal />

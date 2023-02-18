@@ -9,6 +9,10 @@ const SectionFirstStyles = styled.section`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding-top: 8.5rem;
+  @media (min-width: 720px) {
+    padding-top: 10.9875rem;
+  }
 `;
 export const BoxGrid = styled.div`
   max-width: 1200px;

@@ -32,10 +32,11 @@ import HamComponents from "./images/HamComponents";
 // enum
 import { Language, Theme } from "../enum/LanguageEnum";
 import MenuMobile from "./mobile/MenuMobile";
+import { InterfaceNavScroll } from "../interface/scrollspy";
 
 // spy scroll
 
-function Navegator() {
+function Navegator({ activeSection }: InterfaceNavScroll) {
   const dataContext = useContext(FetchContext);
   const themeContext = useContext(ThemeContext);
   const [menu, setMenu] = useState(false);
@@ -62,25 +63,37 @@ function Navegator() {
               </ListImageBox>
 
               <ListPoint>
-                <ListLink className="true">
+                <ListLink
+                  className={activeSection === 0 ? "true" : "false"}
+                  href="#home"
+                >
                   {dataContext.language_static.nav.home}
                 </ListLink>
               </ListPoint>
 
               <ListPoint>
-                <ListLink className="false">
+                <ListLink
+                  className={activeSection === 1 ? "true" : "false"}
+                  href="#about"
+                >
                   {dataContext.language_static.nav.about}
                 </ListLink>
               </ListPoint>
 
               <ListPoint>
-                <ListLink className="false">
+                <ListLink
+                  className={activeSection === 2 ? "true" : "false"}
+                  href="#projects"
+                >
                   {dataContext.language_static.nav.portfolio}
                 </ListLink>
               </ListPoint>
 
               <ListPoint>
-                <ListLink className="false">
+                <ListLink
+                  className={activeSection === 3 ? "true" : "false"}
+                  href="#contact"
+                >
                   {dataContext.language_static.nav.contact}
                 </ListLink>
               </ListPoint>

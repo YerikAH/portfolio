@@ -51,3 +51,6 @@ input[type="button"] {
   outline: none;
   border: none;
 }
+* {
+  scroll-behavior: smooth;
+}

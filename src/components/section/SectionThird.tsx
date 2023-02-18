@@ -15,8 +15,9 @@ import FetchContext from "../../context/dataContext";
 import ProjectsComponent from "./third/ProjectsComponent";
 import ThemeContext from "../../context/themeContext";
 import IconProjects from "../images/IconProjects";
+import { InterfaceSectionScroll } from "../../interface/scrollspy";
 
-export default function SectionThird() {
+export default function SectionThird({ sectionRef }: InterfaceSectionScroll) {
   const dataContext = useContext(FetchContext);
   const themeContext = useContext(ThemeContext);
 
@@ -38,7 +39,11 @@ export default function SectionThird() {
   return (
     <FetchContext.Provider value={dataContext}>
       <ThemeContext.Provider value={themeContext}>
-        <SectionThirdStylesTheme className={themeContext.theme}>
+        <SectionThirdStylesTheme
+          className={themeContext.theme}
+          ref={sectionRef}
+          id="projects"
+        >
           <TitleBox>
             <IconProjects />
             <SubtitleOne>
