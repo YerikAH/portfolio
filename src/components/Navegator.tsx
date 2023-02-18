@@ -33,6 +33,8 @@ import HamComponents from "./images/HamComponents";
 import { Language, Theme } from "../enum/LanguageEnum";
 import MenuMobile from "./mobile/MenuMobile";
 
+// spy scroll
+
 function Navegator() {
   const dataContext = useContext(FetchContext);
   const themeContext = useContext(ThemeContext);
@@ -90,14 +92,17 @@ function Navegator() {
               </ListPoint>
             </ListDesorder>
             <ListDesorder>
-              <ListTheme onClick={handleLanguage}>
+              <ListTheme
+                onClick={handleLanguage}
+                title="Dale click para cambiar de idioma"
+              >
                 {dataContext.language_current === Language.es ? (
                   <ImageButton src={flagEn} />
                 ) : (
                   <ImageButton src={flagEs} />
                 )}
               </ListTheme>
-              <ListTheme onClick={handleTheme}>
+              <ListTheme onClick={handleTheme} title="Para cambiar de tema">
                 {themeContext.theme === Theme.light ? (
                   <ImageButton src={sun} />
                 ) : (

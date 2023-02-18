@@ -166,7 +166,7 @@ export const ListTileTitle = styled.h4`
 `;
 export const ListTileLink = styled.a`
   margin-top: 0.3rem;
-  font: normal normal 400 0.8rem/1.2rem var(--font-lato);
+  font: normal normal 400 0.9rem/1.2rem var(--font-lato);
   color: var(--white);
   opacity: 0.8;
   text-align: center;
