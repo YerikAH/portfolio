@@ -13,10 +13,14 @@ import {
 } from "../../../styles/section_third";
 /* images */
 import { useContext } from "react";
-import FetchContext from "../../../context/dataContext";
-import LinkComponent from "../../images/LinkComponent";
+// components
 import GithubComponent from "../../images/GithubComponent";
 import InfoComponent from "../../images/InfoComponent";
+import LinkComponent from "../../images/LinkComponent";
+
+// context
+import FetchContext from "../../../context/dataContext";
+
 export default function ProjectsComponent({ data }: PortfolioProps) {
   const dataContext = useContext(FetchContext);
   return (

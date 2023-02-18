@@ -1,4 +1,7 @@
+// props
 import { SocialMediaProps } from "../../../interface/props";
+
+// styles
 import {
   ListTileBox,
   ListTileImage,

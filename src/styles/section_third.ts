@@ -1,4 +1,6 @@
 import styled from "styled-components";
+
+// enum
 import { Theme } from "../enum/LanguageEnum";
 
 const SectionThirdStyles = styled.section`
@@ -171,7 +173,6 @@ export const TextButton = styled.a`
     background-color: var(--black-10);
   }
 `;
-export const ImageIcon = styled.img``;
 
 export const TextButtonStroke = styled.button`
   margin-top: 4rem;

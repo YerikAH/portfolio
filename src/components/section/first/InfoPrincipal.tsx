@@ -1,3 +1,6 @@
+// hook
+import { useContext } from "react";
+
 //styles
 import {
   BoxButtons,
@@ -5,8 +8,10 @@ import {
   TextButtonFill,
   TextButtonStroke,
 } from "../../../styles/section_first";
+
+// context
 import FetchContext from "../../../context/dataContext";
-import { useContext } from "react";
+
 export default function InfoPrincipal() {
   const dataContext = useContext(FetchContext);
   return (
