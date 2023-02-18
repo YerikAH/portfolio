@@ -1,5 +1,5 @@
 import { Dynamic, Portfolio, SocialMedia, Static } from "./data";
-import { Language } from "../enum/LanguageEnum";
+import { Language, Theme } from "../enum/LanguageEnum";
 export interface ContextProps {
   children: JSX.Element;
 }
@@ -13,7 +13,7 @@ export interface ContextInterface {
   handle_language: () => void;
 }
 export interface ContextThemeInterface {
-  theme: string;
+  theme: Theme;
   handle_theme: () => void;
 }
 

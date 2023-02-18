@@ -1,5 +1,4 @@
 import { useContext, useState } from "react";
-import { Tooltip } from "react-tooltip";
 
 // styles
 import {
@@ -14,12 +13,6 @@ import {
   NavStyle,
 } from "../styles/navegator_styles";
 
-// images
-import sun from "../assets/icon/sun.svg";
-import moon from "../assets/icon/moon.svg";
-import flagEs from "../assets/static/es.png";
-import flagEn from "../assets/static/en.png";
-
 // context
 import FetchContext from "../context/dataContext";
 import ThemeContext from "../context/themeContext";
@@ -32,6 +25,8 @@ import HamComponents from "./images/HamComponents";
 import { Language, Theme } from "../enum/LanguageEnum";
 import MenuMobile from "./mobile/MenuMobile";
 import { InterfaceNavScroll } from "../interface/scrollspy";
+import LanguageButton from "./buttons/LanguageButton";
+import ThemeButton from "./buttons/ThemeButton";
 
 // spy scroll
 
@@ -104,26 +99,23 @@ function Navegator({ activeSection }: InterfaceNavScroll) {
               </ListPoint>
             </ListDesorder>
             <ListDesorder>
-              <ListTheme onClick={handleLanguage} title="">
-                {dataContext.language_current === Language.es ? (
-                  <ImageButton src={flagEn} />
-                ) : (
-                  <ImageButton src={flagEs} />
-                )}
-              </ListTheme>
-              <ListTheme onClick={handleTheme} title="">
-                {themeContext.theme === Theme.light ? (
-                  <ImageButton src={sun} />
-                ) : (
-                  <ImageButton src={moon} />
-                )}
-              </ListTheme>
+              <LanguageButton
+                languageCurrent={dataContext.language_current}
+                handleLanguageProps={handleLanguage}
+              />
+
+              <ThemeButton
+                handleThemeProps={handleTheme}
+                languageCurrent={dataContext.language_current}
+                themeCurrent={themeContext.theme}
+              />
               <ListHam aria-label="open menu" onClick={handleMenu}>
                 <HamComponents />
               </ListHam>
             </ListDesorder>
           </NavStyle>
         </HeaderStyleTheme>
+
         <MenuMobile menu={menu} handleMenu={handleMenu} />
       </FetchContext.Provider>
     </ThemeContext.Provider>
