@@ -9,7 +9,7 @@ const HeaderStyle = styled.header`
   top: 0;
   left: 0;
   right: 0;
-  box-shadow: 0px 0px 1.5px 1px #0002;
+
   z-index: 100;
   transition: 0.3s;
 `;
@@ -95,10 +95,10 @@ export const ListTheme = styled.button`
 `;
 
 export const HamImage = styled.img``;
-export const ThemeImage = styled.img`
+export const ImageButton = styled.img`
   width: 1rem;
   @media (min-width: 720px) {
-    width: auto;
+    width: 1.5rem;
   }
 `;
 
@@ -107,6 +107,11 @@ export const ThemeImage = styled.img`
 export const HeaderStyleTheme = styled(HeaderStyle)`
   background-color: ${(props) =>
     props.className === Theme.dark ? "var(--black-blue)" : "var(--white)"};
+
+  box-shadow: ${(props) =>
+    props.className === Theme.dark
+      ? "0px 0px 1.5px 1px #FFF2"
+      : "0px 0px 1.5px 1px #0002"};
   & ${ListLink} {
     color: ${(props) =>
       props.className === Theme.dark ? "var(--white)" : "var(--black)"};
