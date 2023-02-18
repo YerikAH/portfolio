@@ -31,6 +31,7 @@ import HamComponents from "./images/HamComponents";
 
 // enum
 import { Language, Theme } from "../enum/LanguageEnum";
+import MenuMobile from "./mobile/MenuMobile";
 
 function Navegator() {
   const dataContext = useContext(FetchContext);
@@ -104,6 +105,7 @@ function Navegator() {
             </ListDesorder>
           </NavStyle>
         </HeaderStyleTheme>
+        <MenuMobile />
       </FetchContext.Provider>
     </ThemeContext.Provider>
   );

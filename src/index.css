@@ -33,6 +33,10 @@
   font-family: var(--font-lato);
 }
 
+html {
+  overflow-x: hidden;
+}
+
 a,
 li {
   text-decoration: none;
