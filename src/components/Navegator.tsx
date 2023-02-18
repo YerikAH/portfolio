@@ -1,9 +1,9 @@
 import { useContext, useState } from "react";
+import { Tooltip } from "react-tooltip";
 
 // styles
 import {
   ImageButton,
-  HamImage,
   HeaderStyleTheme,
   ListDesorder,
   ListHam,
@@ -15,7 +15,6 @@ import {
 } from "../styles/navegator_styles";
 
 // images
-import ham from "../assets/icon/ham.svg";
 import sun from "../assets/icon/sun.svg";
 import moon from "../assets/icon/moon.svg";
 import flagEs from "../assets/static/es.png";

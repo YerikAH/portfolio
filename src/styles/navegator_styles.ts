@@ -93,8 +93,6 @@ export const ListTheme = styled.button`
   justify-content: center;
   align-items: center;
 `;
-
-export const HamImage = styled.img``;
 export const ImageButton = styled.img`
   width: 1rem;
   @media (min-width: 720px) {
