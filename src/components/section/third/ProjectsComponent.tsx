@@ -4,7 +4,6 @@ import {
   BoxButtons,
   BoxInfo,
   HoverBox,
-  ImageIcon,
   LinkImage,
   ProjectStyle,
   TextButton,

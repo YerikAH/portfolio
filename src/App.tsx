@@ -1,10 +1,7 @@
-// components
-import Footer from "./components/Footer";
-import Global from "./components/Global";
-import Main from "./components/Main";
-import Navegator from "./components/Navegator";
-
 // context
+import { Route, Routes } from "react-router-dom";
+import Blog from "./components/pages/Blog";
+import Home from "./components/pages/Home";
 import { DataProvider } from "./context/dataContext";
 import { ThemeProvider } from "./context/themeContext";
 
@@ -13,10 +10,10 @@ function App() {
     <DataProvider>
       <ThemeProvider>
         <>
-          <Navegator />
-          <Main />
-          <Footer />
-          <Global />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/blog" element={<Blog />} />
+          </Routes>
         </>
       </ThemeProvider>
     </DataProvider>
