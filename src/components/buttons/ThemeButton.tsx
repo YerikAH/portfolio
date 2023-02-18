@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 // interface and enum
 import { Language, Theme } from "../../enum/LanguageEnum";
 import { InterfaceButton } from "../../interface/buttons";
@@ -12,7 +14,9 @@ import moon from "../../assets/icon/moon.svg";
 // tooltip
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
-import { useEffect, useState } from "react";
+
+// const
+import { EN_DARK, EN_LIGHT, ES_DARK, ES_LIGHT } from "../../constant/TextInit";
 
 export default function ThemeButton({
   languageCurrent,
@@ -22,11 +26,11 @@ export default function ThemeButton({
   function languageSwitchText(): string {
     return themeCurrent === Theme.dark
       ? languageCurrent === Language.es
-        ? "Cambiar a tema claro"
-        : "Change the theme light"
+        ? ES_LIGHT
+        : EN_LIGHT
       : languageCurrent === Language.es
-      ? "Cambiar a tema oscuro"
-      : "Change the theme dark";
+      ? ES_DARK
+      : EN_DARK;
   }
 
   const [textToolTip, setTextToolTip] = useState(languageSwitchText);

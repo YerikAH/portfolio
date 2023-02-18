@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 // styles
 import { ImageButton, ListTheme } from "../../styles/navegator_styles";
 
@@ -13,8 +15,8 @@ import flagEn from "../../assets/static/en.png";
 import { Language, Theme } from "../../enum/LanguageEnum";
 import { InterfaceButton } from "../../interface/buttons";
 
-// helpers
-import { useEffect, useState } from "react";
+// const
+import { LANGUAGE_EN, LANGUAGE_ES } from "../../constant/TextInit";
 
 export default function LanguageButton({
   handleFunction,
@@ -22,9 +24,7 @@ export default function LanguageButton({
   themeCurrent,
 }: InterfaceButton) {
   function languageSwitchText(): string {
-    return languageCurrent === Language.es
-      ? "Cambiar a idioma ingles"
-      : "Change to language spanish";
+    return languageCurrent === Language.es ? LANGUAGE_ES : LANGUAGE_EN;
   }
 
   const [textToolTip, setTextToolTip] = useState(languageSwitchText);
