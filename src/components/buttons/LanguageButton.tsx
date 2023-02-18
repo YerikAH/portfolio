@@ -14,7 +14,6 @@ import { Language, Theme } from "../../enum/LanguageEnum";
 import { InterfaceButton } from "../../interface/buttons";
 
 // helpers
-import { getTooltipText } from "../../helpers/getTooltipText";
 import { useEffect, useState } from "react";
 
 export default function LanguageButton({
@@ -22,15 +21,16 @@ export default function LanguageButton({
   languageCurrent,
   themeCurrent,
 }: InterfaceButton) {
-  const [textToolTip, setTextToolTip] = useState("Cambiar de tema");
+  function languageSwitchText(): string {
+    return languageCurrent === Language.es
+      ? "Cambiar a idioma ingles"
+      : "Change to language spanish";
+  }
+
+  const [textToolTip, setTextToolTip] = useState(languageSwitchText);
 
   useEffect(() => {
-    const textTooltip: string = getTooltipText(
-      languageCurrent,
-      "Cambiar de idioma",
-      "Change the language"
-    );
-    setTextToolTip(textTooltip);
+    setTextToolTip(languageSwitchText);
   }, [languageCurrent]);
 
   return (

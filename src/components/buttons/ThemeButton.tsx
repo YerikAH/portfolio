@@ -14,24 +14,26 @@ import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
 import { useEffect, useState } from "react";
 
-// helpers
-import { getTooltipText } from "../../helpers/getTooltipText";
-
 export default function ThemeButton({
   languageCurrent,
   themeCurrent,
   handleFunction,
 }: InterfaceButton) {
-  const [textToolTip, setTextToolTip] = useState("Cambiar de tema");
+  function languageSwitchText(): string {
+    return themeCurrent === Theme.dark
+      ? languageCurrent === Language.es
+        ? "Cambiar a tema claro"
+        : "Change the theme light"
+      : languageCurrent === Language.es
+      ? "Cambiar a tema oscuro"
+      : "Change the theme dark";
+  }
+
+  const [textToolTip, setTextToolTip] = useState(languageSwitchText);
 
   useEffect(() => {
-    const textTooltip: string = getTooltipText(
-      languageCurrent,
-      "Cambiar de tema",
-      "Change the theme"
-    );
-    setTextToolTip(textTooltip);
-  }, [languageCurrent]);
+    setTextToolTip(languageSwitchText);
+  }, [languageCurrent, themeCurrent]);
 
   return (
     <>
