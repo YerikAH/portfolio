@@ -92,17 +92,14 @@ function Navegator() {
               </ListPoint>
             </ListDesorder>
             <ListDesorder>
-              <ListTheme
-                onClick={handleLanguage}
-                title="Dale click para cambiar de idioma"
-              >
+              <ListTheme onClick={handleLanguage} title="">
                 {dataContext.language_current === Language.es ? (
                   <ImageButton src={flagEn} />
                 ) : (
                   <ImageButton src={flagEs} />
                 )}
               </ListTheme>
-              <ListTheme onClick={handleTheme} title="Para cambiar de tema">
+              <ListTheme onClick={handleTheme} title="">
                 {themeContext.theme === Theme.light ? (
                   <ImageButton src={sun} />
                 ) : (
