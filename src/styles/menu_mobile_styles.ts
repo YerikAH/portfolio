@@ -15,7 +15,7 @@ const MenuMobileStyles = styled.nav`
   right: -100vw;
   transition: 0.3s;
   z-index: 500;
-
+  overflow: auto;
   @media (min-width: 720px) {
     display: none;
   }

@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import ReactDOM from "react-dom";
-import DataContext from "../../context/dataContext";
+
 import {
   ListHam,
   MenuMobileLinkRouter,
@@ -9,12 +9,18 @@ import {
   MenuMobileUlist,
 } from "../../styles/menu_mobile_styles";
 import CloseHamComponent from "../images/CloseHamComponent";
-// props or interface
+// props or interface or init state
 import { InterfaceStylesMenu, MenuMobileProps } from "../../interface/props";
 import { STYLES_MENU } from "../../constant/appInitialState";
+
+// context
 import ThemeContext from "../../context/themeContext";
+import DataContext from "../../context/dataContext";
+
+// react router
 import { useLocation } from "react-router-dom";
-import { Sections } from "../../enum/LanguageEnum";
+
+// components
 import HomeMenuMobile from "./HomeMenuMobile";
 import BlogMenuMobile from "./BlogMenuMobile";
 
@@ -24,8 +30,10 @@ export default function MenuMobile({
   changeSection,
 }: MenuMobileProps) {
   const menuHTML = document.getElementById("menu")!;
+
   const dataContext = useContext(DataContext);
   const themeContext = useContext(ThemeContext);
+  
   const [stylesMenu, setStylesMenu] =
     useState<InterfaceStylesMenu>(STYLES_MENU);
 

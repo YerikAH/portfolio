@@ -77,7 +77,7 @@ export default function LinksNav({
           </ListPoint>
           <ListPoint>
             <ListLinkRouter
-              to="/#about"
+              to="/"
               onClick={() => changeSection(Sections.about)}
             >
               {navText.about}
@@ -85,7 +85,7 @@ export default function LinksNav({
           </ListPoint>
           <ListPoint>
             <ListLinkRouter
-              to="/#projects"
+              to="/"
               onClick={() => changeSection(Sections.projects)}
             >
               {navText.portfolio}
@@ -93,7 +93,7 @@ export default function LinksNav({
           </ListPoint>
           <ListPoint>
             <ListLinkRouter
-              to="/#contact"
+              to="/"
               onClick={() => changeSection(Sections.contact)}
             >
               {navText.contact}
