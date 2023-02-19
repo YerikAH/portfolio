@@ -1,4 +1,4 @@
-import { useContext,  useState } from "react";
+import { useContext, useState } from "react";
 
 // styles
 import {
@@ -28,6 +28,7 @@ import { InterfaceNavScroll } from "../interface/scrollspy";
 import { useLocation } from "react-router-dom";
 import { Sections } from "../enum/LanguageEnum";
 import LinksNav from "./nav/LinksNav";
+import ButtonsNav from "./nav/ButtonsNav";
 
 // spy scroll
 
@@ -59,23 +60,18 @@ function Navegator({ activeSection, handleChange }: InterfaceNavScroll) {
       <FetchContext.Provider value={dataContext}>
         <HeaderStyleTheme className={themeContext.theme}>
           <NavStyle>
-            <LinksNav activeSection={activeSection} navText={dataContext.language_static.nav} changeSection={changeSection}/>
-            <ListDesorder>
-              <LanguageButton
-                languageCurrent={dataContext.language_current}
-                themeCurrent={themeContext.theme}
-                handleFunction={handleLanguage}
-              />
-
-              <ThemeButton
-                handleFunction={handleTheme}
-                languageCurrent={dataContext.language_current}
-                themeCurrent={themeContext.theme}
-              />
-              <ListHam aria-label="open menu" onClick={handleMenu}>
-                <HamComponents />
-              </ListHam>
-            </ListDesorder>
+            <LinksNav
+              activeSection={activeSection}
+              navText={dataContext.language_static.nav}
+              changeSection={changeSection}
+            />
+            <ButtonsNav
+              handleLanguage={handleLanguage}
+              handleTheme={handleTheme}
+              handleMenu={handleMenu}
+              languageCurrent={dataContext.language_current}
+              themeCurrent={themeContext.theme}
+            />
           </NavStyle>
         </HeaderStyleTheme>
 

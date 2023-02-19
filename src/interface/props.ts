@@ -45,10 +45,17 @@ export interface HomeBlogProps{
 }
 
 
-// LinksNav.tsx
+// dir - nav
 
 export interface LinksNavsProps{
   navText : Nav;
   activeSection: number;
   changeSection(section: Sections): void
+}
+export interface ButtonNavProps {
+  languageCurrent: Language;
+  themeCurrent: Theme;
+  handleLanguage(): void;
+  handleTheme():void;
+  handleMenu(): void
 }
