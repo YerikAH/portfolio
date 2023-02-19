@@ -39,23 +39,22 @@ export interface InterfaceStylesMenu {
 }
 
 // App.tsx
-export interface HomeBlogProps{
+export interface HomeBlogProps {
   section: Sections;
-  handleChange(section: Sections): void
+  handleChange(section: Sections): void;
 }
-
 
 // dir - nav
 
-export interface LinksNavsProps{
-  navText : Nav;
+export interface LinksNavsProps {
+  navText: Nav;
   activeSection: number;
-  changeSection(section: Sections): void
+  changeSection(section: Sections): void;
 }
 export interface ButtonNavProps {
   languageCurrent: Language;
   themeCurrent: Theme;
   handleLanguage(): void;
-  handleTheme():void;
-  handleMenu(): void
+  handleTheme(): void;
+  handleMenu(): void;
 }

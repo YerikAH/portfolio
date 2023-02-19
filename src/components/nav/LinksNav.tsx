@@ -1,6 +1,11 @@
+// react router
 import { useLocation } from "react-router-dom";
+
+// interface or props or enum
 import { Sections } from "../../enum/LanguageEnum";
 import { LinksNavsProps } from "../../interface/props";
+
+// styles
 import {
   ListDesorder,
   ListImageBox,
@@ -8,10 +13,16 @@ import {
   ListLinkRouter,
   ListPoint,
 } from "../../styles/navegator_styles";
+
+// components
 import LogoComponent from "../images/LogoComponent";
 
-export default function LinksNav({navText, activeSection, changeSection}:LinksNavsProps) {
-    let location = useLocation()
+export default function LinksNav({
+  navText,
+  activeSection,
+  changeSection,
+}: LinksNavsProps) {
+  let location = useLocation();
   return (
     <ListDesorder>
       <ListImageBox>
