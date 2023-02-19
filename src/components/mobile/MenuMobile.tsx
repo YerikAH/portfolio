@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import DataContext from "../../context/dataContext";
 import {
   ListHam,
-  MenuMobileLink,
+  MenuMobileLinkRouter,
   MenuMobileList,
   MenuMobileStylesTheme,
   MenuMobileUlist,
@@ -13,13 +13,23 @@ import CloseHamComponent from "../images/CloseHamComponent";
 import { InterfaceStylesMenu, MenuMobileProps } from "../../interface/props";
 import { STYLES_MENU } from "../../constant/appInitialState";
 import ThemeContext from "../../context/themeContext";
+import { useLocation } from "react-router-dom";
+import { Sections } from "../../enum/LanguageEnum";
+import HomeMenuMobile from "./HomeMenuMobile";
+import BlogMenuMobile from "./BlogMenuMobile";
 
-export default function MenuMobile({ menu, handleMenu }: MenuMobileProps) {
+export default function MenuMobile({
+  menu,
+  handleMenu,
+  changeSection,
+}: MenuMobileProps) {
   const menuHTML = document.getElementById("menu")!;
   const dataContext = useContext(DataContext);
   const themeContext = useContext(ThemeContext);
   const [stylesMenu, setStylesMenu] =
     useState<InterfaceStylesMenu>(STYLES_MENU);
+
+  let location = useLocation();
 
   function handleSwitch() {
     handleMenu();
@@ -48,30 +58,22 @@ export default function MenuMobile({ menu, handleMenu }: MenuMobileProps) {
             <CloseHamComponent />
           </ListHam>
           <MenuMobileUlist>
+            {location.pathname === "/" ? (
+              <HomeMenuMobile
+                handleSwitch={handleSwitch}
+                navText={dataContext.language_static.nav}
+              />
+            ) : (
+              <BlogMenuMobile
+                changeSection={changeSection}
+                navText={dataContext.language_static.nav}
+              />
+            )}
+
             <MenuMobileList>
-              <MenuMobileLink>
-                {dataContext.language_static.nav.home}
-              </MenuMobileLink>
-            </MenuMobileList>
-            <MenuMobileList>
-              <MenuMobileLink>
-                {dataContext.language_static.nav.about}
-              </MenuMobileLink>
-            </MenuMobileList>
-            <MenuMobileList>
-              <MenuMobileLink>
-                {dataContext.language_static.nav.portfolio}
-              </MenuMobileLink>
-            </MenuMobileList>
-            <MenuMobileList>
-              <MenuMobileLink>
-                {dataContext.language_static.nav.contact}
-              </MenuMobileLink>
-            </MenuMobileList>
-            <MenuMobileList>
-              <MenuMobileLink>
+              <MenuMobileLinkRouter to="/blog">
                 {dataContext.language_static.nav.blog}
-              </MenuMobileLink>
+              </MenuMobileLinkRouter>
             </MenuMobileList>
           </MenuMobileUlist>
         </MenuMobileStylesTheme>

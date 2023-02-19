@@ -56,7 +56,11 @@ function Navegator({ activeSection, handleChange }: InterfaceNavScroll) {
             />
           </NavStyle>
         </HeaderStyleTheme>
-        <MenuMobile menu={menu} handleMenu={handleMenu} />
+        <MenuMobile
+          menu={menu}
+          handleMenu={handleMenu}
+          changeSection={changeSection}
+        />
       </FetchContext.Provider>
     </ThemeContext.Provider>
   );

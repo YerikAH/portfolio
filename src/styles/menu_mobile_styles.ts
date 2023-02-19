@@ -1,6 +1,12 @@
-import styled from "styled-components";
+import { Link } from "react-router-dom";
+import styled, { css } from "styled-components";
 import { Theme } from "../enum/LanguageEnum";
-
+const MobileLink = css`
+  display: block;
+  font: normal normal 400 1rem/1.2rem var(--font-lato);
+  width: 100%;
+  padding: 1rem 2rem;
+`;
 const MenuMobileStyles = styled.nav`
   position: fixed;
   width: 250px;
@@ -30,17 +36,22 @@ export const MenuMobileUlist = styled.ul`
   width: 100%;
 `;
 export const MenuMobileList = styled.li``;
-export const MenuMobileLink = styled.a`
-  display: block;
-  font: normal normal 400 1rem/1.2rem var(--font-lato);
 
-  width: 100%;
-  padding: 1rem 2rem;
+export const MenuMobileLink = styled.a`
+  ${MobileLink}
 `;
+export const MenuMobileLinkRouter = styled(Link)`
+  ${MobileLink}
+`;
+
 export const MenuMobileStylesTheme = styled(MenuMobileStyles)`
   background-color: ${(props) =>
     props.className === Theme.dark ? "var(--black-pale)" : "var(--white)"};
   & ${MenuMobileLink} {
+    color: ${(props) =>
+      props.className === Theme.dark ? "var(--white)" : "var(--black)"};
+  }
+  & ${MenuMobileLinkRouter} {
     color: ${(props) =>
       props.className === Theme.dark ? "var(--white)" : "var(--black)"};
   }

@@ -33,9 +33,19 @@ export interface SocialMediaProps {
 export interface MenuMobileProps {
   menu: boolean;
   handleMenu: () => void;
+  changeSection(section: Sections): void;
 }
 export interface InterfaceStylesMenu {
   right: string;
+}
+
+export interface HomeNavProps {
+  navText: Nav;
+  handleSwitch(): void;
+}
+export interface BlogNavProps {
+  navText: Nav;
+  changeSection: (section: Sections) => void;
 }
 
 // App.tsx
