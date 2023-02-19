@@ -30,3 +30,8 @@ export interface MenuMobileProps {
 export interface InterfaceStylesMenu {
   right: string;
 }
+export interface NavLinkProps {
+  path: string,
+  activeSection: number,
+  
+}

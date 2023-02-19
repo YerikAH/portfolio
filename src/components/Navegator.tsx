@@ -1,16 +1,15 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 // styles
 import {
-  ImageButton,
   HeaderStyleTheme,
   ListDesorder,
   ListHam,
   ListImageBox,
   ListLink,
   ListPoint,
-  ListTheme,
   NavStyle,
+  ListLinkRouter,
 } from "../styles/navegator_styles";
 
 // context
@@ -20,13 +19,13 @@ import ThemeContext from "../context/themeContext";
 // component
 import LogoComponent from "./images/LogoComponent";
 import HamComponents from "./images/HamComponents";
-
-// enum
-import { Language, Theme } from "../enum/LanguageEnum";
-import MenuMobile from "./mobile/MenuMobile";
-import { InterfaceNavScroll } from "../interface/scrollspy";
 import LanguageButton from "./buttons/LanguageButton";
 import ThemeButton from "./buttons/ThemeButton";
+import MenuMobile from "./mobile/MenuMobile";
+
+// enum or interface
+import { InterfaceNavScroll } from "../interface/scrollspy";
+import { useLocation } from "react-router-dom";
 
 // spy scroll
 
@@ -34,6 +33,8 @@ function Navegator({ activeSection }: InterfaceNavScroll) {
   const dataContext = useContext(FetchContext);
   const themeContext = useContext(ThemeContext);
   const [menu, setMenu] = useState(false);
+
+  let location = useLocation();
 
   function handleLanguage() {
     dataContext.handle_language();
@@ -44,6 +45,15 @@ function Navegator({ activeSection }: InterfaceNavScroll) {
   function handleMenu() {
     setMenu(menu ? false : true);
   }
+
+  function BlogTest() {
+    console.log("HOla mujdno");
+  }
+
+  useEffect(() => {
+    console.log(location.pathname);
+  }, [location]);
+
   return (
     <ThemeContext.Provider value={themeContext}>
       <FetchContext.Provider value={dataContext}>
@@ -56,47 +66,79 @@ function Navegator({ activeSection }: InterfaceNavScroll) {
                 </ListLink>
               </ListImageBox>
 
-              <ListPoint>
-                <ListLink
-                  className={activeSection === 0 ? "true" : "false"}
-                  href="#home"
-                >
-                  {dataContext.language_static.nav.home}
-                </ListLink>
-              </ListPoint>
+              {location.pathname === "/" ? (
+                <>
+                  <ListPoint>
+                    <ListLink
+                      className={activeSection === 0 ? "true" : "false"}
+                      href="#home"
+                    >
+                      {dataContext.language_static.nav.home}
+                    </ListLink>
+                  </ListPoint>
+                  <ListPoint>
+                    <ListLink
+                      className={activeSection === 1 ? "true" : "false"}
+                      href="#about"
+                    >
+                      {dataContext.language_static.nav.about}
+                    </ListLink>
+                  </ListPoint>
+
+                  <ListPoint>
+                    <ListLink
+                      className={activeSection === 2 ? "true" : "false"}
+                      href="#projects"
+                    >
+                      {dataContext.language_static.nav.portfolio}
+                    </ListLink>
+                  </ListPoint>
+
+                  <ListPoint>
+                    <ListLink
+                      className={activeSection === 3 ? "true" : "false"}
+                      href="#contact"
+                    >
+                      {dataContext.language_static.nav.contact}
+                    </ListLink>
+                  </ListPoint>
+                </>
+              ) : (
+                <>
+                  <ListPoint>
+                    <ListLinkRouter to="/">
+                      {dataContext.language_static.nav.home}
+                    </ListLinkRouter>
+                  </ListPoint>
+                  <ListPoint>
+                    <ListLinkRouter to="/#about">
+                      {dataContext.language_static.nav.about}
+                    </ListLinkRouter>
+                  </ListPoint>
+                  <ListPoint>
+                    <ListLinkRouter to="/#projects">
+                      {dataContext.language_static.nav.portfolio}
+                    </ListLinkRouter>
+                  </ListPoint>
+                  <ListPoint>
+                    <ListLinkRouter to="/#contact">
+                      {dataContext.language_static.nav.contact}
+                    </ListLinkRouter>
+                  </ListPoint>
+                </>
+              )}
 
               <ListPoint>
-                <ListLink
-                  className={activeSection === 1 ? "true" : "false"}
-                  href="#about"
+                <ListLinkRouter
+                  to="/blog"
+                  className={activeSection === 4 ? "true" : "false"}
+                  onClick={BlogTest}
                 >
-                  {dataContext.language_static.nav.about}
-                </ListLink>
-              </ListPoint>
-
-              <ListPoint>
-                <ListLink
-                  className={activeSection === 2 ? "true" : "false"}
-                  href="#projects"
-                >
-                  {dataContext.language_static.nav.portfolio}
-                </ListLink>
-              </ListPoint>
-
-              <ListPoint>
-                <ListLink
-                  className={activeSection === 3 ? "true" : "false"}
-                  href="#contact"
-                >
-                  {dataContext.language_static.nav.contact}
-                </ListLink>
-              </ListPoint>
-
-              <ListPoint>
-                <ListLink className="false">
                   {dataContext.language_static.nav.blog}
-                </ListLink>
+                </ListLinkRouter>
               </ListPoint>
+
+
             </ListDesorder>
             <ListDesorder>
               <LanguageButton

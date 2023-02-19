@@ -1,7 +1,19 @@
-import styled from "styled-components";
+import { Link } from "react-router-dom";
+import styled, { css } from "styled-components";
 
 // enum
 import { Theme } from "../enum/LanguageEnum";
+
+// mixin
+
+const LinkGeneral = css`
+  font: normal normal 400 1rem/1.9rem var(--font-lato);
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+`;
 
 const HeaderStyle = styled.header`
   width: 100%;
@@ -41,12 +53,25 @@ export const ListPoint = styled.li`
 `;
 
 export const ListLink = styled.a`
-  font: normal normal 400 1rem/1.9rem var(--font-lato);
-  color: var(--black);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+  ${LinkGeneral}
+  &::after {
+    content: "";
+    width: 100%;
+    height: 1.5px;
+    transform: ${(props) =>
+      props.className === "true" ? "scale(1)" : "scaleX(0)"};
+    background-color: var(--black);
+    opacity: ${(props) => props.className === "false" && "0.5"};
+    bottom: -0.2rem;
+    transition: 0.3s;
+    position: absolute;
+  }
+  &:hover::after {
+    transform: ${(props) => props.className !== "logo" && "scale(1)"};
+  }
+`;
+export const ListLinkRouter = styled(Link)`
+  ${LinkGeneral}
   &::after {
     content: "";
     width: 100%;
@@ -111,6 +136,14 @@ export const HeaderStyleTheme = styled(HeaderStyle)`
       ? "0px 0px 1.5px 1px #FFF2"
       : "0px 0px 1.5px 1px #0002"};
   & ${ListLink} {
+    color: ${(props) =>
+      props.className === Theme.dark ? "var(--white)" : "var(--black)"};
+    &::after {
+      background-color: ${(props) =>
+        props.className === Theme.dark ? "var(--white)" : "var(--black)"};
+    }
+  }
+  & ${ListLinkRouter} {
     color: ${(props) =>
       props.className === Theme.dark ? "var(--white)" : "var(--black)"};
     &::after {

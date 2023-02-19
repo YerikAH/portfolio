@@ -1,5 +1,5 @@
 // components
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import useScrollSpy from "react-use-scrollspy";
 import Footer from "../Footer";
 import Global from "../Global";
@@ -18,11 +18,13 @@ export default function Home() {
     useScrollSpy({
       sectionElementRefs: sectionRefs,
       offsetPx: -150,
-    }) ?? 0;
-
+    }) ?? 5;
+    const scrollToSection = (index: number) => {
+      sectionRefs[index].current!.scrollIntoView({ behavior: "smooth" });
+    };
   return (
     <>
-      <Navegator activeSection={activeSection} />
+      <Navegator activeSection={activeSection} scrollToSection={scrollToSection}/>
       <Main sectionRefs={sectionRefs} />
       <Footer />
       <Global />

@@ -1,5 +1,9 @@
+import Navegator from "../Navegator";
+
 export default function Blog() {
   return (
-    <div>Blog</div>
+    <>
+     <Navegator activeSection={4} />
+    </>
   )
 }

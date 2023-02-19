@@ -1,5 +1,6 @@
 export interface InterfaceNavScroll {
   activeSection: number;
+  scrollToSection?: (index: number) => void
 }
 export interface InterfaceMainScroll {
   sectionRefs: React.RefObject<HTMLDivElement>[];
