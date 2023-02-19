@@ -4,7 +4,7 @@ import useScrollSpy from "react-use-scrollspy";
 
 // enum and interface
 import { Sections } from "../../enum/LanguageEnum";
-import { InterfaceApp } from "../../interface/interface";
+import { HomeBlogProps } from "../../interface/props";
 
 // components
 import Footer from "../Footer";
@@ -12,7 +12,7 @@ import Global from "../Global";
 import Main from "../Main";
 import Navegator from "../Navegator";
 
-export default function Home({ section }: InterfaceApp) {
+export default function Home({ section }: HomeBlogProps) {
   const sectionRefs = [
     useRef<HTMLDivElement>(null),
     useRef<HTMLDivElement>(null),

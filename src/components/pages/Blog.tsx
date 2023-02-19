@@ -4,9 +4,9 @@ import Global from "../Global";
 import Navegator from "../Navegator";
 
 // interface
-import { InterfaceApp } from "../../interface/interface";
+import { HomeBlogProps } from "../../interface/props";
 
-export default function Blog({ handleChange }: InterfaceApp) {
+export default function Blog({ handleChange }: HomeBlogProps) {
   return (
     <>
       <Navegator activeSection={4} handleChange={handleChange} />

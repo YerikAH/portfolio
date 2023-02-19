@@ -10,7 +10,3 @@ export interface InterfaceFormVerify {
   email: boolean;
   message: boolean;
 }
-export interface InterfaceApp{
-  section: Sections;
-  handleChange(section: Sections): void
-}
