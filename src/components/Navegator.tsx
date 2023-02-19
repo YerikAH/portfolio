@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext,  useState } from "react";
 
 // styles
 import {
@@ -26,10 +26,11 @@ import MenuMobile from "./mobile/MenuMobile";
 // enum or interface
 import { InterfaceNavScroll } from "../interface/scrollspy";
 import { useLocation } from "react-router-dom";
+import { Sections } from "../enum/LanguageEnum";
 
 // spy scroll
 
-function Navegator({ activeSection }: InterfaceNavScroll) {
+function Navegator({ activeSection, handleChange }: InterfaceNavScroll) {
   const dataContext = useContext(FetchContext);
   const themeContext = useContext(ThemeContext);
   const [menu, setMenu] = useState(false);
@@ -46,13 +47,11 @@ function Navegator({ activeSection }: InterfaceNavScroll) {
     setMenu(menu ? false : true);
   }
 
-  function BlogTest() {
-    console.log("HOla mujdno");
+  function changeSection(section: Sections) {
+    if (handleChange !== undefined) {
+      handleChange(section);
+    }
   }
-
-  useEffect(() => {
-    console.log(location.pathname);
-  }, [location]);
 
   return (
     <ThemeContext.Provider value={themeContext}>
@@ -106,22 +105,22 @@ function Navegator({ activeSection }: InterfaceNavScroll) {
               ) : (
                 <>
                   <ListPoint>
-                    <ListLinkRouter to="/">
+                    <ListLinkRouter to="/" onClick={()=>changeSection(Sections.home)}> 
                       {dataContext.language_static.nav.home}
                     </ListLinkRouter>
                   </ListPoint>
                   <ListPoint>
-                    <ListLinkRouter to="/#about">
+                    <ListLinkRouter to="/#about" onClick={()=>changeSection(Sections.about)} >
                       {dataContext.language_static.nav.about}
                     </ListLinkRouter>
                   </ListPoint>
                   <ListPoint>
-                    <ListLinkRouter to="/#projects">
+                    <ListLinkRouter to="/#projects" onClick={()=>changeSection(Sections.projects)}>
                       {dataContext.language_static.nav.portfolio}
                     </ListLinkRouter>
                   </ListPoint>
                   <ListPoint>
-                    <ListLinkRouter to="/#contact">
+                    <ListLinkRouter to="/#contact" onClick={()=>changeSection(Sections.contact)}>
                       {dataContext.language_static.nav.contact}
                     </ListLinkRouter>
                   </ListPoint>
@@ -132,13 +131,10 @@ function Navegator({ activeSection }: InterfaceNavScroll) {
                 <ListLinkRouter
                   to="/blog"
                   className={activeSection === 4 ? "true" : "false"}
-                  onClick={BlogTest}
                 >
                   {dataContext.language_static.nav.blog}
                 </ListLinkRouter>
               </ListPoint>
-
-
             </ListDesorder>
             <ListDesorder>
               <LanguageButton
