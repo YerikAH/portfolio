@@ -1,5 +1,4 @@
 import { InterfaceForm, InterfaceFormVerify } from "../interface/interface";
-import { InterfaceStylesMenu } from "../interface/props";
 
 export const FORM_INITIAL_STATE: InterfaceForm = {
   name: "",
@@ -12,6 +11,3 @@ export const FORM_VERIFY: InterfaceFormVerify = {
   message: false,
 };
 
-export const STYLES_MENU: InterfaceStylesMenu = {
-  right: "-100vw",
-};

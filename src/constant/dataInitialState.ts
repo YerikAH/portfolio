@@ -16,6 +16,8 @@ export const DATA_INITIAL_STATE: Welcome = {
           headline: "",
           button_one: "",
           button_two: "",
+          button_es_cv: "",
+          button_en_cv:""
         },
         section_second: {
           headline: "",
@@ -68,6 +70,8 @@ export const DATA_INITIAL_STATE: Welcome = {
           headline: "",
           button_one: "",
           button_two: "",
+          button_es_cv: "",
+          button_en_cv:""
         },
         section_second: {
           headline: "",

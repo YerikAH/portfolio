@@ -3,11 +3,19 @@ import styled from "styled-components";
 export const SelectLanguageBox = styled.div`
   position: absolute;
   z-index: 900;
-  background-color: var(--white);
-  box-shadow: 0px 0px 4px 4px var(--black-10);
   border-radius: 0.4rem;
   width: 18.5rem;
-  margin-top: 2rem;
+  transition:  0.3s cubic-bezier(.25,.72,.37,1.18);
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  left: 0;
+  right: 0;
+  margin: 2rem auto 0;
+  @media (min-width: 720px) {
+    left: auto;
+  right: auto;
+  }
 `;
 
 export const ButtonLanguage = styled.button`
@@ -18,12 +26,15 @@ export const ButtonLanguage = styled.button`
   background-color: transparent;
   justify-content: start;
   align-items: center;
+  width: 100%;
+  transition:  0.3s cubic-bezier(.25,.72,.37,1.18);
   @media (min-width: 720px) {
     font-size: 1rem;
   }
+
 `;
 export const ImageLanguage = styled.img`
-  width: 12px;
+  width: 1rem;
   @media (min-width: 720px) {
     width: 1.5rem;
   }

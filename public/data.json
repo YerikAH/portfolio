@@ -13,7 +13,9 @@
         "section_first": {
           "headline": "Hola, soy desarrollador Front end con React y Flutter",
           "button_one": "Certificados",
-          "button_two": "Currículo"
+          "button_two": "Currículo",
+          "button_es_cv": "Descargar CV en español",
+          "button_en_cv":"Descargar CV en ingles"
         },
         "section_second": {
           "headline": "Sobre mí"
@@ -129,7 +131,9 @@
         "section_first": {
           "headline": "Hi, I'm a Front End Developer with React and Flutter",
           "button_one": "Certificates",
-          "button_two": "Resume"
+          "button_two": "Resume",
+          "button_es_cv": "Download CV in Spanish",
+          "button_en_cv":"Download CV in English"
         },
         "section_second": {
           "headline": "About"

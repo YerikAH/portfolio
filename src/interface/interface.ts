@@ -1,5 +1,3 @@
-import { Sections } from "../enum/LanguageEnum";
-
 export interface InterfaceForm {
   name: string;
   email: string;

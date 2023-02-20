@@ -56,6 +56,8 @@ export interface SectionFirst {
   headline: string;
   button_one: string;
   button_two: string;
+  button_es_cv: string,
+  button_en_cv: string
 }
 
 export interface SectionFour {

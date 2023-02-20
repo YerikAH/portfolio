@@ -1,4 +1,4 @@
-import { Dynamic, Nav, Portfolio, SocialMedia, Static } from "./data";
+import { Dynamic, Nav, Portfolio, SectionFirst, SocialMedia, Static } from "./data";
 import { Language, Sections, Theme } from "../enum/LanguageEnum";
 
 // context
@@ -35,9 +35,6 @@ export interface MenuMobileProps {
   handleMenu: () => void;
   changeSection(section: Sections): void;
 }
-export interface InterfaceStylesMenu {
-  right: string;
-}
 
 export interface HomeNavProps {
   navText: Nav;
@@ -67,4 +64,11 @@ export interface ButtonNavProps {
   handleLanguage(): void;
   handleTheme(): void;
   handleMenu(): void;
+}
+
+// dir - section first
+
+export interface LanguageOptionsProps{
+  languageOptions: boolean,
+  sectionFirst: SectionFirst
 }

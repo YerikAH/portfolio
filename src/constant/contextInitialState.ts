@@ -15,6 +15,8 @@ export const CONTEXT_INITIAL_STATE: ContextInterface = {
       headline: "",
       button_one: "",
       button_two: "",
+      button_es_cv: "",
+      button_en_cv:""
     },
     section_second: {
       headline: "",

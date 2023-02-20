@@ -9,8 +9,9 @@ import {
 } from "../../styles/menu_mobile_styles";
 import CloseHamComponent from "../images/CloseHamComponent";
 // props or interface or init state
-import { InterfaceStylesMenu, MenuMobileProps } from "../../interface/props";
-import { STYLES_MENU } from "../../constant/appInitialState";
+import { InterfaceStylesMenu } from "../../interface/styles";
+import {MenuMobileProps} from "../../interface/props"
+import { STYLES_MENU } from "../../constant/stylesInitialState";
 
 // context
 import ThemeContext from "../../context/themeContext";
@@ -46,12 +47,10 @@ export default function MenuMobile({
     let stylesNormal: InterfaceStylesMenu = {
       right: "0",
     };
-    if (menu) {
-      setStylesMenu(stylesNormal);
-    } else {
+    if (!menu) {
       stylesNormal.right = "-100vw";
-      setStylesMenu(stylesNormal);
     }
+    setStylesMenu(stylesNormal);
   }, [menu]);
 
   return ReactDOM.createPortal(

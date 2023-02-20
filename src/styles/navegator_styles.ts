@@ -21,8 +21,7 @@ const HeaderStyle = styled.header`
   top: 0;
   left: 0;
   right: 0;
-
-  z-index: 100;
+  z-index: 1000;
   transition: 0.3s;
 `;
 export const NavStyle = styled.nav`

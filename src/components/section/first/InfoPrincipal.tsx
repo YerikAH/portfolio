@@ -1,5 +1,5 @@
 // hook
-import { useContext } from "react";
+import { useContext, useState } from "react";
 
 //styles
 import {
@@ -15,6 +15,12 @@ import SelectLanguage from "../../buttons/SelectLanguage";
 
 export default function InfoPrincipal() {
   const dataContext = useContext(FetchContext);
+  const [languageOptions, setLanguageOptions] = useState(false)
+
+  function handleLanguage(){
+    setLanguageOptions(languageOptions ? false : true)
+  }
+
   return (
     <FetchContext.Provider value={dataContext}>
       <HeadlinePrincipal>
@@ -24,10 +30,9 @@ export default function InfoPrincipal() {
         <TextButtonStroke>
           {dataContext.language_static.section_first.button_one}
         </TextButtonStroke>
-        <TextButtonFill>
+        <TextButtonFill onClick={handleLanguage}>
           {dataContext.language_static.section_first.button_two}
-
-          <SelectLanguage />
+          <SelectLanguage languageOptions={languageOptions} sectionFirst={dataContext.language_static.section_first}/>
         </TextButtonFill>
       </BoxButtons>
     </FetchContext.Provider>
