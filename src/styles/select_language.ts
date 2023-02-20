@@ -14,7 +14,7 @@ export const SelectLanguageBox = styled.div`
   margin: 2rem auto 0;
   @media (min-width: 720px) {
     left: auto;
-  right: auto;
+    right: auto;
   }
 `;
 
