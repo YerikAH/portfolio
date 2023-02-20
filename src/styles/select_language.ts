@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SelectLanguageBox = styled.div`
   position: absolute;
-  z-index: 900;
+  z-index: 400;
   border-radius: 0.4rem;
   width: 18.5rem;
   transition:  0.3s cubic-bezier(.25,.72,.37,1.18);

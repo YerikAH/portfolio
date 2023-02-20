@@ -8,6 +8,7 @@ import { ButtonNavProps } from "../../interface/props";
 import LanguageButton from "../buttons/LanguageButton";
 import ThemeButton from "../buttons/ThemeButton";
 import HamComponents from "../images/HamComponents";
+import CloseHamComponent from "../images/CloseHamComponent";
 
 export default function ButtonsNav({
   languageCurrent,
@@ -15,6 +16,7 @@ export default function ButtonsNav({
   handleLanguage,
   handleTheme,
   handleMenu,
+  menu
 }: ButtonNavProps) {
   return (
     <ListDesorder>
@@ -29,7 +31,8 @@ export default function ButtonsNav({
         themeCurrent={themeCurrent}
       />
       <ListHam aria-label="open menu" onClick={handleMenu}>
-        <HamComponents />
+        {!menu ?<HamComponents />: <CloseHamComponent/> }
+        
       </ListHam>
     </ListDesorder>
   );

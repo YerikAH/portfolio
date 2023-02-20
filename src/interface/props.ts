@@ -64,6 +64,7 @@ export interface ButtonNavProps {
   handleLanguage(): void;
   handleTheme(): void;
   handleMenu(): void;
+  menu: boolean
 }
 
 // dir - section first

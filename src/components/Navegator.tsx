@@ -48,6 +48,7 @@ function Navegator({ activeSection, handleChange }: InterfaceNavScroll) {
               changeSection={changeSection}
             />
             <ButtonsNav
+              menu={menu}
               handleLanguage={handleLanguage}
               handleTheme={handleTheme}
               handleMenu={handleMenu}

@@ -1,13 +1,11 @@
 import { useContext, useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import {
-  ListHam,
   MenuMobileLinkRouter,
   MenuMobileList,
   MenuMobileStylesTheme,
   MenuMobileUlist,
 } from "../../styles/menu_mobile_styles";
-import CloseHamComponent from "../images/CloseHamComponent";
 // props or interface or init state
 import { InterfaceStylesMenu } from "../../interface/styles";
 import {MenuMobileProps} from "../../interface/props"
@@ -60,9 +58,6 @@ export default function MenuMobile({
           style={stylesMenu}
           className={themeContext.theme}
         >
-          <ListHam onClick={handleSwitch}>
-            <CloseHamComponent />
-          </ListHam>
           <MenuMobileUlist>
             {location.pathname === "/" ? (
               <HomeMenuMobile

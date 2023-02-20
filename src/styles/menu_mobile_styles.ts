@@ -20,17 +20,9 @@ const MenuMobileStyles = styled.nav`
     display: none;
   }
 `;
-export const ListHam = styled.button`
-  background-color: transparent;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  padding: 1rem 2rem 0 2rem;
-  width: 100%;
-`;
 
 export const MenuMobileUlist = styled.ul`
-  margin-top: 2rem;
+  margin-top: 5rem;
   display: grid;
   place-items: start;
   width: 100%;
