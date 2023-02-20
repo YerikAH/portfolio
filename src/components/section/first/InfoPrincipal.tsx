@@ -11,6 +11,7 @@ import {
 
 // context
 import FetchContext from "../../../context/dataContext";
+import SelectLanguage from "../../buttons/SelectLanguage";
 
 export default function InfoPrincipal() {
   const dataContext = useContext(FetchContext);
@@ -25,6 +26,8 @@ export default function InfoPrincipal() {
         </TextButtonStroke>
         <TextButtonFill>
           {dataContext.language_static.section_first.button_two}
+
+          <SelectLanguage />
         </TextButtonFill>
       </BoxButtons>
     </FetchContext.Provider>

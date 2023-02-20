@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from "react";
 import ReactDOM from "react-dom";
-
 import {
   ListHam,
   MenuMobileLinkRouter,
@@ -33,7 +32,7 @@ export default function MenuMobile({
 
   const dataContext = useContext(DataContext);
   const themeContext = useContext(ThemeContext);
-  
+
   const [stylesMenu, setStylesMenu] =
     useState<InterfaceStylesMenu>(STYLES_MENU);
 
