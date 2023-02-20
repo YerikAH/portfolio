@@ -20,7 +20,7 @@ export const SubtitleOne = styled.h2`
   font: normal normal 700 1.5rem/1.5rem var(--font-lato);
   color: var(--black);
   margin-top: 1.25rem;
-  transition: 0.3s;
+  transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
 `;
 
 export const BoxGrid = styled.div`
@@ -81,7 +81,7 @@ export const HoverBox = styled.div`
   border: 0.5px solid var(--gray);
   backdrop-filter: blur(12.5px);
   border-radius: 15px;
-  transition: 0.3s;
+  transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
   width: 0;
   height: 0;
   top: 0;
@@ -101,7 +101,7 @@ export const LinkImage = styled.a`
   align-items: center;
   position: relative;
   margin-top: 1.5rem;
-  transition: 0.3s;
+  transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
   @media (min-width: 1000px) {
     bottom: -15px;
     right: -15px;
@@ -133,7 +133,7 @@ export const TitleProject = styled.h4`
   text-align: justify;
   letter-spacing: 0.02em;
   color: var(--black);
-  transition: 0.3s;
+  transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
 `;
 
 export const TextProject = styled.p`
@@ -142,7 +142,7 @@ export const TextProject = styled.p`
   letter-spacing: 0.02em;
   color: var(--black);
   opacity: 0.6;
-  transition: 0.3s;
+  transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
 `;
 
 export const BoxButtons = styled.div`
@@ -168,7 +168,7 @@ export const TextButton = styled.a`
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  transition: 0.3s;
+  transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
   &:hover {
     background-color: var(--black-10);
   }
@@ -182,7 +182,7 @@ export const TextButtonStroke = styled.button`
   border: 1px solid var(--blue);
   padding: 0.8rem;
   border-radius: 0.8rem;
-  transition: 0.3s;
+  transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
   @media (min-width: 720px) {
     font: normal normal 600 1rem/0.9rem var(--font-lato);
     padding: 0.8rem 2rem;

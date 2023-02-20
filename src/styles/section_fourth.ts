@@ -174,7 +174,7 @@ export const ListTileLink = styled.a`
   overflow: hidden;
   white-space: pre;
   width: 100%;
-  transition: 0.3s;
+  transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
 `;
 export const ErrorStyles = styled.p`
   margin-top: 1rem;

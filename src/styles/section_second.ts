@@ -9,7 +9,7 @@ const SectionScondStyles = styled.section`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  transition: 0.3s;
+  transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
   margin-top: 5rem;
   padding: 5rem 0;
 `;
@@ -57,7 +57,7 @@ export const SubtitleOne = styled.h2`
   font: normal normal 700 1.5rem/1.5rem var(--font-lato);
   color: var(--black);
   margin-top: 1.25rem;
-  transition: 0.3s;
+  transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
 `;
 
 export const TextBodyOne = styled.p`
@@ -65,7 +65,7 @@ export const TextBodyOne = styled.p`
   color: var(--black);
   opacity: 0.6;
   text-align: center;
-  transition: 0.3s;
+  transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
   @media (min-width: 720px) {
     text-align: left;
   }
@@ -103,7 +103,7 @@ export const LabelSkills = styled.p`
   color: var(--white);
   padding: 0.1rem 0.5rem;
   border-radius: 0.4rem;
-  transition: 0.3s;
+  transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
   font: normal normal 400 0.9rem/1rem var(--font-lato);
 `;
 export const SectionScondStylesTheme = styled(SectionScondStyles)`

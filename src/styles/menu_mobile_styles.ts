@@ -13,7 +13,7 @@ const MenuMobileStyles = styled.nav`
   height: 100vh;
   top: 0;
   right: -100vw;
-  transition: 0.3s;
+  transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
   z-index: 500;
   overflow: auto;
   @media (min-width: 720px) {

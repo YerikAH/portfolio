@@ -22,7 +22,7 @@ const HeaderStyle = styled.header`
   left: 0;
   right: 0;
   z-index: 1000;
-  transition: 0.3s;
+  transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
 `;
 export const NavStyle = styled.nav`
   max-width: 1200px;
@@ -62,7 +62,7 @@ export const ListLink = styled.a`
     background-color: var(--black);
     opacity: ${(props) => props.className === "false" && "0.5"};
     bottom: -0.2rem;
-    transition: 0.3s;
+    transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
     position: absolute;
   }
   &:hover::after {
@@ -80,7 +80,7 @@ export const ListLinkRouter = styled(Link)`
     background-color: var(--black);
     opacity: ${(props) => props.className === "false" && "0.5"};
     bottom: -0.2rem;
-    transition: 0.3s;
+    transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
     position: absolute;
   }
   &:hover::after {
