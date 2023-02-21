@@ -37,9 +37,9 @@ export const BoxGridOne = styled.div`
   display: grid;
   height: 100%;
   width: 100%;
+  place-items: center;
   @media (min-width: 720px) {
     grid-area: box_one;
-    place-items: center;
   }
 `;
 export const BoxGridTwo = styled.div`

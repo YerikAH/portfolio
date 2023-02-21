@@ -1,12 +1,12 @@
 import { useContext } from "react";
 import ThemeContext from "../../context/themeContext";
-import { SvgGeneral } from "../../styles/images/icons";
+import { SvgGeneralReverse } from "../../styles/images/icons";
 
 export default function ArrowComponent() {
   const themeContext = useContext(ThemeContext);
   return (
     <ThemeContext.Provider value={themeContext}>
-      <SvgGeneral
+      <SvgGeneralReverse
         xmlns="http://www.w3.org/2000/svg"
         className={themeContext.theme}
         width="24"
@@ -22,7 +22,7 @@ export default function ArrowComponent() {
         <path d="M5 12l14 0"></path>
         <path d="M15 16l4 -4"></path>
         <path d="M15 8l4 4"></path>
-      </SvgGeneral>
+      </SvgGeneralReverse>
     </ThemeContext.Provider>
   );
 }

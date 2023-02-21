@@ -1,7 +1,9 @@
 import {
+  BoxButtons,
   BoxGridBlog,
   BoxGridOne,
   BoxGridTwo,
+  BoxTitle,
   DecorationBox,
   DecorationImage,
   DecorationImageBox,
@@ -9,6 +11,7 @@ import {
   GroupContent,
   GroupContentLink,
   HeadlinePrincipal,
+  IconButton,
   NavigationBox,
   NavigationGeneral,
   NavigationSubtitleButton,
@@ -24,6 +27,7 @@ import {
 } from "../../../../styles/blog/section_first_blog";
 
 import logoGradient from "../../../../assets/static/logo-gradient.svg";
+import ArrowComponent from "../../../images/ArrowComponent";
 
 export default function SectionFirstBlog() {
   return (
@@ -56,7 +60,18 @@ export default function SectionFirstBlog() {
               <DecorationImage src={logoGradient} />
             </DecorationImageBox>
           </DecorationBox>
+          <BoxTitle>
           <SubtitleTwo>Ultimos blogs</SubtitleTwo>
+
+          <BoxButtons>
+            <IconButton className="-180deg">
+              <ArrowComponent/>
+            </IconButton>
+            <IconButton>
+            <ArrowComponent/>
+            </IconButton>
+          </BoxButtons>
+          </BoxTitle>
           <GroupBox>
             <GroupContent>
               <GroupContentLink></GroupContentLink>
@@ -70,7 +85,7 @@ export default function SectionFirstBlog() {
             </GroupContent>
             <GroupContent>
               <GroupContentLink></GroupContentLink>
-              <SpanText className="var(--purple-brig)">// Experiencias</SpanText>
+              <SpanText className="var(--purple-brig)">// Reseñas de libros</SpanText>
               <TitleBox>Mi Experiencia Aprendiendo Programación</TitleBox>
               <TextBox>
                 Durante los últimos 8 meses he estado inmerso en un intenso
@@ -80,7 +95,7 @@ export default function SectionFirstBlog() {
             </GroupContent>
             <GroupContent>
               <GroupContentLink></GroupContentLink>
-              <SpanText className="var(--pink-brig)">// Experiencias</SpanText>
+              <SpanText className="var(--pink-brig)">// Programación</SpanText>
               <TitleBox>Mi Experiencia Aprendiendo Programación</TitleBox>
               <TextBox>
                 Durante los últimos 8 meses he estado inmerso en un intenso
