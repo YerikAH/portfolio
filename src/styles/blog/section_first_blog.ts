@@ -9,7 +9,6 @@ export const SectionStylesBlog = styled.section`
   @media (min-width: 720px) {
     padding-top: 10.9875rem;
   }
-
 `;
 export const BoxGridBlog = styled.div`
   max-width: 1100px;
@@ -24,16 +23,18 @@ export const BoxGridBlog = styled.div`
 export const BoxGridOne = styled.div``;
 export const BoxGridTwo = styled.div``;
 
-export const DecorationBox = styled.div`  
+export const DecorationBox = styled.div`
   border-radius: 1rem;
-  padding: 2rem ;
-  background: linear-gradient(93.89deg, #2472CE 15.64%, #2449CE 90.51%);
+  padding: 2rem;
+  background: linear-gradient(93.89deg, #2472ce 15.64%, #2449ce 90.51%);
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: start;
   position: relative;
+  overflow: hidden;
   flex-direction: column;
+  height: 60%;
   @media (min-widh: 720px) {
     padding: 2rem 2.5rem 2rem 4rem;
   }
@@ -41,35 +42,73 @@ export const DecorationBox = styled.div`
 export const HeadlinePrincipal = styled.h1`
   color: var(--white);
   margin: 0;
-  font: normal normal 700 2rem/2.5rem var(--font-lato)
-`
+  font: normal normal 700 2rem/2.5rem var(--font-lato);
+`;
 export const SubtitleOne = styled.h4`
+  margin-top: 1rem;
+  max-width: 330px;
+  width: 100%;
   color: var(--white);
-  font: normal normal 500 1rem/1.2rem var(--font-lato)
-`
-export const DecorationImage = styled.img``
+  font: normal normal 500 1rem/2rem var(--font-lato);
+  opacity: 0.8;
+`;
+
+export const DecorationImageBox = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  position: relative;
+`;
+
+export const DecorationImage = styled.img`
+ scale: 0.8;
+rotate: 15deg;
+`;
 
 export const SubtitleTwo = styled.h2`
   color: var(--black);
-  font: normal normal 700 2rem/2.5rem var(--font-lato)
-
-`
+  font: normal normal 700 1.8rem/2.5rem var(--font-lato);
+  margin-top: 2rem;
+`;
 export const GroupBox = styled.div`
   display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+`;
+
+export const GroupContent = styled.div`
+  overflow: hidden;
+  position: relative;
+`;
+export const GroupContentLink = styled.a`
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 `
-export const GroupContent = styled.div``
-export const SpanText = styled.span``
-export const TitleBox = styled.h6``
-export const TextBox = styled.p``
-
-
+export const SpanText = styled.span`
+  font: normal normal 700 1rem/1.2rem var(--font-mono);
+  color: var(--blue-brig);
+`;
+export const TitleBox = styled.h6`
+  font: normal normal 700 1rem/1.2rem var(--font-lato);
+  text-transform: capitalize;
+  overflow: hidden;
+  white-space: pre;
+  color: var(--black);
+`;
+export const TextBox = styled.p`
+  font: normal normal 400 0.8rem/1rem var(--font-lato);
+  color: var(--black);
+  opacity: 0.8;
+`;
 
 export const NavigationBox = styled.div`
-display: flex;
-flex-direction: column;
-margin: 1rem 0;
-`
-
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+`;
 
 export const NavigationGeneral = styled.div`
   height: 0;
@@ -78,25 +117,23 @@ export const NavigationGeneral = styled.div`
     height: auto;
     overflow: auto;
   }
-`
+`;
 export const NavigationTitleButton = styled.button`
   background-color: var(--black-10);
   border-radius: 8px;
-  padding:  1rem;
+  padding: 1rem;
   color: var(--blue);
   font: normal normal 700 1.1rem/1.2rem var(--font-lato);
   text-align: left;
-`
+`;
 
 export const NavigationTitle = styled.h3`
-color: var(--black);
+  color: var(--black);
   font: normal normal 600 1.2rem/1.2rem var(--font-lato);
   text-align: left;
   padding: 1rem;
-
-`
+`;
 export const NavigationSubtitleButton = styled.button`
-
   background-color: transparent;
   border-radius: 8px;
   padding: 1rem;
@@ -104,17 +141,16 @@ export const NavigationSubtitleButton = styled.button`
   font: normal normal 400 1rem/1.2rem var(--font-lato);
   text-align: left;
   opacity: 0.8;
-  &:hover{
+  &:hover {
     background-color: var(--black-10);
   }
-
-`
+`;
 
 export const Separate = styled.div`
   width: 100%;
   height: 0.5px;
   opacity: 0.5;
   background-color: var(--black);
-`
+`;
 
-export const TextDecoration = styled.p``
+export const TextDecoration = styled.p``;
