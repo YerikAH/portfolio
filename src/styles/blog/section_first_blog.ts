@@ -79,6 +79,7 @@ export const BoxTitle = styled.div`
 export const IconButton = styled.button`
   color: var(--blue);
   padding: 1rem;
+  border-radius: 0.2rem;
 `
 
 export const GroupBox = styled.div`

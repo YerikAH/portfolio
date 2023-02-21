@@ -1,6 +1,8 @@
+import { SvgGeneral } from "../../styles/images/icons";
+
 export default function ArrowComponent() {
   return (
-    <svg
+    <SvgGeneral
       xmlns="http://www.w3.org/2000/svg"
       className="icon icon-tabler icon-tabler-arrow-narrow-right"
       width="24"
@@ -16,6 +18,6 @@ export default function ArrowComponent() {
       <path d="M5 12l14 0"></path>
       <path d="M15 16l4 -4"></path>
       <path d="M15 8l4 4"></path>
-    </svg>
+    </SvgGeneral>
   );
 }

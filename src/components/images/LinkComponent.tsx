@@ -1,12 +1,12 @@
 import ThemeContext from "../../context/themeContext";
-import { SvgIconsProjects } from "../../styles/images/icons";
+import { SvgGeneral } from "../../styles/images/icons";
 import { useContext } from "react";
 
 export default function LinkComponent() {
   const themeContext = useContext(ThemeContext);
   return (
     <ThemeContext.Provider value={themeContext}>
-      <SvgIconsProjects
+      <SvgGeneral
         xmlns="http://www.w3.org/2000/svg"
         className={themeContext.theme}
         width="24"
@@ -21,7 +21,7 @@ export default function LinkComponent() {
         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
         <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5"></path>
         <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5"></path>
-      </SvgIconsProjects>
+      </SvgGeneral>
     </ThemeContext.Provider>
   );
 }

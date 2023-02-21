@@ -1,13 +1,13 @@
 import { useContext } from "react";
 import ThemeContext from "../../context/themeContext";
-import { SvgIconsProjects } from "../../styles/images/icons";
+import { SvgGeneral } from "../../styles/images/icons";
 
 export default function InfoComponent() {
   const themeContext = useContext(ThemeContext);
 
   return (
     <ThemeContext.Provider value={themeContext}>
-      <SvgIconsProjects
+      <SvgGeneral
         xmlns="http://www.w3.org/2000/svg"
         className={themeContext.theme}
         width="24"
@@ -23,7 +23,7 @@ export default function InfoComponent() {
         <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
         <path d="M12 8l.01 0"></path>
         <path d="M11 12l1 0l0 4l1 0"></path>
-      </SvgIconsProjects>
+      </SvgGeneral>
     </ThemeContext.Provider>
   );
 }
