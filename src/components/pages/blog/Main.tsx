@@ -1,5 +1,13 @@
-import React from "react";
+// styles
+import { MainBlogStyles } from "../../../styles/blog/main_styles_blog";
+
+// components
+import SectionFirstBlog from "./section/SectionFirstBlog";
 
 export default function Main() {
-  return <div>Main</div>;
+  return (
+    <MainBlogStyles>
+      <SectionFirstBlog />
+    </MainBlogStyles>
+  );
 }
