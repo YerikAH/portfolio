@@ -3,7 +3,7 @@ import {
   ImageLanguage,
   SelectLanguageBox,
   Separator,
-} from "../../styles/select_language";
+} from "../../styles/home/select_language";
 
 // images
 import flagEs from "../../assets/static/es.png";
@@ -15,24 +15,23 @@ import { MODAL_RESUME_INIT } from "../../constant/stylesInitialState";
 
 export default function SelectLanguage({
   languageOptions,
-  sectionFirst
+  sectionFirst,
 }: LanguageOptionsProps) {
-
-  const [stylesBitModal, setStylesBitModal] = useState<LanguageOptionsStyles>(MODAL_RESUME_INIT)
-
+  const [stylesBitModal, setStylesBitModal] =
+    useState<LanguageOptionsStyles>(MODAL_RESUME_INIT);
 
   useEffect(() => {
-    let stylesModal: LanguageOptionsStyles= {
+    let stylesModal: LanguageOptionsStyles = {
       opacity: "0",
-      visibility: "hidden"
-    }
+      visibility: "hidden",
+    };
     if (languageOptions) {
-      stylesModal.opacity = "1"
-      stylesModal.visibility = "visible" 
+      stylesModal.opacity = "1";
+      stylesModal.visibility = "visible";
     }
-    setStylesBitModal(stylesModal)
-  }, [languageOptions])
-  
+    setStylesBitModal(stylesModal);
+  }, [languageOptions]);
+
   return (
     <SelectLanguageBox style={stylesBitModal}>
       <ButtonLanguage>

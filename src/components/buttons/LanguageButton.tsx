@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 // styles
-import { ImageButton, ListTheme } from "../../styles/navegator_styles";
+import { ImageButton, ListTheme } from "../../styles/global/navegator_styles";
 
 // tooltip
 import { Tooltip } from "react-tooltip";

@@ -1,7 +1,7 @@
 // components
-import Footer from "../Footer";
-import Global from "../Global";
-import Navegator from "../Navegator";
+import Footer from "../global/Footer";
+import Global from "../global/Global";
+import Navegator from "../global/Navegator";
 
 // interface
 import { HomeBlogProps } from "../../interface/props";

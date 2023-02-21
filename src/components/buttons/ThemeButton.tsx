@@ -5,7 +5,7 @@ import { Language, Theme } from "../../enum/LanguageEnum";
 import { InterfaceButton } from "../../interface/buttons";
 
 // styles
-import { ImageButton, ListTheme } from "../../styles/navegator_styles";
+import { ImageButton, ListTheme } from "../../styles/global/navegator_styles";
 
 // images
 import sun from "../../assets/icon/sun.svg";

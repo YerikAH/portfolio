@@ -7,10 +7,10 @@ import { Sections } from "../../enum/LanguageEnum";
 import { HomeBlogProps } from "../../interface/props";
 
 // components
-import Footer from "../Footer";
-import Global from "../Global";
-import Main from "../Main";
-import Navegator from "../Navegator";
+import Footer from "../global/Footer";
+import Global from "../global/Global";
+import Main from "./home/Main";
+import Navegator from "../global/Navegator";
 
 export default function Home({ section }: HomeBlogProps) {
   const sectionRefs = [
