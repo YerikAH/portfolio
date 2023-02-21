@@ -14,7 +14,6 @@ export const BoxGridBlog = styled.div`
   max-width: 1100px;
   width: 100%;
   display: grid;
-  gap: 8%;
   padding: 0 1rem;
   @media (min-width: 720px) {
     grid-template-columns: 26% 66%;
@@ -34,7 +33,7 @@ export const DecorationBox = styled.div`
   position: relative;
   overflow: hidden;
   flex-direction: column;
-  height: 60%;
+  height: 15rem;
   @media (min-widh: 720px) {
     padding: 2rem 2.5rem 2rem 4rem;
   }
@@ -71,14 +70,34 @@ export const SubtitleTwo = styled.h2`
   font: normal normal 700 1.8rem/2.5rem var(--font-lato);
   margin-top: 2rem;
 `;
+export const BoxTitle = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+`
+
 export const GroupBox = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, 300px);
+  margin-top: 3rem;
+  grid-template-columns: repeat(auto-fill, 100%);
+  place-items: center;
+  gap: 2rem;
+  @media (min-width: 720px) {
+    grid-template-columns: repeat(auto-fill, 210px);
+  }
 `;
 
 export const GroupContent = styled.div`
   overflow: hidden;
   position: relative;
+  box-shadow: 0px 0px 11px rgba(38, 55, 75, 0.25);
+  background-color: var(--white);
+  padding: 2rem 1rem;
+  display: grid;
+  border-radius: 0.5rem;
+  
+
 `;
 export const GroupContentLink = styled.a`
   position: absolute;
@@ -88,18 +107,20 @@ export const GroupContentLink = styled.a`
   height: 100%;
 `
 export const SpanText = styled.span`
-  font: normal normal 700 1rem/1.2rem var(--font-mono);
-  color: var(--blue-brig);
+  font: normal normal 700 1rem/1.5rem var(--font-mono);
+  color: ${props => props.className && `${props.className}`}
 `;
 export const TitleBox = styled.h6`
-  font: normal normal 700 1rem/1.2rem var(--font-lato);
+  font: normal normal 700 1.2rem/1.5rem var(--font-lato);
   text-transform: capitalize;
   overflow: hidden;
   white-space: pre;
+  text-overflow: ellipsis;
   color: var(--black);
+  margin: 1rem 0 0.5rem 0;
 `;
 export const TextBox = styled.p`
-  font: normal normal 400 0.8rem/1rem var(--font-lato);
+  font: normal normal 400 0.9rem/1.2rem var(--font-lato);
   color: var(--black);
   opacity: 0.8;
 `;
@@ -113,7 +134,7 @@ export const NavigationBox = styled.div`
 export const NavigationGeneral = styled.div`
   height: 0;
   overflow: hidden;
-  @media (min-widh: 720px) {
+  @media (min-width: 720px) {
     height: auto;
     overflow: auto;
   }

@@ -60,7 +60,27 @@ export default function SectionFirstBlog() {
           <GroupBox>
             <GroupContent>
               <GroupContentLink></GroupContentLink>
-              <SpanText>// Experiencias</SpanText>
+              <SpanText className="var(--blue-brig)">// Experiencias</SpanText>
+              <TitleBox>Mi Experiencia Aprendiendo Programación</TitleBox>
+              <TextBox>
+                Durante los últimos 8 meses he estado inmerso en un intenso
+                proceso de aprendizaje de programación. Este periodo ha sido uno
+                de los más desafiantes y gratificantes de mi vida...
+              </TextBox>
+            </GroupContent>
+            <GroupContent>
+              <GroupContentLink></GroupContentLink>
+              <SpanText className="var(--purple-brig)">// Experiencias</SpanText>
+              <TitleBox>Mi Experiencia Aprendiendo Programación</TitleBox>
+              <TextBox>
+                Durante los últimos 8 meses he estado inmerso en un intenso
+                proceso de aprendizaje de programación. Este periodo ha sido uno
+                de los más desafiantes y gratificantes de mi vida...
+              </TextBox>
+            </GroupContent>
+            <GroupContent>
+              <GroupContentLink></GroupContentLink>
+              <SpanText className="var(--pink-brig)">// Experiencias</SpanText>
               <TitleBox>Mi Experiencia Aprendiendo Programación</TitleBox>
               <TextBox>
                 Durante los últimos 8 meses he estado inmerso en un intenso
