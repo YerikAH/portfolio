@@ -76,6 +76,10 @@ export const BoxTitle = styled.div`
   align-items: center;
 
 `
+export const IconButton = styled.button`
+  color: var(--blue);
+  padding: 1rem;
+`
 
 export const GroupBox = styled.div`
   display: grid;
