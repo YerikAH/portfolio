@@ -23,6 +23,7 @@ import {
   SubtitleOne,
   SubtitleTwo,
   TextBox,
+  TextDecoration,
   TitleBox,
 } from "../../../../styles/blog/section_first_blog";
 
@@ -48,7 +49,11 @@ export default function SectionFirstBlog() {
               <NavigationSubtitleButton>Programación</NavigationSubtitleButton>
             </NavigationBox>
             <Separate />
+            <NavigationBox>
+              <TextDecoration>¿Ya viste mis ultimas creaciónes?</TextDecoration>
+            </NavigationBox>
           </NavigationGeneral>
+
         </BoxGridOne>
         <BoxGridTwo>
           <DecorationBox>
@@ -61,7 +66,7 @@ export default function SectionFirstBlog() {
             </DecorationImageBox>
           </DecorationBox>
           <BoxTitle>
-          <SubtitleTwo>Ultimos blogs</SubtitleTwo>
+          <SubtitleTwo>Lo último de mi blog</SubtitleTwo>
 
           <BoxButtons>
             <IconButton className="-180deg">
@@ -75,7 +80,7 @@ export default function SectionFirstBlog() {
           <GroupBox>
             <GroupContent>
               <GroupContentLink></GroupContentLink>
-              <SpanText className="var(--blue-brig)">// Experiencias</SpanText>
+              <SpanText className="var(--blue-brig)">/* Experiencias */</SpanText>
               <TitleBox>Mi Experiencia Aprendiendo Programación</TitleBox>
               <TextBox>
                 Durante los últimos 8 meses he estado inmerso en un intenso
@@ -85,7 +90,7 @@ export default function SectionFirstBlog() {
             </GroupContent>
             <GroupContent>
               <GroupContentLink></GroupContentLink>
-              <SpanText className="var(--purple-brig)">// Reseñas de libros</SpanText>
+              <SpanText className="var(--purple-brig)">/* Reseñas_de_libros */</SpanText>
               <TitleBox>Mi Experiencia Aprendiendo Programación</TitleBox>
               <TextBox>
                 Durante los últimos 8 meses he estado inmerso en un intenso
@@ -95,7 +100,7 @@ export default function SectionFirstBlog() {
             </GroupContent>
             <GroupContent>
               <GroupContentLink></GroupContentLink>
-              <SpanText className="var(--pink-brig)">// Programación</SpanText>
+              <SpanText className="var(--pink-brig)">/* Programación */</SpanText>
               <TitleBox>Mi Experiencia Aprendiendo Programación</TitleBox>
               <TextBox>
                 Durante los últimos 8 meses he estado inmerso en un intenso

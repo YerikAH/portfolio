@@ -11,14 +11,14 @@ export const SectionStylesBlog = styled.section`
   }
 `;
 export const BoxGridBlog = styled.div`
-  max-width: 1100px;
+  max-width: 1200px;
   width: 100%;
   display: grid;
   padding: 0 1rem 8.5rem 1rem;
   border-bottom: 1px solid var(--black-10);
   @media (min-width: 720px) {
-    grid-template-columns: 26% 66%;
-    gap: 8%;
+    grid-template-columns: 20% 74%;
+gap: 4%;
   }
 `;
 export const BoxGridOne = styled.div``;
@@ -30,7 +30,7 @@ export const BoxGridTwo = styled.div`
 `;
 
 export const DecorationBox = styled.div`
-  border-radius: 1rem;
+  border-radius: 2rem;
   padding: 2rem;
   background: linear-gradient(93.89deg, #2472ce 15.64%, #2449ce 90.51%);
   width: 100%;
@@ -52,8 +52,8 @@ export const HeadlinePrincipal = styled.h1`
   margin: 0;
   font: normal normal 700 2rem/2.5rem var(--font-lato);
   @media (min-width: 720px) {
-    font-size: 3.5rem;
-    line-height: 4rem;
+    font-size: 3rem;
+    line-height: 3rem;
   }
 `;
 export const SubtitleOne = styled.h4`
@@ -78,8 +78,8 @@ export const DecorationImageBox = styled.div`
   @media (min-width: 720px) {
     position: absolute;
     width: auto;
-    bottom: -2rem;
-    right: 5rem;
+    bottom: -1rem;
+    right: 8rem;
   }
 `;
 
@@ -87,13 +87,17 @@ export const DecorationImage = styled.img`
   scale: 0.8;
   rotate: 15deg;
   @media (min-width: 720px) {
-    scale: 1.2;
+    scale: 2;
+    rotate: 15deg;
   }
 `;
 
 export const SubtitleTwo = styled.h2`
   color: var(--black);
   font: normal normal 700 1.8rem/2.5rem var(--font-lato);
+    @media (min-width: 720px) {
+      font-size: 2rem;
+  }
 `;
 export const BoxTitle = styled.div`
   display: flex;
@@ -110,11 +114,15 @@ export const IconButton = styled.button`
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   background: var(--blue);
-  opacity: 0.4;
+  opacity: 0.7;
   rotate: ${(props) => props.className && `${props.className}`};
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
+  &:hover{
+    opacity: 1;
+  }
 `;
 
 export const GroupBox = styled.div`
@@ -122,9 +130,12 @@ export const GroupBox = styled.div`
   margin-top: 3rem;
   grid-template-columns: repeat(auto-fill, 100%);
   place-items: center;
-  gap: 2rem;
+  gap: 3rem;
+
   @media (min-width: 720px) {
-    grid-template-columns: repeat(auto-fill, 210px);
+    gap: 1rem;
+    justify-content: space-between;
+    grid-template-columns: repeat(auto-fill, 270px);
   }
 `;
 
@@ -135,7 +146,8 @@ export const GroupContent = styled.div`
   background-color: var(--white);
   padding: 2rem 1rem;
   display: grid;
-  border-radius: 0.5rem;
+  border-radius: 0.8rem;
+  
 `;
 export const GroupContentLink = styled.a`
   position: absolute;
@@ -152,16 +164,12 @@ export const SpanText = styled.span`
   }
 `;
 export const TitleBox = styled.h6`
-  font: normal normal 700 1.2rem/1.5rem var(--font-lato);
+  font: normal normal 600 1.1rem/1.5rem var(--font-lato);
   text-transform: capitalize;
   overflow: hidden;
-  white-space: pre;
   text-overflow: ellipsis;
   color: var(--black);
-  margin: 1rem 0 0.5rem 0;
-  @media (min-width: 720px) {
-    font-size: 1rem;
-  }
+  margin: 1rem 0;
 `;
 export const TextBox = styled.p`
   font: normal normal 400 0.9rem/1.2rem var(--font-lato);
@@ -169,7 +177,7 @@ export const TextBox = styled.p`
   opacity: 0.8;
   text-align: justify;
   @media (min-width: 720px) {
-    font-size: 0.8rem;
+    line-height: 1.5rem;
   }
 `;
 
@@ -222,4 +230,8 @@ export const Separate = styled.div`
   margin: 1rem 0;
 `;
 
-export const TextDecoration = styled.p``;
+export const TextDecoration = styled.p`
+  font: normal normal 500 1rem/1.2rem var(--font-lato);
+  padding: 0 1rem;
+
+`;
