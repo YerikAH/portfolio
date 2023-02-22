@@ -32,7 +32,7 @@ export const BoxGridTwo = styled.div`
 export const DecorationBox = styled.div`
   border-radius: 2rem;
   padding: 2rem;
-  background: linear-gradient(93.89deg, #2472ce 15.64%, #2449ce 90.51%);
+  background: linear-gradient(93.89deg, var(--blue-strong) 15.64%, var(--blue-sky) 90.51%);
   width: 100%;
   display: flex;
   justify-content: start;
@@ -113,7 +113,7 @@ export const BoxButtons = styled.div`
 export const IconButton = styled.button`
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-  background: var(--blue);
+  background: var(--sky);
   opacity: 0.7;
   rotate: ${(props) => props.className && `${props.className}`};
   display: flex;
@@ -131,11 +131,15 @@ export const GroupBox = styled.div`
   grid-template-columns: repeat(auto-fill, 100%);
   place-items: center;
   gap: 3rem;
+  
 
-  @media (min-width: 720px) {
-    gap: 1rem;
-    justify-content: space-between;
+  @media (min-width: 810px) {
     grid-template-columns: repeat(auto-fill, 270px);
+    gap: 1rem;
+    justify-content: start;
+  }
+  @media (min-width: 1170px) {
+    justify-content: space-between;
   }
 `;
 

@@ -24,6 +24,7 @@
   --white-10: #ffffff1a;
   --white-40: #ffffffcc;
   --blue-strong: #2472ce;
+  --blue-sky: #2449ce;
 
   /* dark theme*/
   --black-blue: #303033;
@@ -33,6 +34,7 @@
   --blue-brig : #2472CE;
   --purple-brig: #6218FF;
   --pink-brig: #CE1986;
+  --sky: #0477FF;
 }
 
 *,
