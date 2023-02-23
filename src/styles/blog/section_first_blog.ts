@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { Theme } from "../../enum/LanguageEnum";
 
-export const SectionStylesBlog = styled.section`
+const SectionStylesBlog = styled.section`
   width: 100%;
   display: flex;
   justify-content: center;
@@ -15,10 +16,10 @@ export const BoxGridBlog = styled.div`
   width: 100%;
   display: grid;
   padding: 0 1rem 8.5rem 1rem;
-  border-bottom: 1px solid var(--black-10);
+
   @media (min-width: 720px) {
     grid-template-columns: 20% 74%;
-gap: 4%;
+    gap: 4%;
   }
 `;
 export const BoxGridOne = styled.div``;
@@ -32,7 +33,11 @@ export const BoxGridTwo = styled.div`
 export const DecorationBox = styled.div`
   border-radius: 2rem;
   padding: 2rem;
-  background: linear-gradient(93.89deg, var(--blue-strong) 15.64%, var(--blue-sky) 90.51%);
+  background: linear-gradient(
+    93.89deg,
+    var(--blue-strong) 15.64%,
+    var(--blue-sky) 90.51%
+  );
   width: 100%;
   display: flex;
   justify-content: start;
@@ -93,10 +98,9 @@ export const DecorationImage = styled.img`
 `;
 
 export const SubtitleTwo = styled.h2`
-  color: var(--black);
   font: normal normal 700 1.8rem/2.5rem var(--font-lato);
-    @media (min-width: 720px) {
-      font-size: 2rem;
+  @media (min-width: 720px) {
+    font-size: 2rem;
   }
 `;
 export const BoxTitle = styled.div`
@@ -120,7 +124,7 @@ export const IconButton = styled.button`
   justify-content: center;
   align-items: center;
   transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
-  &:hover{
+  &:hover {
     opacity: 1;
   }
 `;
@@ -131,7 +135,6 @@ export const GroupBox = styled.div`
   grid-template-columns: repeat(auto-fill, 100%);
   place-items: center;
   gap: 3rem;
-  
 
   @media (min-width: 810px) {
     grid-template-columns: repeat(auto-fill, 270px);
@@ -147,11 +150,9 @@ export const GroupContent = styled.div`
   overflow: hidden;
   position: relative;
   box-shadow: 0px 0px 11px rgba(38, 55, 75, 0.25);
-  background-color: var(--white);
   padding: 2rem 1rem;
   display: grid;
   border-radius: 0.8rem;
-  
 `;
 export const GroupContentLink = styled.a`
   position: absolute;
@@ -237,5 +238,26 @@ export const Separate = styled.div`
 export const TextDecoration = styled.p`
   font: normal normal 500 1rem/1.2rem var(--font-lato);
   padding: 0 1rem;
+`;
 
+export const SectionStylesBlogTheme = styled(SectionStylesBlog)`
+  ${BoxGridBlog} {
+    border-bottom: ${(props) =>
+      props.className === Theme.dark
+        ? "1px solid var(--white-10)"
+        : "1px solid var(--black-10)"};
+  }
+  ${SubtitleTwo} {
+    color: ${(props) =>
+      props.className === Theme.dark ? "var(--black-pale)" : "var(--white)"};
+  }
+  ${GroupContent} {
+    background-color: ${(props) =>
+      props.className === Theme.dark ? "var(--black-pale)" : "var(--white)"};
+
+    box-shadow: ${(props) =>
+      props.className === Theme.dark
+        ? "0px 0px 11px rgba(255, 255, 255, 0.25)"
+        : "0px 0px 11px rgba(38, 55, 75, 0.25)"};
+  }
 `;

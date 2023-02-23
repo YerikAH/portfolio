@@ -2,13 +2,7 @@ import {
   BoxGridBlog,
   BoxGridOne,
   BoxGridTwo,
-  GroupBox,
-  GroupContent,
-  GroupContentLink,
-  SectionStylesBlog,
-  SpanText,
-  TextBox,
-  TitleBox,
+  SectionStylesBlogTheme,
 } from "../../../../styles/blog/section_first_blog";
 
 import { useContext } from "react";
@@ -26,7 +20,7 @@ export default function SectionFirstBlog() {
   return (
     <FetchContext.Provider value={dataContext}>
       <ThemeContext.Provider value={themeContext}>
-        <SectionStylesBlog className={themeContext.theme}>
+        <SectionStylesBlogTheme className={themeContext.theme}>
           <BoxGridBlog>
             <BoxGridOne>
               <NavigationBlog nav={dataContext.blog} />
@@ -34,10 +28,10 @@ export default function SectionFirstBlog() {
             <BoxGridTwo>
               <BannerBlog nav={dataContext.blog} />
               <TitleBlog />
-              <GroupBoxBlog nav={dataContext.blog}/>
+              <GroupBoxBlog nav={dataContext.blog} />
             </BoxGridTwo>
           </BoxGridBlog>
-        </SectionStylesBlog>
+        </SectionStylesBlogTheme>
       </ThemeContext.Provider>
     </FetchContext.Provider>
   );

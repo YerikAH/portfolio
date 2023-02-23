@@ -15,7 +15,7 @@
           "button_one": "Certificados",
           "button_two": "Currículo",
           "button_es_cv": "Descargar CV en español",
-          "button_en_cv":"Descargar CV en ingles"
+          "button_en_cv": "Descargar CV en ingles"
         },
         "section_second": {
           "headline": "Sobre mí"
@@ -117,45 +117,45 @@
           }
         ]
       },
-      "blog":{
-        "navigation_blog":{
-          "title": ["Blog","Temas"],
+      "blog": {
+        "navigation_blog": {
+          "title": ["Blog", "Temas"],
           "topics": [
             {
-              "name":"Experiencias",
+              "name": "Experiencias",
               "word": "exp"
             },
             {
-              "name":"Reseñas de libros",
+              "name": "Reseñas de libros",
               "word": "review"
             },
             {
-              "name":"Programación",
+              "name": "Programación",
               "word": "code"
             }
           ],
-          "project" : "¿Ya viste mis últimas creaciónes?"
+          "project": "¿Ya viste mis últimas creaciones?"
         },
         "banner": {
           "title": "Blog",
-          "subtitle": "Historias de un desarrollador web"
+          "subtitle": "Historias de un desarrollador web: reflexiones y experiencias."
         },
-        "blog_preview":[
+        "blog_preview": [
           {
             "id": "blog_1",
-            "word":"exp",
+            "word": "exp",
             "title": "Mi Experiencia Aprendiendo Programación",
             "description": "Durante los últimos 8 meses he estado inmerso en un intenso proceso de aprendizaje de programación. Este periodo ha sido uno de los más desafiantes y gratificantes de mi vida..."
           },
           {
             "id": "blog_2",
-            "word":"exp",
+            "word": "review",
             "title": "Mi Experiencia Aprendiendo Programación",
             "description": "Durante los últimos 8 meses he estado inmerso en un intenso proceso de aprendizaje de programación. Este periodo ha sido uno de los más desafiantes y gratificantes de mi vida..."
           },
           {
             "id": "blog_3",
-            "word":"code",
+            "word": "code",
             "title": "Mi Experiencia Aprendiendo Programación",
             "description": "Durante los últimos 8 meses he estado inmerso en un intenso proceso de aprendizaje de programación. Este periodo ha sido uno de los más desafiantes y gratificantes de mi vida..."
           }
@@ -177,7 +177,7 @@
           "button_one": "Certificates",
           "button_two": "Resume",
           "button_es_cv": "Download CV in Spanish",
-          "button_en_cv":"Download CV in English"
+          "button_en_cv": "Download CV in English"
         },
         "section_second": {
           "headline": "About"
@@ -279,47 +279,47 @@
           }
         ]
       },
-      "blog":{
-        "navigation_blog":{
-          "title": ["Blog","Topics"],
+      "blog": {
+        "navigation_blog": {
+          "title": ["Blog", "Topics"],
           "topics": [
             {
-              "name":"Experiencias",
+              "name": "Experiences ",
               "word": "exp"
             },
             {
-              "name":"Reseñas de libros",
+              "name": "Book reviews",
               "word": "review"
             },
             {
-              "name":"Programación",
+              "name": "Programming",
               "word": "code"
             }
           ],
-          "project" : "¿Ya viste mis últimas creaciónes?"
+          "project": "Have you seen my latest creations yet?"
         },
         "banner": {
-          "title": "Blog",
-          "subtitle": "Historias de un desarrollador web"
+          "title": "My Blog",
+          "subtitle": "Stories of a web developer: reflections and experiences."
         },
-        "blog_preview":[
+        "blog_preview": [
           {
             "id": "blog_1",
-            "word":"exp",
-            "title": "Mi Experiencia Aprendiendo Programación",
-            "description": "Durante los últimos 8 meses he estado inmerso en un intenso proceso de aprendizaje de programación. Este periodo ha sido uno de los más desafiantes y gratificantes de mi vida..."
+            "word": "exp",
+            "title": "My Experience Learning Programming ",
+            "description": "During the last 8 months I have been immersed in an intense programming learning process. This period has been one of the most challenging and rewarding of my life..."
           },
           {
             "id": "blog_2",
-            "word":"exp",
-            "title": "Mi Experiencia Aprendiendo Programación",
-            "description": "Durante los últimos 8 meses he estado inmerso en un intenso proceso de aprendizaje de programación. Este periodo ha sido uno de los más desafiantes y gratificantes de mi vida..."
+            "word": "review",
+            "title": "My Experience Learning Programming ",
+            "description": "During the last 8 months I have been immersed in an intense programming learning process. This period has been one of the most challenging and rewarding of my life..."
           },
           {
             "id": "blog_3",
-            "word":"code",
-            "title": "Mi Experiencia Aprendiendo Programación",
-            "description": "Durante los últimos 8 meses he estado inmerso en un intenso proceso de aprendizaje de programación. Este periodo ha sido uno de los más desafiantes y gratificantes de mi vida..."
+            "word": "code",
+            "title": "My Experience Learning Programming ",
+            "description": "During the last 8 months I have been immersed in an intense programming learning process. This period has been one of the most challenging and rewarding of my life..."
           }
         ]
       }
@@ -353,26 +353,26 @@
   ],
   "social_media": [
     {
-      "name":"linkedin",
-      "icon":"./images/icon/linkedin-link.svg",
+      "name": "linkedin",
+      "icon": "./images/icon/linkedin-link.svg",
       "user": "Harvey Yerik Vasquez Huaranga",
       "link": "https://www.linkedin.com/in/harvey-yerik-vasquez-huaranga-802218228/"
     },
-     {
+    {
       "name": "github",
-      "icon":"./images/icon/github-link.svg",
+      "icon": "./images/icon/github-link.svg",
       "user": "YerikAH",
       "link": "https://github.com/YerikAH"
     },
     {
       "name": "twitter",
-      "icon":"./images/icon/twitter-link.svg",
+      "icon": "./images/icon/twitter-link.svg",
       "user": "@yerikhar",
       "link": "https://twitter.com/yerikhar"
     },
     {
       "name": "email",
-      "icon":"./images/icon/email-link.svg",
+      "icon": "./images/icon/email-link.svg",
       "user": "yerik05vh@gmail.com",
       "link": "yerik05vh@gmail.com"
     }
