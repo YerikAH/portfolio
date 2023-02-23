@@ -1,4 +1,4 @@
-import { Dynamic, Nav, Portfolio, SectionFirst, SocialMedia, Static } from "./data";
+import { Blog, Dynamic, Nav, Portfolio, SectionFirst, SocialMedia, Static } from "./data";
 import { Language, Sections, Theme } from "../enum/LanguageEnum";
 
 // context
@@ -13,6 +13,7 @@ export interface ContextInterface {
   skills: string[];
   language_current: Language;
   handle_language: () => void;
+  blog: Blog
 }
 export interface ContextThemeInterface {
   theme: Theme;

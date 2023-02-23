@@ -109,7 +109,51 @@ export const CONTEXT_INITIAL_STATE: ContextInterface = {
     "GitHub",
   ],
   handle_language: () => {},
-  language_current: Language.es
+  language_current: Language.es,
+  blog:{
+    navigation_blog:{
+      title: [""],
+      topics: [
+        {
+          name:"",
+          word: ""
+        },
+        {
+          name:"",
+          word: ""
+        },
+        {
+          name:"",
+          word: ""
+        },
+      ],
+      project : ""
+    },
+    banner: {
+      title: "",
+      subtitle: ""
+    },
+    blog_preview:[
+      {
+        id: "",
+        word:"",
+        title: "",
+        description: ""
+      },
+      {
+        id: "",
+        word:"",
+        title: "",
+        description: ""
+      },
+      {
+        id: "",
+        word:"",
+        title: "",
+        description: ""
+      }
+    ]
+  }
 };
 export const THEME_CONTEXT_INITIAL_STATE: ContextThemeInterface = {
   theme: Theme.light,

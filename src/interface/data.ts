@@ -13,7 +13,37 @@ export interface Language {
 export interface En {
   static: Static;
   dynamic: Dynamic;
+  blog: Blog;
 }
+export interface Blog {
+  navigation_blog: NavigationBlog;
+  banner:          Banner;
+  blog_preview:    BlogPreview[];
+}
+
+export interface Banner {
+  title:    string;
+  subtitle: string;
+}
+
+export interface BlogPreview {
+  id:          string;
+  word:        string;
+  title:       string;
+  description: string;
+}
+
+export interface NavigationBlog {
+  title:   string[];
+  topics:  Topic[];
+  project: string;
+}
+
+export interface Topic {
+  name: string;
+  word: string;
+}
+
 
 export interface Dynamic {
   description: string;

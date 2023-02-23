@@ -55,6 +55,50 @@ export const DATA_INITIAL_STATE: Welcome = {
           },
         ],
       },
+      blog:{
+        navigation_blog:{
+          title: [""],
+          topics: [
+            {
+              name:"",
+              word: ""
+            },
+            {
+              name:"",
+              word: ""
+            },
+            {
+              name:"",
+              word: ""
+            },
+          ],
+          project : ""
+        },
+        banner: {
+          title: "",
+          subtitle: ""
+        },
+        blog_preview:[
+          {
+            id: "",
+            word:"",
+            title: "",
+            description: ""
+          },
+          {
+            id: "",
+            word:"",
+            title: "",
+            description: ""
+          },
+          {
+            id: "",
+            word:"",
+            title: "",
+            description: ""
+          }
+        ]
+      }
     },
     en: {
       static: {
@@ -109,6 +153,50 @@ export const DATA_INITIAL_STATE: Welcome = {
           },
         ],
       },
+      blog:{
+        navigation_blog:{
+          title: [""],
+          topics: [
+            {
+              name:"",
+              word: ""
+            },
+            {
+              name:"",
+              word: ""
+            },
+            {
+              name:"",
+              word: ""
+            },
+          ],
+          project : ""
+        },
+        banner: {
+          title: "",
+          subtitle: ""
+        },
+        blog_preview:[
+          {
+            id: "",
+            word:"",
+            title: "",
+            description: ""
+          },
+          {
+            id: "",
+            word:"",
+            title: "",
+            description: ""
+          },
+          {
+            id: "",
+            word:"",
+            title: "",
+            description: ""
+          }
+        ]
+      }
     },
   },
 

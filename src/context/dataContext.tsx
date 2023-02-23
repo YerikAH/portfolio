@@ -35,6 +35,7 @@ const DataProvider = ({ children }: ContextProps) => {
         skills: dataJson.skills,
         language_current: language,
         handle_language: handleLanguage,
+        blog: dataJson.language[language].blog
       };
       setDataValueAll(dataValue);
     }
@@ -50,6 +51,7 @@ const DataProvider = ({ children }: ContextProps) => {
         social_media: dataJson.social_media,
         skills: dataJson.skills,
         handle_language: handleLanguage,
+        blog: dataJson.language[language].blog
       };
       setDataValueAll(dataValue);
     }

@@ -116,6 +116,50 @@
             "link_preview": "https://github.com/YerikAH/todoyou-fullstack#readme"
           }
         ]
+      },
+      "blog":{
+        "navigation_blog":{
+          "title": ["Blog"],
+          "topics": [
+            {
+              "name":"Experiencias",
+              "word": "exp"
+            },
+            {
+              "name":"Reseñas de libros",
+              "word": "review"
+            },
+            {
+              "name":"Programación",
+              "word": "code"
+            }
+          ],
+          "project" : "¿Ya viste mis últimas creaciónes?"
+        },
+        "banner": {
+          "title": "Blog",
+          "subtitle": "Historias de un desarrollador web"
+        },
+        "blog_preview":[
+          {
+            "id": "blog_1",
+            "word":"exp",
+            "title": "Mi Experiencia Aprendiendo Programación",
+            "description": "Durante los últimos 8 meses he estado inmerso en un intenso proceso de aprendizaje de programación. Este periodo ha sido uno de los más desafiantes y gratificantes de mi vida..."
+          },
+          {
+            "id": "blog_2",
+            "word":"exp",
+            "title": "Mi Experiencia Aprendiendo Programación",
+            "description": "Durante los últimos 8 meses he estado inmerso en un intenso proceso de aprendizaje de programación. Este periodo ha sido uno de los más desafiantes y gratificantes de mi vida..."
+          },
+          {
+            "id": "blog_3",
+            "word":"exp",
+            "title": "Mi Experiencia Aprendiendo Programación",
+            "description": "Durante los últimos 8 meses he estado inmerso en un intenso proceso de aprendizaje de programación. Este periodo ha sido uno de los más desafiantes y gratificantes de mi vida..."
+          }
+        ]
       }
     },
     "en": {
@@ -232,6 +276,50 @@
             "image_path": "./images/projects/django.png",
             "link_code": "https://github.com/YerikAH/todoyou-fullstack",
             "link_preview": "https://github.com/YerikAH/todoyou-fullstack#readme"
+          }
+        ]
+      },
+      "blog":{
+        "navigation_blog":{
+          "title": ["Blog"],
+          "topics": [
+            {
+              "name":"Experiencias",
+              "word": "exp"
+            },
+            {
+              "name":"Reseñas de libros",
+              "word": "review"
+            },
+            {
+              "name":"Programación",
+              "word": "code"
+            }
+          ],
+          "project" : "¿Ya viste mis últimas creaciónes?"
+        },
+        "banner": {
+          "title": "Blog",
+          "subtitle": "Historias de un desarrollador web"
+        },
+        "blog_preview":[
+          {
+            "id": "blog_1",
+            "word":"exp",
+            "title": "Mi Experiencia Aprendiendo Programación",
+            "description": "Durante los últimos 8 meses he estado inmerso en un intenso proceso de aprendizaje de programación. Este periodo ha sido uno de los más desafiantes y gratificantes de mi vida..."
+          },
+          {
+            "id": "blog_2",
+            "word":"exp",
+            "title": "Mi Experiencia Aprendiendo Programación",
+            "description": "Durante los últimos 8 meses he estado inmerso en un intenso proceso de aprendizaje de programación. Este periodo ha sido uno de los más desafiantes y gratificantes de mi vida..."
+          },
+          {
+            "id": "blog_3",
+            "word":"exp",
+            "title": "Mi Experiencia Aprendiendo Programación",
+            "description": "Durante los últimos 8 meses he estado inmerso en un intenso proceso de aprendizaje de programación. Este periodo ha sido uno de los más desafiantes y gratificantes de mi vida..."
           }
         ]
       }
