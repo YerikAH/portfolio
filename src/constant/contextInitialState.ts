@@ -1,4 +1,4 @@
-import { Language, Theme } from "../enum/LanguageEnum";
+import { Language, Theme, TopicsEnum } from "../enum/LanguageEnum";
 import { ContextInterface, ContextThemeInterface } from "../interface/props";
 
 export const CONTEXT_INITIAL_STATE: ContextInterface = {
@@ -116,15 +116,15 @@ export const CONTEXT_INITIAL_STATE: ContextInterface = {
       topics: [
         {
           name:"",
-          word: ""
+          word: TopicsEnum.exp
         },
         {
           name:"",
-          word: ""
+          word: TopicsEnum.review
         },
         {
           name:"",
-          word: ""
+          word: TopicsEnum.code
         },
       ],
       project : ""
@@ -136,19 +136,19 @@ export const CONTEXT_INITIAL_STATE: ContextInterface = {
     blog_preview:[
       {
         id: "",
-        word:"",
+        word: TopicsEnum.exp,
         title: "",
         description: ""
       },
       {
         id: "",
-        word:"",
+        word: TopicsEnum.exp,
         title: "",
         description: ""
       },
       {
         id: "",
-        word:"",
+        word: TopicsEnum.exp,
         title: "",
         description: ""
       }

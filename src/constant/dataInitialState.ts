@@ -1,3 +1,4 @@
+import { TopicsEnum } from "../enum/LanguageEnum";
 import { Welcome } from "../interface/data";
 
 export const DATA_INITIAL_STATE: Welcome = {
@@ -61,15 +62,15 @@ export const DATA_INITIAL_STATE: Welcome = {
           topics: [
             {
               name:"",
-              word: ""
+              word:  TopicsEnum.exp
             },
             {
               name:"",
-              word: ""
+              word:  TopicsEnum.review
             },
             {
               name:"",
-              word: ""
+              word:  TopicsEnum.code
             },
           ],
           project : ""
@@ -81,19 +82,19 @@ export const DATA_INITIAL_STATE: Welcome = {
         blog_preview:[
           {
             id: "",
-            word:"",
+            word:TopicsEnum.exp,
             title: "",
             description: ""
           },
           {
             id: "",
-            word:"",
+            word:TopicsEnum.exp,
             title: "",
             description: ""
           },
           {
             id: "",
-            word:"",
+            word:TopicsEnum.exp,
             title: "",
             description: ""
           }
@@ -159,15 +160,15 @@ export const DATA_INITIAL_STATE: Welcome = {
           topics: [
             {
               name:"",
-              word: ""
+              word: TopicsEnum.exp
             },
             {
               name:"",
-              word: ""
+              word: TopicsEnum.review
             },
             {
               name:"",
-              word: ""
+              word: TopicsEnum.code
             },
           ],
           project : ""
@@ -179,19 +180,19 @@ export const DATA_INITIAL_STATE: Welcome = {
         blog_preview:[
           {
             id: "",
-            word:"",
+            word:TopicsEnum.exp,
             title: "",
             description: ""
           },
           {
             id: "",
-            word:"",
+            word:TopicsEnum.exp,
             title: "",
             description: ""
           },
           {
             id: "",
-            word:"",
+            word:TopicsEnum.exp,
             title: "",
             description: ""
           }
