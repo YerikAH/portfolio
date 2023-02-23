@@ -17,3 +17,14 @@ export enum Sections{
   projects = "projects",
   contact = "contact"
 }
+
+export enum TopicsEnum{
+  exp = "exp",
+  review = "review",
+  code = "code"
+}
+export enum TopicsColorEnum{
+  blue = "var(--blue-brig)",
+  pink = "var(--pink-brig)",
+  purple = "var(--purple-brig)"
+}

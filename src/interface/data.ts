@@ -1,3 +1,5 @@
+import { TopicsEnum } from "../enum/LanguageEnum";
+
 export interface Welcome {
   language: Language;
   photo_url: string;
@@ -28,7 +30,7 @@ export interface Banner {
 
 export interface BlogPreview {
   id:          string;
-  word:        string;
+  word:        TopicsEnum;
   title:       string;
   description: string;
 }
@@ -41,7 +43,7 @@ export interface NavigationBlog {
 
 export interface Topic {
   name: string;
-  word: string;
+  word: TopicsEnum;
 }
 
 

@@ -74,3 +74,10 @@ export interface LanguageOptionsProps{
   languageOptions: boolean,
   sectionFirst: SectionFirst
 }
+
+
+// blog
+
+export interface NavigationBlogProps{
+  nav : Blog
+}

@@ -119,7 +119,7 @@
       },
       "blog":{
         "navigation_blog":{
-          "title": ["Blog"],
+          "title": ["Blog","Temas"],
           "topics": [
             {
               "name":"Experiencias",
@@ -281,7 +281,7 @@
       },
       "blog":{
         "navigation_blog":{
-          "title": ["Blog"],
+          "title": ["Blog","Topics"],
           "topics": [
             {
               "name":"Experiencias",
