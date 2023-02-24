@@ -149,7 +149,6 @@ export const GroupBox = styled.div`
 export const GroupContent = styled.div`
   overflow: hidden;
   position: relative;
-  box-shadow: 0px 0px 11px rgba(38, 55, 75, 0.25);
   padding: 2rem 1rem;
   display: grid;
   border-radius: 0.8rem;
@@ -173,12 +172,10 @@ export const TitleBox = styled.h6`
   text-transform: capitalize;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: var(--black);
   margin: 1rem 0;
 `;
 export const TextBox = styled.p`
   font: normal normal 400 0.9rem/1.2rem var(--font-lato);
-  color: var(--black);
   opacity: 0.8;
   text-align: justify;
   @media (min-width: 720px) {
@@ -200,7 +197,6 @@ export const NavigationGeneral = styled.div`
   }
 `;
 export const NavigationTitleButton = styled.button`
-  background-color: var(--black-10);
   border-radius: 8px;
   padding: 1rem;
   color: var(--blue);
@@ -209,7 +205,6 @@ export const NavigationTitleButton = styled.button`
 `;
 
 export const NavigationTitle = styled.h3`
-  color: var(--black);
   font: normal normal 600 1.2rem/1.2rem var(--font-lato);
   text-align: left;
   padding: 1rem;
@@ -218,20 +213,16 @@ export const NavigationSubtitleButton = styled.button`
   background-color: transparent;
   border-radius: 8px;
   padding: 1rem;
-  color: var(--black-pale);
+
   font: normal normal 400 1rem/1.2rem var(--font-lato);
   text-align: left;
   opacity: 0.8;
-  &:hover {
-    background-color: var(--black-10);
-  }
 `;
 
 export const Separate = styled.div`
   width: 100%;
   height: 0.5px;
   opacity: 0.5;
-  background-color: var(--black);
   margin: 1rem 0;
 `;
 
@@ -249,15 +240,50 @@ export const SectionStylesBlogTheme = styled(SectionStylesBlog)`
   }
   ${SubtitleTwo} {
     color: ${(props) =>
-      props.className === Theme.dark ? "var(--black-pale)" : "var(--white)"};
+      props.className === Theme.dark ? "var(--white)" : "var(--black)"};
   }
   ${GroupContent} {
     background-color: ${(props) =>
       props.className === Theme.dark ? "var(--black-pale)" : "var(--white)"};
 
-    box-shadow: ${(props) =>
+    border: ${(props) =>
       props.className === Theme.dark
-        ? "0px 0px 11px rgba(255, 255, 255, 0.25)"
-        : "0px 0px 11px rgba(38, 55, 75, 0.25)"};
+        ? "1px solid rgba(255, 255, 255, 0.25)"
+        : "1px solid  rgba(38, 55, 75, 0.25)"};
+  }
+  ${TitleBox} {
+    color: ${(props) =>
+      props.className === Theme.dark ? "var(--white)" : "var(--black)"};
+  }
+  ${TextBox} {
+    color: ${(props) =>
+      props.className === Theme.dark ? "var(--white)" : "var(--black)"};
+  }
+  ${NavigationTitle} {
+    color: ${(props) =>
+      props.className === Theme.dark ? "var(--white)" : "var(--black)"};
+  }
+  ${TextDecoration} {
+    color: ${(props) =>
+      props.className === Theme.dark ? "var(--white)" : "var(--black)"};
+  }
+
+  ${NavigationTitleButton} {
+    background-color: ${(props) =>
+      props.className === Theme.dark ? "var(--white-10)" : "var(--black-10)"};
+  }
+  ${NavigationSubtitleButton} {
+    color: ${(props) =>
+      props.className === Theme.dark ? "var(--white)" : "var(--black-pale)"};
+    &:hover{
+    background-color: ${(props) =>
+      props.className === Theme.dark ? "var(--white-10)" : "var(--black-10)"};
+      
+    }
+  }
+
+  ${Separate} {
+    background-color: ${(props) =>
+      props.className === Theme.dark ? "var(--white)" : "var(--black)"};
   }
 `;
