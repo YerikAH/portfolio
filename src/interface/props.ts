@@ -1,6 +1,13 @@
-import { Blog, Dynamic, Nav, Portfolio, SectionFirst, SocialMedia, Static } from "./data";
+import {
+  Blog,
+  Dynamic,
+  Nav,
+  Portfolio,
+  SectionFirst,
+  SocialMedia,
+  Static,
+} from "./data";
 import { Language, Sections, Theme } from "../enum/LanguageEnum";
-
 // context
 export interface ContextProps {
   children: JSX.Element;
@@ -13,7 +20,7 @@ export interface ContextInterface {
   skills: string[];
   language_current: Language;
   handle_language: () => void;
-  blog: Blog
+  blog: Blog;
 }
 export interface ContextThemeInterface {
   theme: Theme;
@@ -65,19 +72,18 @@ export interface ButtonNavProps {
   handleLanguage(): void;
   handleTheme(): void;
   handleMenu(): void;
-  menu: boolean
+  menu: boolean;
 }
 
 // dir - section first
 
-export interface LanguageOptionsProps{
-  languageOptions: boolean,
-  sectionFirst: SectionFirst
+export interface LanguageOptionsProps {
+  languageOptions: boolean;
+  sectionFirst: SectionFirst;
 }
-
 
 // blog
 
-export interface NavigationBlogProps{
-  nav : Blog
+export interface NavigationBlogProps {
+  nav: Blog;
 }
