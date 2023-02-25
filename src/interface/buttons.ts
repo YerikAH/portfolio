@@ -1,4 +1,4 @@
-import { Language, Theme } from "../enum/LanguageEnum";
+import { Language, Theme } from '../enum/LanguageEnum';
 
 export interface InterfaceButton {
   languageCurrent: Language;

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const SelectLanguageBox = styled.div`
   position: absolute;
@@ -16,7 +16,7 @@ export const SelectLanguageBox = styled.div`
     left: auto;
     right: auto;
   }
-`;
+`
 
 export const ButtonLanguage = styled.button`
   padding: 1rem 0.5rem;
@@ -31,16 +31,16 @@ export const ButtonLanguage = styled.button`
   @media (min-width: 720px) {
     font-size: 1rem;
   }
-`;
+`
 export const ImageLanguage = styled.img`
   width: 1rem;
   @media (min-width: 720px) {
     width: 1.5rem;
   }
-`;
+`
 export const Separator = styled.div`
   width: 100%;
   height: 0.5px;
   background-color: var(--black);
   opacity: 0.3;
-`;
+`

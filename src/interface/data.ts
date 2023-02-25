@@ -1,4 +1,4 @@
-import { TopicsEnum } from "../enum/LanguageEnum";
+import { TopicsEnum } from '../enum/LanguageEnum';
 
 export interface Welcome {
   language: Language;

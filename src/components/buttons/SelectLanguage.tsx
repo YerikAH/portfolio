@@ -3,34 +3,30 @@ import {
   ImageLanguage,
   SelectLanguageBox,
   Separator,
-} from "../../styles/home/select_language";
+} from '../../styles/home/select_language'
 
 // images
-import flagEs from "../../assets/static/es.png";
-import flagEn from "../../assets/static/en.png";
-import { LanguageOptionsProps } from "../../interface/props";
-import { useEffect, useState } from "react";
-import { LanguageOptionsStyles } from "../../interface/styles";
-import { MODAL_RESUME_INIT } from "../../constant/stylesInitialState";
+import flagEs from '../../assets/static/es.png'
+import flagEn from '../../assets/static/en.png'
+import { LanguageOptionsProps } from '../../interface/props'
+import { useEffect, useState } from 'react'
+import { LanguageOptionsStyles } from '../../interface/styles'
+import { MODAL_RESUME_INIT } from '../../constant/stylesInitialState'
 
-export default function SelectLanguage({
-  languageOptions,
-  sectionFirst,
-}: LanguageOptionsProps) {
-  const [stylesBitModal, setStylesBitModal] =
-    useState<LanguageOptionsStyles>(MODAL_RESUME_INIT);
+export default function SelectLanguage({ languageOptions, sectionFirst }: LanguageOptionsProps) {
+  const [stylesBitModal, setStylesBitModal] = useState<LanguageOptionsStyles>(MODAL_RESUME_INIT)
 
   useEffect(() => {
-    let stylesModal: LanguageOptionsStyles = {
-      opacity: "0",
-      visibility: "hidden",
-    };
-    if (languageOptions) {
-      stylesModal.opacity = "1";
-      stylesModal.visibility = "visible";
+    const stylesModal: LanguageOptionsStyles = {
+      opacity: '0',
+      visibility: 'hidden',
     }
-    setStylesBitModal(stylesModal);
-  }, [languageOptions]);
+    if (languageOptions) {
+      stylesModal.opacity = '1'
+      stylesModal.visibility = 'visible'
+    }
+    setStylesBitModal(stylesModal)
+  }, [languageOptions])
 
   return (
     <SelectLanguageBox style={stylesBitModal}>
@@ -44,5 +40,5 @@ export default function SelectLanguage({
         {sectionFirst.button_es_cv}
       </ButtonLanguage>
     </SelectLanguageBox>
-  );
+  )
 }

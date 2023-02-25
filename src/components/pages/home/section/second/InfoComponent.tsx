@@ -1,5 +1,5 @@
 // hook
-import { useContext } from "react";
+import { useContext } from 'react'
 
 // styles
 import {
@@ -8,21 +8,21 @@ import {
   BoxGridTwo,
   CircleAvatar,
   TextBodyOne,
-} from "../../../../../styles/home/section_second";
+} from '../../../../../styles/home/section_second'
 
 // context
-import FetchContext from "../../../../../context/dataContext";
+import FetchContext from '../../../../../context/dataContext'
 
 export default function InfoComponent() {
-  const dataContext = useContext(FetchContext);
+  const dataContext = useContext(FetchContext)
   return (
     <BoxGrid>
       <BoxGridOne>
         <TextBodyOne>{dataContext.language_dynamic.description}</TextBodyOne>
       </BoxGridOne>
       <BoxGridTwo>
-        <CircleAvatar src={dataContext.photo} alt="harvey photo" />
+        <CircleAvatar src={dataContext.photo} alt='harvey photo' />
       </BoxGridTwo>
     </BoxGrid>
-  );
+  )
 }

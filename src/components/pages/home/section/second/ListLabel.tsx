@@ -1,17 +1,14 @@
 // hook
-import { useContext } from "react";
+import { useContext } from 'react'
 
 // styles
-import {
-  LabelSkills,
-  ListSkills,
-} from "../../../../../styles/home/section_second";
+import { LabelSkills, ListSkills } from '../../../../../styles/home/section_second'
 
 // context
-import FetchContext from "../../../../../context/dataContext";
+import FetchContext from '../../../../../context/dataContext'
 
 export default function ListLabel() {
-  const dataContext = useContext(FetchContext);
+  const dataContext = useContext(FetchContext)
   return (
     <FetchContext.Provider value={dataContext}>
       <ListSkills>
@@ -20,5 +17,5 @@ export default function ListLabel() {
         ))}
       </ListSkills>
     </FetchContext.Provider>
-  );
+  )
 }

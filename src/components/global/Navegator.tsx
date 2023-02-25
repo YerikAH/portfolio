@@ -1,42 +1,39 @@
-import { useContext, useState } from "react";
+import { useContext, useState } from 'react'
 
 // styles
-import {
-  HeaderStyleTheme,
-  NavStyle,
-} from "../../styles/global/navegator_styles";
+import { HeaderStyleTheme, NavStyle } from '../../styles/global/navegator_styles'
 
 // context
-import FetchContext from "../../context/dataContext";
-import ThemeContext from "../../context/themeContext";
+import FetchContext from '../../context/dataContext'
+import ThemeContext from '../../context/themeContext'
 
 // component
-import MenuMobile from "./mobile/MenuMobile";
-import LinksNav from "./nav/LinksNav";
-import ButtonsNav from "./nav/ButtonsNav";
+import MenuMobile from './mobile/MenuMobile'
+import LinksNav from './nav/LinksNav'
+import ButtonsNav from './nav/ButtonsNav'
 
 // enum or interface
-import { InterfaceNavScroll } from "../../interface/scrollspy";
-import { Sections } from "../../enum/LanguageEnum";
+import { InterfaceNavScroll } from '../../interface/scrollspy'
+import { Sections } from '../../enum/LanguageEnum'
 
 function Navegator({ activeSection, handleChange }: InterfaceNavScroll) {
-  const dataContext = useContext(FetchContext);
-  const themeContext = useContext(ThemeContext);
-  const [menu, setMenu] = useState(false);
+  const dataContext = useContext(FetchContext)
+  const themeContext = useContext(ThemeContext)
+  const [menu, setMenu] = useState(false)
 
   function handleLanguage() {
-    dataContext.handle_language();
+    dataContext.handle_language()
   }
   function handleTheme() {
-    themeContext.handle_theme();
+    themeContext.handle_theme()
   }
   function handleMenu() {
-    setMenu(menu ? false : true);
+    setMenu(menu ? false : true)
   }
 
   function changeSection(section: Sections) {
     if (handleChange !== undefined) {
-      handleChange(section);
+      handleChange(section)
     }
   }
 
@@ -60,14 +57,10 @@ function Navegator({ activeSection, handleChange }: InterfaceNavScroll) {
             />
           </NavStyle>
         </HeaderStyleTheme>
-        <MenuMobile
-          menu={menu}
-          handleMenu={handleMenu}
-          changeSection={changeSection}
-        />
+        <MenuMobile menu={menu} handleMenu={handleMenu} changeSection={changeSection} />
       </FetchContext.Provider>
     </ThemeContext.Provider>
-  );
+  )
 }
 
-export default Navegator;
+export default Navegator

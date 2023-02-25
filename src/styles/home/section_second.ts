@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 // enum
-import { Theme } from "../../enum/LanguageEnum";
+import { Theme } from '../../enum/LanguageEnum'
 
 const SectionScondStyles = styled.section`
   width: 100%;
@@ -12,7 +12,7 @@ const SectionScondStyles = styled.section`
   transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
   margin-top: 5rem;
   padding: 5rem 0;
-`;
+`
 
 export const BoxGrid = styled.div`
   max-width: 720px;
@@ -24,10 +24,10 @@ export const BoxGrid = styled.div`
   margin-top: 3.625rem;
   @media (min-width: 720px) {
     grid-template-columns: repeat(2, auto);
-    grid-template-areas: "box_two box_one";
+    grid-template-areas: 'box_two box_one';
     gap: 3.5rem;
   }
-`;
+`
 
 export const BoxGridOne = styled.div`
   display: grid;
@@ -36,7 +36,7 @@ export const BoxGridOne = styled.div`
   @media (min-width: 720px) {
     grid-area: box_one;
   }
-`;
+`
 export const BoxGridTwo = styled.div`
   display: grid;
   height: 0%;
@@ -47,18 +47,18 @@ export const BoxGridTwo = styled.div`
     height: 100%;
     width: 100%;
   }
-`;
+`
 
 export const TitleBox = styled.div`
   display: grid;
   place-items: center;
-`;
+`
 export const SubtitleOne = styled.h2`
   font: normal normal 700 1.5rem/1.5rem var(--font-lato);
   color: var(--black);
   margin-top: 1.25rem;
   transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
-`;
+`
 
 export const TextBodyOne = styled.p`
   font: normal normal 400 1rem/1.5rem var(--font-lato);
@@ -69,7 +69,7 @@ export const TextBodyOne = styled.p`
   @media (min-width: 720px) {
     text-align: left;
   }
-`;
+`
 export const CircleAvatar = styled.img`
   border-radius: 15rem;
   max-width: 7.8125rem;
@@ -83,7 +83,7 @@ export const CircleAvatar = styled.img`
     height: 100%;
     visibility: visible;
   }
-`;
+`
 export const ListSkills = styled.div`
   display: flex;
   gap: 8px;
@@ -96,7 +96,7 @@ export const ListSkills = styled.div`
   @media (min-width: 720px) {
     justify-content: start;
   }
-`;
+`
 
 export const LabelSkills = styled.p`
   background-color: var(--blue);
@@ -105,24 +105,18 @@ export const LabelSkills = styled.p`
   border-radius: 0.4rem;
   transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
   font: normal normal 400 0.9rem/1rem var(--font-lato);
-`;
+`
 export const SectionScondStylesTheme = styled(SectionScondStyles)`
   background-color: ${(props) =>
-    props.className === Theme.dark
-      ? "var(--black-blue-pale)"
-      : "var(--white-pale)"};
+    props.className === Theme.dark ? 'var(--black-blue-pale)' : 'var(--white-pale)'};
   & ${SubtitleOne} {
-    color: ${(props) =>
-      props.className === Theme.dark ? "var(--white)" : "var(--black)"};
+    color: ${(props) => (props.className === Theme.dark ? 'var(--white)' : 'var(--black)')};
   }
   & ${TextBodyOne} {
-    color: ${(props) =>
-      props.className === Theme.dark ? "var(--white)" : "var(--black)"};
+    color: ${(props) => (props.className === Theme.dark ? 'var(--white)' : 'var(--black)')};
   }
   & ${LabelSkills} {
     color: ${(props) =>
-      props.className === Theme.dark
-        ? "var(--black-blue-pale)"
-        : "var(--white)"};
+      props.className === Theme.dark ? 'var(--black-blue-pale)' : 'var(--white)'};
   }
-`;
+`

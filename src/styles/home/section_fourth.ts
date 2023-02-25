@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const SectionFourthStyles = styled.section`
   width: 100%;
@@ -7,7 +7,7 @@ export const SectionFourthStyles = styled.section`
   justify-content: center;
   flex-direction: column;
   margin-top: 5rem;
-`;
+`
 
 export const BoxGridFather = styled.div`
   max-width: 1200px;
@@ -18,7 +18,7 @@ export const BoxGridFather = styled.div`
   padding: 3.625rem 2rem;
   background: linear-gradient(90deg, var(--blue) 0.15%, var(--blue-strong) 90%);
   border-radius: 30px;
-`;
+`
 export const BoxGrid = styled.div`
   max-width: 720px;
   width: 100%;
@@ -28,10 +28,10 @@ export const BoxGrid = styled.div`
 
   @media (min-width: 720px) {
     grid-template-columns: repeat(2, 50%);
-    grid-template-areas: "box_two box_one";
+    grid-template-areas: 'box_two box_one';
     gap: 3.5rem;
   }
-`;
+`
 
 export const BoxGridOne = styled.div`
   display: grid;
@@ -41,7 +41,7 @@ export const BoxGridOne = styled.div`
   @media (min-width: 720px) {
     grid-area: box_one;
   }
-`;
+`
 export const BoxGridTwo = styled.div`
   display: flex;
   height: 100%;
@@ -56,18 +56,18 @@ export const BoxGridTwo = styled.div`
     flex-direction: column;
     padding-top: 0;
   }
-`;
+`
 
 export const TitleBox = styled.div`
   display: grid;
   place-items: center;
-`;
-export const IconImage = styled.img``;
+`
+export const IconImage = styled.img``
 export const SubtitleOne = styled.h2`
   font: normal normal 600 1.5rem/1.5rem var(--font-lato);
   color: var(--white);
   margin-top: 1.25rem;
-`;
+`
 
 export const TextBodyOne = styled.p`
   max-width: 720px;
@@ -76,18 +76,18 @@ export const TextBodyOne = styled.p`
   color: var(--white);
   text-align: center;
   opacity: 0.8;
-`;
+`
 
 export const FormStyles = styled.form`
   display: grid;
   max-width: 21.3125rem;
   width: 100%;
-`;
+`
 export const LabelStyles = styled.label`
   font: normal normal 600 0.9rem/1.2rem var(--font-lato);
   color: var(--white);
   margin: 1rem 0 0.5rem 0;
-`;
+`
 export const InputStyles = styled.input`
   padding: 0.5rem 1rem;
   background-color: transparent;
@@ -97,7 +97,7 @@ export const InputStyles = styled.input`
   border: 1px solid var(--white);
   width: 100%;
   outline: none;
-`;
+`
 export const TextAreaStyles = styled.textarea`
   padding: 0.5rem 1rem;
   background-color: transparent;
@@ -109,7 +109,7 @@ export const TextAreaStyles = styled.textarea`
   height: 150px;
   width: 100%;
   outline: none;
-`;
+`
 export const ButtonSubmit = styled.button`
   display: flex;
   justify-content: center;
@@ -122,9 +122,9 @@ export const ButtonSubmit = styled.button`
   border-radius: 10px;
   margin-top: 1rem;
   color: var(--blue-strong);
-`;
+`
 
-export const ButtonIcon = styled.img``;
+export const ButtonIcon = styled.img``
 
 export const ListTileStyles = styled.div`
   display: flex;
@@ -142,18 +142,18 @@ export const ListTileStyles = styled.div`
       width: auto;
     }
   }
-`;
+`
 export const ListTileBox = styled.div`
   display: grid;
   place-items: center;
   @media (min-width: 720px) {
     place-items: start;
   }
-`;
+`
 export const ListTileLinkIcon = styled.a`
   display: block;
-`;
-export const ListTileImage = styled.img``;
+`
+export const ListTileImage = styled.img``
 export const ListTileTitle = styled.h4`
   margin-top: 1rem;
   font: normal normal 600 1rem/1.2rem var(--font-lato);
@@ -163,7 +163,7 @@ export const ListTileTitle = styled.h4`
   @media (min-width: 720px) {
     margin-top: 0;
   }
-`;
+`
 export const ListTileLink = styled.a`
   margin-top: 0.3rem;
   font: normal normal 400 0.9rem/1.2rem var(--font-lato);
@@ -175,11 +175,11 @@ export const ListTileLink = styled.a`
   white-space: pre;
   width: 100%;
   transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
-`;
+`
 export const ErrorStyles = styled.p`
   margin-top: 1rem;
   text-align: left;
   font: normal normal 500 0.8rem/1rem var(--font-lato);
   letter-spacing: 0.05rem;
   color: var(--black-pale);
-`;
+`

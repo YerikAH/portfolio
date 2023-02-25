@@ -1,61 +1,53 @@
 // hook
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from 'react'
 
-//styles
+// styles
 import {
   BoxGrid,
   SectionThirdStylesTheme,
   SubtitleOne,
   TextButtonStroke,
   TitleBox,
-} from "../../../../styles/home/section_third";
+} from '../../../../styles/home/section_third'
 
 // context
-import FetchContext from "../../../../context/dataContext";
-import ProjectsComponent from "./third/ProjectsComponent";
-import ThemeContext from "../../../../context/themeContext";
-import IconProjects from "../../../images/IconProjects";
-import { InterfaceSectionScroll } from "../../../../interface/scrollspy";
+import FetchContext from '../../../../context/dataContext'
+import ProjectsComponent from './third/ProjectsComponent'
+import ThemeContext from '../../../../context/themeContext'
+import IconProjects from '../../../images/IconProjects'
+import { InterfaceSectionScroll } from '../../../../interface/scrollspy'
 
 export default function SectionThird({ sectionRef }: InterfaceSectionScroll) {
-  const dataContext = useContext(FetchContext);
-  const themeContext = useContext(ThemeContext);
+  const dataContext = useContext(FetchContext)
+  const themeContext = useContext(ThemeContext)
 
-  const [offset, setOffset] = useState(6);
-  const [thereProjects, setThereProjects] = useState(true);
+  const [offset, setOffset] = useState(6)
+  const [thereProjects, setThereProjects] = useState(true)
 
   useEffect(() => {
-    const numberProjects = dataContext.language_dynamic.portfolio.length;
-    console.log(offset, numberProjects);
-    console.log(offset >= numberProjects);
+    const numberProjects = dataContext.language_dynamic.portfolio.length
+    console.log(offset, numberProjects)
+    console.log(offset >= numberProjects)
     if (offset >= numberProjects) {
-      setOffset(offset);
-      setThereProjects(false);
+      setOffset(offset)
+      setThereProjects(false)
     } else {
-      setThereProjects(true);
+      setThereProjects(true)
     }
-  }, [offset, dataContext.language_dynamic.portfolio.length]);
+  }, [offset, dataContext.language_dynamic.portfolio.length])
 
   return (
     <FetchContext.Provider value={dataContext}>
       <ThemeContext.Provider value={themeContext}>
-        <SectionThirdStylesTheme
-          className={themeContext.theme}
-          ref={sectionRef}
-          id="projects"
-        >
+        <SectionThirdStylesTheme className={themeContext.theme} ref={sectionRef} id='projects'>
           <TitleBox>
             <IconProjects />
-            <SubtitleOne>
-              {dataContext.language_static.section_third.headline}
-            </SubtitleOne>
+            <SubtitleOne>{dataContext.language_static.section_third.headline}</SubtitleOne>
           </TitleBox>
           <BoxGrid>
-            {dataContext.language_dynamic.portfolio
-              .slice(0, offset)
-              .map((item) => (
-                <ProjectsComponent data={item} key={item.id} />
-              ))}
+            {dataContext.language_dynamic.portfolio.slice(0, offset).map((item) => (
+              <ProjectsComponent data={item} key={item.id} />
+            ))}
           </BoxGrid>
           {thereProjects && (
             <TextButtonStroke onClick={() => setOffset(offset + 6)}>
@@ -65,5 +57,5 @@ export default function SectionThird({ sectionRef }: InterfaceSectionScroll) {
         </SectionThirdStylesTheme>
       </ThemeContext.Provider>
     </FetchContext.Provider>
-  );
+  )
 }

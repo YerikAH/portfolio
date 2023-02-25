@@ -1,65 +1,69 @@
-import { useContext, useEffect, useState } from "react";
-import ReactDOM from "react-dom";
+import { useContext, useEffect, useState } from 'react'
+import ReactDOM from 'react-dom'
 import {
   MenuMobileLinkRouter,
   MenuMobileList,
   MenuMobileStylesTheme,
   MenuMobileUlist,
-} from "../../../styles/global/menu_mobile_styles";
+} from '../../../styles/global/menu_mobile_styles'
 // props or interface or init state
-import { InterfaceStylesMenu } from "../../../interface/styles";
-import { MenuMobileProps } from "../../../interface/props";
-import { STYLES_MENU } from "../../../constant/stylesInitialState";
+import { InterfaceStylesMenu } from '../../../interface/styles'
+import { MenuMobileProps } from '../../../interface/props'
+import { STYLES_MENU } from '../../../constant/stylesInitialState'
 
 // context
-import ThemeContext from "../../../context/themeContext";
-import DataContext from "../../../context/dataContext";
+import ThemeContext from '../../../context/themeContext'
+import DataContext from '../../../context/dataContext'
 
 // react router
-import { useLocation } from "react-router-dom";
+import { useLocation } from 'react-router-dom'
 
 // components
-import HomeMenuMobile from "./HomeMenuMobile";
-import BlogMenuMobile from "./BlogMenuMobile";
+import HomeMenuMobile from './HomeMenuMobile'
+import BlogMenuMobile from './BlogMenuMobile'
 
-export default function MenuMobile({
-  menu,
-  handleMenu,
-  changeSection,
-}: MenuMobileProps) {
-  const menuHTML = document.getElementById("menu")!;
+export default function MenuMobile({ menu, handleMenu, changeSection }: MenuMobileProps) {
+  
+  let menuHTML = document.getElementById('menu');
+  if (menuHTML === null) {
+    const menuDom: HTMLElement = document.createElement('div')
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    const bodyElement = document.querySelector('body')!
+    menuDom.setAttribute('id','menu')
+    bodyElement.appendChild(menuDom)
 
-  const dataContext = useContext(DataContext);
-  const themeContext = useContext(ThemeContext);
+    menuHTML = menuDom as HTMLElement
+  }else{
+    menuHTML = document.getElementById('menu') as HTMLElement
+  }
 
-  const [stylesMenu, setStylesMenu] =
-    useState<InterfaceStylesMenu>(STYLES_MENU);
+  const dataContext = useContext(DataContext)
+  const themeContext = useContext(ThemeContext)
 
-  let location = useLocation();
+  const [stylesMenu, setStylesMenu] = useState<InterfaceStylesMenu>(STYLES_MENU)
+
+  const location = useLocation()
 
   function handleSwitch() {
-    handleMenu();
+    handleMenu()
   }
 
   useEffect(() => {
-    let stylesNormal: InterfaceStylesMenu = {
-      right: "0",
-    };
-    if (!menu) {
-      stylesNormal.right = "-100vw";
+    const stylesNormal: InterfaceStylesMenu = {
+      right: '0',
     }
-    setStylesMenu(stylesNormal);
-  }, [menu]);
+    if (!menu) {
+      stylesNormal.right = '-100vw'
+    }
+    setStylesMenu(stylesNormal)
+  }, [menu])
 
   return ReactDOM.createPortal(
     <ThemeContext.Provider value={themeContext}>
       <DataContext.Provider value={dataContext}>
-        <MenuMobileStylesTheme
-          style={stylesMenu}
-          className={themeContext.theme}
-        >
+        <MenuMobileStylesTheme style={stylesMenu} className={themeContext.theme}>
           <MenuMobileUlist>
-            {location.pathname === "/" ? (
+            {location.pathname === '/' ? (
               <HomeMenuMobile
                 handleSwitch={handleSwitch}
                 navText={dataContext.language_static.nav}
@@ -72,7 +76,7 @@ export default function MenuMobile({
             )}
 
             <MenuMobileList>
-              <MenuMobileLinkRouter to="/blog">
+              <MenuMobileLinkRouter to='/blog'>
                 {dataContext.language_static.nav.blog}
               </MenuMobileLinkRouter>
             </MenuMobileList>
@@ -80,6 +84,6 @@ export default function MenuMobile({
         </MenuMobileStylesTheme>
       </DataContext.Provider>
     </ThemeContext.Provider>,
-    menuHTML
-  );
+    menuHTML,
+  )
 }

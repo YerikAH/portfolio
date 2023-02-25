@@ -1,12 +1,12 @@
-import { Sections } from "../enum/LanguageEnum";
+import { Sections } from '../enum/LanguageEnum'
 
 export interface InterfaceNavScroll {
-  activeSection: number;
+  activeSection: number
   handleChange?(section: Sections): void
 }
 export interface InterfaceMainScroll {
-  sectionRefs: React.RefObject<HTMLDivElement>[];
+  sectionRefs: React.RefObject<HTMLDivElement>[]
 }
 export interface InterfaceSectionScroll {
-  sectionRef: React.RefObject<HTMLDivElement>;
+  sectionRef: React.RefObject<HTMLDivElement>
 }

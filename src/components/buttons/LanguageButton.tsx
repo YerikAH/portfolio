@@ -1,22 +1,22 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react'
 
 // styles
-import { ImageButton, ListTheme } from "../../styles/global/navegator_styles";
+import { ImageButton, ListTheme } from '../../styles/global/navegator_styles'
 
 // tooltip
-import { Tooltip } from "react-tooltip";
-import "react-tooltip/dist/react-tooltip.css";
+import { Tooltip } from 'react-tooltip'
+import 'react-tooltip/dist/react-tooltip.css'
 
 // images
-import flagEs from "../../assets/static/es.png";
-import flagEn from "../../assets/static/en.png";
+import flagEs from '../../assets/static/es.png'
+import flagEn from '../../assets/static/en.png'
 
 // interface and enum
-import { Language, Theme } from "../../enum/LanguageEnum";
-import { InterfaceButton } from "../../interface/buttons";
+import { Language, Theme } from '../../enum/LanguageEnum'
+import { InterfaceButton } from '../../interface/buttons'
 
 // const
-import { LANGUAGE_EN, LANGUAGE_ES } from "../../constant/TextInit";
+import { LANGUAGE_EN, LANGUAGE_ES } from '../../constant/TextInit'
 
 export default function LanguageButton({
   handleFunction,
@@ -24,23 +24,23 @@ export default function LanguageButton({
   themeCurrent,
 }: InterfaceButton) {
   function languageSwitchText(): string {
-    return languageCurrent === Language.es ? LANGUAGE_ES : LANGUAGE_EN;
+    return languageCurrent === Language.es ? LANGUAGE_ES : LANGUAGE_EN
   }
 
-  const [textToolTip, setTextToolTip] = useState(languageSwitchText);
+  const [textToolTip, setTextToolTip] = useState(languageSwitchText)
 
   useEffect(() => {
-    setTextToolTip(languageSwitchText);
-  }, [languageCurrent]);
+    setTextToolTip(languageSwitchText)
+  }, [languageCurrent])
 
   return (
     <>
       <ListTheme
         onClick={() => handleFunction()}
-        data-tooltip-id="language-tooltip"
+        data-tooltip-id='language-tooltip'
         data-tooltip-content={textToolTip}
-        data-tooltip-place="top"
-        data-tooltip-variant={themeCurrent === Theme.dark ? "light" : "dark"}
+        data-tooltip-place='top'
+        data-tooltip-variant={themeCurrent === Theme.dark ? 'light' : 'dark'}
       >
         {languageCurrent === Language.es ? (
           <ImageButton src={flagEn} />
@@ -48,7 +48,7 @@ export default function LanguageButton({
           <ImageButton src={flagEs} />
         )}
       </ListTheme>
-      <Tooltip id="language-tooltip" />
+      <Tooltip id='language-tooltip' />
     </>
-  );
+  )
 }

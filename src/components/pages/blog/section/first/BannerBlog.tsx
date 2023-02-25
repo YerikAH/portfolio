@@ -1,13 +1,13 @@
-import { NavigationBlogProps } from "../../../../../interface/props";
+import { NavigationBlogProps } from '../../../../../interface/props'
 import {
   DecorationBox,
   DecorationImage,
   DecorationImageBox,
   HeadlinePrincipal,
   SubtitleOne,
-} from "../../../../../styles/blog/section_first_blog";
+} from '../../../../../styles/blog/section_first_blog'
 
-import logoGradient from "../../../../../assets/static/logo-gradient.svg";
+import logoGradient from '../../../../../assets/static/logo-gradient.svg'
 export default function BannerBlog({ nav }: NavigationBlogProps) {
   return (
     <DecorationBox>
@@ -17,5 +17,5 @@ export default function BannerBlog({ nav }: NavigationBlogProps) {
         <DecorationImage src={logoGradient} />
       </DecorationImageBox>
     </DecorationBox>
-  );
+  )
 }

@@ -1,14 +1,14 @@
 // styles
-import { ListDesorder, ListHam } from "../../../styles/global/navegator_styles";
+import { ListDesorder, ListHam } from '../../../styles/global/navegator_styles'
 
 // props
-import { ButtonNavProps } from "../../../interface/props";
+import { ButtonNavProps } from '../../../interface/props'
 
 // components
-import LanguageButton from "../../buttons/LanguageButton";
-import ThemeButton from "../../buttons/ThemeButton";
-import HamComponents from "../../images/HamComponents";
-import CloseHamComponent from "../../images/CloseHamComponent";
+import LanguageButton from '../../buttons/LanguageButton'
+import ThemeButton from '../../buttons/ThemeButton'
+import HamComponents from '../../images/HamComponents'
+import CloseHamComponent from '../../images/CloseHamComponent'
 
 export default function ButtonsNav({
   languageCurrent,
@@ -30,9 +30,9 @@ export default function ButtonsNav({
         languageCurrent={languageCurrent}
         themeCurrent={themeCurrent}
       />
-      <ListHam aria-label="open menu" onClick={handleMenu}>
+      <ListHam aria-label='open menu' onClick={handleMenu}>
         {!menu ? <HamComponents /> : <CloseHamComponent />}
       </ListHam>
     </ListDesorder>
-  );
+  )
 }

@@ -1,3 +1,3 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
-export const MainBlogStyles = styled.main``;
+export const MainBlogStyles = styled.main``

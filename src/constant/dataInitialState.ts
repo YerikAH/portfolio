@@ -1,255 +1,255 @@
-import { TopicsEnum } from "../enum/LanguageEnum";
-import { Welcome } from "../interface/data";
+import { TopicsEnum } from '../enum/LanguageEnum'
+import { Welcome } from '../interface/data'
 
 export const DATA_INITIAL_STATE: Welcome = {
   language: {
     es: {
       static: {
         nav: {
-          home: "",
-          about: "",
-          portfolio: "",
-          language: "",
-          contact: "",
-          blog: "",
+          home: '',
+          about: '',
+          portfolio: '',
+          language: '',
+          contact: '',
+          blog: '',
         },
         section_first: {
-          headline: "",
-          button_one: "",
-          button_two: "",
-          button_es_cv: "",
-          button_en_cv:""
+          headline: '',
+          button_one: '',
+          button_two: '',
+          button_es_cv: '',
+          button_en_cv: '',
         },
         section_second: {
-          headline: "",
+          headline: '',
         },
         section_third: {
-          headline: "",
-          preview: "",
-          code: "",
-          info: "",
-          button: "",
+          headline: '',
+          preview: '',
+          code: '',
+          info: '',
+          button: '',
         },
         section_four: {
-          headline: "",
-          text: "",
-          label_one: "",
-          label_two: "",
-          label_three: "",
-          button: "",
+          headline: '',
+          text: '',
+          label_one: '',
+          label_two: '',
+          label_three: '',
+          button: '',
         },
         footer: {
-          text: "",
-          text_link: "",
+          text: '',
+          text_link: '',
         },
       },
       dynamic: {
-        description: "",
+        description: '',
         portfolio: [
           {
-            id: "",
-            name: "",
-            description: "",
-            image_path: "",
-            link_code: "",
-            link_preview: "",
+            id: '',
+            name: '',
+            description: '',
+            image_path: '',
+            link_code: '',
+            link_preview: '',
           },
         ],
       },
-      blog:{
-        navigation_blog:{
-          title: [""],
+      blog: {
+        navigation_blog: {
+          title: [''],
           topics: [
             {
-              name:"",
-              word:  TopicsEnum.exp
+              name: '',
+              word: TopicsEnum.exp,
             },
             {
-              name:"",
-              word:  TopicsEnum.review
+              name: '',
+              word: TopicsEnum.review,
             },
             {
-              name:"",
-              word:  TopicsEnum.code
+              name: '',
+              word: TopicsEnum.code,
             },
           ],
-          project : ""
+          project: '',
         },
         banner: {
-          title: "",
-          subtitle: ""
+          title: '',
+          subtitle: '',
         },
-        blog_preview:[
+        blog_preview: [
           {
-            id: "",
-            word:TopicsEnum.exp,
-            title: "",
-            description: ""
+            id: '',
+            word: TopicsEnum.exp,
+            title: '',
+            description: '',
           },
           {
-            id: "",
-            word:TopicsEnum.exp,
-            title: "",
-            description: ""
+            id: '',
+            word: TopicsEnum.exp,
+            title: '',
+            description: '',
           },
           {
-            id: "",
-            word:TopicsEnum.exp,
-            title: "",
-            description: ""
-          }
-        ]
-      }
+            id: '',
+            word: TopicsEnum.exp,
+            title: '',
+            description: '',
+          },
+        ],
+      },
     },
     en: {
       static: {
         nav: {
-          home: "",
-          about: "",
-          portfolio: "",
-          language: "",
-          contact: "",
-          blog: "",
+          home: '',
+          about: '',
+          portfolio: '',
+          language: '',
+          contact: '',
+          blog: '',
         },
         section_first: {
-          headline: "",
-          button_one: "",
-          button_two: "",
-          button_es_cv: "",
-          button_en_cv:""
+          headline: '',
+          button_one: '',
+          button_two: '',
+          button_es_cv: '',
+          button_en_cv: '',
         },
         section_second: {
-          headline: "",
+          headline: '',
         },
         section_third: {
-          headline: "",
-          preview: "",
-          code: "",
-          info: "",
-          button: "",
+          headline: '',
+          preview: '',
+          code: '',
+          info: '',
+          button: '',
         },
         section_four: {
-          headline: "",
-          text: "",
-          label_one: "",
-          label_two: "",
-          label_three: "",
-          button: "",
+          headline: '',
+          text: '',
+          label_one: '',
+          label_two: '',
+          label_three: '',
+          button: '',
         },
         footer: {
-          text: "",
-          text_link: "",
+          text: '',
+          text_link: '',
         },
       },
       dynamic: {
-        description: "",
+        description: '',
         portfolio: [
           {
-            id: "",
-            name: "",
-            description: "",
-            image_path: "",
-            link_code: "",
-            link_preview: "",
+            id: '',
+            name: '',
+            description: '',
+            image_path: '',
+            link_code: '',
+            link_preview: '',
           },
         ],
       },
-      blog:{
-        navigation_blog:{
-          title: [""],
+      blog: {
+        navigation_blog: {
+          title: [''],
           topics: [
             {
-              name:"",
-              word: TopicsEnum.exp
+              name: '',
+              word: TopicsEnum.exp,
             },
             {
-              name:"",
-              word: TopicsEnum.review
+              name: '',
+              word: TopicsEnum.review,
             },
             {
-              name:"",
-              word: TopicsEnum.code
+              name: '',
+              word: TopicsEnum.code,
             },
           ],
-          project : ""
+          project: '',
         },
         banner: {
-          title: "",
-          subtitle: ""
+          title: '',
+          subtitle: '',
         },
-        blog_preview:[
+        blog_preview: [
           {
-            id: "",
-            word:TopicsEnum.exp,
-            title: "",
-            description: ""
+            id: '',
+            word: TopicsEnum.exp,
+            title: '',
+            description: '',
           },
           {
-            id: "",
-            word:TopicsEnum.exp,
-            title: "",
-            description: ""
+            id: '',
+            word: TopicsEnum.exp,
+            title: '',
+            description: '',
           },
           {
-            id: "",
-            word:TopicsEnum.exp,
-            title: "",
-            description: ""
-          }
-        ]
-      }
+            id: '',
+            word: TopicsEnum.exp,
+            title: '',
+            description: '',
+          },
+        ],
+      },
     },
   },
 
-  photo_url: "",
+  photo_url: '',
   skills: [
-    "JavaScript",
-    "TypeScript",
-    "HTML",
-    "Python",
-    "Dart",
-    "C",
-    "Bash",
-    "Java",
-    "SQL",
-    "CSS",
-    "SASS",
-    "Pug",
-    "styled-components",
-    "TailwildCSS",
-    "Bootstrap",
-    "less",
-    "React",
-    "Vue.js",
-    "Vite",
-    "Flutter",
-    "Git",
-    "GitHub",
+    'JavaScript',
+    'TypeScript',
+    'HTML',
+    'Python',
+    'Dart',
+    'C',
+    'Bash',
+    'Java',
+    'SQL',
+    'CSS',
+    'SASS',
+    'Pug',
+    'styled-components',
+    'TailwildCSS',
+    'Bootstrap',
+    'less',
+    'React',
+    'Vue.js',
+    'Vite',
+    'Flutter',
+    'Git',
+    'GitHub',
   ],
   social_media: [
     {
-      name:"",
-      icon:"",
-      user: "",
-      link: "",
+      name: '',
+      icon: '',
+      user: '',
+      link: '',
     },
     {
-      name:"",
-      icon:"",
-      user: "",
-      link: "",
+      name: '',
+      icon: '',
+      user: '',
+      link: '',
     },
     {
-      name:"",
-      icon:"",
-      user: "",
-      link: "",
+      name: '',
+      icon: '',
+      user: '',
+      link: '',
     },
     {
-      name:"",
-      icon:"",
-      user: "",
-      link: "",
+      name: '',
+      icon: '',
+      user: '',
+      link: '',
     },
   ],
-};
+}

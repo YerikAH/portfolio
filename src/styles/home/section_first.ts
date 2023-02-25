@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 // enum
-import { Theme } from "../../enum/LanguageEnum";
-import { ButtonLanguage, SelectLanguageBox } from "./select_language";
+import { Theme } from '../../enum/LanguageEnum'
+import { ButtonLanguage, SelectLanguageBox } from './select_language'
 
 const SectionFirstStyles = styled.section`
   width: 100%;
@@ -14,7 +14,7 @@ const SectionFirstStyles = styled.section`
   @media (min-width: 720px) {
     padding-top: 10.9875rem;
   }
-`;
+`
 export const BoxGrid = styled.div`
   max-width: 1200px;
   width: 100%;
@@ -24,9 +24,9 @@ export const BoxGrid = styled.div`
   padding: 0 2rem;
   @media (min-width: 720px) {
     grid-template-columns: repeat(2, 50%);
-    grid-template-areas: "box_two box_one";
+    grid-template-areas: 'box_two box_one';
   }
-`;
+`
 export const BoxGridOne = styled.div`
   display: grid;
   height: 100%;
@@ -34,7 +34,7 @@ export const BoxGridOne = styled.div`
   @media (min-width: 720px) {
     grid-area: box_one;
   }
-`;
+`
 export const BoxGridTwo = styled.div`
   display: grid;
   height: 100%;
@@ -42,7 +42,7 @@ export const BoxGridTwo = styled.div`
   @media (min-width: 720px) {
     grid-area: box_two;
   }
-`;
+`
 
 export const HeadlinePrincipal = styled.h1`
   font: normal normal 600 1.8rem/2.5rem var(--font-lato);
@@ -54,7 +54,7 @@ export const HeadlinePrincipal = styled.h1`
     max-width: 25rem;
     font: normal normal 600 2.3rem/3.4rem var(--font-lato);
   }
-`;
+`
 export const BoxButtons = styled.div`
   width: 100%;
   display: grid;
@@ -64,7 +64,7 @@ export const BoxButtons = styled.div`
     justify-content: start;
     grid-template-columns: auto auto;
   }
-`;
+`
 export const TextButtonStroke = styled.button`
   color: var(--blue);
   font: normal normal 700 0.8rem/0.7rem var(--font-lato);
@@ -77,10 +77,10 @@ export const TextButtonStroke = styled.button`
     font: normal normal 600 1rem/0.9rem var(--font-lato);
     padding: 0.8rem 2rem;
   }
-`;
+`
 export const ButtonBoxFill = styled.div`
   width: 100%;
-`;
+`
 export const TextButtonFill = styled.button`
   color: var(--white);
   width: 100%;
@@ -93,7 +93,7 @@ export const TextButtonFill = styled.button`
     padding: 0.8rem 2rem;
     font: normal normal 600 1rem/0.9rem var(--font-lato);
   }
-`;
+`
 
 export const BoxImages = styled.div`
   width: 100%;
@@ -108,7 +108,7 @@ export const BoxImages = styled.div`
   @media (min-width: 720px) {
     padding: 0;
   }
-`;
+`
 
 export const IconImage = styled.img`
   position: relative;
@@ -117,13 +117,12 @@ export const IconImage = styled.img`
   max-width: 6.25rem;
   object-fit: contain;
   @media (min-width: 720px) {
-    bottom: ${(props) => (props.className === "icon_side" ? "50px" : "-50px")};
+    bottom: ${(props) => (props.className === 'icon_side' ? '50px' : '-50px')};
   }
-`;
+`
 export const SectionFirstStylesTheme = styled(SectionFirstStyles)`
   & ${TextButtonFill} {
-    color: ${(props) =>
-      props.className === Theme.dark ? "var(--black-pale)" : "var(--white)"};
+    color: ${(props) => (props.className === Theme.dark ? 'var(--black-pale)' : 'var(--white)')};
     &:hover {
       background-color: transparent;
       color: var(--blue);
@@ -131,30 +130,27 @@ export const SectionFirstStylesTheme = styled(SectionFirstStyles)`
     }
   }
   & ${HeadlinePrincipal} {
-    color: ${(props) =>
-      props.className === Theme.dark ? "var(--white)" : "var(--black)"};
+    color: ${(props) => (props.className === Theme.dark ? 'var(--white)' : 'var(--black)')};
   }
   ${TextButtonStroke} {
     &:hover {
       background-color: var(--blue);
-      color: ${(props) =>
-        props.className === Theme.dark ? "var(--black-pale)" : "var(--white)"};
+      color: ${(props) => (props.className === Theme.dark ? 'var(--black-pale)' : 'var(--white)')};
     }
   }
   ${SelectLanguageBox} {
     background-color: ${(props) =>
-      props.className === Theme.dark ? "var(--black-pale)" : "var(--white)"};
+      props.className === Theme.dark ? 'var(--black-pale)' : 'var(--white)'};
     box-shadow: ${(props) =>
       props.className === Theme.dark
-        ? " 0px 0px 4px 0px var(--white-10)"
-        : " 0px 0px 4px 0px var(--black-10)"};
+        ? ' 0px 0px 4px 0px var(--white-10)'
+        : ' 0px 0px 4px 0px var(--black-10)'};
   }
   ${ButtonLanguage} {
-    color: ${(props) =>
-      props.className === Theme.dark ? "var(--white)" : "var(--black)"};
+    color: ${(props) => (props.className === Theme.dark ? 'var(--white)' : 'var(--black)')};
     &:hover {
       background-color: ${(props) =>
-        props.className === Theme.dark ? "var(--white-10)" : "var(--black-10)"};
+        props.className === Theme.dark ? 'var(--white-10)' : 'var(--black-10)'};
     }
   }
-`;
+`

@@ -3,20 +3,20 @@ import {
   BoxGridOne,
   BoxGridTwo,
   SectionStylesBlogTheme,
-} from "../../../../styles/blog/section_first_blog";
+} from '../../../../styles/blog/section_first_blog'
 
-import { useContext } from "react";
-import FetchContext from "../../../../context/dataContext";
-import ThemeContext from "../../../../context/themeContext";
-import NavigationBlog from "./first/NavigationBlog";
-import BannerBlog from "./first/BannerBlog";
-import TitleBlog from "./first/TitleBlog";
-import GroupBoxBlog from "./first/GroupBoxBlog";
+import { useContext } from 'react'
+import FetchContext from '../../../../context/dataContext'
+import ThemeContext from '../../../../context/themeContext'
+import NavigationBlog from './first/NavigationBlog'
+import BannerBlog from './first/BannerBlog'
+import TitleBlog from './first/TitleBlog'
+import GroupBoxBlog from './first/GroupBoxBlog'
 
 export default function SectionFirstBlog() {
-  const dataContext = useContext(FetchContext);
-  const themeContext = useContext(ThemeContext);
-  console.log(dataContext.blog.navigation_blog.topics);
+  const dataContext = useContext(FetchContext)
+  const themeContext = useContext(ThemeContext)
+  console.log(dataContext.blog.navigation_blog.topics)
   return (
     <FetchContext.Provider value={dataContext}>
       <ThemeContext.Provider value={themeContext}>
@@ -34,5 +34,5 @@ export default function SectionFirstBlog() {
         </SectionStylesBlogTheme>
       </ThemeContext.Provider>
     </FetchContext.Provider>
-  );
+  )
 }
