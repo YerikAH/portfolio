@@ -1,5 +1,8 @@
+// context
 import { useContext } from 'react'
 import ThemeContext from '../../context/themeContext'
+
+// styles
 import { PathStyles, SvgStyles } from '../../styles/images/logo'
 
 export default function LogoComponent() {

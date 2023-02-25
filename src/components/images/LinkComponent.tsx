@@ -1,5 +1,8 @@
+// context
 import ThemeContext from '../../context/themeContext'
 import { SvgGeneral } from '../../styles/images/icons'
+
+// styles
 import { useContext } from 'react'
 
 export default function LinkComponent() {

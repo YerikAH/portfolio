@@ -1,9 +1,12 @@
+// context
 import { useContext } from 'react'
 import ThemeContext from '../../context/themeContext'
+
+// styles
 import { SvgGeneral } from '../../styles/images/icons'
 
 export default function IconHome() {
-const themeContext = useContext(ThemeContext)
+  const themeContext = useContext(ThemeContext)
   return (
     <ThemeContext.Provider value={themeContext}>
       <SvgGeneral
@@ -13,7 +16,7 @@ const themeContext = useContext(ThemeContext)
         height='24'
         viewBox='0 0 24 24'
         strokeWidth='2'
-        stroke="#212121"
+        stroke='#212121'
         fill='none'
         strokeLinecap='round'
         strokeLinejoin='round'

@@ -2,13 +2,7 @@
 import { useContext } from 'react'
 
 // styles
-import {
-  BoxGrid,
-  BoxGridOne,
-  BoxGridTwo,
-  CircleAvatar,
-  TextBodyOne,
-} from '../../../../../styles/home/section_second'
+import * as style from '../../../../../styles/home/section_second'
 
 // context
 import FetchContext from '../../../../../context/dataContext'
@@ -16,13 +10,13 @@ import FetchContext from '../../../../../context/dataContext'
 export default function InfoComponent() {
   const dataContext = useContext(FetchContext)
   return (
-    <BoxGrid>
-      <BoxGridOne>
-        <TextBodyOne>{dataContext.language_dynamic.description}</TextBodyOne>
-      </BoxGridOne>
-      <BoxGridTwo>
-        <CircleAvatar src={dataContext.photo} alt='harvey photo' />
-      </BoxGridTwo>
-    </BoxGrid>
+    <style.BoxGrid>
+      <style.BoxGridOne>
+        <style.TextBodyOne>{dataContext.language_dynamic.description}</style.TextBodyOne>
+      </style.BoxGridOne>
+      <style.BoxGridTwo>
+        <style.CircleAvatar src={dataContext.photo} alt='harvey photo' />
+      </style.BoxGridTwo>
+    </style.BoxGrid>
   )
 }

@@ -1,16 +1,6 @@
 import { useContext } from 'react'
 // styles
-import {
-  BoxGrid,
-  BoxGridFather,
-  BoxGridOne,
-  BoxGridTwo,
-  IconImage,
-  SectionFourthStyles,
-  SubtitleOne,
-  TextBodyOne,
-  TitleBox,
-} from '../../../../styles/home/section_fourth'
+import * as style from '../../../../styles/home/section_fourth'
 // images
 import Contact from '../../../../assets/icon/icon-phone.svg'
 import FetchContext from '../../../../context/dataContext'
@@ -23,25 +13,27 @@ export default function SectionFourth({ sectionRef }: InterfaceSectionScroll) {
 
   return (
     <FetchContext.Provider value={dataContext}>
-      <SectionFourthStyles ref={sectionRef} id='contact'>
-        <BoxGridFather>
-          <TitleBox>
-            <IconImage src={Contact} />
-            <SubtitleOne>{dataContext.language_static.section_four.headline}</SubtitleOne>
-            <TextBodyOne>{dataContext.language_static.section_four.text}</TextBodyOne>
-          </TitleBox>
-          <BoxGrid>
-            <BoxGridOne>
+      <style.SectionFourthStyles ref={sectionRef} id='contact'>
+        <style.BoxGridFather>
+          <style.TitleBox>
+            <style.IconImage src={Contact} />
+            <style.SubtitleOne>
+              {dataContext.language_static.section_four.headline}
+            </style.SubtitleOne>
+            <style.TextBodyOne>{dataContext.language_static.section_four.text}</style.TextBodyOne>
+          </style.TitleBox>
+          <style.BoxGrid>
+            <style.BoxGridOne>
               <FormComponent />
-            </BoxGridOne>
-            <BoxGridTwo>
+            </style.BoxGridOne>
+            <style.BoxGridTwo>
               {dataContext.social_media.map((item, i) => (
                 <ListTile key={i} data={item} />
               ))}
-            </BoxGridTwo>
-          </BoxGrid>
-        </BoxGridFather>
-      </SectionFourthStyles>
+            </style.BoxGridTwo>
+          </style.BoxGrid>
+        </style.BoxGridFather>
+      </style.SectionFourthStyles>
     </FetchContext.Provider>
   )
 }

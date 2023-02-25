@@ -1,5 +1,8 @@
+// context
 import { useContext } from 'react'
 import ThemeContext from '../../context/themeContext'
+
+// styles
 import { SvgGeneralReverse } from '../../styles/images/icons'
 
 export default function ArrowComponent() {

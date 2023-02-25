@@ -1,8 +1,16 @@
 import { useEffect, useState } from 'react'
+
+// const
 import { BLOG_INIT } from '../../../../../constant/blogInitialState'
+
+// helpers
 import { returnWord, selectColor } from '../../../../../helpers/switchBlog'
+
+// interface
 import { Blog } from '../../../../../interface/data'
 import { FilterProps } from '../../../../../interface/props'
+
+// styles
 import * as style from '../../../../../styles/blog/section_first_blog'
 
 export default function WordFilter({ blogPreview, nav }: FilterProps) {

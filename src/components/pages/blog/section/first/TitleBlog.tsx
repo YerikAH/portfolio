@@ -1,11 +1,16 @@
+// enum and interface
 import { Language, TopicsEnum } from '../../../../../enum/LanguageEnum'
 import { TitlePropsBlog } from '../../../../../interface/props'
+
+// styles
 import {
   BoxButtons,
   BoxTitle,
   IconButton,
   SubtitleTwo,
 } from '../../../../../styles/blog/section_first_blog'
+
+// components
 import ArrowComponent from '../../../../images/ArrowComponent'
 
 function switchTitleBlog(value: TopicsEnum, language: Language) {
@@ -19,7 +24,7 @@ function switchTitleBlog(value: TopicsEnum, language: Language) {
   const { es, en } = titleConfig[value] || titleConfig['all']
   return language === Language.es ? es : en
 }
-export default function TitleBlog({filter,language}:TitlePropsBlog) {
+export default function TitleBlog({ filter, language }: TitlePropsBlog) {
   return (
     <BoxTitle>
       <SubtitleTwo>{switchTitleBlog(filter, language)}</SubtitleTwo>

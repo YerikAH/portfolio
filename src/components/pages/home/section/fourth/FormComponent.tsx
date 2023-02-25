@@ -2,15 +2,7 @@
 import { useContext, useState } from 'react'
 
 // styles
-import {
-  ButtonIcon,
-  ButtonSubmit,
-  ErrorStyles,
-  FormStyles,
-  InputStyles,
-  LabelStyles,
-  TextAreaStyles,
-} from '../../../../../styles/home/section_fourth'
+import * as style from '../../../../../styles/home/section_fourth'
 
 // context
 import FetchContext from '../../../../../context/dataContext'
@@ -83,45 +75,45 @@ export default function FormComponent() {
 
   return (
     <FetchContext.Provider value={dataContext}>
-      <FormStyles>
-        <LabelStyles htmlFor={OptionsForm.name}>
+      <style.FormStyles>
+        <style.LabelStyles htmlFor={OptionsForm.name}>
           {dataContext.language_static.section_four.label_one}
-        </LabelStyles>
-        <InputStyles
+        </style.LabelStyles>
+        <style.InputStyles
           id={OptionsForm.name}
           name={OptionsForm.name}
           onChange={(e) => handleForm(e)}
         />
-        <LabelStyles htmlFor={OptionsForm.email}>
+        <style.LabelStyles htmlFor={OptionsForm.email}>
           {dataContext.language_static.section_four.label_two}
-        </LabelStyles>
-        <InputStyles
+        </style.LabelStyles>
+        <style.InputStyles
           id={OptionsForm.email}
           name={OptionsForm.email}
           onChange={(e) => handleForm(e)}
         />
-        <LabelStyles htmlFor={OptionsForm.message}>
+        <style.LabelStyles htmlFor={OptionsForm.message}>
           {dataContext.language_static.section_four.label_three}
-        </LabelStyles>
-        <TextAreaStyles
+        </style.LabelStyles>
+        <style.TextAreaStyles
           id={OptionsForm.message}
           name={OptionsForm.message}
           onChange={(e) => handleForm(e)}
         />
         {!errorForm.name || !errorForm.email || !errorForm.message ? (
-          <ErrorStyles>{errorMessage}</ErrorStyles>
+          <style.ErrorStyles>{errorMessage}</style.ErrorStyles>
         ) : (
           <></>
         )}
-        <ButtonSubmit
+        <style.ButtonSubmit
           type='submit'
           aria-label='send message'
           disabled={!errorForm.name || !errorForm.email || !errorForm.message}
         >
-          <ButtonIcon src={Send} />
+          <style.ButtonIcon src={Send} />
           {dataContext.language_static.section_four.button}
-        </ButtonSubmit>
-      </FormStyles>
+        </style.ButtonSubmit>
+      </style.FormStyles>
     </FetchContext.Provider>
   )
 }
