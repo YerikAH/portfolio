@@ -1,3 +1,4 @@
+import { TopicsEnum } from '../../../../../enum/LanguageEnum'
 import { NavigationBlogProps } from '../../../../../interface/props'
 import {
   NavigationBox,
@@ -9,7 +10,10 @@ import {
   TextDecoration,
 } from '../../../../../styles/blog/section_first_blog'
 
-export default function NavigationBlog({ nav }: NavigationBlogProps) {
+export default function NavigationBlog({ nav, handleFilterProp }: NavigationBlogProps) {
+  function handleClick(value: TopicsEnum) {
+    if (handleFilterProp !== undefined) handleFilterProp(value)
+  }
   return (
     <>
       <NavigationBox>
@@ -20,7 +24,9 @@ export default function NavigationBlog({ nav }: NavigationBlogProps) {
         <NavigationBox>
           <NavigationTitle>{nav.navigation_blog.title[1]}</NavigationTitle>
           {nav.navigation_blog.topics.map((item, i) => (
-            <NavigationSubtitleButton key={i}>{item.name}</NavigationSubtitleButton>
+            <NavigationSubtitleButton key={i} onClick={() => handleClick(item.word)}>
+              {item.name}
+            </NavigationSubtitleButton>
           ))}
         </NavigationBox>
         <Separate />

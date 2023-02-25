@@ -22,7 +22,9 @@ export enum TopicsEnum {
   exp = 'exp',
   review = 'review',
   code = 'code',
+  all = 'all'
 }
+
 export enum TopicsColorEnum {
   blue = 'var(--blue-brig)',
   pink = 'var(--pink-brig)',

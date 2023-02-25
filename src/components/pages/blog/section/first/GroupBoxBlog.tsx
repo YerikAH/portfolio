@@ -1,31 +1,22 @@
-import { returnWord, selectColor } from '../../../../../helpers/switchBlog';
-import { NavigationBlogProps } from '../../../../../interface/props';
+import { useEffect, useState } from 'react'
+import { BLOG_FILTER } from '../../../../../constant/blogInitialState'
+import { TopicsEnum } from '../../../../../enum/LanguageEnum'
+import { BlogPreview } from '../../../../../interface/data'
+import { NavigationBlogProps } from '../../../../../interface/props'
 import {
   GroupBox,
-  GroupContent,
-  GroupContentLink,
-  SpanText,
-  TextBox,
-  TitleBox,
-} from '../../../../../styles/blog/section_first_blog';
+} from '../../../../../styles/blog/section_first_blog'
+import WordFilter from './filterFiles/WordFilter'
 
-
-
-export default function GroupBoxBlog({ nav }: NavigationBlogProps){
+export default function GroupBoxBlog({ nav, filter }: NavigationBlogProps) {
+  const [BlogFilter, setBlogFilter] = useState<BlogPreview[]>(BLOG_FILTER)
+  useEffect(() => {
+    const newBlogFilter = nav.blog_preview.filter(item=>item.word === filter)
+    setBlogFilter(filter === TopicsEnum.all ? nav.blog_preview : newBlogFilter)
+  }, [filter, nav])
   return (
-      <GroupBox>
-        {nav.blog_preview.map((item, i) => (
-          <GroupContent key={i}>
-            <GroupContentLink></GroupContentLink>
-            <SpanText className={selectColor(item.word)}>{'/* '} {returnWord(item.word, nav)} {' */'}</SpanText>
-            <TitleBox>{item.title}</TitleBox>
-            <TextBox>
-              {item.description}
-            </TextBox>
-          </GroupContent>
-        ))}
-      </GroupBox>
-    
-
-  );
+    <GroupBox>
+      <WordFilter blogPreview={BlogFilter} nav={nav}/>
+    </GroupBox>
+  )
 }

@@ -1,5 +1,5 @@
-import { Blog, Dynamic, Nav, Portfolio, SectionFirst, SocialMedia, Static } from './data'
-import { Language, Sections, Theme } from '../enum/LanguageEnum'
+import { Blog, BlogPreview, Dynamic, Nav, Portfolio, SectionFirst, SocialMedia, Static } from './data'
+import { Language, Sections, Theme, TopicsEnum } from '../enum/LanguageEnum'
 // context
 export interface ContextProps {
   children: JSX.Element
@@ -77,5 +77,11 @@ export interface LanguageOptionsProps {
 // blog
 
 export interface NavigationBlogProps {
-  nav: Blog
+  nav: Blog,
+  filter?: TopicsEnum
+  handleFilterProp?(value: TopicsEnum): void
+}
+export interface FilterProps{
+  blogPreview: BlogPreview[],
+  nav?: Blog,
 }
