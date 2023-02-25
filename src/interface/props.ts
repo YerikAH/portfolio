@@ -55,8 +55,8 @@ export interface HomeBlogProps {
 
 export interface LinksNavsProps {
   navText: Nav
-  activeSection: number
-  changeSection(section: Sections): void
+  activeSection?: number
+  changeSection?(section: Sections): void
 }
 export interface ButtonNavProps {
   languageCurrent: Language

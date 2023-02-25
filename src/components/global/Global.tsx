@@ -1,5 +1,8 @@
+// context
 import { useContext } from 'react'
 import ThemeContext from '../../context/themeContext'
+
+// styles
 import { GlobalStyles } from '../../styles/global/global'
 
 export default function Global() {

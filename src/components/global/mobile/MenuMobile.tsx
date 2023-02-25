@@ -1,11 +1,14 @@
 import { useContext, useEffect, useState } from 'react'
 import ReactDOM from 'react-dom'
+
+// styles
 import {
   MenuMobileLinkRouter,
   MenuMobileList,
   MenuMobileStylesTheme,
   MenuMobileUlist,
 } from '../../../styles/global/menu_mobile_styles'
+
 // props or interface or init state
 import { InterfaceStylesMenu } from '../../../interface/styles'
 import { MenuMobileProps } from '../../../interface/props'
@@ -23,26 +26,14 @@ import HomeMenuMobile from './HomeMenuMobile'
 import BlogMenuMobile from './BlogMenuMobile'
 import IconGlobal from '../../images/IconGlobal'
 
+// helpers
+import { elementHtmlSelect } from '../../../helpers/helpers'
+
 export default function MenuMobile({ menu, handleMenu, changeSection }: MenuMobileProps) {
-  
-  let menuHTML = document.getElementById('menu');
-  if (menuHTML === null) {
-    const menuDom: HTMLElement = document.createElement('div')
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    const bodyElement = document.querySelector('body')!
-    menuDom.setAttribute('id','menu')
-    bodyElement.appendChild(menuDom)
-
-    menuHTML = menuDom as HTMLElement
-  }else{
-    menuHTML = document.getElementById('menu') as HTMLElement
-  }
-
+  const menuHTML = document.getElementById('menu');
   const dataContext = useContext(DataContext)
   const themeContext = useContext(ThemeContext)
-
   const [stylesMenu, setStylesMenu] = useState<InterfaceStylesMenu>(STYLES_MENU)
-
   const location = useLocation()
 
   function handleSwitch() {
@@ -53,10 +44,7 @@ export default function MenuMobile({ menu, handleMenu, changeSection }: MenuMobi
     const stylesNormal: InterfaceStylesMenu = {
       right: '0',
     }
-    if (!menu) {
-      stylesNormal.right = '-100vw'
-    }
-    setStylesMenu(stylesNormal)
+    setStylesMenu(!menu ? STYLES_MENU : stylesNormal)
   }, [menu])
 
   return ReactDOM.createPortal(
@@ -86,6 +74,6 @@ export default function MenuMobile({ menu, handleMenu, changeSection }: MenuMobi
         </MenuMobileStylesTheme>
       </DataContext.Provider>
     </ThemeContext.Provider>,
-    menuHTML,
+    elementHtmlSelect(menuHTML),
   )
 }

@@ -1,10 +1,16 @@
 import { useContext } from 'react'
+
+// styles
 import { FooterStylesTheme, TextLink, TextNormal } from '../../styles/global/footer_styles'
+
+// context
 import FetchContext from '../../context/dataContext'
 import ThemeContext from '../../context/themeContext'
+
 export default function Footer() {
   const dataContext = useContext(FetchContext)
   const themeContext = useContext(ThemeContext)
+
   return (
     <FetchContext.Provider value={dataContext}>
       <ThemeContext.Provider value={themeContext}>

@@ -32,9 +32,7 @@ function Navegator({ activeSection, handleChange }: InterfaceNavScroll) {
   }
 
   function changeSection(section: Sections) {
-    if (handleChange !== undefined) {
-      handleChange(section)
-    }
+    handleChange?.(section)
   }
 
   return (

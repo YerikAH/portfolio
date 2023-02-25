@@ -1,5 +1,10 @@
+// interface
 import { HomeNavProps } from '../../../interface/props'
+
+// styles
 import { MenuMobileList, MenuMobileLink } from '../../../styles/global/menu_mobile_styles'
+
+// icon components
 import IconAbout from '../../images/IconAbout';
 import IconHome from '../../images/IconHome';
 import IconPhone from '../../images/IconPhone';
