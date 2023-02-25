@@ -21,6 +21,7 @@ import { useLocation } from 'react-router-dom'
 // components
 import HomeMenuMobile from './HomeMenuMobile'
 import BlogMenuMobile from './BlogMenuMobile'
+import IconGlobal from '../../images/IconGlobal'
 
 export default function MenuMobile({ menu, handleMenu, changeSection }: MenuMobileProps) {
   
@@ -77,6 +78,7 @@ export default function MenuMobile({ menu, handleMenu, changeSection }: MenuMobi
 
             <MenuMobileList>
               <MenuMobileLinkRouter to='/blog'>
+                <IconGlobal/>
                 {dataContext.language_static.nav.blog}
               </MenuMobileLinkRouter>
             </MenuMobileList>

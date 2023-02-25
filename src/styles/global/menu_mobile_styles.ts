@@ -2,10 +2,17 @@ import { Link } from 'react-router-dom'
 import styled, { css } from 'styled-components'
 import { Theme } from '../../enum/LanguageEnum'
 const MobileLink = css`
-  display: block;
+  display: flex;
   font: normal normal 400 1rem/1.2rem var(--font-lato);
   width: 100%;
   padding: 1rem 2rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  & svg{
+    width: 20px;
+    height: 20px;
+  }
 `
 const MenuMobileStyles = styled.nav`
   position: fixed;

@@ -1,29 +1,27 @@
 import { HomeNavProps } from '../../../interface/props'
 import { MenuMobileList, MenuMobileLink } from '../../../styles/global/menu_mobile_styles'
+import IconAbout from '../../images/IconAbout';
+import IconHome from '../../images/IconHome';
+import IconPhone from '../../images/IconPhone';
+import IconProjects from '../../images/IconProjects';
 
 export default function HomeMenuMobile({ navText, handleSwitch }: HomeNavProps) {
+  const menuItems= [
+    { section: '#home', text: navText.home, icon: <IconHome/>},
+    { section: '#about', text: navText.about , icon: <IconAbout/>},
+    { section: '#projects', text: navText.portfolio, icon: <IconProjects/>},
+    { section: '#contact', text: navText.contact , icon: <IconPhone/>},
+  ];
   return (
     <>
-      <MenuMobileList>
-        <MenuMobileLink href='#home' onClick={handleSwitch}>
-          {navText.home}
-        </MenuMobileLink>
-      </MenuMobileList>
-      <MenuMobileList>
-        <MenuMobileLink href='#about' onClick={handleSwitch}>
-          {navText.about}
-        </MenuMobileLink>
-      </MenuMobileList>
-      <MenuMobileList>
-        <MenuMobileLink href='#projects' onClick={handleSwitch}>
-          {navText.portfolio}
-        </MenuMobileLink>
-      </MenuMobileList>
-      <MenuMobileList>
-        <MenuMobileLink href='#contact' onClick={handleSwitch}>
-          {navText.contact}
-        </MenuMobileLink>
-      </MenuMobileList>
+      {menuItems.map((item,idx)=>(
+        <MenuMobileList key={idx}>
+          <MenuMobileLink href={item.section} onClick={handleSwitch}>
+            {item.icon}
+            {item.text}
+          </MenuMobileLink>
+        </MenuMobileList>
+      ))}
     </>
   )
 }
