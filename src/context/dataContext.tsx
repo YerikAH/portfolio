@@ -16,6 +16,7 @@ const DataProvider = ({ children }: ContextProps) => {
   const { dataJson, load } = useFetch(envUrl)
   const [dataValueAll, setDataValueAll] = useState<ContextInterface>(CONTEXT_INITIAL_STATE)
   const [language, setLanguage] = useState<Language>(Language.es)
+
   function handleLanguage() {
     if (dataJson !== null) {
       setLanguage(language === Language.es ? Language.en : Language.es)
@@ -23,45 +24,30 @@ const DataProvider = ({ children }: ContextProps) => {
     }
   }
 
-  useEffect(() => {
+  function updateData() {
     if (dataJson !== null) {
       const dataValue: ContextInterface = {
         language_static: dataJson.language[language].static,
         language_dynamic: dataJson.language[language].dynamic,
         photo: dataJson.photo_url,
+        language_current: language,
         social_media: dataJson.social_media,
         skills: dataJson.skills,
-        language_current: language,
         handle_language: handleLanguage,
         blog: dataJson.language[language].blog,
       }
       setDataValueAll(dataValue)
     }
-  }, [load])
+  }
 
   useEffect(() => {
-    if (dataJson !== null) {
-      const dataValue: ContextInterface = {
-        language_static: dataJson.language[language].static,
-        language_dynamic: dataJson.language[language].dynamic,
-        photo: dataJson.photo_url,
-        language_current: language,
-        social_media: dataJson.social_media,
-        skills: dataJson.skills,
-        handle_language: handleLanguage,
-        blog: dataJson.language[language].blog,
-      }
-      setDataValueAll(dataValue)
-    }
-  }, [language, dataJson])
+    updateData()
+  }, [language, load])
 
   // SAVE LOCALSTORAGE
   useEffect(() => {
-    const language = localStorage.getItem(LANGUAGE_LOCALSTORAGE)
-    if (typeof language === 'string') {
-      const languageChange = language as Language
-      setLanguage(languageChange === Language.es ? Language.en : Language.es)
-    }
+    const languageLocal = localStorage.getItem(LANGUAGE_LOCALSTORAGE) ?? Language.es
+    setLanguage((languageLocal as Language) === Language.es ? Language.en : Language.es)
   }, [])
 
   return <DataContext.Provider value={dataValueAll}>{children}</DataContext.Provider>

@@ -7,10 +7,9 @@ export function useFetch(url: string) {
   const [load, setLoad] = useState(false)
   useEffect(() => {
     const getData = async (url: string) => {
-      const urlLocal = url
       setLoad(true)
       try {
-        const res = await fetch(urlLocal)
+        const res: Response = await fetch(url)
         const json: Promise<Welcome> = await res.json()
         if (!res.ok) {
           const errorObj = {
