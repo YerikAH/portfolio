@@ -6,7 +6,7 @@ import { NavigationBlogProps } from '../../../../../interface/props'
 import {
   GroupBox,
 } from '../../../../../styles/blog/section_first_blog'
-import WordFilter from './filterFiles/WordFilter'
+import WordFilter from './WordFilter'
 
 export default function GroupBoxBlog({ nav, filter }: NavigationBlogProps) {
   const [BlogFilter, setBlogFilter] = useState<BlogPreview[]>(BLOG_FILTER)

@@ -32,7 +32,7 @@ export default function SectionFirstBlog() {
             </BoxGridOne>
             <BoxGridTwo>
               <BannerBlog nav={dataContext.blog} />
-              <TitleBlog />
+              <TitleBlog filter={filter} language={dataContext.language_current}/>
               <GroupBoxBlog nav={dataContext.blog} filter={filter}/>
             </BoxGridTwo>
           </BoxGridBlog>

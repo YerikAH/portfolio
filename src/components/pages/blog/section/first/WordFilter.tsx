@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react'
-import { BLOG_INIT } from '../../../../../../constant/blogInitialState'
-import { returnWord, selectColor } from '../../../../../../helpers/switchBlog'
-import { Blog } from '../../../../../../interface/data'
-import { FilterProps } from '../../../../../../interface/props'
+import { useEffect, useState } from 'react'
+import { BLOG_INIT } from '../../../../../constant/blogInitialState'
+import { returnWord, selectColor } from '../../../../../helpers/switchBlog'
+import { Blog } from '../../../../../interface/data'
+import { FilterProps } from '../../../../../interface/props'
 import {
   GroupContent,
   GroupContentLink,
   SpanText,
   TextBox,
   TitleBox,
-} from '../../../../../../styles/blog/section_first_blog'
+} from '../../../../../styles/blog/section_first_blog'
 
 export default function WordFilter({ blogPreview, nav }: FilterProps) {
   const [navBlog, setNavBlog] = useState<Blog>(BLOG_INIT)

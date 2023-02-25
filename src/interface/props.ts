@@ -85,3 +85,8 @@ export interface FilterProps{
   blogPreview: BlogPreview[],
   nav?: Blog,
 }
+
+export interface TitlePropsBlog{
+  filter: TopicsEnum,
+  language: Language
+}
