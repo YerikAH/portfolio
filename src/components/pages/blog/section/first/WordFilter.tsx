@@ -3,33 +3,24 @@ import { BLOG_INIT } from '../../../../../constant/blogInitialState'
 import { returnWord, selectColor } from '../../../../../helpers/switchBlog'
 import { Blog } from '../../../../../interface/data'
 import { FilterProps } from '../../../../../interface/props'
-import {
-  GroupContent,
-  GroupContentLink,
-  SpanText,
-  TextBox,
-  TitleBox,
-} from '../../../../../styles/blog/section_first_blog'
+import * as style from '../../../../../styles/blog/section_first_blog'
 
 export default function WordFilter({ blogPreview, nav }: FilterProps) {
-  const [navBlog, setNavBlog] = useState<Blog>(BLOG_INIT)
-
+  const [currentBlogs, setCurrentBlogs] = useState<Blog>(nav ?? BLOG_INIT)
   useEffect(() => {
-    if (nav !== undefined) {
-      setNavBlog(nav)
-    }
+    setCurrentBlogs(nav ?? BLOG_INIT)
   }, [blogPreview])
   return (
     <>
-      {blogPreview.map((item, i) => (
-        <GroupContent key={i}>
-          <GroupContentLink></GroupContentLink>
-          <SpanText className={selectColor(item.word)}>
-            {'/* '} {returnWord(item.word, navBlog)} {' */'}
-          </SpanText>
-          <TitleBox>{item.title}</TitleBox>
-          <TextBox>{item.description}</TextBox>
-        </GroupContent>
+      {blogPreview.map((item, idx) => (
+        <style.GroupContent key={idx}>
+          <style.GroupContentLink></style.GroupContentLink>
+          <style.SpanText className={selectColor(item.word)}>
+            {'/* '} {returnWord(item.word, currentBlogs)} {' */'}
+          </style.SpanText>
+          <style.TitleBox>{item.title}</style.TitleBox>
+          <style.TextBox>{item.description}</style.TextBox>
+        </style.GroupContent>
       ))}
     </>
   )
