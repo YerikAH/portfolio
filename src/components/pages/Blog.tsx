@@ -6,13 +6,23 @@ import Navegator from '../global/Navegator'
 // interface
 import { HomeBlogProps } from '../../interface/props'
 import Main from './blog/Main'
-
+import { Outlet, useLocation } from 'react-router-dom'
 export default function Blog({ handleChange }: HomeBlogProps) {
+  const location = useLocation()
   return (
     <>
       <Navegator activeSection={4} handleChange={handleChange} />
-      <Main />
-      <Footer />
+      {location.pathname === '/blog' ? (
+        <>
+          <Main />
+          <Footer />
+
+        </>
+      ) : (
+        <>
+          <Outlet />
+        </>
+      )}
       <Global />
     </>
   )

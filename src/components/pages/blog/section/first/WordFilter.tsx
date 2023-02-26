@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-
 // const
 import { BLOG_INIT } from '../../../../../constant/blogInitialState'
 
@@ -22,7 +21,7 @@ export default function WordFilter({ blogPreview, nav }: FilterProps) {
     <>
       {blogPreview.map((item, idx) => (
         <style.GroupContent key={idx}>
-          <style.GroupContentLink></style.GroupContentLink>
+        <style.GroupContentLink to='1'></style.GroupContentLink>
           <style.SpanText className={selectColor(item.word)}>
             {'/* '} {returnWord(item.word, currentBlogs)} {' */'}
           </style.SpanText>

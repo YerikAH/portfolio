@@ -1,44 +1,46 @@
 // react router
+import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
+import { checkPathname } from '../../../helpers/helpers'
 
 // interface or props or enum
 import { LinksNavsProps } from '../../../interface/props'
 
 // styles
 import {
-  ListDesorder,
-  ListImageBox,
-  ListLink,
-  ListLinkRouter,
-  ListPoint,
+  BackButton,
+  ListDesorder, ListLinkRouter,
 } from '../../../styles/global/navegator_styles'
+import ArrowMiniComponent from '../../images/ArrowMiniComponent'
 
-// components
-import LogoComponent from '../../images/LogoComponent'
-import LinksBlog from './LinksBlog'
-import LinksHome from './LinksHome'
+import LinksNavActive from './LinksNavActive'
 
 export default function LinksNav({ navText, activeSection, changeSection }: LinksNavsProps) {
+  const [toLink, setToLink] = useState('/')
   const location = useLocation()
+
+  useEffect(() => {
+    if(checkPathname(location.pathname)){
+      setToLink('/blog')
+    }else{
+      setToLink('/')
+    }
+  }, [location.pathname])
+  
   return (
     <ListDesorder>
-      <ListImageBox>
-        <ListLink className='logo'>
-          <LogoComponent />
-        </ListLink>
-      </ListImageBox>
-
-      {location.pathname === '/' ? (
-        <LinksHome activeSection={activeSection} navText={navText} />
+      {checkPathname(location.pathname) ? (
+        <BackButton to={toLink}>
+          <ArrowMiniComponent />
+          Volver
+        </BackButton>
       ) : (
-        <LinksBlog navText={navText} changeSection={changeSection} />
+        <LinksNavActive
+          navText={navText}
+          activeSection={activeSection}
+          changeSection={changeSection}
+        />
       )}
-
-      <ListPoint>
-        <ListLinkRouter to='/blog' className={activeSection === 4 ? 'true' : 'false'}>
-          {navText.blog}
-        </ListLinkRouter>
-      </ListPoint>
     </ListDesorder>
   )
 }

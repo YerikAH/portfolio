@@ -13,6 +13,7 @@ const LinkGeneral = css`
   align-items: center;
   justify-content: center;
   position: relative;
+  transition:  0.3s cubic-bezier(.25,.72,.37,1.18);
 `
 
 const HeaderStyle = styled.header`
@@ -61,7 +62,6 @@ export const ListLink = styled.a`
     background-color: var(--black);
     opacity: ${(props) => props.className === 'false' && '0.5'};
     bottom: -0.2rem;
-    transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
     position: absolute;
   }
   &:hover::after {
@@ -78,7 +78,6 @@ export const ListLinkRouter = styled(Link)`
     background-color: var(--black);
     opacity: ${(props) => props.className === 'false' && '0.5'};
     bottom: -0.2rem;
-    transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
     position: absolute;
   }
   &:hover::after {
@@ -122,6 +121,13 @@ export const ImageButton = styled.img`
   }
 `
 
+export const BackButton = styled(Link)`
+  ${LinkGeneral}
+  gap: 0.5rem;
+  &:hover{
+    opacity: 0.8;
+  }
+`
 // DARK MODE
 
 export const HeaderStyleTheme = styled(HeaderStyle)`
@@ -143,6 +149,9 @@ export const HeaderStyleTheme = styled(HeaderStyle)`
       background-color: ${(props) =>
         props.className === Theme.dark ? 'var(--white)' : 'var(--black)'};
     }
+  }
+  & ${BackButton} {
+    color: ${(props) => (props.className === Theme.dark ? 'var(--white)' : 'var(--black)')};
   }
   & ${ListTheme} {
     background-color: ${(props) =>

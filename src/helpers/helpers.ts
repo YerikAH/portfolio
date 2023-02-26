@@ -8,3 +8,13 @@ export function elementHtmlSelect( selectHTML:HTMLElement | null ): HTMLElement{
     bodyElement.appendChild(menuDom)
     return menuDom 
 }
+
+export function checkPathname(pathname: string) {
+    if (pathname === '/') {
+      return false
+    } else if (pathname.startsWith('/blog/')) {
+      return true
+    } else {
+      return false
+    }
+  }

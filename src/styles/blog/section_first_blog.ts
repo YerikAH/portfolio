@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { Theme } from '../../enum/LanguageEnum'
 
@@ -148,13 +149,15 @@ export const GroupContent = styled.div`
   padding: 2rem 1rem;
   display: grid;
   border-radius: 0.8rem;
+  transition:  0.3s cubic-bezier(.25,.72,.37,1.18);
 `
-export const GroupContentLink = styled.a`
+export const GroupContentLink = styled(Link)`
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
+  z-index: 400;
 `
 export const SpanText = styled.span`
   font: normal normal 700 1rem/1.5rem var(--font-mono);
@@ -243,6 +246,11 @@ export const SectionStylesBlogTheme = styled(SectionStylesBlog)`
       props.className === Theme.dark
         ? '1px solid rgba(255, 255, 255, 0.25)'
         : '1px solid  rgba(38, 55, 75, 0.25)'};
+
+    &:hover{
+      background-color: ${(props) =>
+      props.className === Theme.dark ? 'var(--white-10)' : 'var(--black-10)'};
+    }
   }
   ${TitleBox} {
     color: ${(props) => (props.className === Theme.dark ? 'var(--white)' : 'var(--black)')};
