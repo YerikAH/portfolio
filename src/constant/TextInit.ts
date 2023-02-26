@@ -23,3 +23,17 @@ export const ERROR_MESSAGE_ES =
   'Mensaje: El mensaje no puede tener más de 255 caracteres. El campo debe tener más de 5 caracteres.'
 export const ERROR_MESSAGE_EN =
   'Message: The message cannot be longer than 255 characters. The field must have more than 5 characters.'
+
+// BLOG
+
+export const BLOG_EXP_ES = 'Mis experiencias'
+export const BLOG_EXP_EN = 'My experiences'
+
+export const BLOG_REV_ES = 'Mis reseñas de libros'
+export const BLOG_REV_EN = 'My book reviews'
+
+export const BLOG_ALL_ES = 'Mis últimas publicaciones'
+export const BLOG_ALL_EN = 'My latest posts'
+
+export const BLOG_COD_ES = 'Acerca de la programación'
+export const BLOG_COD_EN = 'About programming'

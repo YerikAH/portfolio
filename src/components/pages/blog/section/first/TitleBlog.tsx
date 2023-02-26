@@ -1,4 +1,5 @@
 // enum and interface
+import { BLOG_ALL_EN, BLOG_ALL_ES, BLOG_COD_EN, BLOG_COD_ES, BLOG_EXP_EN, BLOG_EXP_ES, BLOG_REV_EN, BLOG_REV_ES } from '../../../../../constant/TextInit'
 import { Language, TopicsEnum } from '../../../../../enum/LanguageEnum'
 import { TitlePropsBlog } from '../../../../../interface/props'
 
@@ -15,10 +16,10 @@ import ArrowComponent from '../../../../images/ArrowComponent'
 
 function switchTitleBlog(value: TopicsEnum, language: Language) {
   const titleConfig = {
-    all: { es: 'Lo último de mi blog', en: 'The last of my blog' },
-    code: { es: 'Código', en: 'Code' },
-    exp: { es: 'Experiencias', en: 'Experiences' },
-    review: { es: 'Reseñas', en: 'Reviews' },
+    all: { es: BLOG_ALL_ES, en: BLOG_ALL_EN },
+    code: { es: BLOG_COD_ES, en: BLOG_COD_EN },
+    exp: { es: BLOG_EXP_ES, en: BLOG_EXP_EN },
+    review: { es: BLOG_REV_ES, en: BLOG_REV_EN },
   }
 
   const { es, en } = titleConfig[value] || titleConfig['all']
