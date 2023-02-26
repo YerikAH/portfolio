@@ -9,7 +9,7 @@ import { LinksNavsProps } from '../../../interface/props'
 // styles
 import {
   BackButton,
-  ListDesorder, ListLinkRouter,
+  ListDesorder,
 } from '../../../styles/global/navegator_styles'
 import ArrowMiniComponent from '../../images/ArrowMiniComponent'
 
