@@ -1,18 +1,17 @@
 /* Lato */
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-@import url("https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 /* font mono */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap');
 
-
 :root {
-  --font-lato: "Outfit", sans-serif;
+  --font-lato: 'Outfit', sans-serif;
   --font-mono: 'Ubuntu Mono', monospace;
   --black: #212121;
   --white: #ffffff;
@@ -31,10 +30,10 @@
   --black-blue-pale: #43434b;
 
   /* color for topics blog */
-  --blue-brig : #2472CE;
-  --purple-brig: #6218FF;
-  --pink-brig: #CE1986;
-  --sky: #0477FF;
+  --blue-brig: #2472ce;
+  --purple-brig: #449aff;
+  --pink-brig: #2447ce;
+  --sky: #0477ff;
 }
 
 *,
@@ -58,8 +57,8 @@ li {
 
 a,
 button,
-input[type="submit"],
-input[type="button"] {
+input[type='submit'],
+input[type='button'] {
   cursor: pointer;
   outline: none;
   border: none;
