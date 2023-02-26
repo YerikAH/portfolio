@@ -1,7 +1,26 @@
+import { BlogMain, BlogSection, BoxGridOne, BoxGridTwo , BoxGrid, SpanText, HeadlinePrincipal, SpanTextTwo} from '../../../../../styles/blog/blog_read';
+
 export default function BlogOneStr() {
   return (
-    <>
-      <div>BlogOneStr</div>
-    </>
+    <BlogMain>
+      <BlogSection>
+      <BoxGrid>
+        <BoxGridOne>
+          <SpanText>{'//'} Experiencia</SpanText>
+          <HeadlinePrincipal>
+          Programación asíncrona en JavaScript: Conceptos esenciales y ejemplos prácticos
+          </HeadlinePrincipal>
+          <SpanTextTwo>
+          Publicado el 23 de febrero, 2023
+          </SpanTextTwo>
+        </BoxGridOne>
+        <BoxGridTwo>
+          
+        </BoxGridTwo>
+      </BoxGrid>
+
+      </BlogSection>
+      
+    </BlogMain>
   )
 }

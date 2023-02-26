@@ -149,7 +149,7 @@ export const GroupContent = styled.div`
   padding: 2rem 1rem;
   display: grid;
   border-radius: 0.8rem;
-  transition:  0.3s cubic-bezier(.25,.72,.37,1.18);
+      transition:  0.3s cubic-bezier(.25,.72,.37,1.18);
 `
 export const GroupContentLink = styled(Link)`
   position: absolute;
