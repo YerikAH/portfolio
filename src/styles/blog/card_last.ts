@@ -4,12 +4,14 @@ export const BoxContent = styled.div`
   background-color: var(--white);
   border-radius: 1rem;
   border: 1px solid #bdbdbd;
-  padding: 0.5rem 1rem;
+  padding: 2rem 1rem;
 `
 
 export const TitleBox = styled.h2`
-  font: normal normal 500 1.5rem/500 var(--font-lato);
+  font: normal normal 500 1.5rem/4rem var(--font-lato);
   color: var(--black);
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--black);
 `
 
 export const ListTile = styled.div`
@@ -25,9 +27,10 @@ export const ContainerRow = styled.div`
 `
 
 export const ImageRow = styled.img`
-  width: 4rem;
-  height: 4rem;
+  width: 5rem;
+  height: 5rem;
   border-radius: 1rem;
+  object-fit: cover;
 `
 
 export const SubtitleRow = styled.h5`
@@ -35,3 +38,4 @@ export const SubtitleRow = styled.h5`
   color: var(--black);
   opacity: 0.7;
 `
+

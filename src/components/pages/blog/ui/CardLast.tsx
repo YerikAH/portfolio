@@ -11,17 +11,17 @@ const data = [
   {
     id: 1,
     name: 'Hábitos Atómicos: Un libro para transformar tu vida y ser más productivo',
-    image: '',
+    image: 'https://blog.davidtorne.com/wp-content/uploads/2020/04/habits-atomics.jpg',
   },
   {
     id: 2,
     name: 'Mi experiencia aprendiendo programación durante 8 meses: lecciones y consejos',
-    image: '',
+    image: 'https://s1.1zoom.me/big0/212/356623-admin.jpg',
   },
   {
     id: 3,
     name: 'Ejercicios de programación para mejorar tus habilidades y competencias',
-    image: '',
+    image: 'https://e.rpp-noticias.io/medium/2022/03/04/portada_354235.jpg',
   },
 ]
 
@@ -32,7 +32,7 @@ export default function CardLast() {
       <ListTile>
         {data.map((item) => (
           <ContainerRow key={item.id}>
-            <ImageRow />
+            <ImageRow src={item.image}/>
             <SubtitleRow>{item.name}</SubtitleRow>
           </ContainerRow>
         ))}

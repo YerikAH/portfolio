@@ -13,14 +13,15 @@ export default function Blog({ handleChange }: HomeBlogProps) {
     <>
       <Navegator activeSection={4} handleChange={handleChange} />
       <Global />
+  
       {location.pathname === '/blog' ? (
         <Main />
       ) : (
         <>
           <Outlet />
-          <Footer />
         </>
       )}
+          <Footer />
     </>
   )
 }
