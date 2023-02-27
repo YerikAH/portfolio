@@ -13,7 +13,7 @@ const LinkGeneral = css`
   align-items: center;
   justify-content: center;
   position: relative;
-  transition:  0.3s cubic-bezier(.25,.72,.37,1.18);
+  transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
 `
 
 const HeaderStyle = styled.header`
@@ -63,6 +63,7 @@ export const ListLink = styled.a`
     opacity: ${(props) => props.className === 'false' && '0.5'};
     bottom: -0.2rem;
     position: absolute;
+    transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
   }
   &:hover::after {
     transform: ${(props) => props.className !== 'logo' && 'scale(1)'};
@@ -79,6 +80,7 @@ export const ListLinkRouter = styled(Link)`
     opacity: ${(props) => props.className === 'false' && '0.5'};
     bottom: -0.2rem;
     position: absolute;
+    transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
   }
   &:hover::after {
     transform: ${(props) => props.className !== 'logo' && 'scale(1)'};
@@ -124,7 +126,7 @@ export const ImageButton = styled.img`
 export const BackButton = styled(Link)`
   ${LinkGeneral}
   gap: 0.5rem;
-  &:hover{
+  &:hover {
     opacity: 0.8;
   }
 `
