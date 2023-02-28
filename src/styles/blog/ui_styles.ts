@@ -20,16 +20,28 @@ export const BoxInfo = styled.div`
   gap: 0.5rem;
 `
 export const TextRich = styled.p`
-  font: normal normal 400 1rem/1.25rem var(--font-lato);
+  font: normal normal 400 0.8rem/1rem var(--font-lato);
   color: var(--black);
+  @media (min-width: 720px) {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
 `
 export const TextLink = styled.a`
-  font: normal normal 400 1rem/1.25rem var(--font-lato);
+  font: normal normal 400 0.8rem/1rem var(--font-lato);
   color: var(--sky);
   text-decoration: underline;
+  @media (min-width: 720px) {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
 `
 export const TextBodyTwo = styled.p`
-  font: normal normal 400 1rem/1.25rem var(--font-lato);
+  font: normal normal 400 0.8rem/1rem var(--font-lato);
   color: var(--black);
   opacity: 0.7;
+  @media (min-width: 720px) {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
 `

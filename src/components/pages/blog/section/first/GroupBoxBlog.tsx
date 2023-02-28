@@ -7,7 +7,7 @@ import { NavigationBlogProps } from '../../../../../interface/props'
 import { BlogPreview } from '../../../../../interface/data'
 
 // styles
-import { GroupBox } from '../../../../../styles/blog/section_first_blog'
+import { GroupBox, GroupBoxMove } from '../../../../../styles/blog/section_first_blog'
 
 // components
 import WordFilter from './WordFilter'
@@ -20,7 +20,9 @@ export default function GroupBoxBlog({ nav, filter }: NavigationBlogProps) {
   }, [filter, nav])
   return (
     <GroupBox>
-      <WordFilter blogPreview={BlogFilter} nav={nav} />
+      <GroupBoxMove>
+        <WordFilter blogPreview={BlogFilter} nav={nav} />
+      </GroupBoxMove>
     </GroupBox>
   )
 }

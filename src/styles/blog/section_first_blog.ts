@@ -109,6 +109,12 @@ export const BoxTitle = styled.div`
 export const BoxButtons = styled.div`
   display: flex;
   gap: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  @media (min-width: 1170px) {
+    opacity: 1;
+    visibility: visible;
+  }
 `
 
 export const IconButton = styled.button`
@@ -127,19 +133,25 @@ export const IconButton = styled.button`
 `
 
 export const GroupBox = styled.div`
+  position: relative;
+  overflow: hidden;
+`
+export const GroupBoxMove = styled.div`
   display: grid;
   margin-top: 3rem;
   grid-template-columns: repeat(auto-fill, 100%);
   place-items: center;
   gap: 3rem;
-
-  @media (min-width: 810px) {
-    grid-template-columns: repeat(auto-fill, 270px);
+  position: relative;
+  @media (min-width: 720px) {
     gap: 1rem;
     justify-content: start;
+    grid-template-columns: repeat(auto-fill, 270px);
   }
   @media (min-width: 1170px) {
     justify-content: space-between;
+    display: flex;
+    width: fit-content;
   }
 `
 
@@ -149,7 +161,10 @@ export const GroupContent = styled.div`
   padding: 2rem 1rem;
   display: grid;
   border-radius: 0.8rem;
-      transition:  0.3s cubic-bezier(.25,.72,.37,1.18);
+  transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
+  @media (min-width: 720px) {
+    width: 270px;
+  }
 `
 export const GroupContentLink = styled(Link)`
   position: absolute;
@@ -247,9 +262,9 @@ export const SectionStylesBlogTheme = styled(SectionStylesBlog)`
         ? '1px solid rgba(255, 255, 255, 0.25)'
         : '1px solid  rgba(38, 55, 75, 0.25)'};
 
-    &:hover{
+    &:hover {
       background-color: ${(props) =>
-      props.className === Theme.dark ? 'var(--white-10)' : 'var(--black-10)'};
+        props.className === Theme.dark ? 'var(--white-10)' : 'var(--black-10)'};
     }
   }
   ${TitleBox} {

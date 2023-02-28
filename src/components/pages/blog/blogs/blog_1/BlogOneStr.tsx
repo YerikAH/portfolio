@@ -12,11 +12,15 @@ import {
   TextListBoxDesorder,
   TextList,
   HeadlineThree,
+  CodeSyntax,
 } from '../../../../../styles/blog/blog_read'
 import CardLast from '../../ui/CardLast'
 import WhoPublished from '../../ui/WhoPublished'
 import blogI from '../../../../../assets/blog/blogI.png'
+import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 export default function BlogOneStr() {
+  const codeaa =
+    'function createChildren(style, useInlineStyles) {\n  letchildrenCount = 0;\n return children => {\n    childrenCount += 1;\n   return children.map((child, i) =>createElement({\nnode: child,\nstyle,\nuseInlineStyles,\nkey:`code-segment-${childrenCount}-${i}`\n}));\n}\n}\n'
   return (
     <BlogMain>
       <BlogSection>
@@ -58,11 +62,14 @@ export default function BlogOneStr() {
               problema de las funciones síncronas de larga duración, que hacen que la programación
               asíncrona sea una necesidad.
             </TextBodyOne>
-            <HeadlineThree>
-              Programación síncrona
-            </HeadlineThree>
+            <HeadlineThree>Programación síncrona</HeadlineThree>
+            <TextBodyOne>Considere el siguiente código:</TextBodyOne>
+            <CodeSyntax language='javascript' style={atomOneDark} children={codeaa}></CodeSyntax>
             <TextBodyOne>
-              Considere el siguiente código:
+              Debemos notar aquí que el navegador recorre el programa línea a línea, en el mismo
+              orden en que nosotros lo escribimos. En cada punto, el navegador espera a que la línea
+              termine su trabajo antes de pasar a la siguiente línea. Tiene que hacer esto porque
+              cada línea depende del trabajo realizado en las líneas precedentes.
             </TextBodyOne>
           </BoxGridOne>
           <BoxGridTwo>

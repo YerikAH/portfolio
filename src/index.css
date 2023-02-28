@@ -9,10 +9,11 @@
 
 /* font mono */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap');
 :root {
   --font-lato: 'Outfit', sans-serif;
   --font-mono: 'Ubuntu Mono', monospace;
+  --font-mono-two: 'JetBrains Mono', monospace;
   --black: #212121;
   --white: #ffffff;
   --black-pale: #393939;
