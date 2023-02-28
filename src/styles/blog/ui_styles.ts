@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { Theme } from '../../enum/LanguageEnum'
 
-export const BoxWhoPublish = styled.div`
+const BoxWhoPublish = styled.div`
   display: flex;
   justify-content: start;
   align-items: center;
@@ -21,7 +22,6 @@ export const BoxInfo = styled.div`
 `
 export const TextRich = styled.p`
   font: normal normal 400 0.8rem/1rem var(--font-lato);
-  color: var(--black);
   @media (min-width: 720px) {
     font-size: 1rem;
     line-height: 1.25rem;
@@ -38,10 +38,19 @@ export const TextLink = styled.a`
 `
 export const TextBodyTwo = styled.p`
   font: normal normal 400 0.8rem/1rem var(--font-lato);
-  color: var(--black);
   opacity: 0.7;
   @media (min-width: 720px) {
     font-size: 1rem;
     line-height: 1.25rem;
+  }
+`
+// DARK MODE
+
+export const BoxWhoPublishTheme = styled(BoxWhoPublish)`
+  ${TextRich} {
+    color: ${(props) => (props.className === Theme.dark ? 'var(--white)' : 'var(--black)')};
+  }
+  ${TextBodyTwo} {
+    color: ${(props) => (props.className === Theme.dark ? 'var(--white)' : 'var(--black)')};
   }
 `

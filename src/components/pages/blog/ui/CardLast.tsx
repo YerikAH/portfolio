@@ -1,5 +1,7 @@
+import { useContext } from 'react'
+import ThemeContext from '../../../../context/themeContext'
 import {
-  BoxContent,
+  BoxContentTheme,
   TitleBox,
   ListTile,
   ContainerRow,
@@ -26,17 +28,20 @@ const data = [
 ]
 
 export default function CardLast() {
+  const themeContext = useContext(ThemeContext)
   return (
-    <BoxContent>
-      <TitleBox>Últimos blogs</TitleBox>
-      <ListTile>
-        {data.map((item) => (
-          <ContainerRow key={item.id}>
-            <ImageRow src={item.image}/>
-            <SubtitleRow>{item.name}</SubtitleRow>
-          </ContainerRow>
-        ))}
-      </ListTile>
-    </BoxContent>
+    <ThemeContext.Provider value={themeContext}>
+      <BoxContentTheme className={themeContext.theme}>
+        <TitleBox>Últimos blogs</TitleBox>
+        <ListTile>
+          {data.map((item) => (
+            <ContainerRow key={item.id}>
+              <ImageRow src={item.image} />
+              <SubtitleRow>{item.name}</SubtitleRow>
+            </ContainerRow>
+          ))}
+        </ListTile>
+      </BoxContentTheme>
+    </ThemeContext.Provider>
   )
 }
