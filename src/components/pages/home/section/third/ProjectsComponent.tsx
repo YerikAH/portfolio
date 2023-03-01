@@ -14,7 +14,7 @@ export default function ProjectsComponent({ data }: PortfolioProps) {
   const dataContext = useContext(FetchContext)
   return (
     <FetchContext.Provider value={dataContext}>
-      <style.ProjectStyle>
+      <style.ProjectStyle tabIndex={1}>
         <style.HoverBox className='hoverBox'></style.HoverBox>
         <style.LinkImage href={data.link_preview} target='_blank' className='linkImage'>
           <style.AssetImage src={data.image_path} />
@@ -24,15 +24,15 @@ export default function ProjectsComponent({ data }: PortfolioProps) {
           <style.TextProject>{data.description.substring(0, 300)}...</style.TextProject>
         </style.BoxInfo>
         <style.BoxButtons>
-          <style.TextButton href={data.link_preview} target='_blank'>
+          <style.TextButton href={data.link_preview} target='_blank' tabIndex={1}>
             <LinkComponent />
             {dataContext.language_static.section_third.preview}
           </style.TextButton>
-          <style.TextButton href={data.link_code} target='_blank'>
+          <style.TextButton href={data.link_code} target='_blank' tabIndex={1}>
             <GithubComponent />
             {dataContext.language_static.section_third.code}
           </style.TextButton>
-          <style.TextButton href=''>
+          <style.TextButton href='' tabIndex={1}>
             <InfoComponent />
             {dataContext.language_static.section_third.info}
           </style.TextButton>

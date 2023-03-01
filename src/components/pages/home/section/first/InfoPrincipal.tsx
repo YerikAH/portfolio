@@ -26,8 +26,9 @@ export default function InfoPrincipal() {
     <FetchContext.Provider value={dataContext}>
       <HeadlinePrincipal>{dataContext.language_static.section_first.headline}</HeadlinePrincipal>
       <BoxButtons>
-        <TextButtonStroke>{dataContext.language_static.section_first.button_one}</TextButtonStroke>
-
+        <TextButtonStroke to='/certificate'>
+          {dataContext.language_static.section_first.button_one}
+        </TextButtonStroke>
         <ButtonBoxFill>
           <TextButtonFill onClick={handleLanguage}>
             {dataContext.language_static.section_first.button_two}

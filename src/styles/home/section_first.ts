@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 // enum
@@ -65,8 +66,9 @@ export const BoxButtons = styled.div`
     grid-template-columns: auto auto;
   }
 `
-export const TextButtonStroke = styled.button`
+export const TextButtonStroke = styled(Link)`
   color: var(--blue);
+  display: block;
   font: normal normal 700 0.8rem/0.7rem var(--font-lato);
   background-color: transparent;
   border: 1px solid var(--blue);
