@@ -1,7 +1,10 @@
-export interface LanguageOptionsStyles{
-    opacity: string;
-    visibility : DocumentVisibilityState
+export interface LanguageOptionsStyles {
+  opacity: string
+  visibility: DocumentVisibilityState
 }
 export interface InterfaceStylesMenu {
-    right: string;
-  }
+  right: string
+}
+export interface ScrollBlogStyle {
+  right: string
+}

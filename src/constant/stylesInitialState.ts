@@ -1,4 +1,4 @@
-import { InterfaceStylesMenu, LanguageOptionsStyles } from '../interface/styles'
+import { InterfaceStylesMenu, LanguageOptionsStyles, ScrollBlogStyle } from '../interface/styles'
 
 export const MODAL_RESUME_INIT: LanguageOptionsStyles = {
   opacity: '0',
@@ -6,4 +6,8 @@ export const MODAL_RESUME_INIT: LanguageOptionsStyles = {
 }
 export const STYLES_MENU: InterfaceStylesMenu = {
   right: '-100vw',
+}
+
+export const STYLES_BLOG: ScrollBlogStyle = {
+  right: '0',
 }

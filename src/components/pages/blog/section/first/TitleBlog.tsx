@@ -1,5 +1,14 @@
 // enum and interface
-import { BLOG_ALL_EN, BLOG_ALL_ES, BLOG_COD_EN, BLOG_COD_ES, BLOG_EXP_EN, BLOG_EXP_ES, BLOG_REV_EN, BLOG_REV_ES } from '../../../../../constant/TextInit'
+import {
+  BLOG_ALL_EN,
+  BLOG_ALL_ES,
+  BLOG_COD_EN,
+  BLOG_COD_ES,
+  BLOG_EXP_EN,
+  BLOG_EXP_ES,
+  BLOG_REV_EN,
+  BLOG_REV_ES,
+} from '../../../../../constant/TextInit'
 import { Language, TopicsEnum } from '../../../../../enum/LanguageEnum'
 import { TitlePropsBlog } from '../../../../../interface/props'
 
@@ -25,15 +34,20 @@ function switchTitleBlog(value: TopicsEnum, language: Language) {
   const { es, en } = titleConfig[value] || titleConfig['all']
   return language === Language.es ? es : en
 }
-export default function TitleBlog({ filter, language }: TitlePropsBlog) {
+export default function TitleBlog({
+  filter,
+  language,
+  handleDecrement,
+  handleIncrement,
+}: TitlePropsBlog) {
   return (
     <BoxTitle>
       <SubtitleTwo>{switchTitleBlog(filter, language)}</SubtitleTwo>
       <BoxButtons>
-        <IconButton className='-180deg'>
+        <IconButton className='-180deg' onClick={() => handleDecrement()}>
           <ArrowComponent />
         </IconButton>
-        <IconButton>
+        <IconButton onClick={() => handleIncrement()}>
           <ArrowComponent />
         </IconButton>
       </BoxButtons>

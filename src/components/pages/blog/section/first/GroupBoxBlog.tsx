@@ -12,15 +12,27 @@ import { GroupBox, GroupBoxMove } from '../../../../../styles/blog/section_first
 // components
 import WordFilter from './WordFilter'
 
-export default function GroupBoxBlog({ nav, filter }: NavigationBlogProps) {
+import { BLOG_WIDTH_CARD } from '../../../../../constant/numberInit'
+
+export default function GroupBoxBlog({
+  nav,
+  filter,
+  styleScroll,
+  updateScroll,
+}: NavigationBlogProps) {
   const [BlogFilter, setBlogFilter] = useState<BlogPreview[]>(BLOG_FILTER)
   useEffect(() => {
     const newBlogFilter = nav.blog_preview.filter((item) => item.word === filter)
     setBlogFilter(filter === TopicsEnum.all ? nav.blog_preview : newBlogFilter)
   }, [filter, nav])
+
+  useEffect(() => {
+    const newWidth = BlogFilter.length * BLOG_WIDTH_CARD
+    updateScroll?.(newWidth)
+  }, [BlogFilter])
   return (
     <GroupBox>
-      <GroupBoxMove>
+      <GroupBoxMove style={styleScroll}>
         <WordFilter blogPreview={BlogFilter} nav={nav} />
       </GroupBoxMove>
     </GroupBox>
