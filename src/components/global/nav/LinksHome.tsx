@@ -8,7 +8,7 @@ export default function LinksHome({ activeSection, navText }: LinksNavsProps) {
     { section: '#projects', text: navText.portfolio, number: 2 },
     { section: '#contact', text: navText.contact, number: 3 },
   ]
-  function noUndefined(value: number | undefined): number{
+  function noUndefined(value: number | undefined): number {
     return value === undefined ? 1 : value
   }
   return (
@@ -18,6 +18,7 @@ export default function LinksHome({ activeSection, navText }: LinksNavsProps) {
           <ListLink
             className={noUndefined(activeSection) === item.number ? 'true' : 'false'}
             href={item.section}
+            tabIndex={1}
           >
             {item.text}
           </ListLink>

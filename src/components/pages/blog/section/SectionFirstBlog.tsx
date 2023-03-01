@@ -22,7 +22,7 @@ import { TopicsEnum } from '../../../../enum/LanguageEnum'
 
 import { STYLES_BLOG } from '../../../../constant/stylesInitialState'
 import { ScrollBlogStyle } from '../../../../interface/styles'
-import { BLOG_WIDTH_CARD } from '../../../../constant/numberInit'
+import { BLOG_WIDTH_CARD, BLOG_WIDTH_PAGE_CARD } from '../../../../constant/numberInit'
 export default function SectionFirstBlog() {
   const dataContext = useContext(FetchContext)
   const themeContext = useContext(ThemeContext)
@@ -33,38 +33,40 @@ export default function SectionFirstBlog() {
   function handleFilter(value: TopicsEnum) {
     setFilter(value)
   }
-  function handleIncrement() {
-    console.log(styleScroll)
-    const styleScrollCurrent = parseInt(stylCurrent.right)
-    if (styleScrollCurrent > maxScroll) {
-      return
-    } else {
-      if (maxScroll > 810) {
-        console.log('increment')
-        const incrementScroll = styleScrollCurrent + BLOG_WIDTH_CARD * 3
-
-        let newValue = {
-          right: `${incrementScroll}px`,
-        }
-        setStylCurrent()
-        setStyleScroll(stylCurrent)
-      }
-    }
-  }
-  function handleDecrement() {
-    // const styleScrollCurrent = parseInt(styleScrollObj.right)
-    // if (styleScrollCurrent > maxScroll) {
-    //   if (maxScroll > 810) {
-    //     const decrementScroll = styleScrollCurrent - BLOG_WIDTH_CARD * 3
-    //     styleScroll.right = `${decrementScroll}px`
-    //     setStyleScroll(styleScrollObj)
-    //   }
-    // }
-  }
-
   function updateScroll(value: number) {
     setMaxScroll(value)
+    setStyleScroll(STYLES_BLOG)
   }
+  function handleIncrement() {
+    const styleScrollCurrent = parseInt(stylCurrent.right)
+    const incrementScroll = styleScrollCurrent + BLOG_WIDTH_CARD * 3
+
+    const isIncrementValid =
+      styleScrollCurrent < maxScroll &&
+      maxScroll > BLOG_WIDTH_PAGE_CARD &&
+      incrementScroll !== maxScroll &&
+      incrementScroll < maxScroll
+
+    if (isIncrementValid) {
+      setStylCurrent({ right: `${incrementScroll}px` })
+    }
+  }
+
+  function handleDecrement() {
+    const styleScrollCurrent = parseInt(stylCurrent.right)
+    const decrementScroll = styleScrollCurrent - BLOG_WIDTH_CARD * 3
+
+    const isDecrementValid = styleScrollCurrent >= BLOG_WIDTH_PAGE_CARD
+
+    if (isDecrementValid) {
+      setStylCurrent({ right: `${decrementScroll}px` })
+    }
+  }
+
+  useEffect(() => {
+    setStyleScroll(stylCurrent)
+  }, [stylCurrent])
+
   return (
     <FetchContext.Provider value={dataContext}>
       <ThemeContext.Provider value={themeContext}>

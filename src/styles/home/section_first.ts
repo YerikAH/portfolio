@@ -128,12 +128,21 @@ export const SectionFirstStylesTheme = styled(SectionFirstStyles)`
       color: var(--blue);
       border: 1px solid var(--blue);
     }
+    &:focus {
+      background-color: transparent;
+      color: var(--blue);
+      border: 1px solid var(--blue);
+    }
   }
   & ${HeadlinePrincipal} {
     color: ${(props) => (props.className === Theme.dark ? 'var(--white)' : 'var(--black)')};
   }
   ${TextButtonStroke} {
     &:hover {
+      background-color: var(--blue);
+      color: ${(props) => (props.className === Theme.dark ? 'var(--black-pale)' : 'var(--white)')};
+    }
+    &:focus {
       background-color: var(--blue);
       color: ${(props) => (props.className === Theme.dark ? 'var(--black-pale)' : 'var(--white)')};
     }
@@ -149,6 +158,10 @@ export const SectionFirstStylesTheme = styled(SectionFirstStyles)`
   ${ButtonLanguage} {
     color: ${(props) => (props.className === Theme.dark ? 'var(--white)' : 'var(--black)')};
     &:hover {
+      background-color: ${(props) =>
+        props.className === Theme.dark ? 'var(--white-10)' : 'var(--black-10)'};
+    }
+    &:focus {
       background-color: ${(props) =>
         props.className === Theme.dark ? 'var(--white-10)' : 'var(--black-10)'};
     }

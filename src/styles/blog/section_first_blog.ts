@@ -143,6 +143,8 @@ export const GroupBoxMove = styled.div`
   place-items: center;
   gap: 3rem;
   position: relative;
+  transition: 0.3s;
+
   @media (min-width: 720px) {
     gap: 1rem;
     justify-content: start;
@@ -152,6 +154,9 @@ export const GroupBoxMove = styled.div`
     justify-content: space-between;
     display: flex;
     width: fit-content;
+  }
+  @media (max-width: 1170px) {
+    right: 0 !important;
   }
 `
 

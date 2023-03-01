@@ -43,7 +43,8 @@ export const ProjectStyle = styled.div`
   position: relative;
   height: 100%;
 
-  &:hover {
+  &:hover,
+  &:focus {
     .hoverBox {
       width: 110%;
       height: 100%;
@@ -169,7 +170,8 @@ export const TextButton = styled.a`
   align-items: center;
   gap: 0.5rem;
   transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: var(--black-10);
   }
 `
@@ -187,7 +189,8 @@ export const TextButtonStroke = styled.button`
     font: normal normal 600 1rem/0.9rem var(--font-lato);
     padding: 0.8rem 2rem;
   }
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: var(--blue);
     color: var(--white);
   }
@@ -204,7 +207,8 @@ export const SectionThirdStylesTheme = styled(SectionThirdStyles)`
   }
   & ${TextButton} {
     color: ${(props) => (props.className === Theme.dark ? 'var(--white)' : 'var(--black)')};
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: ${(props) =>
         props.className === Theme.dark ? 'var(--white-10)' : 'var(--black-10)'};
     }
@@ -218,7 +222,8 @@ export const SectionThirdStylesTheme = styled(SectionThirdStyles)`
         : '0.5px solid var(--gray)'};
   }
   & ${TextButtonStroke} {
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: var(--blue);
       color: ${(props) =>
         props.className === Theme.dark ? 'var(--black-blue-pale)' : 'var(--white)'};

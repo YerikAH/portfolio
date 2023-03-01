@@ -13,7 +13,7 @@ export default function LinksBlog({ navText, changeSection }: LinksNavsProps) {
     <>
       {menuItems.map((item, idx) => (
         <ListPoint key={idx}>
-          <ListLinkRouter to='/' onClick={() => changeSection?.(item.section)}>
+          <ListLinkRouter to='/' onClick={() => changeSection?.(item.section)} tabIndex={1}>
             {item.text}
           </ListLinkRouter>
         </ListPoint>

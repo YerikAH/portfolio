@@ -65,6 +65,9 @@ export const ListLink = styled.a`
     position: absolute;
     transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
   }
+  &:focus::after {
+    transform: ${(props) => props.className !== 'logo' && 'scale(1)'};
+  }
   &:hover::after {
     transform: ${(props) => props.className !== 'logo' && 'scale(1)'};
   }
@@ -81,6 +84,9 @@ export const ListLinkRouter = styled(Link)`
     bottom: -0.2rem;
     position: absolute;
     transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
+  }
+  &:focus::after {
+    transform: ${(props) => props.className !== 'logo' && 'scale(1)'};
   }
   &:hover::after {
     transform: ${(props) => props.className !== 'logo' && 'scale(1)'};
