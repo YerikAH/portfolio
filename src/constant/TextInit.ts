@@ -37,3 +37,7 @@ export const BLOG_ALL_EN = 'My latest posts'
 
 export const BLOG_COD_ES = 'Acerca de la programación'
 export const BLOG_COD_EN = 'About programming'
+
+// BLOG UI
+export const BLOG_TITLE_UI = 'Últimos blogs'
+export const BLOG_TITLE_UI_EN = 'Latest blogs'
