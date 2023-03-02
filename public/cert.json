@@ -1,0 +1,30 @@
+[
+  {
+    "es": {
+      "title": "Explora  mi  conocimiento certificado",
+      "description": "Esta sección es el resultado de mi constante búsqueda por mejorar y aprender más sobre el desarrollo web. Te invito a descubrir lo que he aprendido y cómo he aplicado esos conocimientos en proyectos reales",
+      "certificates": [
+        {
+          "id": 1,
+          "name": "Certificado de HTML y CSS",
+          "description": "",
+          "image": "",
+          "logo": ""
+        }
+      ]
+    },
+    "en": {
+      "title": "Explora  mi  conocimiento certificado",
+      "description": "Esta sección es el resultado de mi constante búsqueda por mejorar y aprender más sobre el desarrollo web. Te invito a descubrir lo que he aprendido y cómo he aplicado esos conocimientos en proyectos reales",
+      "certificates": [
+        {
+          "id": 1,
+          "name": "Certificado de HTML y CSS",
+          "description": "",
+          "image": "",
+          "logo": ""
+        }
+      ]
+    }
+  }
+]
