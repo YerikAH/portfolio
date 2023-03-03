@@ -11,7 +11,7 @@ import LinksBlog from './LinksBlog'
 import LinksHome from './LinksHome'
 
 export default function LinksNavActive({ navText, activeSection, changeSection }: LinksNavsProps) {
-    const location = useLocation()
+  const location = useLocation()
   return (
     <>
       <ListImageBox>
@@ -23,7 +23,7 @@ export default function LinksNavActive({ navText, activeSection, changeSection }
       {location.pathname === '/' ? (
         <LinksHome activeSection={activeSection} navText={navText} />
       ) : (
-        <LinksBlog navText={navText} changeSection={changeSection} />
+        <LinksBlog navText={navText} changeSection={changeSection} activeSection={activeSection} />
       )}
 
       <ListPoint>

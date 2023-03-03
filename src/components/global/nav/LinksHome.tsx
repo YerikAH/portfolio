@@ -1,3 +1,4 @@
+import { noUndefined } from '../../../helpers/helpers'
 import { LinksNavsProps } from '../../../interface/props'
 import { ListLink, ListPoint } from '../../../styles/global/navegator_styles'
 
@@ -8,9 +9,7 @@ export default function LinksHome({ activeSection, navText }: LinksNavsProps) {
     { section: '#projects', text: navText.portfolio, number: 2 },
     { section: '#contact', text: navText.contact, number: 3 },
   ]
-  function noUndefined(value: number | undefined): number {
-    return value === undefined ? 1 : value
-  }
+
   return (
     <>
       {menuItems.map((item, idx) => (
