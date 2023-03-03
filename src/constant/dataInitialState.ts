@@ -100,6 +100,19 @@ export const DATA_INITIAL_STATE: Welcome = {
           },
         ],
       },
+      certificate: {
+        title: '',
+        description: '',
+        certificates: [
+          {
+            id: 1,
+            name: '',
+            description: '',
+            image: '',
+            logo: '',
+          },
+        ],
+      },
     },
     en: {
       static: {
@@ -195,6 +208,19 @@ export const DATA_INITIAL_STATE: Welcome = {
             word: TopicsEnum.exp,
             title: '',
             description: '',
+          },
+        ],
+      },
+      certificate: {
+        title: '',
+        description: '',
+        certificates: [
+          {
+            id: 1,
+            name: '',
+            description: '',
+            image: '',
+            logo: '',
           },
         ],
       },

@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components'
+import { Theme } from '../../enum/LanguageEnum'
 
-export const SectionStylesCert = styled.section`
+const SectionStylesCert = styled.section`
   width: 100%;
   display: flex;
   align-items: center;
@@ -19,7 +20,7 @@ export const BoxCircle = styled.div`
   position: relative;
 `
 
-export const CircleDecoration = css`
+const CircleDecoration = css`
   border-radius: 25rem;
   width: 300px;
   height: 300px;
@@ -32,25 +33,25 @@ export const CircleDecoration = css`
 
 export const CircleOne = styled.div`
   ${CircleDecoration}
-  background-color: #1b59a4;
+  background-color: var(--blue-100);
   left: 21rem;
   top: -1rem;
 `
 export const CircleTwo = styled.div`
   ${CircleDecoration}
-  background-color: #2472ce;
+  background-color: var(--blue-75);
   left: 7rem;
   top: -2rem;
 `
 export const CircleThree = styled.div`
   ${CircleDecoration}
-  background-color: #3994ff;
+  background-color: var(--blue-50);
   left: -7rem;
   top: 2rem;
 `
 export const CircleFour = styled.div`
   ${CircleDecoration}
-  background-color: #53a2ff;
+  background-color: var(--blue-25);
   left: -21rem;
   top: 1rem;
 `
@@ -94,7 +95,6 @@ export const BoxContain = styled.div`
   display: grid;
   margin-top: 8rem;
   padding-bottom: 4rem;
-  border-bottom: 1px solid var(--black-10);
   grid-template-columns: repeat(auto-fill, 300px);
   width: 100%;
   gap: 3rem;
@@ -114,13 +114,12 @@ export const BoxCertificate = styled.div`
 
 export const TitleCertificate = styled.h2`
   font: normal normal 600 1.25rem/1.5rem var(--font-lato);
-  color: var(--black);
   margin-bottom: 0.5rem;
 `
 
 export const TextCertificate = styled.p`
   font: normal normal 400 1rem/1.5rem var(--font-lato);
-  color: var(--black);
+
   opacity: 0.7;
   margin-bottom: 1.25rem;
 `
@@ -156,4 +155,21 @@ export const ButtonCertificate = styled.button`
   width: 100%;
   border-radius: 0.5rem;
   padding: 0.3rem 0;
+`
+
+export const SectionStylesCertTheme = styled(SectionStylesCert)`
+  ${BoxContain} {
+    border-bottom: ${(props) =>
+      props.className === Theme.dark ? ' 1px solid var(--white-10)' : ' 1px solid var(--black-10)'};
+  }
+  ${BoxCertificate} {
+    background-color: ${(props) =>
+      props.className === Theme.dark ? 'var(--black-pale)' : 'var(--white)'};
+  }
+  ${TitleCertificate} {
+    color: ${(props) => (props.className === Theme.dark ? 'var(--white)' : 'var(--black)')};
+  }
+  ${TextCertificate} {
+    color: ${(props) => (props.className === Theme.dark ? 'var(--white)' : 'var(--black)')};
+  }
 `

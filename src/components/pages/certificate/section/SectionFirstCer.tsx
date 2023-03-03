@@ -6,7 +6,6 @@ import {
   BoxContain,
   BoxInfo,
   ButtonCertificate,
-  CircleDecoration,
   CircleFour,
   CircleOne,
   CircleThree,
@@ -14,7 +13,7 @@ import {
   HeadlinePrincipal,
   ImageCertificate,
   ImageLogoCertificate,
-  SectionStylesCert,
+  SectionStylesCertTheme,
   TextBody,
   TextCertificate,
   TitleCertificate,
@@ -22,7 +21,7 @@ import {
 
 export default function SectionFirstCer() {
   return (
-    <SectionStylesCert>
+    <SectionStylesCertTheme>
       <BoxCircle>
         <CircleOne></CircleOne>
         <CircleTwo></CircleTwo>
@@ -130,6 +129,6 @@ export default function SectionFirstCer() {
           <ButtonCertificate>Detalles del certificado</ButtonCertificate>
         </BoxCertificate>
       </BoxContain>
-    </SectionStylesCert>
+    </SectionStylesCertTheme>
   )
 }

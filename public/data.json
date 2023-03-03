@@ -178,6 +178,19 @@
             "description": "Durante los últimos 8 meses he estado inmerso en un intenso proceso de aprendizaje de programación. Este periodo ha sido uno de los más desafiantes y gratificantes de mi vida..."
           }
         ]
+      },
+      "certificate": {
+        "title": "Explora  mi  conocimiento certificado",
+        "description": "Esta sección es el resultado de mi constante búsqueda por mejorar y aprender más sobre el desarrollo web. Te invito a descubrir lo que he aprendido y cómo he aplicado esos conocimientos en proyectos reales.",
+        "certificates": [
+          {
+            "id": 1,
+            "name": "Certificado de HTML y CSS",
+            "description": "",
+            "image": "",
+            "logo": ""
+          }
+        ]
       }
     },
     "en": {
@@ -356,6 +369,19 @@
             "word": "exp",
             "title": "My Experience Learning Programming ",
             "description": "During the last 8 months I have been immersed in an intense programming learning process. This period has been one of the most challenging and rewarding of my life..."
+          }
+        ]
+      },
+      "certificate": {
+        "title": "Explora  mi  conocimiento certificado",
+        "description": "Esta sección es el resultado de mi constante búsqueda por mejorar y aprender más sobre el desarrollo web. Te invito a descubrir lo que he aprendido y cómo he aplicado esos conocimientos en proyectos reales.",
+        "certificates": [
+          {
+            "id": 1,
+            "name": "Certificado de HTML y CSS",
+            "description": "",
+            "image": "",
+            "logo": ""
           }
         ]
       }

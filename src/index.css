@@ -35,6 +35,13 @@
   --purple-brig: #449aff;
   --pink-brig: #2447ce;
   --sky: #0477ff;
+
+  /* color certificate */
+
+  --blue-100: #1b59a4;
+  --blue-75: #2472ce;
+  --blue-50: #3994ff;
+  --blue-25: #53a2ff;
 }
 
 *,
