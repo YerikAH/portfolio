@@ -448,78 +448,78 @@
         "certificates": [
           {
             "id": 1,
-            "name": "Curso de HTML y CSS",
-            "description": "Desarrollé un proyecto para dominar HTML y CSS, aprendiendo conceptos avanzados como mobile first y maquetado web.",
+            "name": "HTML and CSS Course",
+            "description": "I developed a project to master HTML and CSS, learning advanced concepts such as mobile first and web layout.",
             "image": "./images/cert/html.jpg",
             "logo": ""
           },
           {
             "id": 2,
-            "name": "Curso de Dart desde 0",
-            "description": "Este curso me permitió comprender el lenguaje de programación Dart y aplicarlo al desarrollo móvil con Flutter de manera efectiva.",
+            "name": "Dart course from 0",
+            "description": "This course allowed me to understand the Dart programming language and apply it to mobile development with Flutter effectively.",
             "image": "./images/cert/dart.jpg",
             "logo": ""
           },
           {
             "id": 3,
-            "name": "Escuela de JavaScript",
-            "description": "Durante esta ruta de aprendizaje, logré adquirir conocimientos en desarrollo web full stack, cubriendo temas desde React hasta Nodejs.",
+            "name": "JavaScript School",
+            "description": "During this learning path, I managed to gain knowledge in full stack web development, covering topics from React to Nodejs.",
             "image": "./images/cert/shjs.jpg",
             "logo": ""
           },
           {
             "id": 4,
-            "name": "Curso de React.js",
-            "description": "Aprendí sobre React, hooks y programación funcional en este curso. Fue muy valioso para mí. También sobre componentes en clase.",
+            "name": "React.js Course",
+            "description": "I learned about React, hooks and functional programming in this course. It was very valuable for me. Also about components in class.",
             "image": "./images/cert/react.jpg",
             "logo": ""
           },
           {
             "id": 5,
-            "name": "Curso de Git y GitHub",
-            "description": "Este curso fue crucial para mí, ya que aprendí a manejar Git para versionar mi código, realizar viajes en el tiempo, colaborar en proyectos y utilizar Github de manera efectiva.",
+            "name": "Git and GitHub Course",
+            "description": "This course was crucial for me as I learned how to use Git to version my code, time travel, collaborate on projects, and use Github effectively.",
             "image": "./images/cert/git.jpg",
             "logo": ""
           },
           {
             "id": 6,
-            "name": "Curso de JavaScript",
-            "description": "Este curso me permitió adquirir desde los conceptos básicos hasta los más complejos de JavaScript, además de estudiar por mi cuenta temas avanzados como la programación asincrónica y la programación orientada a objetos en JavaScript.",
+            "name": "JavaScript Course",
+            "description": "This course allowed me to learn from the basics to the more complex concepts of JavaScript, as well as study advanced topics like asynchronous programming and object-oriented programming in JavaScript on my own.",
             "image": "./images/cert/js.jpg",
             "logo": ""
           },
           {
             "id": 7,
-            "name": "Curso de Front-end developer",
-            "description": "En este curso, realicé un proyecto enfocado en la parte estática y comencé a adentrarme en el trabajo con componentes en React, ampliando mis conocimientos en el desarrollo web.",
+            "name": "Front-end developer course",
+            "description": "In this course, I carried out a project focused on the static part and began to delve into working with components in React, expanding my knowledge in web development.",
             "image": "./images/cert/front.jpg",
             "logo": ""
           },
           {
             "id": 8,
-            "name": "Curso de Fundamentos de Ingeniería de software",
-            "description": "Este curso me brindó una comprensión de la ingeniería de software y los conceptos clave en este campo, lo que me permitió adentrarme en este mundo y avanzar en mi formación como desarrollador.",
+            "name": "Software Engineering Fundamentals Course",
+            "description": "This course gave me an understanding of software engineering and the key concepts in the field, allowing me to delve into this world and further my development training.",
             "image": "./images/cert/soft.jpg",
             "logo": ""
           },
           {
             "id": 9,
-            "name": "Curso de Webpack",
-            "description": "Me permitió entender los conceptos de bundling y cómo optimizar el tamaño y rendimiento de las aplicaciones web.",
+            "name": "Webpack Course",
+            "description": "It allowed me to understand the concepts of bundling and how to optimize the size and performance of web applications.",
             "image": "./images/cert/webpack.jpg",
             "logo": ""
           },
           {
             "id": 10,
-            "name": "Curso de Next.js",
-            "description": "Me permitió profundizar mis conocimientos en el desarrollo de aplicaciones web de alto rendimiento, así como comprender cuándo utilizar Next.js para optimizar el proceso de creación de proyectos React.",
+            "name": "Next.js Course",
+            "description": "It allowed me to deepen my knowledge of developing high-performance web applications, as well as understanding when to use Next.js to streamline the React project creation process.",
             "image": "./images/cert/next.jpg",
             "logo": ""
           },
           {
             "id": 11,
-            "name": "Curso de Node.js",
-            "description": "Este curso me introdujo en el mundo del desarrollo backend y me enseñó los fundamentos de Node.js.",
+            "name": "Node.js Course",
+            "description": "This course introduced me to the world of backend development and taught me the fundamentals of Node.js.",
             "image": "./images/cert/node.jpg",
             "logo": ""
           }
