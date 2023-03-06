@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import DataContext from '../../../../context/dataContext'
 import {
   BackgroundCertificate,
@@ -19,22 +19,14 @@ import {
   TextCertificate,
   TitleCertificate,
 } from '../../../../styles/cert/section_first'
+import IntroSection from './first/IntroSection'
 
 export default function SectionFirstCer() {
   const dataContext = useContext(DataContext)
   return (
     <DataContext.Provider value={dataContext}>
       <SectionStylesCertTheme>
-        <BoxCircle>
-          <CircleOne></CircleOne>
-          <CircleTwo></CircleTwo>
-          <CircleThree></CircleThree>
-          <CircleFour></CircleFour>
-          <BoxInfo>
-            <HeadlinePrincipal>{dataContext.certificate.title}</HeadlinePrincipal>
-            <TextBody>{dataContext.certificate.description}</TextBody>
-          </BoxInfo>
-        </BoxCircle>
+        <IntroSection />
         <BoxContain>
           {dataContext.certificate.certificates.map((item) => (
             <BoxCertificate>
