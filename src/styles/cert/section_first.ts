@@ -93,6 +93,7 @@ export const TextBody = styled.p`
 `
 export const BoxContain = styled.div`
   display: grid;
+  
   margin-top: 8rem;
   padding-bottom: 4rem;
   grid-template-columns: repeat(auto-fill, 300px);
@@ -103,34 +104,40 @@ export const BoxContain = styled.div`
   justify-content: center;
   align-items: start;
   @media (min-width: 720px) {
+    grid-auto-rows: minmax(0, auto);
+    grid-template-rows: minmax(0, auto);
+      grid-template-columns: repeat(auto-fill, 350px);
   }
 `
 export const BoxCertificate = styled.div`
   display: grid;
   padding: 2rem 1rem;
-  filter: drop-shadow(0px 0px 4px rgba(37, 76, 152, 0.25));
+  transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
   background-color: var(--white);
   border-radius: 1rem;
   overflow: hidden;
 `
 
 export const TitleCertificate = styled.h2`
-  font: normal normal 600 1.25rem/1.5rem var(--font-lato);
-  margin-bottom: 0.5rem;
+  font: normal normal 600 1.2rem/1.5rem var(--font-lato);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.055em;
+  transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
 `
 
 export const TextCertificate = styled.p`
-  font: normal normal 400 1rem/1.5rem var(--font-lato);
-
-  opacity: 0.7;
+  font: normal normal 400 0.9rem/1.7rem var(--font-lato);
+  opacity: 0.5;
   margin-bottom: 1.25rem;
+  text-align: justify;
+  transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
 `
 export const ImageCertificate = styled.img`
   width: 100%;
   border-radius: 0.5rem;
-  max-height: 200px;
+  max-height: 270px;
   height: 100%;
-
   object-fit: cover;
 `
 export const BackgroundCertificate = styled.div`
@@ -151,14 +158,19 @@ export const ImageLogoCertificate = styled.img`
 `
 export const ButtonCertificate = styled.button`
   border: 1px solid var(--sky);
-  font: normal normal 400 1rem/1.5rem var(--font-lato);
+  font: normal normal 400 0.9rem/1.5rem var(--font-lato);
   color: var(--sky);
   background-color: transparent;
   width: 100%;
   border-radius: 0.5rem;
   padding: 0.3rem 0;
+  transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.54rem;
 `
-
+export const ImageSample = styled.img``
 export const SectionStylesCertTheme = styled(SectionStylesCert)`
   ${BoxContain} {
     border-bottom: ${(props) =>
@@ -167,6 +179,8 @@ export const SectionStylesCertTheme = styled(SectionStylesCert)`
   ${BoxCertificate} {
     background-color: ${(props) =>
       props.className === Theme.dark ? 'var(--black-pale)' : 'var(--white)'};
+        filter: ${(props) =>
+      props.className === Theme.dark ? 'drop-shadow(0px 0px 2px rgba(208, 224, 255, 0.34))' : 'drop-shadow(0px 0px 4px rgba(37, 76, 152, 0.25))'};
   }
   ${TitleCertificate} {
     color: ${(props) => (props.className === Theme.dark ? 'var(--white)' : 'var(--black)')};

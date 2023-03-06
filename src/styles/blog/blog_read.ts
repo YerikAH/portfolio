@@ -44,6 +44,7 @@ export const SpanText = styled.span`
   font: normal normal 700 1rem/1.5rem var(--font-mono);
   color: var(--pink-brig);
   text-align: left;
+  transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
   @media (min-width: 720px) {
     font-size: 1.5rem;
     line-height: 2.5rem;
@@ -52,6 +53,7 @@ export const SpanText = styled.span`
 export const HeadlinePrincipal = styled.h1`
   font: normal normal 600 1.5rem/2rem var(--font-lato);
   text-align: left;
+  transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
   @media (min-width: 720px) {
     font-size: 2.5rem;
     line-height: 3.5rem;
@@ -79,6 +81,7 @@ export const ImageBlog = styled.img`
 export const HeadlineTwo = styled.h2`
   margin-top: 1.5rem;
   font: normal normal 600 1.3rem/1.7rem var(--font-lato);
+  transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
   @media (min-width: 720px) {
     font-size: 1.7rem;
     line-height: 3rem;
@@ -87,6 +90,7 @@ export const HeadlineTwo = styled.h2`
 export const HeadlineThree = styled.h3`
   margin-top: 1.5rem;
   font: normal normal 600 1.2rem/1.5em var(--font-lato);
+  transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
   @media (min-width: 720px) {
     font-size: 1.5rem;
     line-height: 2.5rem;
@@ -95,6 +99,7 @@ export const HeadlineThree = styled.h3`
 export const HeadlineFour = styled.h4`
   margin-top: 1.5rem;
   font: normal normal 600 1rem/1.2rem var(--font-lato);
+  transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
   @media (min-width: 720px) {
     font-size: 1.2rem;
     line-height: 2.2rem;
@@ -102,6 +107,7 @@ export const HeadlineFour = styled.h4`
 `
 export const TextBodyOne = styled.p`
   font: normal normal 400 0.8em/1.5rem var(--font-lato);
+  transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
   opacity: 0.7;
   @media (min-width: 720px) {
     font-size: 1rem;
@@ -110,6 +116,7 @@ export const TextBodyOne = styled.p`
 `
 export const TextBodyTwo = styled.p``
 export const TextLink = styled.a`
+  transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
   font: normal normal 500 0.8rem/1.5rem var(--font-lato);
   color: var(--sky);
   @media (min-width: 720px) {
@@ -125,6 +132,7 @@ export const TextListBoxDesorder = styled.ul`
 `
 export const TextList = styled.li`
   list-style: initial;
+  transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
   font: normal normal 400 0.8rem/1.5rem var(--font-lato);
   opacity: 0.7;
   @media (min-width: 720px) {
@@ -134,6 +142,7 @@ export const TextList = styled.li`
 `
 export const CodeSyntax = styled(SyntaxHighlighter)`
   margin: 2rem 0;
+  
   border-radius: 1rem;
   code {
     white-space: break-spaces !important;

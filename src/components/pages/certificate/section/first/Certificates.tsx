@@ -6,14 +6,16 @@ import {
   ButtonCertificate,
   ImageCertificate,
   ImageLogoCertificate,
+  ImageSample,
   TextCertificate,
   TitleCertificate,
 } from '../../../../../styles/cert/section_first'
-export default function Certificates({ cert, language }: CertificateProps) {
+import IconInfo from '../../../../../assets/icon/icon-info-cert.svg'
+export default function Certificates({ cert, languageSelect }: CertificateProps) {
   return (
     <>
       {cert.certificates.map((item) => (
-        <BoxCertificate>
+        <BoxCertificate key={item.id}>
           <TitleCertificate>{item.name}</TitleCertificate>
           <TextCertificate>{item.description}</TextCertificate>
           <BackgroundCertificate>
@@ -21,7 +23,8 @@ export default function Certificates({ cert, language }: CertificateProps) {
             <ImageLogoCertificate src={item.logo} />
           </BackgroundCertificate>
           <ButtonCertificate>
-            {(language ?? Language.es) === Language.es
+            <ImageSample src={IconInfo}/>
+            {(languageSelect ?? Language.es) === Language.es
               ? 'Detalles del certificado'
               : 'Certificate details'}
           </ButtonCertificate>
