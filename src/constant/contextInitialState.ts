@@ -106,7 +106,7 @@ export const CONTEXT_INITIAL_STATE: ContextInterface = {
     'Git',
     'GitHub',
   ],
-  handle_language: () => { 
+  handle_language: () => {
     /* This function needs to be empty */
   },
   language_current: Language.es,
@@ -154,10 +154,23 @@ export const CONTEXT_INITIAL_STATE: ContextInterface = {
       },
     ],
   },
+  certificate: {
+    title: '',
+    description: '',
+    certificates: [
+      {
+        id: 1,
+        name: '',
+        description: '',
+        image: '',
+        logo: '',
+      },
+    ],
+  },
 }
 export const THEME_CONTEXT_INITIAL_STATE: ContextThemeInterface = {
   theme: Theme.light,
   handle_theme: () => {
-  /*  This function needs to be empty */
+    /*  This function needs to be empty */
   },
 }

@@ -35,6 +35,7 @@ const DataProvider = ({ children }: ContextProps) => {
         skills: dataJson.skills,
         handle_language: handleLanguage,
         blog: dataJson.language[language].blog,
+        certificate: dataJson.language[language].certificate,
       }
       setDataValueAll(dataValue)
     }

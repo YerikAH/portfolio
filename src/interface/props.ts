@@ -1,6 +1,7 @@
 import {
   Blog,
   BlogPreview,
+  Certificate,
   Dynamic,
   Nav,
   Portfolio,
@@ -23,6 +24,7 @@ export interface ContextInterface {
   language_current: Language
   handle_language: () => void
   blog: Blog
+  certificate: Certificate
 }
 export interface ContextThemeInterface {
   theme: Theme
