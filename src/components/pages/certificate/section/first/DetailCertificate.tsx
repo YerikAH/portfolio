@@ -1,8 +1,8 @@
 import ReactDOM from 'react-dom';
 import { elementHtmlSelect } from '../../../../../helpers/helpers';
-import { BoxButton, BoxContent, ButtonClose, DetailCertificateStyles, IconClose, ImageSample } from '../../../../../styles/cert/detail_certificate';
-import IconCloseCert from '../../../../../assets/icon/icon-close-cert.svg'
+import { BoxButton, BoxContent, ButtonClose, DetailCertificateStyles, ImageSample } from '../../../../../styles/cert/detail_certificate';
 import { CertificateModalProps } from '../../../../../interface/certProps';
+import IconCloseCert from '../../../../images/IconCloseCert';
 export default function DetailCertificate({imageCertificate, switchModalCertificate}:CertificateModalProps) {
     const modalCertHTML = document.getElementById('certificate');
   return ReactDOM.createPortal(
@@ -10,7 +10,7 @@ export default function DetailCertificate({imageCertificate, switchModalCertific
         <BoxContent>
             <BoxButton>
                 <ButtonClose onClick={switchModalCertificate}>
-                    <IconClose src={IconCloseCert}/>
+                    <IconCloseCert/>
                 </ButtonClose>
             </BoxButton>
             <ImageSample src={imageCertificate}/>
