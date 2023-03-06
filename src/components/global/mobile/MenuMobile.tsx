@@ -74,6 +74,6 @@ export default function MenuMobile({ menu, handleMenu, changeSection }: MenuMobi
         </MenuMobileStylesTheme>
       </DataContext.Provider>
     </ThemeContext.Provider>,
-    elementHtmlSelect(menuHTML),
+    elementHtmlSelect(menuHTML, 'menu'),
   )
 }
