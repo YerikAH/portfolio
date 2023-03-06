@@ -31,12 +31,8 @@ export default function SectionFirstCer() {
           <CircleThree></CircleThree>
           <CircleFour></CircleFour>
           <BoxInfo>
-            <HeadlinePrincipal>{}</HeadlinePrincipal>
-            <TextBody>
-              Esta sección es el resultado de mi constante búsqueda por mejorar y aprender más sobre
-              el desarrollo web. Te invito a descubrir lo que he aprendido y cómo he aplicado esos
-              conocimientos en proyectos reales.
-            </TextBody>
+            <HeadlinePrincipal>{dataContext.certificate.title}</HeadlinePrincipal>
+            <TextBody>{dataContext.certificate.description}</TextBody>
           </BoxInfo>
         </BoxCircle>
         <BoxContain>
