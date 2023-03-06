@@ -3,19 +3,11 @@ import DataContext from '../../../../context/dataContext'
 import {
   BackgroundCertificate,
   BoxCertificate,
-  BoxCircle,
   BoxContain,
-  BoxInfo,
   ButtonCertificate,
-  CircleFour,
-  CircleOne,
-  CircleThree,
-  CircleTwo,
-  HeadlinePrincipal,
   ImageCertificate,
   ImageLogoCertificate,
   SectionStylesCertTheme,
-  TextBody,
   TextCertificate,
   TitleCertificate,
 } from '../../../../styles/cert/section_first'
@@ -26,7 +18,7 @@ export default function SectionFirstCer() {
   return (
     <DataContext.Provider value={dataContext}>
       <SectionStylesCertTheme>
-        <IntroSection />
+        <IntroSection cert={dataContext.certificate} />
         <BoxContain>
           {dataContext.certificate.certificates.map((item) => (
             <BoxCertificate>

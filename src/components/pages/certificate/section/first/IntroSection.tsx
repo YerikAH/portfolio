@@ -1,3 +1,4 @@
+import { CertificateProps } from '../../../../../interface/certProps'
 import {
   BoxCircle,
   BoxInfo,
@@ -8,7 +9,7 @@ import {
   HeadlinePrincipal,
   TextBody,
 } from '../../../../../styles/cert/section_first'
-export default function IntroSection() {
+export default function IntroSection({ cert }: CertificateProps) {
   return (
     <BoxCircle>
       <CircleOne></CircleOne>
@@ -16,8 +17,8 @@ export default function IntroSection() {
       <CircleThree></CircleThree>
       <CircleFour></CircleFour>
       <BoxInfo>
-        <HeadlinePrincipal>{dataContext.certificate.title}</HeadlinePrincipal>
-        <TextBody>{dataContext.certificate.description}</TextBody>
+        <HeadlinePrincipal>{cert.title}</HeadlinePrincipal>
+        <TextBody>{cert.description}</TextBody>
       </BoxInfo>
     </BoxCircle>
   )
