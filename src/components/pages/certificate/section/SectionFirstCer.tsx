@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import ThemeContext  from '../../../../context/themeContext'
+import ThemeContext from '../../../../context/themeContext'
 import DataContext from '../../../../context/dataContext'
 import { BoxContain, SectionStylesCertTheme } from '../../../../styles/cert/section_first'
 import Certificates from './first/Certificates'
@@ -14,7 +14,10 @@ export default function SectionFirstCer() {
         <SectionStylesCertTheme className={themeContext.theme}>
           <IntroSection cert={dataContext.certificate} />
           <BoxContain>
-            <Certificates cert={dataContext.certificate} languageSelect={dataContext.language_current} />
+            <Certificates
+              cert={dataContext.certificate}
+              languageSelect={dataContext.language_current}
+            />
           </BoxContain>
         </SectionStylesCertTheme>
       </ThemeContext.Provider>

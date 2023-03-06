@@ -10,6 +10,9 @@ export const DetailCertificateStyles = styled.div`
     top: 0;
     padding: 2rem;
     background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `
 
 export const BoxButton = styled.div`
@@ -26,6 +29,7 @@ export const ButtonClose = styled.button`
     align-items: center;
 `
 export const IconClose = styled.img``
+
 export const BoxContent = styled.div`
     max-width: 700px;
     width: 100%;
