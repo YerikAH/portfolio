@@ -43,6 +43,8 @@ export const BoxContent = styled.div`
   width: 100%;
   display: grid;
   gap: 2rem;
+  margin: 2rem 0;
+  height: 100%;
 `
 export const ImageSample = styled.img`
   width: 100%;

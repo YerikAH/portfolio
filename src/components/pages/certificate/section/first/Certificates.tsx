@@ -19,8 +19,10 @@ export default function Certificates({ cert, languageSelect }: CertificateProps)
     setModalCert(!modalCert)
     if(e !== undefined){
       const convertHTMLEvent = e.target as HTMLButtonElement
+
       setImage(convertHTMLEvent.value)
     }
+
   }
   return (
     <>
