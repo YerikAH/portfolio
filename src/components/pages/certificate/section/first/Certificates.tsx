@@ -6,13 +6,12 @@ import {
   ButtonCertificate,
   ImageCertificate,
   ImageLogoCertificate,
-  ImageSample,
   TextCertificate,
   TitleCertificate,
 } from '../../../../../styles/cert/section_first'
-import IconInfo from '../../../../../assets/icon/icon-info-cert.svg'
 import { useState } from 'react'
 import DetailCertificate from './DetailCertificate'
+import IconInfoCert from '../../../../images/IconInfoCert'
 export default function Certificates({ cert, languageSelect }: CertificateProps) {
   const [modalCert, setModalCert] = useState(false)
   const [image, setImage] = useState('')
@@ -34,7 +33,7 @@ export default function Certificates({ cert, languageSelect }: CertificateProps)
             <ImageLogoCertificate src={item.logo} />
           </BackgroundCertificate>
           <ButtonCertificate onClick={(e)=>switchModalCertificate(e)} value={item.image}>
-            <ImageSample src={IconInfo} />
+            <IconInfoCert/>
             {(languageSelect ?? Language.es) === Language.es
               ? 'Detalles del certificado'
               : 'Certificate details'}

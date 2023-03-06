@@ -93,7 +93,7 @@ export const TextBody = styled.p`
 `
 export const BoxContain = styled.div`
   display: grid;
-  
+
   margin-top: 8rem;
   padding-bottom: 4rem;
   grid-template-columns: repeat(auto-fill, 300px);
@@ -106,7 +106,7 @@ export const BoxContain = styled.div`
   @media (min-width: 720px) {
     grid-auto-rows: minmax(0, auto);
     grid-template-rows: minmax(0, auto);
-      grid-template-columns: repeat(auto-fill, 350px);
+    grid-template-columns: repeat(auto-fill, 350px);
   }
 `
 export const BoxCertificate = styled.div`
@@ -159,8 +159,6 @@ export const ImageLogoCertificate = styled.img`
 export const ButtonCertificate = styled.button`
   border: 1px solid var(--sky);
   font: normal normal 400 0.9rem/1.5rem var(--font-lato);
-  color: var(--sky);
-  background-color: transparent;
   width: 100%;
   border-radius: 0.5rem;
   padding: 0.3rem 0;
@@ -170,7 +168,6 @@ export const ButtonCertificate = styled.button`
   align-items: center;
   gap: 0.54rem;
 `
-export const ImageSample = styled.img``
 export const SectionStylesCertTheme = styled(SectionStylesCert)`
   ${BoxContain} {
     border-bottom: ${(props) =>
@@ -179,13 +176,29 @@ export const SectionStylesCertTheme = styled(SectionStylesCert)`
   ${BoxCertificate} {
     background-color: ${(props) =>
       props.className === Theme.dark ? 'var(--black-pale)' : 'var(--white)'};
-        filter: ${(props) =>
-      props.className === Theme.dark ? 'drop-shadow(0px 0px 2px rgba(208, 224, 255, 0.34))' : 'drop-shadow(0px 0px 4px rgba(37, 76, 152, 0.25))'};
+    filter: ${(props) =>
+      props.className === Theme.dark
+        ? 'drop-shadow(0px 0px 2px rgba(208, 224, 255, 0.34))'
+        : 'drop-shadow(0px 0px 4px rgba(37, 76, 152, 0.25))'};
   }
   ${TitleCertificate} {
     color: ${(props) => (props.className === Theme.dark ? 'var(--white)' : 'var(--black)')};
   }
   ${TextCertificate} {
     color: ${(props) => (props.className === Theme.dark ? 'var(--white)' : 'var(--black)')};
+  }
+  ${ButtonCertificate} {
+    background-color: transparent;
+    color: var(--sky);
+    svg {
+      transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
+    }
+    &:hover {
+      background-color: var(--sky);
+      color: ${(props) => (props.className === Theme.dark ? 'var(--black)' : 'var(--white)')};
+      svg {
+        stroke: ${(props) => (props.className === Theme.dark ? 'var(--black)' : 'var(--white)')};
+      }
+    }
   }
 `
