@@ -17,7 +17,7 @@ export default function Certificates({ cert }: CertificateProps) {
           <TextCertificate>{item.description}</TextCertificate>
           <BackgroundCertificate>
             <ImageCertificate src={item.image} />
-            <ImageLogoCertificate src='https://static.platzi.com/static/images/footer/logo.png' />
+            <ImageLogoCertificate src={item.logo} />
           </BackgroundCertificate>
           <ButtonCertificate>Detalles del certificado</ButtonCertificate>
         </BoxCertificate>
