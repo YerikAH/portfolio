@@ -1,6 +1,7 @@
 import { useContext } from 'react'
 import DataContext from '../../../../context/dataContext'
 import { BoxContain, SectionStylesCertTheme } from '../../../../styles/cert/section_first'
+import Certificates from './first/Certificates'
 import IntroSection from './first/IntroSection'
 
 export default function SectionFirstCer() {
@@ -9,7 +10,9 @@ export default function SectionFirstCer() {
     <DataContext.Provider value={dataContext}>
       <SectionStylesCertTheme>
         <IntroSection cert={dataContext.certificate} />
-        <BoxContain></BoxContain>
+        <BoxContain>
+          <Certificates cert={dataContext.certificate} />
+        </BoxContain>
       </SectionStylesCertTheme>
     </DataContext.Provider>
   )

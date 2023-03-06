@@ -1,18 +1,17 @@
+import { CertificateProps } from '../../../../../interface/certProps'
 import {
   BackgroundCertificate,
   BoxCertificate,
-  BoxContain,
   ButtonCertificate,
   ImageCertificate,
   ImageLogoCertificate,
-  SectionStylesCertTheme,
   TextCertificate,
   TitleCertificate,
 } from '../../../../../styles/cert/section_first'
-export default function Certificates() {
+export default function Certificates({ cert }: CertificateProps) {
   return (
     <>
-      {dataContext.certificate.certificates.map((item) => (
+      {cert.certificates.map((item) => (
         <BoxCertificate>
           <TitleCertificate>{item.name}</TitleCertificate>
           <TextCertificate>{item.description}</TextCertificate>
