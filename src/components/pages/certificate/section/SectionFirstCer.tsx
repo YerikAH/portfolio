@@ -11,7 +11,7 @@ export default function SectionFirstCer() {
       <SectionStylesCertTheme>
         <IntroSection cert={dataContext.certificate} />
         <BoxContain>
-          <Certificates cert={dataContext.certificate} />
+          <Certificates cert={dataContext.certificate} language={dataContext.language_current} />
         </BoxContain>
       </SectionStylesCertTheme>
     </DataContext.Provider>

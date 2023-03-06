@@ -100,6 +100,8 @@ export const BoxContain = styled.div`
   gap: 3rem;
   place-content: center;
   place-items: center;
+  justify-content: center;
+  align-items: start;
   @media (min-width: 720px) {
   }
 `

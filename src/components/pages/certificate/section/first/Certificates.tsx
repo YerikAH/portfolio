@@ -1,3 +1,4 @@
+import { Language } from '../../../../../enum/LanguageEnum'
 import { CertificateProps } from '../../../../../interface/certProps'
 import {
   BackgroundCertificate,
@@ -8,7 +9,7 @@ import {
   TextCertificate,
   TitleCertificate,
 } from '../../../../../styles/cert/section_first'
-export default function Certificates({ cert }: CertificateProps) {
+export default function Certificates({ cert, language }: CertificateProps) {
   return (
     <>
       {cert.certificates.map((item) => (
@@ -19,7 +20,11 @@ export default function Certificates({ cert }: CertificateProps) {
             <ImageCertificate src={item.image} />
             <ImageLogoCertificate src={item.logo} />
           </BackgroundCertificate>
-          <ButtonCertificate>Detalles del certificado</ButtonCertificate>
+          <ButtonCertificate>
+            {(language ?? Language.es) === Language.es
+              ? 'Detalles del certificado'
+              : 'Certificate details'}
+          </ButtonCertificate>
         </BoxCertificate>
       ))}
     </>
