@@ -14,6 +14,7 @@ export const AvatarCircle = styled.img`
   width: 3rem;
   height: 3rem;
   border-radius: 15rem;
+  object-fit: contain;
 `
 
 export const BoxInfo = styled.div`
