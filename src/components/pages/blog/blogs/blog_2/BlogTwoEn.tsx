@@ -5,7 +5,7 @@ import {
   SpanTextTwo,
 } from '../../../../../styles/blog/blog_read'
 import WhoPublished from '../../ui/WhoPublished'
-export default function BlogTwoEn() {
+export default function BlogTwoEn({}: BlogTwo) {
   return (
     <>
       <SpanText>{'//'} Experiencia</SpanText>
