@@ -142,7 +142,7 @@ export const TextList = styled.li`
 `
 export const CodeSyntax = styled(SyntaxHighlighter)`
   margin: 2rem 0;
-  
+
   border-radius: 1rem;
   code {
     white-space: break-spaces !important;
@@ -150,6 +150,10 @@ export const CodeSyntax = styled(SyntaxHighlighter)`
   span {
     font: normal normal 500 0.8rem/2rem var(--font-mono-two);
   }
+`
+export const VideoiFrame = styled.iframe`
+  max-width: 560px;
+  width: 100%;
 `
 
 /* DARK MODE */

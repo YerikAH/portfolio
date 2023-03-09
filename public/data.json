@@ -142,38 +142,14 @@
         },
         "blog_preview": [
           {
-            "id": "blog_1",
+            "id": "1",
             "word": "exp",
             "title": "Mi Experiencia Aprendiendo Programación",
             "description": "Durante los últimos 8 meses he estado inmerso en un intenso proceso de aprendizaje de programación. Este periodo ha sido uno de los más desafiantes y gratificantes de mi vida..."
           },
           {
-            "id": "blog_2",
+            "id": "2",
             "word": "review",
-            "title": "Mi Experiencia Aprendiendo Programación",
-            "description": "Durante los últimos 8 meses he estado inmerso en un intenso proceso de aprendizaje de programación. Este periodo ha sido uno de los más desafiantes y gratificantes de mi vida..."
-          },
-          {
-            "id": "blog_3",
-            "word": "code",
-            "title": "Mi Experiencia Aprendiendo Programación",
-            "description": "Durante los últimos 8 meses he estado inmerso en un intenso proceso de aprendizaje de programación. Este periodo ha sido uno de los más desafiantes y gratificantes de mi vida..."
-          },
-          {
-            "id": "blog_4",
-            "word": "exp",
-            "title": "Mi Experiencia Aprendiendo Programación",
-            "description": "Durante los últimos 8 meses he estado inmerso en un intenso proceso de aprendizaje de programación. Este periodo ha sido uno de los más desafiantes y gratificantes de mi vida..."
-          },
-          {
-            "id": "blog_5",
-            "word": "exp",
-            "title": "Mi Experiencia Aprendiendo Programación",
-            "description": "Durante los últimos 8 meses he estado inmerso en un intenso proceso de aprendizaje de programación. Este periodo ha sido uno de los más desafiantes y gratificantes de mi vida..."
-          },
-          {
-            "id": "blog_6",
-            "word": "exp",
             "title": "Mi Experiencia Aprendiendo Programación",
             "description": "Durante los últimos 8 meses he estado inmerso en un intenso proceso de aprendizaje de programación. Este periodo ha sido uno de los más desafiantes y gratificantes de mi vida..."
           }
@@ -405,38 +381,14 @@
         },
         "blog_preview": [
           {
-            "id": "blog_1",
+            "id": "1",
             "word": "exp",
             "title": "My Experience Learning Programming ",
             "description": "During the last 8 months I have been immersed in an intense programming learning process. This period has been one of the most challenging and rewarding of my life..."
           },
           {
-            "id": "blog_2",
+            "id": "2",
             "word": "review",
-            "title": "My Experience Learning Programming ",
-            "description": "During the last 8 months I have been immersed in an intense programming learning process. This period has been one of the most challenging and rewarding of my life..."
-          },
-          {
-            "id": "blog_3",
-            "word": "code",
-            "title": "My Experience Learning Programming ",
-            "description": "During the last 8 months I have been immersed in an intense programming learning process. This period has been one of the most challenging and rewarding of my life..."
-          },
-          {
-            "id": "blog_4",
-            "word": "exp",
-            "title": "My Experience Learning Programming ",
-            "description": "During the last 8 months I have been immersed in an intense programming learning process. This period has been one of the most challenging and rewarding of my life..."
-          },
-          {
-            "id": "blog_5",
-            "word": "exp",
-            "title": "My Experience Learning Programming ",
-            "description": "During the last 8 months I have been immersed in an intense programming learning process. This period has been one of the most challenging and rewarding of my life..."
-          },
-          {
-            "id": "blog_6",
-            "word": "exp",
             "title": "My Experience Learning Programming ",
             "description": "During the last 8 months I have been immersed in an intense programming learning process. This period has been one of the most challenging and rewarding of my life..."
           }

@@ -11,6 +11,7 @@ import blogII from '../../../../../assets/blog/blogII.png'
 export default function BlogTwoStr() {
   const themeContext = useContext(ThemeContext)
   const dataContext = useContext(DataContext)
+  console.log('HOl,a mud o')
   return (
     <ThemeContext.Provider value={themeContext}>
       <DataContext.Provider value={dataContext}>

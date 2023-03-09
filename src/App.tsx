@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router-dom'
 // components
 import Blog from './components/pages/Blog'
 import BlogOneStr from './components/pages/blog/blogs/blog_1/BlogOneStr'
+import BlogTwoStr from './components/pages/blog/blogs/blog_2/BlogTwoStr'
 import Certificate from './components/pages/Certificate'
 import Home from './components/pages/Home'
 
@@ -31,7 +32,8 @@ function App() {
               element={<Certificate section={section} handleChange={handleChange} />}
             />
             <Route path='/blog' element={<Blog section={section} handleChange={handleChange} />}>
-              <Route path=':1' element={<BlogOneStr />} />
+              <Route path='1' element={<BlogOneStr />} />
+              <Route path='2' element={<BlogTwoStr />} />
             </Route>
           </Routes>
         </>
