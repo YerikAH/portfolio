@@ -10,6 +10,7 @@ import {
   TextList,
   HeadlineTwo,
   VideoiFrame,
+  Frame,
 } from '../../../../../styles/blog/blog_read'
 import WhoPublished from '../../ui/WhoPublished'
 export default function BlogTwoEn({ blogI }: BlogTwo) {
@@ -127,15 +128,17 @@ export default function BlogTwoEn({ blogI }: BlogTwo) {
       <br />
       <TextBodyOne>Digging a little deeper I found this video:</TextBodyOne>
       <br />
-      <VideoiFrame
-        width='560'
-        height='315'
-        src='https://www.youtube.com/embed/CyA1yKN2534'
-        title='YouTube video player'
-        frameBorder='0'
-        allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-        allowFullScreen
-      ></VideoiFrame>
+      <Frame>
+        <VideoiFrame
+          width='560'
+          height='315'
+          src='https://www.youtube.com/embed/CyA1yKN2534'
+          title='YouTube video player'
+          frameBorder='0'
+          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+          allowFullScreen
+        ></VideoiFrame>
+      </Frame>
       <br />
       <br />
       <HeadlineThree>3. Keep it simple</HeadlineThree>

@@ -151,8 +151,9 @@ export const CodeSyntax = styled(SyntaxHighlighter)`
     font: normal normal 500 0.8rem/2rem var(--font-mono-two);
   }
 `
+
+export const Frame = styled.div``
 export const VideoiFrame = styled.iframe`
-  max-width: 560px;
   width: 100%;
 `
 

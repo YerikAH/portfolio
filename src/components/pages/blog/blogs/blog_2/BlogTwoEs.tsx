@@ -9,6 +9,8 @@ import {
   TextListBoxDesorder,
   TextList,
   HeadlineTwo,
+  VideoiFrame,
+  Frame,
 } from '../../../../../styles/blog/blog_read'
 import WhoPublished from '../../ui/WhoPublished'
 
@@ -139,15 +141,17 @@ export default function BlogTwoEs({ blogI }: BlogTwo) {
       <br />
       <TextBodyOne>Investigando un poco más fondo encontré este video:</TextBodyOne>
       <br />
-      <iframe
-        width='560'
-        height='315'
-        src='https://www.youtube.com/embed/CyA1yKN2534'
-        title='YouTube video player'
-        frameBorder='0'
-        allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-        allowFullScreen
-      ></iframe>
+      <Frame>
+        <VideoiFrame
+          width='560'
+          height='315'
+          src='https://www.youtube.com/embed/CyA1yKN2534'
+          title='YouTube video player'
+          frameBorder='0'
+          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+          allowFullScreen
+        ></VideoiFrame>
+      </Frame>
       <br />
       <br />
       <HeadlineThree>3. Hacerlo sencillo</HeadlineThree>
