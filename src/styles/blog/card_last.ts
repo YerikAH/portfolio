@@ -1,9 +1,9 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { Theme } from '../../enum/LanguageEnum'
 
 const BoxContent = styled.div`
   border-radius: 1rem;
-
   padding: 2rem 1rem;
 `
 
@@ -19,9 +19,12 @@ export const ListTile = styled.div`
   padding: 0.5rem;
 `
 
-export const ContainerRow = styled.div`
+export const ContainerRow = styled(Link)`
   display: flex;
   gap: 1rem;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
 `
 
 export const ImageRow = styled.img`
@@ -48,5 +51,11 @@ export const BoxContentTheme = styled(BoxContent)`
   }
   ${SubtitleRow} {
     color: ${(props) => (props.className === Theme.dark ? 'var(--white)' : 'var(--black)')};
+  }
+  ${ContainerRow} {
+    &:hover {
+      background: ${(props) =>
+        props.className === Theme.dark ? 'var(--white-10)' : 'var(--black-10)'};
+    }
   }
 `
