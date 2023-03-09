@@ -144,6 +144,7 @@ export const GroupBoxMove = styled.div`
   gap: 3rem;
   position: relative;
   transition: 0.3s;
+  align-items: flex-start;
 
   @media (min-width: 720px) {
     gap: 1rem;

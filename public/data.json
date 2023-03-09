@@ -126,7 +126,7 @@
               "word": "exp"
             },
             {
-              "name": "Reseñas de libros",
+              "name": "Resumen de libros",
               "word": "review"
             },
             {
@@ -144,14 +144,14 @@
           {
             "id": "1",
             "word": "exp",
-            "title": "Mi Experiencia Aprendiendo Programación",
-            "description": "Durante los últimos 8 meses he estado inmerso en un intenso proceso de aprendizaje de programación. Este periodo ha sido uno de los más desafiantes y gratificantes de mi vida..."
+            "title": "Mi experiencia aprendiendo programación",
+            "description": "Durante el último año me he sumergido en un intenso proceso de aprendizaje de programación. Ha sido uno de los periodos más desafiantes y gratificantes de mi vida. Cometí muchos errores, pero todo empezó al finalizar la secundaria, sin saber qué carrera universitaria elegir. Me enfoqué en mejorar mis habilidades y productividad, probando varias aplicaciones de productividad, aunque algunas eran de pago y otras no tenían la interfaz que buscaba. Fue entonces cuando decidí desarrollar mi propia aplicación de productividad para Android, estudiando y utilizando Android Studio para ello. "
           },
           {
             "id": "2",
             "word": "review",
-            "title": "Mi Experiencia Aprendiendo Programación",
-            "description": "Durante los últimos 8 meses he estado inmerso en un intenso proceso de aprendizaje de programación. Este periodo ha sido uno de los más desafiantes y gratificantes de mi vida..."
+            "title": "Resumen del libro Hábitos Atómicos",
+            "description": "Una vez que terminé de leerlo, se convirtió en uno de mis libros favoritos debido a su excelente contenido. Lo que más me gustó de él es que, como el propio libro lo describe, es un manual para desarrollar buenos hábitos y eliminar los malos. Para realmente beneficiarse del libro, es importante actuar en consecuencia."
           }
         ]
       },
@@ -365,7 +365,7 @@
               "word": "exp"
             },
             {
-              "name": "Book reviews",
+              "name": "Book summary",
               "word": "review"
             },
             {
@@ -383,14 +383,14 @@
           {
             "id": "1",
             "word": "exp",
-            "title": "My Experience Learning Programming ",
-            "description": "During the last 8 months I have been immersed in an intense programming learning process. This period has been one of the most challenging and rewarding of my life..."
+            "title": "My experience learning programming",
+            "description": "Over the past year I have immersed myself in an intense process of learning to code. It has been one of the most challenging and rewarding periods of my life. I made many mistakes, but it all started after high school, not knowing what college major to choose. I focused on improving my skills and productivity, trying various productivity apps, although some were paid and others did not have the interface I was looking for. That's when I decided to develop my own productivity app for Android, studying and using Android Studio for it."
           },
           {
             "id": "2",
             "word": "review",
-            "title": "My Experience Learning Programming ",
-            "description": "During the last 8 months I have been immersed in an intense programming learning process. This period has been one of the most challenging and rewarding of my life..."
+            "title": "Atomic Habits Book Summary",
+            "description": "Once I finished reading it, it became one of my favorite books due to its excellent content. What I liked the most about it is that, as the book itself describes it, it is a manual for developing good habits and weed out the bad ones. To really benefit from the book, it's important to act on it."
           }
         ]
       },

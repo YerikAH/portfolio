@@ -26,7 +26,7 @@ export default function WordFilter({ blogPreview, nav }: FilterProps) {
             {'/* '} {returnWord(item.word, currentBlogs)} {' */'}
           </style.SpanText>
           <style.TitleBox>{item.title}</style.TitleBox>
-          <style.TextBox>{item.description}</style.TextBox>
+          <style.TextBox>{item.description.substring(0, 200)}...</style.TextBox>
         </style.GroupContent>
       ))}
     </>
