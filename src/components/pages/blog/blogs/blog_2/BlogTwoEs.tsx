@@ -1,4 +1,9 @@
-import React from 'react'
+import {
+  ImageBlog,
+  SpanText,
+  HeadlinePrincipal,
+  SpanTextTwo,
+} from '../../../../../styles/blog/blog_read'
 
 export default function BlogTwoEs() {
   return (
