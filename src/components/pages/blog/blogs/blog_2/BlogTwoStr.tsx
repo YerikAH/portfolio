@@ -6,6 +6,7 @@ import DataContext from '../../../../../context/dataContext'
 import { Language } from '../../../../../enum/LanguageEnum'
 import BlogTwoEs from './BlogTwoEs'
 import BlogTwoEn from './BlogTwoEn'
+import blogII from '../../../../../assets/blog/blogII.png'
 
 export default function BlogTwoStr() {
   const themeContext = useContext(ThemeContext)
@@ -17,7 +18,11 @@ export default function BlogTwoStr() {
           <style.BlogSectionTheme className={themeContext.theme}>
             <style.BoxGrid>
               <style.BoxGridOne>
-                {dataContext.language_current === Language.es ? <BlogTwoEs /> : <BlogTwoEn />}
+                {dataContext.language_current === Language.es ? (
+                  <BlogTwoEs blogI={blogII} />
+                ) : (
+                  <BlogTwoEn blogI={blogII} />
+                )}
               </style.BoxGridOne>
               <style.BoxGridTwo>
                 <CardLast />
