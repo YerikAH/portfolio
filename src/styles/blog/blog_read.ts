@@ -152,7 +152,10 @@ export const CodeSyntax = styled(SyntaxHighlighter)`
   }
 `
 
-export const Frame = styled.div``
+export const Frame = styled.div`
+  width: 100%;
+  max-width: 560px;
+`
 export const VideoiFrame = styled.iframe`
   width: 100%;
 `
