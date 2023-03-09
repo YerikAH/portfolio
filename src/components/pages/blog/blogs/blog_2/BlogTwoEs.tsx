@@ -1,3 +1,4 @@
+import { BlogTwo } from '../../../../../interface/blogProps'
 import {
   ImageBlog,
   SpanText,
@@ -6,7 +7,7 @@ import {
 } from '../../../../../styles/blog/blog_read'
 import WhoPublished from '../../ui/WhoPublished'
 
-export default function BlogTwoEs({}: BlogTwo) {
+export default function BlogTwoEs({ blogI }: BlogTwo) {
   return (
     <>
       {' '}

@@ -1,7 +1,6 @@
 import { useContext } from 'react'
 import * as style from '../../../../../styles/blog/blog_read'
 import CardLast from '../../ui/CardLast'
-import blogI from '../../../../../assets/blog/blogI.png'
 import ThemeContext from '../../../../../context/themeContext'
 import DataContext from '../../../../../context/dataContext'
 import { Language } from '../../../../../enum/LanguageEnum'

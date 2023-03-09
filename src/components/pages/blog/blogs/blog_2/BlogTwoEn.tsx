@@ -1,3 +1,4 @@
+import { BlogTwo } from '../../../../../interface/blogProps'
 import {
   ImageBlog,
   SpanText,
@@ -5,7 +6,7 @@ import {
   SpanTextTwo,
 } from '../../../../../styles/blog/blog_read'
 import WhoPublished from '../../ui/WhoPublished'
-export default function BlogTwoEn({}: BlogTwo) {
+export default function BlogTwoEn({ blogI }: BlogTwo) {
   return (
     <>
       <SpanText>{'//'} Experiencia</SpanText>
