@@ -20,7 +20,7 @@ const data = [
   },
   {
     id: '/blog/1',
-    name_es: 'Mi experiencia aprendiendo programación durante 8 meses: lecciones y consejos',
+    name_es: 'Mi experiencia aprendiendo programación durante 8 meses',
     name_en: 'My experience learning programming for 8 months: lessons and tips',
     image: 'https://s1.1zoom.me/big0/212/356623-admin.jpg',
   },

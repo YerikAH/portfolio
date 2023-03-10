@@ -37,6 +37,7 @@ export const ImageRow = styled.img`
 export const SubtitleRow = styled.h5`
   font: normal normal 400 1rem/1.5rem var(--font-lato);
   opacity: 0.7;
+  line-break: anywhere;
 `
 
 export const BoxContentTheme = styled(BoxContent)`

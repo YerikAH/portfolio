@@ -7,12 +7,18 @@ import { NavigationBlogProps } from '../../../../../interface/props'
 import { BlogPreview } from '../../../../../interface/data'
 
 // styles
-import { GroupBox, GroupBoxMove } from '../../../../../styles/blog/section_first_blog'
+import {
+  BoxError,
+  GroupBox,
+  GroupBoxMove,
+  TextBox,
+} from '../../../../../styles/blog/section_first_blog'
 
 // components
 import WordFilter from './WordFilter'
 
 import { BLOG_WIDTH_CARD } from '../../../../../constant/numberInit'
+import CodeIcon from '../../../../images/CodeIcon'
 
 export default function GroupBoxBlog({
   nav,
@@ -32,9 +38,18 @@ export default function GroupBoxBlog({
   }, [BlogFilter])
   return (
     <GroupBox>
-      <GroupBoxMove style={styleScroll}>
-        <WordFilter blogPreview={BlogFilter} nav={nav} />
-      </GroupBoxMove>
+      {BlogFilter.length !== 0 ? (
+        <>
+          <GroupBoxMove style={styleScroll}>
+            <WordFilter blogPreview={BlogFilter} nav={nav} />
+          </GroupBoxMove>
+        </>
+      ) : (
+        <BoxError>
+          <CodeIcon />
+          <TextBox>Error </TextBox>
+        </BoxError>
+      )}
     </GroupBox>
   )
 }

@@ -250,7 +250,13 @@ export const TextDecoration = styled.p`
   font: normal normal 500 1rem/1.2rem var(--font-lato);
   padding: 0 1rem;
 `
-
+export const BoxError = styled.div`
+  width: 100%;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  margin: 3rem 0;
+`
 export const SectionStylesBlogTheme = styled(SectionStylesBlog)`
   ${BoxGridBlog} {
     border-bottom: ${(props) =>
