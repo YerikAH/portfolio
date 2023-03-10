@@ -111,8 +111,12 @@ export const BoxButtons = styled.div`
   gap: 1rem;
   opacity: 0;
   visibility: hidden;
+  width: 0;
+  overflow: hidden;
   @media (min-width: 1170px) {
     opacity: 1;
+    width: auto;
+    overflow: visible;
     visibility: visible;
   }
 `

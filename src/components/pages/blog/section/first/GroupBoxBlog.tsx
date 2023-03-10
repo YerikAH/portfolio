@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 
 // interface and enum and props
 import { BLOG_FILTER } from '../../../../../constant/blogInitialState'
-import { TopicsEnum } from '../../../../../enum/LanguageEnum'
+import { Language, TopicsEnum } from '../../../../../enum/LanguageEnum'
 import { NavigationBlogProps } from '../../../../../interface/props'
 import { BlogPreview } from '../../../../../interface/data'
 
@@ -19,6 +19,8 @@ import WordFilter from './WordFilter'
 
 import { BLOG_WIDTH_CARD } from '../../../../../constant/numberInit'
 import CodeIcon from '../../../../images/CodeIcon'
+import { BLOG_NOT_FOUND_EN, BLOG_NOT_FOUND_ES } from '../../../../../constant/TextInit'
+import DataContext from '../../../../../context/dataContext'
 
 export default function GroupBoxBlog({
   nav,
@@ -31,25 +33,29 @@ export default function GroupBoxBlog({
     const newBlogFilter = nav.blog_preview.filter((item) => item.word === filter)
     setBlogFilter(filter === TopicsEnum.all ? nav.blog_preview : newBlogFilter)
   }, [filter, nav])
-
+  const dataContext = useContext(DataContext)
   useEffect(() => {
     const newWidth = BlogFilter.length * BLOG_WIDTH_CARD
     updateScroll?.(newWidth)
   }, [BlogFilter])
   return (
-    <GroupBox>
-      {BlogFilter.length !== 0 ? (
-        <>
-          <GroupBoxMove style={styleScroll}>
-            <WordFilter blogPreview={BlogFilter} nav={nav} />
-          </GroupBoxMove>
-        </>
-      ) : (
-        <BoxError>
-          <CodeIcon />
-          <TextBox>Error </TextBox>
-        </BoxError>
-      )}
-    </GroupBox>
+    <DataContext.Provider value={dataContext}>
+      <GroupBox>
+        {BlogFilter.length !== 0 ? (
+          <>
+            <GroupBoxMove style={styleScroll}>
+              <WordFilter blogPreview={BlogFilter} nav={nav} />
+            </GroupBoxMove>
+          </>
+        ) : (
+          <BoxError>
+            <CodeIcon />
+            <TextBox>
+              {dataContext.language_current === Language.es ? BLOG_NOT_FOUND_ES : BLOG_NOT_FOUND_EN}
+            </TextBox>
+          </BoxError>
+        )}
+      </GroupBox>
+    </DataContext.Provider>
   )
 }

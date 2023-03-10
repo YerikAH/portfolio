@@ -41,3 +41,5 @@ export const BLOG_COD_EN = 'About programming'
 // BLOG UI
 export const BLOG_TITLE_UI = 'Últimos blogs'
 export const BLOG_TITLE_UI_EN = 'Latest blogs'
+export const BLOG_NOT_FOUND_ES = 'Aún no se ha publicado ningún blog'
+export const BLOG_NOT_FOUND_EN = 'No blog has been published yet'
