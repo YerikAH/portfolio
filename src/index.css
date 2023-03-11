@@ -21,10 +21,13 @@
   --white-pale: #fafafa;
   --gray: #dddddd;
   --black-10: #2121211a;
-  --white-10: #ffffff1a;
+  --white-20: #ffffff33;
   --white-40: #ffffffcc;
   --blue-strong: #2472ce;
   --blue-sky: #2449ce;
+
+  --black-30: #2121213c;
+  --white-30: #ffffff4d;
 
   /* dark theme*/
   --black-blue: #303033;

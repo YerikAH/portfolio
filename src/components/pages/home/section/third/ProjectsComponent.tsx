@@ -9,9 +9,13 @@ import LinkComponent from '../../../../images/LinkComponent'
 
 // context
 import DataContext from '../../../../../context/dataContext'
+import { PROJECT_LOCALSTORAGE } from '../../../../../constant/localStorageName'
 
 export default function ProjectsComponent({ data }: PortfolioProps) {
   const dataContext = useContext(DataContext)
+  function handleClick(id: string) {
+    localStorage.setItem(PROJECT_LOCALSTORAGE, id)
+  }
   return (
     <DataContext.Provider value={dataContext}>
       <style.ProjectStyle tabIndex={1}>
@@ -32,10 +36,10 @@ export default function ProjectsComponent({ data }: PortfolioProps) {
             <GithubComponent />
             {dataContext.language_static.section_third.code}
           </style.TextButton>
-          <style.TextButton href='' tabIndex={1}>
+          <style.TextButtonLink to='/project' tabIndex={1} onClick={(e) => handleClick(data.id)}>
             <InfoComponent />
             {dataContext.language_static.section_third.info}
-          </style.TextButton>
+          </style.TextButtonLink>
         </style.BoxButtons>
       </style.ProjectStyle>
     </DataContext.Provider>

@@ -118,6 +118,10 @@ export const MainProjectTheme = styled(MainProject)`
   ${ButtonClasic} {
     color: ${(props) => (props.className === Theme.dark ? 'var(--white)' : 'var(--black)')};
     background-color: ${(props) =>
-      props.className === Theme.dark ? 'var(--white-10)' : 'var(--black-10)'};
+      props.className === Theme.dark ? 'var(--white-20)' : 'var(--black-10)'};
+    &:hover {
+      background-color: ${(props) =>
+        props.className === Theme.dark ? 'var(--white-30)' : 'var(--black-30)'};
+    }
   }
 `

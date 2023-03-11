@@ -33,6 +33,12 @@ export default function Main() {
 
   useEffect(() => {
     const dataSave = localStorage.getItem(PROJECT_LOCALSTORAGE)
+    if (typeof dataSave === 'string') {
+      const numberSave = JSON.parse(dataSave) - 1
+      setNumberIndex(numberSave)
+    } else {
+      setNumberIndex(0)
+    }
   }, [])
 
   return (
@@ -43,23 +49,23 @@ export default function Main() {
             <BoxGridOne>
               <ImageResponsive>
                 <ImageProject
-                  src={dataContext.language_dynamic.portfolio[numberIndex].image_path}
+                  src={dataContext.language_dynamic.portfolio[numberIndex]?.image_path}
                 />
               </ImageResponsive>
             </BoxGridOne>
             <BoxGridTwo>
               <HeadlinePrincipal>
-                {dataContext.language_dynamic.portfolio[numberIndex].name}
+                {dataContext.language_dynamic.portfolio[numberIndex]?.name}
               </HeadlinePrincipal>
               <TextBodyOne>
-                {dataContext.language_dynamic.portfolio[numberIndex].description}
+                {dataContext.language_dynamic.portfolio[numberIndex]?.description}
               </TextBodyOne>
               <HeadLineTwo>
                 {' '}
                 {dataContext.language_current === Language.es ? TITLE_TECH_ES : TITLE_TECH_EN}
               </HeadLineTwo>
               <ListLabelSkills>
-                {dataContext.language_dynamic.portfolio[numberIndex].lang.map((item) => (
+                {dataContext.language_dynamic.portfolio[numberIndex]?.lang.map((item) => (
                   <ListLabel key={item}>{item}</ListLabel>
                 ))}
               </ListLabelSkills>
@@ -67,12 +73,12 @@ export default function Main() {
                 {dataContext.language_current === Language.es ? TITLE_LINK_ES : TITLE_LINK_EN}
               </HeadLineTwo>
               <BoxButtons>
-                <ButtonClasic href={dataContext.language_dynamic.portfolio[numberIndex].link_code}>
+                <ButtonClasic href={dataContext.language_dynamic.portfolio[numberIndex]?.link_code}>
                   <GithubComponent />
                   {dataContext.language_static.section_third.code}
                 </ButtonClasic>
                 <ButtonClasic
-                  href={dataContext.language_dynamic.portfolio[numberIndex].link_preview}
+                  href={dataContext.language_dynamic.portfolio[numberIndex]?.link_preview}
                 >
                   <LinkComponent />
                   {dataContext.language_static.section_third.preview}

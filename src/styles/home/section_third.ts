@@ -1,4 +1,5 @@
-import styled from 'styled-components'
+import { Link } from 'react-router-dom'
+import styled, { css } from 'styled-components'
 
 // enum
 import { Theme } from '../../enum/LanguageEnum'
@@ -159,8 +160,7 @@ export const BoxButtons = styled.div`
     margin-bottom: 2.5rem;
   }
 `
-
-export const TextButton = styled.a`
+const LinkStyles = css`
   border-radius: 10px;
   color: var(--black);
   font: normal normal 500 14px/10px var(--font-lato);
@@ -174,6 +174,12 @@ export const TextButton = styled.a`
   &:focus {
     background-color: var(--black-10);
   }
+`
+export const TextButton = styled.a`
+  ${LinkStyles}
+`
+export const TextButtonLink = styled(Link)`
+  ${LinkStyles}
 `
 
 export const TextButtonStroke = styled.button`
@@ -206,6 +212,15 @@ export const SectionThirdStylesTheme = styled(SectionThirdStyles)`
     color: ${(props) => (props.className === Theme.dark ? 'var(--white)' : 'var(--black)')};
   }
   & ${TextButton} {
+    color: ${(props) => (props.className === Theme.dark ? 'var(--white)' : 'var(--black)')};
+    &:hover,
+    &:focus {
+      background-color: ${(props) =>
+        props.className === Theme.dark ? 'var(--white-10)' : 'var(--black-10)'};
+    }
+  }
+
+  & ${TextButtonLink} {
     color: ${(props) => (props.className === Theme.dark ? 'var(--white)' : 'var(--black)')};
     &:hover,
     &:focus {
