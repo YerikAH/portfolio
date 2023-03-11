@@ -55,10 +55,14 @@ export const TextBodyOne = styled.p`
 
 export const ListLabelSkills = styled.div`
   display: flex;
-  justify-content: start;
+  justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
   margin: 1rem 0 2rem 0;
   gap: 0.5rem;
+  @media (min-width: 1000px) {
+    justify-content: start;
+  }
 `
 export const ListLabel = styled.li`
   background-color: var(--blue);

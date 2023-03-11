@@ -75,6 +75,7 @@ export const TextButtonStroke = styled(Link)`
   padding: 0.8rem;
   border-radius: 0.8rem;
   transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
+  text-align: center;
   @media (min-width: 720px) {
     font: normal normal 600 1rem/0.9rem var(--font-lato);
     padding: 0.8rem 2rem;
