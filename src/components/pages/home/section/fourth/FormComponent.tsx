@@ -75,7 +75,7 @@ export default function FormComponent() {
 
   return (
     <DataContext.Provider value={dataContext}>
-      <style.FormStyles>
+      <style.FormStyles action='https://formsubmit.co/yerik05vh@gmail.com' method='POST'>
         <style.LabelStyles htmlFor={OptionsForm.name}>
           {dataContext.language_static.section_four.label_one}
         </style.LabelStyles>
@@ -83,6 +83,7 @@ export default function FormComponent() {
           id={OptionsForm.name}
           name={OptionsForm.name}
           onChange={(e) => handleForm(e)}
+          required
         />
         <style.LabelStyles htmlFor={OptionsForm.email}>
           {dataContext.language_static.section_four.label_two}
@@ -91,6 +92,8 @@ export default function FormComponent() {
           id={OptionsForm.email}
           name={OptionsForm.email}
           onChange={(e) => handleForm(e)}
+          type='email'
+          required
         />
         <style.LabelStyles htmlFor={OptionsForm.message}>
           {dataContext.language_static.section_four.label_three}
@@ -99,6 +102,7 @@ export default function FormComponent() {
           id={OptionsForm.message}
           name={OptionsForm.message}
           onChange={(e) => handleForm(e)}
+          required
         />
         {!errorForm.name || !errorForm.email || !errorForm.message ? (
           <style.ErrorStyles>{errorMessage}</style.ErrorStyles>

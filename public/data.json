@@ -11,7 +11,7 @@
           "blog": "Blog"
         },
         "section_first": {
-          "headline": "Hola, soy desarrollador Front end con React y Flutter",
+          "headline": "Hola, soy desarrollador Front End con React y Flutter",
           "button_one": "Certificados",
           "button_two": "Currículo",
           "button_es_cv": "Descargar CV en español",
@@ -41,7 +41,7 @@
         }
       },
       "dynamic": {
-        "description": "Soy un desarrollador Front-end altamente capacitado con experiencia en React y conocimientos en desarrollo móvil con Flutter. Me apasiona crear aplicaciones interactivas y atractivas que brindan una experiencia de usuario única y satisfactoria. Las tecnologías que uso como desarrollador son:",
+        "description": "Soy un desarrollador Front-End altamente capacitado con experiencia en React y conocimientos en desarrollo móvil con Flutter. Me apasiona crear aplicaciones interactivas y atractivas que brindan una experiencia de usuario única y satisfactoria. Las tecnologías que uso como desarrollador son:",
         "portfolio": [
           {
             "id": "1",
@@ -54,8 +54,8 @@
           },
           {
             "id": "2",
-            "name": "Front end mentor challenges",
-            "description": "En este sitio web podrás ver algunas de las soluciones de los desafíos de Frontend Mentor que yo desarrolle, Frontend Mentor es una plataforma en línea que ofrece desafíos prácticos y prácticos de desarrollo web para ayudar a los desarrolladores front-end a mejorar sus habilidades y crear proyectos realistas.",
+            "name": "Front End mentor challenges",
+            "description": "En este sitio web podrás ver algunas de las soluciones de los desafíos de Front End Mentor que yo desarrolle, Frontend Mentor es una plataforma en línea que ofrece desafíos prácticos y prácticos de desarrollo web para ayudar a los desarrolladores front-end a mejorar sus habilidades y crear proyectos realistas.",
             "image_path": "./images/projects/frontend_mentor.png",
             "link_code": "https://github.com/YerikAH/frond-end-challenge",
             "link_preview": "https://yerikah.github.io/frond-end-challenge/",
@@ -212,7 +212,7 @@
           },
           {
             "id": 7,
-            "name": "Curso de Front-end developer",
+            "name": "Curso de Front-End developer",
             "description": "En este curso, realicé un proyecto enfocado en la parte estática y comencé a adentrarme en el trabajo con componentes en React, ampliando mis conocimientos en el desarrollo web.",
             "image": "./images/cert/front.jpg",
             "logo": "./images/cert/logo/platzi.png"
@@ -244,6 +244,13 @@
             "description": "Este curso me introdujo en el mundo del desarrollo backend y me enseñó los fundamentos de Node.js.",
             "image": "./images/cert/node.jpg",
             "logo": "./images/cert/logo/platzi.png"
+          },
+          {
+            "id": 12,
+            "name": "Curso de diseño web adaptable",
+            "description": "Durante este curso, tuve la oportunidad de profundizar en mis conocimientos de HTML y CSS, a través de la realización de proyectos prácticos y desafiantes. Además, pude aprender nuevas técnicas y herramientas para mejorar la calidad y la eficiencia de mi trabajo en la creación de sitios web y aplicaciones.",
+            "image": "./images/cert/free.PNG",
+            "logo": "./images/cert/logo/freecodecamp.png"
           }
         ]
       }
@@ -289,7 +296,7 @@
         }
       },
       "dynamic": {
-        "description": "I'm a highly-skilled front-end developer with a background in React and a background in mobile development with Flutter. I am passionate about creating engaging and interactive apps that provide a unique and satisfying user experience. The technologies I use as a developer are:",
+        "description": "I'm a highly-skilled Front-End developer with a background in React and a background in mobile development with Flutter. I am passionate about creating engaging and interactive apps that provide a unique and satisfying user experience. The technologies I use as a developer are:",
         "portfolio": [
           {
             "id": "1",
@@ -302,7 +309,7 @@
           },
           {
             "id": "2",
-            "name": "Front end mentor challenges",
+            "name": "Front End mentor challenges",
             "description": "On this website you will be able to see some of the Frontend Mentor Challenge Solutions that I develop, Frontend Mentor is an online platform that offers hands-on and hands-on web development challenges to help front-end developers improve their skills and create realistic projects.",
             "image_path": "./images/projects/frontend_mentor.png",
             "link_code": "https://github.com/YerikAH/frond-end-challenge",
@@ -460,7 +467,7 @@
           },
           {
             "id": 7,
-            "name": "Front-end developer course",
+            "name": "Front-End developer course",
             "description": "In this course, I carried out a project focused on the static part and began to delve into working with components in React, expanding my knowledge in web development.",
             "image": "./images/cert/front.jpg",
             "logo": "./images/cert/logo/platzi.png"
@@ -492,6 +499,13 @@
             "description": "This course introduced me to the world of backend development and taught me the fundamentals of Node.js.",
             "image": "./images/cert/node.jpg",
             "logo": "./images/cert/logo/platzi.png"
+          },
+          {
+            "id": 12,
+            "name": "Responsive web design course",
+            "description": "During this course, I had the opportunity to deepen my knowledge of HTML and CSS, through the realization of practical and challenging projects. In addition, I was able to learn new techniques and tools to improve the quality and efficiency of my work creating websites and applications.",
+            "image": "./images/cert/free.PNG",
+            "logo": "./images/cert/logo/freecodecamp.png"
           }
         ]
       }
