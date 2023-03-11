@@ -51,6 +51,7 @@ export const CONTEXT_INITIAL_STATE: ContextInterface = {
         image_path: '',
         link_code: '',
         link_preview: '',
+        lang: [],
       },
     ],
   },

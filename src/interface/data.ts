@@ -73,6 +73,7 @@ export interface Portfolio {
   image_path: string
   link_code: string
   link_preview: string
+  lang: string[]
 }
 
 export interface Static {
