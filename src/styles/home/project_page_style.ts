@@ -128,4 +128,8 @@ export const MainProjectTheme = styled(MainProject)`
         props.className === Theme.dark ? 'var(--white-30)' : 'var(--black-30)'};
     }
   }
+  ${SectionProject} {
+    border-bottom: ${(props) =>
+      props.className === Theme.dark ? '1px solid var(--white-30)' : '1px solid var(--black-30)'};
+  }
 `
