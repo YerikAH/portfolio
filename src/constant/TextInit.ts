@@ -8,6 +8,9 @@ export const EN_LIGHT = 'Switch to light theme'
 export const LANGUAGE_ES = 'Cambiar al idioma inglés'
 export const LANGUAGE_EN = 'Switch to Spanish language'
 
+export const BACK_ES = 'Volver'
+export const BACK_EN = 'Back'
+
 // FORM
 export const ERROR_NAME_ES =
   'Nombre: por favor, introduzca su nombre sin incluir números, y sin exceder los 20 caracteres. El campo debe tener más de 5 caracteres.'

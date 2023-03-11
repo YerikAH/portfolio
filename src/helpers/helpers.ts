@@ -14,6 +14,8 @@ export function checkPathname(pathname: string) {
     return false
   } else if (pathname.startsWith('/blog/')) {
     return true
+  } else if (pathname === '/project') {
+    return true
   } else {
     return false
   }

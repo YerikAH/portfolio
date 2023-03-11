@@ -8,6 +8,7 @@ import BlogOneStr from './components/pages/blog/blogs/blog_1/BlogOneStr'
 import BlogTwoStr from './components/pages/blog/blogs/blog_2/BlogTwoStr'
 import Certificate from './components/pages/Certificate'
 import Home from './components/pages/Home'
+import ProjectPage from './components/pages/ProjectPage'
 
 // context
 import { DataProvider } from './context/dataContext'
@@ -31,6 +32,7 @@ function App() {
               path='/certificate'
               element={<Certificate section={section} handleChange={handleChange} />}
             />
+            <Route path='/project' element={<ProjectPage />} />
             <Route path='/blog' element={<Blog section={section} handleChange={handleChange} />}>
               <Route path='1' element={<BlogOneStr />} />
               <Route path='2' element={<BlogTwoStr />} />

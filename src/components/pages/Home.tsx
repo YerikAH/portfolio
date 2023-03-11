@@ -27,9 +27,9 @@ export default function Home({ section }: HomeBlogProps) {
     }) ?? 5
 
   const scrollToSection = (index: number) => {
-    if(sectionRefs[index].current === null){
+    if (sectionRefs[index].current === null) {
       sectionRefs[0].current?.scrollIntoView({ behavior: 'smooth' })
-    }else{
+    } else {
       sectionRefs[index].current?.scrollIntoView({ behavior: 'smooth' })
     }
   }
