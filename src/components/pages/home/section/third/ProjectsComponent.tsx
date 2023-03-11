@@ -8,12 +8,12 @@ import InfoComponent from '../../../../images/InfoComponent'
 import LinkComponent from '../../../../images/LinkComponent'
 
 // context
-import FetchContext from '../../../../../context/dataContext'
+import DataContext from '../../../../../context/dataContext'
 
 export default function ProjectsComponent({ data }: PortfolioProps) {
-  const dataContext = useContext(FetchContext)
+  const dataContext = useContext(DataContext)
   return (
-    <FetchContext.Provider value={dataContext}>
+    <DataContext.Provider value={dataContext}>
       <style.ProjectStyle tabIndex={1}>
         <style.HoverBox className='hoverBox'></style.HoverBox>
         <style.LinkImage href={data.link_preview} target='_blank' className='linkImage'>
@@ -38,6 +38,6 @@ export default function ProjectsComponent({ data }: PortfolioProps) {
           </style.TextButton>
         </style.BoxButtons>
       </style.ProjectStyle>
-    </FetchContext.Provider>
+    </DataContext.Provider>
   )
 }

@@ -20,7 +20,9 @@ export default function LinksNav({ navText, activeSection, changeSection }: Link
   const location = useLocation()
   const dataContext = useContext(DataContext)
   useEffect(() => {
-    if (checkPathname(location.pathname)) {
+    if (location.pathname === '/project') {
+      setToLink('/')
+    } else if (checkPathname(location.pathname)) {
       setToLink('/blog')
     } else {
       setToLink('/')

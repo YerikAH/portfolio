@@ -5,7 +5,7 @@ import { useContext, useState } from 'react'
 import * as style from '../../../../../styles/home/section_fourth'
 
 // context
-import FetchContext from '../../../../../context/dataContext'
+import DataContext from '../../../../../context/dataContext'
 
 // images
 import Send from '../../../../../assets/icon/icon-send.svg'
@@ -28,7 +28,7 @@ import {
 } from '../../../../../constant/TextInit'
 
 export default function FormComponent() {
-  const dataContext = useContext(FetchContext)
+  const dataContext = useContext(DataContext)
   const [form, setForm] = useState(FORM_INITIAL_STATE)
   const [errorMessage, setErrorMessage] = useState('')
   const [errorForm, setErrorForm] = useState(FORM_VERIFY)
@@ -74,7 +74,7 @@ export default function FormComponent() {
   }
 
   return (
-    <FetchContext.Provider value={dataContext}>
+    <DataContext.Provider value={dataContext}>
       <style.FormStyles>
         <style.LabelStyles htmlFor={OptionsForm.name}>
           {dataContext.language_static.section_four.label_one}
@@ -114,6 +114,6 @@ export default function FormComponent() {
           {dataContext.language_static.section_four.button}
         </style.ButtonSubmit>
       </style.FormStyles>
-    </FetchContext.Provider>
+    </DataContext.Provider>
   )
 }

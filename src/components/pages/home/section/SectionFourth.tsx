@@ -3,16 +3,16 @@ import { useContext } from 'react'
 import * as style from '../../../../styles/home/section_fourth'
 // images
 import Contact from '../../../../assets/icon/icon-phone.svg'
-import FetchContext from '../../../../context/dataContext'
+import DataContext from '../../../../context/dataContext'
 import ListTile from './fourth/ListTile'
 import FormComponent from './fourth/FormComponent'
 import { InterfaceSectionScroll } from '../../../../interface/scrollspy'
 
 export default function SectionFourth({ sectionRef }: InterfaceSectionScroll) {
-  const dataContext = useContext(FetchContext)
+  const dataContext = useContext(DataContext)
 
   return (
-    <FetchContext.Provider value={dataContext}>
+    <DataContext.Provider value={dataContext}>
       <style.SectionFourthStyles ref={sectionRef} id='contact'>
         <style.BoxGridFather>
           <style.TitleBox>
@@ -34,6 +34,6 @@ export default function SectionFourth({ sectionRef }: InterfaceSectionScroll) {
           </style.BoxGrid>
         </style.BoxGridFather>
       </style.SectionFourthStyles>
-    </FetchContext.Provider>
+    </DataContext.Provider>
   )
 }

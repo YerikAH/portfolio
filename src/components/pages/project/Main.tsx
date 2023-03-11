@@ -13,15 +13,28 @@ import {
   SectionProject,
   TextBodyOne,
 } from '../../../styles/home/project_page_style'
-import aaaw from '../../../../public/images/projects/task_app.png'
 import GithubComponent from '../../images/GithubComponent'
 import LinkComponent from '../../images/LinkComponent'
 import ThemeContext from '../../../context/themeContext'
-import { useContext } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import DataContext from '../../../context/dataContext'
+import { Language } from '../../../enum/LanguageEnum'
+import {
+  TITLE_LINK_EN,
+  TITLE_LINK_ES,
+  TITLE_TECH_EN,
+  TITLE_TECH_ES,
+} from '../../../constant/TextInit'
+import { PROJECT_LOCALSTORAGE } from '../../../constant/localStorageName'
 export default function Main() {
   const themeContext = useContext(ThemeContext)
   const dataContext = useContext(DataContext)
+  const [numberIndex, setNumberIndex] = useState(0)
+
+  useEffect(() => {
+    const dataSave = localStorage.getItem(PROJECT_LOCALSTORAGE)
+  }, [])
+
   return (
     <DataContext.Provider value={dataContext}>
       <ThemeContext.Provider value={themeContext}>
@@ -29,30 +42,40 @@ export default function Main() {
           <SectionProject>
             <BoxGridOne>
               <ImageResponsive>
-                <ImageProject src={dataContext.language_dynamic.portfolio[0].image_path} />
+                <ImageProject
+                  src={dataContext.language_dynamic.portfolio[numberIndex].image_path}
+                />
               </ImageResponsive>
             </BoxGridOne>
             <BoxGridTwo>
               <HeadlinePrincipal>
-                {dataContext.language_dynamic.portfolio[0].name}
+                {dataContext.language_dynamic.portfolio[numberIndex].name}
               </HeadlinePrincipal>
-              <TextBodyOne>{dataContext.language_dynamic.portfolio[0].description}</TextBodyOne>
-              <HeadLineTwo>Tecnologías utilizadas en el desarrollo del proyecto</HeadLineTwo>
+              <TextBodyOne>
+                {dataContext.language_dynamic.portfolio[numberIndex].description}
+              </TextBodyOne>
+              <HeadLineTwo>
+                {' '}
+                {dataContext.language_current === Language.es ? TITLE_TECH_ES : TITLE_TECH_EN}
+              </HeadLineTwo>
               <ListLabelSkills>
-                <ListLabel>HTML</ListLabel>
-                <ListLabel>CSS</ListLabel>
-                <ListLabel>JavaScript</ListLabel>
-                <ListLabel>React</ListLabel>
+                {dataContext.language_dynamic.portfolio[numberIndex].lang.map((item) => (
+                  <ListLabel key={item}>{item}</ListLabel>
+                ))}
               </ListLabelSkills>
-              <HeadLineTwo>Enlaces</HeadLineTwo>
+              <HeadLineTwo>
+                {dataContext.language_current === Language.es ? TITLE_LINK_ES : TITLE_LINK_EN}
+              </HeadLineTwo>
               <BoxButtons>
-                <ButtonClasic href={dataContext.language_dynamic.portfolio[0].link_code}>
+                <ButtonClasic href={dataContext.language_dynamic.portfolio[numberIndex].link_code}>
                   <GithubComponent />
-                  Ver codigo
+                  {dataContext.language_static.section_third.code}
                 </ButtonClasic>
-                <ButtonClasic href={dataContext.language_dynamic.portfolio[0].link_preview}>
+                <ButtonClasic
+                  href={dataContext.language_dynamic.portfolio[numberIndex].link_preview}
+                >
                   <LinkComponent />
-                  Ver aplicación
+                  {dataContext.language_static.section_third.preview}
                 </ButtonClasic>
               </BoxButtons>
             </BoxGridTwo>

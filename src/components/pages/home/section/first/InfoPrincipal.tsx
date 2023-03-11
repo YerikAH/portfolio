@@ -11,11 +11,11 @@ import {
 } from '../../../../../styles/home/section_first'
 
 // context
-import FetchContext from '../../../../../context/dataContext'
+import DataContext from '../../../../../context/dataContext'
 import SelectLanguage from '../../../../buttons/SelectLanguage'
 
 export default function InfoPrincipal() {
-  const dataContext = useContext(FetchContext)
+  const dataContext = useContext(DataContext)
   const [languageOptions, setLanguageOptions] = useState(false)
 
   function handleLanguage() {
@@ -23,7 +23,7 @@ export default function InfoPrincipal() {
   }
 
   return (
-    <FetchContext.Provider value={dataContext}>
+    <DataContext.Provider value={dataContext}>
       <HeadlinePrincipal>{dataContext.language_static.section_first.headline}</HeadlinePrincipal>
       <BoxButtons>
         <TextButtonStroke to='/certificate'>
@@ -39,6 +39,6 @@ export default function InfoPrincipal() {
           />
         </ButtonBoxFill>
       </BoxButtons>
-    </FetchContext.Provider>
+    </DataContext.Provider>
   )
 }

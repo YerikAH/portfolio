@@ -1,3 +1,10 @@
+// PROJECT PAGE
+export const TITLE_TECH_ES = 'Tecnologías utilizadas en el desarrollo del proyecto'
+export const TITLE_TECH_EN = 'Technologies used in the development of the project'
+
+export const TITLE_LINK_ES = 'Enlaces'
+export const TITLE_LINK_EN = 'Links'
+
 // BUTTONS NAV
 
 export const ES_DARK = 'Cambiar a tema oscuro'

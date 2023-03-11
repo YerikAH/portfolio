@@ -12,16 +12,16 @@ import ListLabel from './second/ListLabel'
 import InfoComponent from './second/InfoComponent'
 
 // hook
-import FetchContext from '../../../../context/dataContext'
+import DataContext from '../../../../context/dataContext'
 import ThemeContext from '../../../../context/themeContext'
 import IconAbout from '../../../images/IconAbout'
 import { InterfaceSectionScroll } from '../../../../interface/scrollspy'
 
 function SectionSecond({ sectionRef }: InterfaceSectionScroll) {
-  const dataContext = useContext(FetchContext)
+  const dataContext = useContext(DataContext)
   const themeContext = useContext(ThemeContext)
   return (
-    <FetchContext.Provider value={dataContext}>
+    <DataContext.Provider value={dataContext}>
       <ThemeContext.Provider value={themeContext}>
         <SectionScondStylesTheme className={themeContext.theme} ref={sectionRef} id='about'>
           <TitleBox>
@@ -32,7 +32,7 @@ function SectionSecond({ sectionRef }: InterfaceSectionScroll) {
           <ListLabel />
         </SectionScondStylesTheme>
       </ThemeContext.Provider>
-    </FetchContext.Provider>
+    </DataContext.Provider>
   )
 }
 

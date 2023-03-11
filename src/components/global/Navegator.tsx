@@ -4,7 +4,7 @@ import { useContext, useState } from 'react'
 import { HeaderStyleTheme, NavStyle } from '../../styles/global/navegator_styles'
 
 // context
-import FetchContext from '../../context/dataContext'
+import DataContext from '../../context/dataContext'
 import ThemeContext from '../../context/themeContext'
 
 // component
@@ -17,7 +17,7 @@ import { InterfaceNavScroll } from '../../interface/scrollspy'
 import { Sections } from '../../enum/LanguageEnum'
 
 function Navegator({ activeSection, handleChange }: InterfaceNavScroll) {
-  const dataContext = useContext(FetchContext)
+  const dataContext = useContext(DataContext)
   const themeContext = useContext(ThemeContext)
   const [menu, setMenu] = useState(false)
 
@@ -37,7 +37,7 @@ function Navegator({ activeSection, handleChange }: InterfaceNavScroll) {
 
   return (
     <ThemeContext.Provider value={themeContext}>
-      <FetchContext.Provider value={dataContext}>
+      <DataContext.Provider value={dataContext}>
         <HeaderStyleTheme className={themeContext.theme}>
           <NavStyle>
             <LinksNav
@@ -56,7 +56,7 @@ function Navegator({ activeSection, handleChange }: InterfaceNavScroll) {
           </NavStyle>
         </HeaderStyleTheme>
         <MenuMobile menu={menu} handleMenu={handleMenu} changeSection={changeSection} />
-      </FetchContext.Provider>
+      </DataContext.Provider>
     </ThemeContext.Provider>
   )
 }

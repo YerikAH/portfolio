@@ -4,15 +4,15 @@ import { useContext } from 'react'
 import { FooterStylesTheme, TextLink, TextNormal } from '../../styles/global/footer_styles'
 
 // context
-import FetchContext from '../../context/dataContext'
+import DataContext from '../../context/dataContext'
 import ThemeContext from '../../context/themeContext'
 
 export default function Footer() {
-  const dataContext = useContext(FetchContext)
+  const dataContext = useContext(DataContext)
   const themeContext = useContext(ThemeContext)
 
   return (
-    <FetchContext.Provider value={dataContext}>
+    <DataContext.Provider value={dataContext}>
       <ThemeContext.Provider value={themeContext}>
         <FooterStylesTheme className={themeContext.theme}>
           <TextNormal>
@@ -23,6 +23,6 @@ export default function Footer() {
           </TextNormal>
         </FooterStylesTheme>
       </ThemeContext.Provider>
-    </FetchContext.Provider>
+    </DataContext.Provider>
   )
 }

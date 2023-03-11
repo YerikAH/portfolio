@@ -11,14 +11,14 @@ import {
 } from '../../../../styles/home/section_third'
 
 // context
-import FetchContext from '../../../../context/dataContext'
+import DataContext from '../../../../context/dataContext'
 import ProjectsComponent from './third/ProjectsComponent'
 import ThemeContext from '../../../../context/themeContext'
 import IconProjects from '../../../images/IconProjects'
 import { InterfaceSectionScroll } from '../../../../interface/scrollspy'
 
 export default function SectionThird({ sectionRef }: InterfaceSectionScroll) {
-  const dataContext = useContext(FetchContext)
+  const dataContext = useContext(DataContext)
   const themeContext = useContext(ThemeContext)
 
   const [offset, setOffset] = useState(6)
@@ -26,8 +26,6 @@ export default function SectionThird({ sectionRef }: InterfaceSectionScroll) {
 
   useEffect(() => {
     const numberProjects = dataContext.language_dynamic.portfolio.length
-    console.log(offset, numberProjects)
-    console.log(offset >= numberProjects)
     if (offset >= numberProjects) {
       setOffset(offset)
       setThereProjects(false)
@@ -37,7 +35,7 @@ export default function SectionThird({ sectionRef }: InterfaceSectionScroll) {
   }, [offset, dataContext.language_dynamic.portfolio.length])
 
   return (
-    <FetchContext.Provider value={dataContext}>
+    <DataContext.Provider value={dataContext}>
       <ThemeContext.Provider value={themeContext}>
         <SectionThirdStylesTheme className={themeContext.theme} ref={sectionRef} id='projects'>
           <TitleBox>
@@ -56,6 +54,6 @@ export default function SectionThird({ sectionRef }: InterfaceSectionScroll) {
           )}
         </SectionThirdStylesTheme>
       </ThemeContext.Provider>
-    </FetchContext.Provider>
+    </DataContext.Provider>
   )
 }

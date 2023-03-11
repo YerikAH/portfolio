@@ -8,7 +8,7 @@ import {
 } from '../../../../styles/blog/section_first_blog'
 
 // context
-import FetchContext from '../../../../context/dataContext'
+import DataContext from '../../../../context/dataContext'
 import ThemeContext from '../../../../context/themeContext'
 
 // components
@@ -24,7 +24,7 @@ import { STYLES_BLOG } from '../../../../constant/stylesInitialState'
 import { ScrollBlogStyle } from '../../../../interface/styles'
 import { BLOG_WIDTH_CARD, BLOG_WIDTH_PAGE_CARD } from '../../../../constant/numberInit'
 export default function SectionFirstBlog() {
-  const dataContext = useContext(FetchContext)
+  const dataContext = useContext(DataContext)
   const themeContext = useContext(ThemeContext)
   const [filter, setFilter] = useState<TopicsEnum>(TopicsEnum.all)
   const [styleScroll, setStyleScroll] = useState<ScrollBlogStyle>(STYLES_BLOG)
@@ -68,7 +68,7 @@ export default function SectionFirstBlog() {
   }, [stylCurrent])
 
   return (
-    <FetchContext.Provider value={dataContext}>
+    <DataContext.Provider value={dataContext}>
       <ThemeContext.Provider value={themeContext}>
         <SectionStylesBlogTheme className={themeContext.theme}>
           <BoxGridBlog>
@@ -93,6 +93,6 @@ export default function SectionFirstBlog() {
           </BoxGridBlog>
         </SectionStylesBlogTheme>
       </ThemeContext.Provider>
-    </FetchContext.Provider>
+    </DataContext.Provider>
   )
 }
