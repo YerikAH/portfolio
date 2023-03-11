@@ -29,19 +29,14 @@ export default function Main() {
           <SectionProject>
             <BoxGridOne>
               <ImageResponsive>
-                <ImageProject src={aaaw} />
+                <ImageProject src={dataContext.language_dynamic.portfolio[0].image_path} />
               </ImageResponsive>
             </BoxGridOne>
             <BoxGridTwo>
-              <HeadlinePrincipal>Aplicación de productividad</HeadlinePrincipal>
-              <TextBodyOne>
-                Esta aplicación de productividad cuenta con una funcionalidad de pomodoro para
-                ayudar a aumentar la eficiencia y productividad. Además, permite la adición de
-                tareas para llevar un registro organizado de las tareas pendientes. La aplicación
-                también cuenta con opciones de configuración para personalizarla según las
-                preferencias del usuario. Este proyecto fue un reto significativo en mi camino de
-                aprendizaje de JavaScript Vanilla y estoy muy orgulloso del resultado logrado.
-              </TextBodyOne>
+              <HeadlinePrincipal>
+                {dataContext.language_dynamic.portfolio[0].name}
+              </HeadlinePrincipal>
+              <TextBodyOne>{dataContext.language_dynamic.portfolio[0].description}</TextBodyOne>
               <HeadLineTwo>Tecnologías utilizadas en el desarrollo del proyecto</HeadLineTwo>
               <ListLabelSkills>
                 <ListLabel>HTML</ListLabel>
@@ -51,11 +46,11 @@ export default function Main() {
               </ListLabelSkills>
               <HeadLineTwo>Enlaces</HeadLineTwo>
               <BoxButtons>
-                <ButtonClasic>
+                <ButtonClasic href={dataContext.language_dynamic.portfolio[0].link_code}>
                   <GithubComponent />
                   Ver codigo
                 </ButtonClasic>
-                <ButtonClasic>
+                <ButtonClasic href={dataContext.language_dynamic.portfolio[0].link_preview}>
                   <LinkComponent />
                   Ver aplicación
                 </ButtonClasic>
