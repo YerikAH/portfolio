@@ -106,3 +106,10 @@ export interface TitlePropsBlog {
   handleIncrement(): void
   handleDecrement(): void
 }
+
+// PROJECT
+export interface ProjectProps {
+  data_porfolio: Portfolio[]
+  lang: Language
+  staticprop: Static
+}
