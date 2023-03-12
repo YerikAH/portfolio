@@ -12,7 +12,8 @@ import { LanguageOptionsProps } from '../../interface/props'
 import { useEffect, useState } from 'react'
 import { LanguageOptionsStyles } from '../../interface/styles'
 import { MODAL_RESUME_INIT } from '../../constant/stylesInitialState'
-
+import cvEs from '../../../public/CV-ES.pdf'
+import cvEn from '../../../public/CV-En.pdf'
 export default function SelectLanguage({ languageOptions, sectionFirst }: LanguageOptionsProps) {
   const [stylesBitModal, setStylesBitModal] = useState<LanguageOptionsStyles>(MODAL_RESUME_INIT)
 
@@ -30,12 +31,12 @@ export default function SelectLanguage({ languageOptions, sectionFirst }: Langua
 
   return (
     <SelectLanguageBox style={stylesBitModal}>
-      <ButtonLanguage>
+      <ButtonLanguage href={cvEn} download='' target='_blank'>
         <ImageLanguage src={flagEn} />
         {sectionFirst.button_en_cv}
       </ButtonLanguage>
       <Separator />
-      <ButtonLanguage>
+      <ButtonLanguage href={cvEs} download='' target='_blank'>
         <ImageLanguage src={flagEs} />
         {sectionFirst.button_es_cv}
       </ButtonLanguage>

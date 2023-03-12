@@ -18,7 +18,7 @@ export const SelectLanguageBox = styled.div`
   }
 `
 
-export const ButtonLanguage = styled.button`
+export const ButtonLanguage = styled.a`
   padding: 1rem 0.5rem;
   display: flex;
   font: normal normal 400 0.8rem/1rem var(--font-lato);
