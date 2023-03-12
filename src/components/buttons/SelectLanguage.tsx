@@ -13,7 +13,7 @@ import { useEffect, useState } from 'react'
 import { LanguageOptionsStyles } from '../../interface/styles'
 import { MODAL_RESUME_INIT } from '../../constant/stylesInitialState'
 import cvEs from '../../../public/CV-ES.pdf'
-import cvEn from '../../../public/CV-En.pdf'
+import cvEn from '../../../public/CV-EN.pdf'
 export default function SelectLanguage({ languageOptions, sectionFirst }: LanguageOptionsProps) {
   const [stylesBitModal, setStylesBitModal] = useState<LanguageOptionsStyles>(MODAL_RESUME_INIT)
 
