@@ -2,6 +2,7 @@
 ## Development 
 ### Project structure
 ### My experience developing
+I think this was the project that took me the longest, I used a lot of libraries and learned a lot of things. I reuse some components that I already had from other projects which helped me a lot in the development process (customHook, DataContext), This project helped me a lot when creating interfaces, creating helpers, on the other hand what was a bit confusing for me was the project structure since at first I thought it would not be a lot of work, and I would develop it in a simple way, but after a lot of development, I didn't know what project structure to handle, but I think  looks good. By the way, in the development of this project I learned a little more about the configuration of TypeScript, ESLint, and Prettier, to handle the code in a slightly cleaner way.
 ### Technologies used in the project
 
 1. [React](https://es.reactjs.org/) + [Typescript](https://www.typescriptlang.org/)
