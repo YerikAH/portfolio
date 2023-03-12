@@ -1,4 +1,5 @@
 # Portfolio | Harvey
+My new portfolio developed with React and TypeScript, in addition to using some libraries to improve the application. 
 ## Development 
 ### Project structure
 
