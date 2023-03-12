@@ -167,12 +167,12 @@ export const ButtonCertificate = styled.button`
   justify-content: center;
   align-items: center;
   gap: 0.54rem;
-  svg{
+  svg {
     pointer-events: none;
   }
-  path{
+  path {
     pointer-events: none;
-}
+  }
 `
 export const SectionStylesCertTheme = styled(SectionStylesCert)`
   ${BoxContain} {

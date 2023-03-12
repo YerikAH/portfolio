@@ -1,3 +1,5 @@
 import styled from 'styled-components'
 
-export const MainStylesCert = styled.main``
+export const MainStylesCert = styled.main`
+  overflow: hidden;
+`
