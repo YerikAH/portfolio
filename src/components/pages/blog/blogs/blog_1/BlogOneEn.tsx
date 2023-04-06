@@ -114,21 +114,6 @@ export default function BlogOneEn({ blogI }: blogOne) {
         situations.
       </TextBodyOne>
       <br />
-      <TextBodyOne>
-        After learning various technologies, I felt a bit stuck and bored, until I understood the
-        importance of focusing on a particular area. I decided to become a React expert as I liked
-        its focus on functional programming. And although I still have a lot to learn, this
-        specialization has helped me to give better solutions to the problems I encounter in my
-        projects.
-      </TextBodyOne>
-      <br />
-      <TextBodyOne>
-        I remember one problem in particular that took me several days to solve, not because of a
-        lack of technical knowledge, but because I was focused on the easiest solution rather than
-        the most optimal one for the application. From that moment on, I understood that algorithmic
-        complexity and attention to detail are essential to create solutions that work in the long
-        term without causing additional problems.
-      </TextBodyOne>
       <HeadlineThree>In summary</HeadlineThree>
       <br />
       <TextBodyOne>
