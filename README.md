@@ -40,7 +40,8 @@ I think this was the project that took me the longest, I used a lot of libraries
 ## Author
 
 - Harvey Yerik
-
+    
+    - [Portfolio](https://portfolio-harvey.netlify.app/)
     - [Twitter](https://twitter.com/yerikhar)
     - [GitHub](https://github.com/YerikAH)
     - [Send Me A Message](https://yerikah.github.io/send-me-a-message/dist/)
