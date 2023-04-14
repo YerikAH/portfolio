@@ -45,6 +45,15 @@
         "portfolio": [
           {
             "id": "1",
+            "name": "Foxbel Music",
+            "description": "¡Descubre Foxbel Music, la plataforma de música perfecta para tus oídos más exigentes! Sumérgete en un mundo de melodías increíbles con esta innovadora aplicación desarrollada con React y Typescript. Para brindarte la mejor experiencia musical, se utilizó el poderoso SDK de Deezer, que permite acceder a una amplia variedad de pistas y funcionalidades avanzadas.Además, Foxbel Music implementa useContext, una característica de React, para compartir el estado entre componentes de manera eficiente y mantener una experiencia de usuario fluida y sin interrupciones. Con una interfaz de usuario intuitiva y atractiva, Foxbel Music te ofrece una experiencia musical inigualable.",
+            "image_path": "./images/projects/foxbel_music.png",
+            "link_code": "https://github.com/YerikAH/foxbel-music",
+            "link_preview": "https://foxbel-music-web.netlify.app/",
+            "lang": ["React", "styled-components", "TypeScript", "useContext","API"]
+          },
+          {
+            "id": "2",
             "name": "Aplicación de productividad",
             "description": "Esta aplicación de productividad cuenta con una funcionalidad de pomodoro para ayudar a aumentar la eficiencia y productividad. Además, permite la adición de tareas para llevar un registro organizado de las tareas pendientes. La aplicación también cuenta con opciones de configuración para personalizarla según las preferencias del usuario. Este proyecto fue un reto significativo en mi camino de aprendizaje de JavaScript Vanilla y estoy muy orgulloso del resultado logrado.",
             "image_path": "./images/projects/task_app.png",
@@ -53,7 +62,7 @@
             "lang": ["HTML", "CSS", "JavaScript", "THEME"]
           },
           {
-            "id": "2",
+            "id": "3",
             "name": "Front End mentor challenges",
             "description": "En este sitio web podrás ver algunas de las soluciones de los desafíos de Front End Mentor que yo desarrolle, Frontend Mentor es una plataforma en línea que ofrece desafíos prácticos y prácticos de desarrollo web para ayudar a los desarrolladores front-end a mejorar sus habilidades y crear proyectos realistas.",
             "image_path": "./images/projects/frontend_mentor.png",
@@ -62,7 +71,7 @@
             "lang": ["React", "TypeScript", "CSS", "styled-components", "JSON", "Custom Hook"]
           },
           {
-            "id": "3",
+            "id": "4",
             "name": "Mi antiguo portafolio",
             "description": "Mi antiguo portafolio, desarrollado con React, Utilicé diversos hooks, como useEffect y useState, y también tuve la oportunidad de utilizar useContext, lo que me ayudó a comprender de manera más clara el concepto de estados en React. Además, gracias a esta experiencia, fui capaz de aplicar animaciones con React de manera efectiva.",
             "image_path": "./images/projects/portfolio.png",
@@ -71,7 +80,7 @@
             "lang": ["React", "CSS", "Vite", "useContext"]
           },
           {
-            "id": "4",
+            "id": "5",
             "name": "Prevent Nature",
             "description": "Tienda virtual Prevent Nature, trata acerca ventas de productos naturales, además contiene un blog. Utilice un enfoque de consumo de datos dinámicos mediante el uso de peticiones AJAX para obtener y visualizar los productos y artículos del blog a partir de un archivo JSON. El proyecto en cuestión me permitió adquirir una gran cantidad de conocimientos y habilidades.",
             "image_path": "./images/projects/prevent_nature.png",
@@ -80,7 +89,7 @@
             "lang": ["HTML", "CSS", "JavaScript", "Local Storage", "NPM"]
           },
           {
-            "id": "5",
+            "id": "6",
             "name": "Aplicación de mecanografía",
             "description": "Esta es una aplicación avanzada de mecanografía que te permite mejorar tus habilidades de escritura. Con ella, puedes personalizar el tiempo de la prueba y el número de palabras de prueba para adaptarse a tus necesidades. Al final de cada prueba, se te proporcionarán tus resultados detallados, incluyendo las palabras escritas correctamente y incorrectamente, así como también tu velocidad de escritura en palabras por minuto.",
             "image_path": "./images/projects/typebreak.png",
@@ -89,7 +98,7 @@
             "lang": ["React", "styled-components", "JavaScript", "Local Storage", "JSON"]
           },
           {
-            "id": "6",
+            "id": "7",
             "name": "Especificador de horarios",
             "description": "Esta aplicación es una solución integral para mejorar la productividad. Te permite programar tareas y especificar horarios para su ejecución, con un temporizador que se activa automáticamente cuando llega el momento programado. Además, la aplicación mantiene un registro detallado de tus sesiones de trabajo, permitiéndote ver tu progreso a través de gráficos y estadísticas visuales. Con esta herramienta, podrás optimizar tu tiempo y aumentar tu rendimiento en el trabajo.",
             "image_path": "./images/projects/register_work.png",
@@ -98,7 +107,7 @@
             "lang": ["HTML", "CSS", "JavaScript", "TypeScript", "Local Storage"]
           },
           {
-            "id": "7",
+            "id": "8",
             "name": "Pokedex",
             "description": "Esta aplicación ofrece una experiencia única en la búsqueda y visualización de Pokémon. Con ella, puedes acceder a información detallada sobre las estadísticas y descripciones de cada Pokémon de manera fácil y rápida. Desarrollada con React, esta aplicación te permite explorar y conocer mejor el mundo de los Pokémon. Además, a pesar de ser uno de mis primeros proyectos con React, fue un paso importante en mi camino para mejorar mis habilidades en el desarrollo web y estoy emocionado por continuar mejorando mi código en el futuro.",
             "image_path": "./images/projects/pokemon.png",
@@ -107,7 +116,7 @@
             "lang": ["React", "CSS", "Vite", "PokeAPI"]
           },
           {
-            "id": "8",
+            "id": "9",
             "name": "Aplicación de tareas con una base de datos",
             "description": "Esta aplicación de gestión de tareas brinda la posibilidad de agregar, eliminar y actualizar tareas en una base de datos segura y accesible. Para disfrutar de todas sus funciones, es necesario iniciar sesión y registrarse en la plataforma, lo que permitirá mantener un registro detallado y organizado de las tareas realizadas. Con esta herramienta, optimice su productividad y aumente la eficiencia en la gestión de sus tareas cotidianas.",
             "image_path": "./images/projects/flask.png",
@@ -116,7 +125,7 @@
             "lang": ["HTML", "CSS", "JavaScript", "Flask", "Python"]
           },
           {
-            "id": "9",
+            "id": "10",
             "name": "Aplicación de votación",
             "description": "Esta aplicación ha sido diseñada para votar en encuestas. Por medio de una interfaz intuitiva y fácil de usar, los usuarios pueden participar en encuestas relevantes. Al utilizar la plataforma Django como base, esta aplicación garantiza una gestión segura y eficiente de los datos de los usuarios, permitiendo un proceso de votación preciso y confiable.",
             "image_path": "./images/projects/django.png",
@@ -300,6 +309,15 @@
         "portfolio": [
           {
             "id": "1",
+            "name": "Foxbel Music",
+            "description": "Discover Foxbel Music, the perfect music platform for your most demanding ears! Immerse yourself in a world of incredible melodies with this innovative application developed with React and Typescript. To give you the best music experience, Deezer's powerful SDK was showcased, allowing access to a wide variety of tracks and advanced features. Additionally, Foxbel Music implements useContext, a React feature, to efficiently share state between components and efficiently maintain a seamless and seamless user experience. With an intuitive and attractive user interface, Foxbel Music offers you an unparalleled music experience.",
+            "image_path": "./images/projects/foxbel_music.png",
+            "link_code": "https://github.com/YerikAH/foxbel-music",
+            "link_preview": "https://foxbel-music-web.netlify.app/",
+            "lang": ["React", "styled-components", "TypeScript", "useContext","API"]
+          },
+          {
+            "id": "2",
             "name": "My task app",
             "description": "This productivity app features pomodoro functionality to help increase efficiency and productivity. In addition, it allows the addition of tasks to keep an organized record of pending tasks. The application also has configuration options to customize it according to the user's preferences. This project was a significant challenge in my path of learning Vanilla JavaScript and I am very proud of the result achieved.",
             "image_path": "./images/projects/task_app.png",
@@ -308,7 +326,7 @@
             "lang": ["HTML", "CSS", "JavaScript", "THEME"]
           },
           {
-            "id": "2",
+            "id": "3",
             "name": "Front End mentor challenges",
             "description": "On this website you will be able to see some of the Frontend Mentor Challenge Solutions that I develop, Frontend Mentor is an online platform that offers hands-on and hands-on web development challenges to help front-end developers improve their skills and create realistic projects.",
             "image_path": "./images/projects/frontend_mentor.png",
@@ -317,7 +335,7 @@
             "lang": ["React", "TypeScript", "CSS", "styled-components", "JSON", "Custom Hook"]
           },
           {
-            "id": "3",
+            "id": "4",
             "name": "My old portfolio",
             "description": "My old portfolio, developed with React, I used various hooks, such as useEffect and useState, and I also had the opportunity to use useContext, which helped me understand the concept of states in React more clearly. Also, thanks to this experience, I was able to apply animations with React effectively.",
             "image_path": "./images/projects/portfolio.png",
@@ -326,7 +344,7 @@
             "lang": ["React", "CSS", "Vite", "useContext"]
           },
           {
-            "id": "4",
+            "id": "5",
             "name": "Prevent Nature",
             "description": "Prevent Nature virtual store, deals with sales of natural products, also contains a blog. Use a dynamic data consumption approach by using AJAX requests to get and display products and blog articles from a JSON file. The project in question allowed me to acquire a great deal of knowledge and skills.",
             "image_path": "./images/projects/prevent_nature.png",
@@ -335,7 +353,7 @@
             "lang": ["HTML", "CSS", "JavaScript", "Local Storage", "NPM"]
           },
           {
-            "id": "5",
+            "id": "6",
             "name": "Typebreak",
             "description": "This is an advanced typing app that allows you to improve your typing skills. With it, you can customize the test time and the number of test words to suit your needs. At the end of each test, you will be provided with your detailed results, including correctly and incorrectly spelled words, as well as your typing speed in words per minute.",
             "image_path": "./images/projects/typebreak.png",
@@ -344,7 +362,7 @@
             "lang": ["React", "styled-components", "JavaScript", "Local Storage", "JSON"]
           },
           {
-            "id": "6",
+            "id": "7",
             "name": "Register work",
             "description": "This application is a comprehensive solution to improve productivity. It allows you to schedule tasks and specify times for their execution, with a timer that automatically activates when the scheduled time arrives. In addition, the application keeps a detailed record of your work sessions, allowing you to see your progress through graphs and visual statistics. With this tool, you will be able to optimize your time and increase your performance at work.",
             "image_path": "./images/projects/register_work.png",
@@ -353,7 +371,7 @@
             "lang": ["HTML", "CSS", "JavaScript", "TypeScript", "Local Storage"]
           },
           {
-            "id": "7",
+            "id": "8",
             "name": "Pokedex",
             "description": "This application offers a unique experience in finding and viewing Pokémon. With it, you can access detailed information about the statistics and descriptions of each Pokémon easily and quickly. Developed with React, this application allows you to explore and learn more about the world of Pokémon. Also, despite being one of my first projects with React, it was an important step on my way to improve my web development skills and I'm excited to continue improving my code in the future.",
             "image_path": "./images/projects/pokemon.png",
@@ -362,7 +380,7 @@
             "lang": ["React", "CSS", "Vite", "PokeAPI"]
           },
           {
-            "id": "8",
+            "id": "9",
             "name": "Application of tasks with a database",
             "description": "This task management application provides the ability to add, delete and update tasks in a secure and accessible database. To enjoy all its functions, it is necessary to log in and register on the platform, which will allow you to keep a detailed and organized record of the tasks performed. With this tool, optimize your productivity and increase efficiency in managing your daily tasks.",
             "image_path": "./images/projects/flask.png",
@@ -371,7 +389,7 @@
             "lang": ["HTML", "CSS", "JavaScript", "Flask", "Python"]
           },
           {
-            "id": "9",
+            "id": "10",
             "name": "Voting App",
             "description": "This application has been designed to vote in polls. Through an intuitive and easy-to-use interface, users can participate in relevant surveys. By using the Django platform as a foundation, this application ensures secure and efficient management of user data, enabling an accurate and reliable voting process.",
             "image_path": "./images/projects/django.png",
