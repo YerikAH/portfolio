@@ -50,7 +50,7 @@
             "image_path": "./images/projects/foxbel_music.png",
             "link_code": "https://github.com/YerikAH/foxbel-music",
             "link_preview": "https://foxbel-music-web.netlify.app/",
-            "lang": ["React", "styled-components", "TypeScript", "useContext","API"]
+            "lang": ["React", "styled-components", "TypeScript", "useContext", "API"]
           },
           {
             "id": "2",
@@ -169,6 +169,12 @@
             "id": "2",
             "word": "review",
             "title": "Resumen del libro Hábitos Atómicos",
+            "description": "Una vez que terminé de leerlo, se convirtió en uno de mis libros favoritos debido a su excelente contenido. Lo que más me gustó de él es que, como el propio libro lo describe, es un manual para desarrollar buenos hábitos y eliminar los malos. Para realmente beneficiarse del libro, es importante actuar en consecuencia."
+          },
+          {
+            "id": "3",
+            "word": "exp",
+            "title": "Mi experiencia bajando de peso",
             "description": "Una vez que terminé de leerlo, se convirtió en uno de mis libros favoritos debido a su excelente contenido. Lo que más me gustó de él es que, como el propio libro lo describe, es un manual para desarrollar buenos hábitos y eliminar los malos. Para realmente beneficiarse del libro, es importante actuar en consecuencia."
           }
         ]
@@ -314,7 +320,7 @@
             "image_path": "./images/projects/foxbel_music.png",
             "link_code": "https://github.com/YerikAH/foxbel-music",
             "link_preview": "https://foxbel-music-web.netlify.app/",
-            "lang": ["React", "styled-components", "TypeScript", "useContext","API"]
+            "lang": ["React", "styled-components", "TypeScript", "useContext", "API"]
           },
           {
             "id": "2",
@@ -434,6 +440,12 @@
             "word": "review",
             "title": "Atomic Habits Book Summary",
             "description": "Once I finished reading it, it became one of my favorite books due to its excellent content. What I liked the most about it is that, as the book itself describes it, it is a manual for developing good habits and weed out the bad ones. To really benefit from the book, it's important to act on it."
+          },
+          {
+            "id": "3",
+            "word": "exp",
+            "title": "My experience lose weight",
+            "description": "Una vez que terminé de leerlo, se convirtió en uno de mis libros favoritos debido a su excelente contenido. Lo que más me gustó de él es que, como el propio libro lo describe, es un manual para desarrollar buenos hábitos y eliminar los malos. Para realmente beneficiarse del libro, es importante actuar en consecuencia."
           }
         ]
       },

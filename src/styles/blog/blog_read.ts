@@ -159,6 +159,17 @@ export const Frame = styled.div`
 export const VideoiFrame = styled.iframe`
   width: 100%;
 `
+export const WithLine = styled.div`
+  padding: 0 2rem 0 2rem;
+  border-left: 2px solid var(--black);
+  font: normal normal 400 0.8em/1.5rem var(--font-lato);
+  transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
+  opacity: 0.5;
+  @media (min-width: 720px) {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+`
 
 /* DARK MODE */
 

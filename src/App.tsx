@@ -4,8 +4,6 @@ import { Route, Routes } from 'react-router-dom'
 
 // components
 import Blog from './components/pages/Blog'
-import BlogOneStr from './components/pages/blog/blogs/blog_1/BlogOneStr'
-import BlogTwoStr from './components/pages/blog/blogs/blog_2/BlogTwoStr'
 import Certificate from './components/pages/Certificate'
 import Home from './components/pages/Home'
 import ProjectPage from './components/pages/ProjectPage'
@@ -16,6 +14,11 @@ import { ThemeProvider } from './context/themeContext'
 
 // enum
 import { Sections } from './enum/LanguageEnum'
+
+// blog
+import BlogTwoStr from './components/pages/blog/blogs/blog_2/BlogTwoStr'
+import BlogOneStr from './components/pages/blog/blogs/blog_1/BlogOneStr'
+import BlogThreeStr from './components/pages/blog/blogs/blog_3/BlogThreeStr'
 
 function App() {
   const [section, setSection] = useState<Sections>(Sections.home)
@@ -36,6 +39,7 @@ function App() {
             <Route path='/blog' element={<Blog section={section} handleChange={handleChange} />}>
               <Route path='1' element={<BlogOneStr />} />
               <Route path='2' element={<BlogTwoStr />} />
+              <Route path='3' element={<BlogThreeStr />} />
             </Route>
           </Routes>
         </>
