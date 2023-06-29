@@ -4,3 +4,7 @@ export interface blogOne {
 export interface BlogTwo {
   blogI: string
 }
+export interface BlogThree {
+  banner: string
+  imageI: string
+}

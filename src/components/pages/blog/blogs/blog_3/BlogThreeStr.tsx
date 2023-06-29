@@ -6,12 +6,13 @@ import DataContext from '../../../../../context/dataContext'
 import { Language } from '../../../../../enum/LanguageEnum'
 import BlogThreeEs from './BlogThreeEs'
 import BlogThreeEn from './BlogThreeEn'
-import blogII from '../../../../../assets/blog/blogII.png'
+import banner from '../../../../../assets/blog/blogIII/banner.png'
+import imageI from '../../../../../assets/blog/blogIII/imageI.png'
+import imageIEn from '../../../../../assets/blog/blogIII/imageIEn.png'
 
 export default function BlogThreeStr() {
   const themeContext = useContext(ThemeContext)
   const dataContext = useContext(DataContext)
-  console.log('HOl,a mud o')
   return (
     <ThemeContext.Provider value={themeContext}>
       <DataContext.Provider value={dataContext}>
@@ -20,9 +21,9 @@ export default function BlogThreeStr() {
             <style.BoxGrid>
               <style.BoxGridOne>
                 {dataContext.language_current === Language.es ? (
-                  <BlogThreeEs blogI={blogII} />
+                  <BlogThreeEs banner={banner} imageI={imageI} />
                 ) : (
-                  <BlogThreeEn blogI={blogII} />
+                  <BlogThreeEn banner={banner} imageI={imageIEn} />
                 )}
               </style.BoxGridOne>
               <style.BoxGridTwo>

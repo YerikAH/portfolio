@@ -77,6 +77,15 @@ export const ImageBlog = styled.img`
   object-position: left;
   margin-bottom: 2rem;
 `
+export const ImageNormal = styled.img`
+  width: 100%;
+  height: 25.625rem;
+  border-radius: 2rem;
+  object-fit: cover;
+  margin-top: 3rem;
+  object-position: left;
+  margin-bottom: 2rem;
+`
 
 export const HeadlineTwo = styled.h2`
   margin-top: 1.5rem;
@@ -131,7 +140,7 @@ export const TextListBoxDesorder = styled.ul`
   padding: 2rem 0 2rem 3rem;
 `
 export const TextList = styled.li`
-  list-style: initial;
+  list-style: inherit;
   transition: 0.3s cubic-bezier(0.25, 0.72, 0.37, 1.18);
   font: normal normal 400 0.8rem/1.5rem var(--font-lato);
   opacity: 0.7;
@@ -158,6 +167,11 @@ export const Frame = styled.div`
 `
 export const VideoiFrame = styled.iframe`
   width: 100%;
+`
+export const Separator = styled.div`
+  width: 100%;
+  height: 2px;
+  opacity: 0.7;
 `
 export const WithLine = styled.div`
   padding: 0 2rem 0 2rem;
@@ -201,5 +215,14 @@ export const BlogSectionTheme = styled(BlogSection)`
   }
   ${TextList} {
     color: ${(props) => (props.className === Theme.dark ? 'var(--white)' : 'var(--black)')};
+  }
+  ${WithLine} {
+    color: ${(props) => (props.className === Theme.dark ? 'var(--white)' : 'var(--black)')};
+    border-left: ${(props) =>
+      props.className === Theme.dark ? '2px solid var(--white)' : '2px solid var(--black)'};
+  }
+  ${Separator} {
+    background-color: ${(props) =>
+      props.className === Theme.dark ? 'var(--white)' : 'var(--black)'};
   }
 `
