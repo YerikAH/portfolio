@@ -17,12 +17,11 @@ export default function Certificates({ cert, languageSelect }: CertificateProps)
   const [image, setImage] = useState('')
   function switchModalCertificate(e: React.MouseEvent<HTMLButtonElement> | undefined) {
     setModalCert(!modalCert)
-    if(e !== undefined){
+    if (e !== undefined) {
       const convertHTMLEvent = e.target as HTMLButtonElement
 
       setImage(convertHTMLEvent.value)
     }
-
   }
   return (
     <>
@@ -32,17 +31,21 @@ export default function Certificates({ cert, languageSelect }: CertificateProps)
           <TextCertificate>{item.description}</TextCertificate>
           <BackgroundCertificate>
             <ImageCertificate src={item.image} />
-            <ImageLogoCertificate src={item.logo} />
           </BackgroundCertificate>
-          <ButtonCertificate onClick={(e)=>switchModalCertificate(e)} value={item.image}>
-            <IconInfoCert/>
+          <ButtonCertificate onClick={(e) => switchModalCertificate(e)} value={item.image}>
+            <IconInfoCert />
             {(languageSelect ?? Language.es) === Language.es
               ? 'Detalles del certificado'
               : 'Certificate details'}
           </ButtonCertificate>
         </BoxCertificate>
       ))}
-      {modalCert && <DetailCertificate imageCertificate={image} switchModalCertificate={switchModalCertificate}/>}
+      {modalCert && (
+        <DetailCertificate
+          imageCertificate={image}
+          switchModalCertificate={switchModalCertificate}
+        />
+      )}
     </>
   )
 }

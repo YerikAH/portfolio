@@ -141,7 +141,6 @@ export const ImageCertificate = styled.img`
   object-fit: cover;
 `
 export const BackgroundCertificate = styled.div`
-  background-color: #212531;
   display: flex;
   justify-content: center;
   align-items: center;
